@@ -1,7 +1,12 @@
-psycopg2==2.5.4
-Django==1.7
+psycopg2>=2.5
+Django>=1.8
 django-countries==2.1.2
 djorm-pgarray==1.0.4
-dj-database-url==0.3.0
+dj-database-url>=0.3.0
 whitenoise==1.0.3
 gunicorn==19.1.1
+requests
+requests-futures
+beautifulsoup4
+lxml
+click

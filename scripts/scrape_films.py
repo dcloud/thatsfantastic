@@ -20,7 +20,7 @@ DEFAULT_EXCLUDE_CLASSES = set(['shareBox', 'alert', 'carousel', 'carousel-inner'
 
 REQUESTS_PER_MINUTE = 15
 
-META_REGEX = r'(?P<year>\d{4}),\s+DIR\.\s+(?P<directors>(?:[\w\s\.]+\,*)+),\s+(?P<runtime>\d+)\s+MIN\.,\s+(?P<country>[\w\s]+)'
+META_REGEX = r'(?P<year>\d{4}),\s+DIR\.\s+(?P<directors>(?:[\w\s\-\.]+\,*)+),\s+(?P<runtime>\d+)\s+MIN\.,\s+(?P<country>[\w\s]+\,*)'
 
 meta_searcher = re.compile(META_REGEX, flags=re.I)
 
@@ -86,12 +86,16 @@ def extract_synopsis(root):
 
 def extract_title(root):
     raw_title = root.find('*/title').text
-    return raw_title.strip(' | Fantastic Fest').title()
+    return raw_title.replace(' | Fantastic Fest', '').title()
 
 
 def clean_text(text):
     text = text.strip()
     return deeducate_quotes(text)
+
+
+def to_list(text):
+    return [clean_text(x) for x in text.strip().split(',') if x]
 
 
 def parse_film_information(response):
@@ -107,9 +111,9 @@ def parse_film_information(response):
     }
     if meta_info:
         film_info['year'] = int(meta_info['year'])
-        film_info['directors'] = [x.strip().title() for x in meta_info.get('directors', '').split(',')]
+        film_info['directors'] = to_list(meta_info.get('directors', ''))
         film_info['runtime'] = int(meta_info.get('runtime', None))
-        film_info['country'] = meta_info.get('country', '').title()
+        film_info['country'] = to_list(meta_info.get('country', '').title())
     return film_info
 
 # Create a session in global scope
@@ -142,7 +146,7 @@ def scrape(path, year, offset, max_pages, save):
 
     for n, url in enumerate(set(movie_urls)):
         click.secho("[{}] Fetching {}".format(n, url), fg="yellow")
-        response = requests.get(url)
+        response = requests.request('GET', url, timeout=(1.0, 3.0))
         if response.ok:
             click.secho("[{}] Parsing {}".format(n, response.url), fg="blue")
             film_info = parse_film_information(response)
@@ -159,7 +163,8 @@ def scrape(path, year, offset, max_pages, save):
                             fg="cyan")
         else:
             click.secho("Request for {} failed!".format(url), fg="red")
-        time.sleep(0.10)
+        time.sleep(0.20)
+    click.secho("All done!", fg="green")
 
 
 

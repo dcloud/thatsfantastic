@@ -1,15 +1,52 @@
 import lxml.html
 from lxml.cssselect import CSSSelector
 import re
-from scraper.utils import decode_html, unicode_normalize
+from scraper.utils import decode_html, unicode_normalize, deeducate_quotes
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
-ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')
 BODY_TEXT_SELECTOR = CSSSelector('article h4 + p', translator='html')
 SYNOPSIS_SELECTOR = CSSSelector('.lead p', translator='html')
+ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')
 
 
-class Movie(object):
+class HTMLParser:
+    """docstring for HTMLParser"""
+    def __init__(self, raw_html):
+        super(HTMLParser, self).__init__()
+        self.raw_html = raw_html
+        self._tree = None
+
+    @property
+    def tree(self):
+        if self._tree is None:
+            self._tree = self.make_tree()
+        return self._tree
+
+    def make_tree(self):
+        decoded_html = decode_html(self.raw_html)
+        return lxml.html.fromstring(decoded_html)
+
+    def parse(self):
+        raise NotImplementedError('Subclasses must implement parsing of raw_html')
+
+
+class FantasticMovieListParser(HTMLParser):
+    """Parses a movie list page for links to movie pages."""
+    def __init__(self, raw_html):
+        super(FantasticMovieListParser, self).__init__(raw_html)
+        self.anchor_list = []
+
+    def get_film_page_urls(self):
+        anchor_els = ANCHOR_SELECTOR(self.tree)
+        self.anchor_list = list(a.attrib.get('href', None) for a in anchor_els)
+        return self.anchor_list
+
+    def parse(self):
+        self.get_film_page_urls()
+        return self.anchor_list
+
+
+class Movie:
     """docstring for Movie"""
 
     attributes = ('title', 'description', 'synopsis', 'directors',
@@ -25,20 +62,18 @@ class Movie(object):
         return {k: self.__dict__[k] for k in Movie.attributes}
 
 
-class FantasticMovieParser:
+class FantasticMovieParser(HTMLParser):
     """Parses movie web pages from http://fantasticfest.com/"""
     def __init__(self, raw_html):
-        super(FantasticMovieParser, self).__init__()
-        self.raw_html = raw_html
+        super(FantasticMovieParser, self).__init__(raw_html)
         self.movie = Movie()
         for attrname in Movie.attributes:
             attr_iname = '_raw_{}'.format(attrname)
             setattr(self, attr_iname, None)
         self._raw_metadata = None
-        self._tree = None
 
     def _clean_text(self, text):
-        return text.strip()
+        return deeducate_quotes(text.strip())
 
     def _clean_list(self, text):
         return [self._clean_text(x) for x in text.split(',') if x.strip()]
@@ -49,16 +84,6 @@ class FantasticMovieParser:
     def _clean_and_normalize_unicode(self, text):
         cleaned = self._clean_text(text)
         return self._normalize_unicode(cleaned)
-
-    @property
-    def tree(self):
-        if self._tree is None:
-            self._tree = self.make_tree()
-        return self._tree
-
-    def make_tree(self):
-        decoded_html = decode_html(self.raw_html)
-        return lxml.html.fromstring(decoded_html)
 
     def parse(self):
         self.clean()

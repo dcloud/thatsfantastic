@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from bs4 import UnicodeDammit
+import unicodedata
 import lxml.html
 from lxml.cssselect import CSSSelector
 import os
@@ -11,6 +12,7 @@ import re
 import logging
 import click
 from datetime import date
+import time
 
 BASE_URL = 'http://fantasticfest.com/films/'
 
@@ -18,7 +20,7 @@ DEFAULT_EXCLUDE_CLASSES = set(['shareBox', 'alert', 'carousel', 'carousel-inner'
 
 REQUESTS_PER_MINUTE = 15
 
-META_REGEX = r'(?P<year>\d{4}),\s+DIR\.\s+(?P<directors>[\w\s\.\,]+),\s+(?P<runtime>\d+)\s+MIN\.,\s+(?P<country>[\w\s]+)'
+META_REGEX = r'(?P<year>\d{4}),\s+DIR\.\s+(?P<directors>(?:[\w\s\.]+\,*)+),\s+(?P<runtime>\d+)\s+MIN\.,\s+(?P<country>[\w\s]+)'
 
 meta_searcher = re.compile(META_REGEX, flags=re.I)
 
@@ -29,6 +31,19 @@ ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)'
 BODY_TEXT_SELECTOR = CSSSelector('article h4 + p')
 SYNOPSIS_SELECTOR = CSSSelector('.lead p')
 
+CHAR_REPLACEMENT_MAP = {
+    '\u2018': '\u0027',
+    '\u2019': '\u0027',
+    '\u201C': '\u0022',
+    '\u201D': '\u0022',
+}
+
+
+def deeducate_quotes(string):
+    for k, v in CHAR_REPLACEMENT_MAP.items():
+        string = string.replace(k, v)
+    return string
+
 
 def decode_html(html_string):
     converted = UnicodeDammit(html_string, is_html=True)
@@ -36,7 +51,8 @@ def decode_html(html_string):
         raise UnicodeDecodeError(
             "Failed to detect encoding, tried [%s]",
             ', '.join(converted.triedEncodings))
-    return converted.unicode_markup
+    normalized_markup = unicodedata.normalize('NFKC', converted.unicode_markup)
+    return normalized_markup
 
 
 def tree_from_html(html_string):
@@ -46,7 +62,7 @@ def tree_from_html(html_string):
 
 def get_meta_info(root):
     meta_el = META_SELECTOR(root)[0]
-    meta_text = meta_el.text
+    meta_text = deeducate_quotes(meta_el.text)
     match = meta_searcher.search(meta_text)
     if match:
         return match.groupdict()
@@ -70,7 +86,12 @@ def extract_synopsis(root):
 
 def extract_title(root):
     raw_title = root.find('*/title').text
-    return raw_title.strip(' | Fantastic Fest')
+    return raw_title.strip(' | Fantastic Fest').title()
+
+
+def clean_text(text):
+    text = text.strip()
+    return deeducate_quotes(text)
 
 
 def parse_film_information(response):
@@ -80,9 +101,9 @@ def parse_film_information(response):
     raw_synopsis = extract_synopsis(root)
     meta_info = get_meta_info(root)
     film_info = {
-        'title': film_title.strip(),
-        'raw_body': raw_body.strip(),
-        'raw_synopsis': raw_synopsis.strip(),
+        'title': clean_text(film_title),
+        'raw_body': clean_text(raw_body),
+        'raw_synopsis': clean_text(raw_synopsis),
     }
     if meta_info:
         film_info['year'] = int(meta_info['year'])
@@ -119,11 +140,11 @@ def scrape(path, year, offset, max_pages, save):
         else:
             click.secho("Request for {} failed!".format(url), fg="red")
 
-    for url in set(movie_urls):
-        click.secho("Fetching {}".format(url), fg="yellow")
+    for n, url in enumerate(set(movie_urls)):
+        click.secho("[{}] Fetching {}".format(n, url), fg="yellow")
         response = requests.get(url)
         if response.ok:
-            click.secho("Parsing {}".format(response.url), fg="blue")
+            click.secho("[{}] Parsing {}".format(n, response.url), fg="blue")
             film_info = parse_film_information(response)
             url_end = os.path.split(response.url)[-1]
             filename = "{}.json".format(url_end)
@@ -136,9 +157,10 @@ def scrape(path, year, offset, max_pages, save):
                             fg="green")
                 click.secho(json.dumps(film_info, indent=4),
                             fg="cyan")
-
         else:
             click.secho("Request for {} failed!".format(url), fg="red")
+        time.sleep(0.10)
+
 
 
 if __name__ == '__main__':

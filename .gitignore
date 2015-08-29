@@ -8,5 +8,7 @@ __pycache__/
 # env
 .env
 
+# Keep a place for playful things
+sandbox/*
 
 staticfiles

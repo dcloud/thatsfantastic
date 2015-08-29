@@ -26,3 +26,11 @@ def decode_html(html_string, smart_quotes_to="ascii"):
 
 def unicode_normalize(string):
     return unicodedata.normalize('NFKC', string)
+
+
+def clean_string(string):
+    return deeducate_quotes(string.strip())
+
+
+def string_to_list(string):
+    return [clean_string(x) for x in string.split(',') if x.strip()]

@@ -1,7 +1,8 @@
 import lxml.html
 from lxml.cssselect import CSSSelector
 import re
-from scraper.utils import decode_html, unicode_normalize, deeducate_quotes
+from scraper.models import Movie
+from scraper.utils import decode_html, unicode_normalize, clean_string, string_to_list
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
 BODY_TEXT_SELECTOR = CSSSelector('article h4 + p', translator='html')
@@ -9,10 +10,10 @@ SYNOPSIS_SELECTOR = CSSSelector('.lead p', translator='html')
 ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')
 
 
-class HTMLParser:
-    """docstring for HTMLParser"""
+class HTMLScraper:
+    """docstring for HTMLScraper"""
     def __init__(self, raw_html):
-        super(HTMLParser, self).__init__()
+        super(HTMLScraper, self).__init__()
         self.raw_html = raw_html
         self._tree = None
 
@@ -26,14 +27,14 @@ class HTMLParser:
         decoded_html = decode_html(self.raw_html)
         return lxml.html.fromstring(decoded_html)
 
-    def parse(self):
-        raise NotImplementedError('Subclasses must implement parsing of raw_html')
+    def scrape(self):
+        raise NotImplementedError('Subclasses must implement scraping of raw_html')
 
 
-class FantasticMovieListParser(HTMLParser):
-    """Parses a movie list page for links to movie pages."""
+class FantasticMovieListScraper(HTMLScraper):
+    """Scrapes a movie list page for links to movie pages."""
     def __init__(self, raw_html):
-        super(FantasticMovieListParser, self).__init__(raw_html)
+        super(FantasticMovieListScraper, self).__init__(raw_html)
         self.anchor_list = []
 
     def get_film_page_urls(self):
@@ -41,53 +42,44 @@ class FantasticMovieListParser(HTMLParser):
         self.anchor_list = list(a.attrib.get('href', None) for a in anchor_els)
         return self.anchor_list
 
-    def parse(self):
+    def scrape(self):
         self.get_film_page_urls()
         return self.anchor_list
 
 
-class Movie:
-    """docstring for Movie"""
-
-    attributes = ('title', 'description', 'synopsis', 'directors',
-                  'countries', 'runtime', 'year')
-
-    def __init__(self, **kwargs):
-        super(Movie, self).__init__()
-        for attr in Movie.attributes:
-            setattr(self, attr, None)
-        self._dictionary = None
-
-    def to_dict(self):
-        return {k: self.__dict__[k] for k in Movie.attributes}
-
-
-class FantasticMovieParser(HTMLParser):
-    """Parses movie web pages from http://fantasticfest.com/"""
+class FantasticMovieScraper(HTMLScraper):
+    """Scrapes movie web pages from http://fantasticfest.com/"""
     def __init__(self, raw_html):
-        super(FantasticMovieParser, self).__init__(raw_html)
+        super(FantasticMovieScraper, self).__init__(raw_html)
         self.movie = Movie()
         for attrname in Movie.attributes:
             attr_iname = '_raw_{}'.format(attrname)
             setattr(self, attr_iname, None)
         self._raw_metadata = None
 
-    def _clean_text(self, text):
-        return deeducate_quotes(text.strip())
+    def _clean_string(self, string):
+        return clean_string(string)
 
-    def _clean_list(self, text):
-        return [self._clean_text(x) for x in text.split(',') if x.strip()]
+    def _clean_list(self, string):
+        return string_to_list(string)
 
-    def _normalize_unicode(self, text):
-        return unicode_normalize(text)
+    def _normalize_unicode(self, string):
+        return unicode_normalize(string)
 
     def _clean_and_normalize_unicode(self, text):
-        cleaned = self._clean_text(text)
+        cleaned = self._clean_string(text)
         return self._normalize_unicode(cleaned)
 
-    def parse(self):
-        self.clean()
-        return self.movie
+    def scrape(self):
+        self._scrape_raw()
+        return self.clean()
+
+    def _scrape_raw(self):
+        for attrname in self.movie.__dict__:
+            methodname = 'raw_{}'.format(attrname)
+            func = getattr(self, methodname, None)
+            if callable(func):
+                setattr(self.movie, attrname, func())
 
     def clean(self):
         for attrname in self.movie.__dict__:
@@ -95,6 +87,7 @@ class FantasticMovieParser(HTMLParser):
             func = getattr(self, methodname, None)
             if callable(func):
                 setattr(self.movie, attrname, func())
+        return self.movie
 
     @property
     def raw_title(self):
@@ -115,7 +108,7 @@ class FantasticMovieParser(HTMLParser):
         return self._raw_description
 
     def clean_description(self):
-        return self._clean_text(self.raw_description)
+        return self._clean_string(self.raw_description)
 
     @property
     def raw_synopsis(self):
@@ -125,7 +118,7 @@ class FantasticMovieParser(HTMLParser):
         return self._raw_synopsis
 
     def clean_synopsis(self):
-        return self._clean_text(self.raw_synopsis)
+        return self._clean_string(self.raw_synopsis)
 
     @property
     def raw_metadata(self):
@@ -165,7 +158,7 @@ class FantasticMovieParser(HTMLParser):
         return self._raw_year
 
     def clean_year(self):
-        return int(self._clean_text(self.raw_year)) if self.raw_year else None
+        return int(self._clean_string(self.raw_year)) if self.raw_year else None
 
     @property
     def raw_runtime(self):
@@ -175,4 +168,4 @@ class FantasticMovieParser(HTMLParser):
         return self._raw_runtime
 
     def clean_runtime(self):
-        return int(self._clean_text(self.raw_runtime)) if self.raw_runtime else None
+        return int(self._clean_string(self.raw_runtime)) if self.raw_runtime else None

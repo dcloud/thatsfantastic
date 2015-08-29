@@ -8,7 +8,7 @@ import logging
 import click
 from datetime import date
 import time
-from scraper.parse import FantasticMovieListParser, FantasticMovieParser
+from scraper.scrape import FantasticMovieListScraper, FantasticMovieScraper
 
 BASE_URL = 'http://fantasticfest.com/films/'
 
@@ -44,8 +44,8 @@ def scrape(path, year, offset, max_pages, save):
         response = session.get(url)
         if response.ok:
             click.secho("Parsing {}".format(response.url), fg="blue")
-            parser = FantasticMovieListParser(response.text)
-            movie_urls.extend(parser.parse())
+            list_scraper = FantasticMovieListScraper(response.text)
+            movie_urls.extend(list_scraper.scrape())
         else:
             click.secho("Request for {} failed!".format(url), fg="red")
 
@@ -54,8 +54,8 @@ def scrape(path, year, offset, max_pages, save):
         response = requests.request('GET', url, timeout=(1.0, 3.0))
         if response.ok:
             click.secho("[{}] Parsing {}".format(n, response.url), fg="blue")
-            movie_parser = FantasticMovieParser(response.content)
-            movie = movie_parser.parse()
+            movie_scraper = FantasticMovieScraper(response.content)
+            movie = movie_scraper.scrape()
             filename = "{}.json".format(filename_from_title(movie.title))
             if save:
                 file_save_path = os.path.join(path, filename)

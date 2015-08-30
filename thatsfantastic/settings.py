@@ -8,11 +8,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as DEFAULT_CONTEXT_PROCESSORS
 import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as DEFAULT_CONTEXT_PROCESSORS
+PROJ_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(PROJ_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -59,13 +60,9 @@ WSGI_APPLICATION = 'thatsfantastic.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'thatsfantastic',
-    }
-}
+    'default': dj_database_url.config()
 
-DATABASES['default'] = dj_database_url.config()
+}
 
 # Templates
 
@@ -73,7 +70,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'APP_DIRS': True,
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(PROJ_DIR, 'templates')],
         'OPTIONS': {
             'context_processors': DEFAULT_CONTEXT_PROCESSORS,
             'debug': True if os.getenv('TEMPLATE_DEBUG', 'True') == 'True' else DEBUG

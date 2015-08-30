@@ -1,13 +1,10 @@
 psycopg2>=2.5
-Django>=1.8
-django-countries==2.1.2
-djorm-pgarray==1.0.4
+Django>=1.8,<1.9
+django-countries>=3.0
 dj-database-url>=0.3.0
-whitenoise==1.0.3
-gunicorn==19.1.1
+whitenoise>=2.0,<3.0
+gunicorn==19.3.0
 requests
-requests-futures
 cchardet
-beautifulsoup4
 lxml
 click

@@ -1,15 +1,11 @@
 from django.db import models
 from django.utils.translation import ugettext as _
 from django.utils.text import slugify
-from djorm_pgarray.fields import TextArrayField
+from django.contrib.postgres.fields import ArrayField
 from django_countries import countries
 from django.core.urlresolvers import reverse
 
 COUNTRY_CODES = tuple(countries)
-
-
-def default_list():
-    return []
 
 
 class Person(models.Model):
@@ -40,8 +36,8 @@ class Film(models.Model):
     slug = models.SlugField(max_length=140, unique=True, null=True, blank=True)
     summary = models.TextField(blank=True)
     long_description = models.TextField(blank=True)
-    country = TextArrayField(choices=COUNTRY_CODES, default=default_list)
-    language = TextArrayField(default=default_list)
+    countries = ArrayField(models.CharField(choices=COUNTRY_CODES, max_length=2), default=list)
+    languages = ArrayField(models.CharField(max_length=30), default=list)
     year = models.PositiveIntegerField(blank=True, null=True, help_text=_("Release year"))
     runtime = models.IntegerField(blank=True, null=True, help_text=_("Film runtime, in whole minutes"))
     directors = models.ManyToManyField('Person', related_name='directed',
@@ -87,4 +83,3 @@ class Screening(models.Model):
 
     def __str__(self):
         return self.__unicode__()
-

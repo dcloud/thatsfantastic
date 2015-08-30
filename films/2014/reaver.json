@@ -1,10 +1,13 @@
 {
-    "runtime": 20,
-    "raw_body": "Brief Summary\n\n\tTwo teens deal with their departed father\u2019s estate. Lamenting his lifelong paranoia, they start dismantling the contraptions he obsessively affixed to the house to ward off a supernatural threat. A solidly acted and tightly directed exercise in mounting dread.\n",
     "year": 2014,
-    "directors": [
-        "Len Lobiondo"
-    ],
     "title": "Reaver",
-    "country": "United States"
+    "countries": [
+        "United States"
+    ],
+    "description": "Len LoBiondo (Director), Molo Alcocer (Producer), Oliver Harwood (Editor)",
+    "directors": [
+        "Len LoBiondo"
+    ],
+    "synopsis": "Two teens deal with their departed father's estate. Lamenting his lifelong paranoia, they start dismantling the contraptions he obsessively affixed to the house to ward off a supernatural threat. A solidly acted and tightly directed exercise in mounting dread.",
+    "runtime": 20
 }

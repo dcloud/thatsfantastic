@@ -1,10 +1,13 @@
 {
-    "runtime": 6,
-    "raw_body": "Brief Summary\n\n\tA Thanksgiving home invasion does not turn out as planned.\n",
     "year": 2014,
+    "title": "Invaders",
+    "countries": [
+        "United States"
+    ],
+    "description": "Jason Kupfer (Director), Tighe Arnold (Producer)",
     "directors": [
         "Jason Kupfer"
     ],
-    "title": "INVADERS",
-    "country": "United States"
+    "synopsis": "A Thanksgiving home invasion does not turn out as planned.",
+    "runtime": 6
 }

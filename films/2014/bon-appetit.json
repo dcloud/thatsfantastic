@@ -1,10 +1,13 @@
 {
-    "runtime": 8,
-    "raw_body": "Brief Summary\n\n\tA distinguished Chef stows himself away in the privacy of his own home to explore his dark culinary desires.\n",
-    "year": 2014,
+    "countries": [
+        "United States"
+    ],
+    "synopsis": "A distinguished Chef stows himself away in the privacy of his own home to explore his dark culinary desires.",
+    "description": "Mark and Sarah are trapped, darkness is falling and the creature outside only attacks by night in this fast-paced Irish horror.",
     "directors": [
         "Christopher Todd"
     ],
-    "title": "BON APP\u00c9TIT",
-    "country": "United States"
+    "year": 2014,
+    "title": "Bon App\u00e9Tit",
+    "runtime": 8
 }

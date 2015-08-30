@@ -1,11 +1,14 @@
 {
-    "runtime": 136,
-    "raw_body": "Brief Summary\n\n\tAn ex-hitman comes out of retirement to track down the gangsters that took everything from him. With New York City as his bullet-riddled playground, JOHN WICK (Keanu Reeves) is a fresh and stylized take on the \"assassin genre\".\n",
     "year": 2014,
+    "title": "John Wick",
+    "countries": [
+        "United States"
+    ],
+    "description": "Keanu Reeves (Actor)",
     "directors": [
         "David Leitch",
         "Chad Stahelski"
     ],
-    "title": "JOHN WICK",
-    "country": "United States"
+    "synopsis": "An ex-hitman comes out of retirement to track down the gangsters that took everything from him. With New York City as his bullet-riddled playground, JOHN WICK (Keanu Reeves) is a fresh and stylized take on the \"assassin genre\".",
+    "runtime": 136
 }

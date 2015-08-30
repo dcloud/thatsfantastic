@@ -1,10 +1,13 @@
 {
-    "runtime": 102,
-    "raw_body": "Brief Summary\n\n\tFrom the singular mind of writer/director and podcaster Kevin Smith, and conceived from one of Smith\u2019s own Smodcast\u2019s, TUSK is a story unlike anything that has ever been committed to screen before. A tale that is equal parts hilarious and horrifying, TUSK will stay with you long after the credits roll.\n",
     "year": 2013,
+    "title": "Tusk",
+    "countries": [
+        "United States"
+    ],
+    "description": "Kevin Smith (Director), William Johnson (Producer), David Greathouse (Producer), Sam Englebardt (Producer)",
     "directors": [
         "Kevin Smith"
     ],
-    "title": "Tusk",
-    "country": "United States"
+    "synopsis": "From the singular mind of writer/director and podcaster Kevin Smith, and conceived from one of Smith's own Smodcast's, TUSK is a story unlike anything that has ever been committed to screen before. A tale that is equal parts hilarious and horrifying, TUSK will stay with you long after the credits roll.",
+    "runtime": 102
 }

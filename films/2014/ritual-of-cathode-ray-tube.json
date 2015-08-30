@@ -1,10 +1,13 @@
 {
-    "runtime": 5,
-    "raw_body": "Brief Summary\n\n\tRITUAL OF CATHODE RAY TUBE began its life as a multi-screen gallery installation, in which a series of monochrome drawings interact with each other like a live news feed recording of a black magic happening. Hypnotic and awesome.\n",
     "year": 2013,
+    "title": "Ritual of Cathode Ray Tube",
+    "countries": [
+        "Province Of China"
+    ],
+    "description": "",
     "directors": [
         "Mores Zhan"
     ],
-    "title": "RITUAL OF CATHODE RAY TUBE",
-    "country": "Taiwan"
+    "synopsis": "RITUAL OF CATHODE RAY TUBE began its life as a multi-screen gallery installation, in which a series of monochrome drawings interact with each other like a live news feed recording of a black magic happening. Hypnotic and awesome.",
+    "runtime": 5
 }

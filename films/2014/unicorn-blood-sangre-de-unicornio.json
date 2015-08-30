@@ -1,10 +1,13 @@
 {
-    "runtime": 8,
-    "raw_body": "Brief Summary\n\n\tA festival favorite since its premiere at Fant Bilbao last year, Alberto Vasquez\u2019 follow up to his award-winning BIRDBOY (2011) is a plushy pastel tale of two teddy bears on the hunt for unicorn blood, a rare blueberry-flavored treat and the secret to eternal cuteness.\n",
     "year": 2013,
+    "title": "Unicorn Blood (Sangre De Unicornio)",
+    "countries": [
+        "Spain"
+    ],
+    "description": "",
     "directors": [
         "Alberto Vazquez"
     ],
-    "title": "UNICORN BLOOD (SANGRE DE UNICORNIO)",
-    "country": "Spain"
+    "synopsis": "A festival favorite since its premiere at Fant Bilbao last year, Alberto Vasquez' follow up to his award-winning BIRDBOY (2011) is a plushy pastel tale of two teddy bears on the hunt for unicorn blood, a rare blueberry-flavored treat and the secret to eternal cuteness.",
+    "runtime": 8
 }

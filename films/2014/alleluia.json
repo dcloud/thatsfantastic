@@ -1,10 +1,13 @@
 {
-    "runtime": 95,
-    "raw_body": "Brief Summary\n\n\tA lonely woman and a psychotic gigolo find love through murder in the latest film from the director of CALVAIRE and VINYAN.\n\nFull Description\n\n\tAfter escaping a bad marriage, Gloria (Lola Due\u00f1as) and her young daughter are looking for a new start. With encouragement from her friend Madeline (St\u00e9phane Bissot), Gloria goes on an Internet date with a handsome man named Michel (Laurent Lucas). Unbeknownst to her, her date is not a normal fellow. This is demonstrated as Michel conducts a black magic ritual to ensure that Gloria succumbs to his charms. The ritual seems to have the intended effect as Gloria and Michel quickly fall in love. Despite the initial sparks, Michel mysteriously disappears after a few weeks. Gloria becomes obsessed with Michel\u2019s whereabouts and tracks him down. She discovers that Michel is leading many different lives with many different women. However, Gloria doesn\u2019t care; she will do anything to be with Michel, including commit murder.\n\n\tALLELUIA is the second film in Fabrice du Welz\u2019s proposed trilogy about the Belgian Ardennes. The first installment, CALVAIRE, is one of the best horror films of the early 2000s. Loosely based on the true story of Martha Beck and Raymond Fernandez (aka the Honeymoon Killers), ALLELUIA is an intense, darkly comedic thriller about an extremely rotten romance. The story of Gloria and Michel is told in four chapters, each of which is focused on a specific crime. Each offense is worse than the last, leading to a violent finale that will leave the viewer gasping for air. Every single element of this film\u2014direction, performances, cinematography\u2014is executed with precision and clarity. (Rodney Perkins)",
-    "year": 2014,
+    "countries": [
+        "Belgium"
+    ],
+    "synopsis": "A lonely woman and a psychotic gigolo find love through murder in the latest film from the director of CALVAIRE and VINYAN.",
+    "description": "After escaping a bad marriage, Gloria (Lola Due\u00f1as) and her young daughter are looking for a new start. With encouragement from her friend Madeline (St\u00e9phane Bissot), Gloria goes on an Internet date with a handsome man named Michel (Laurent Lucas). Unbeknownst to her, her date is not a normal fellow. This is demonstrated as Michel conducts a black magic ritual to ensure that Gloria succumbs to his charms. The ritual seems to have the intended effect as Gloria and Michel quickly fall in love. Despite the initial sparks, Michel mysteriously disappears after a few weeks. Gloria becomes obsessed with Michel's whereabouts and tracks him down. She discovers that Michel is leading many different lives with many different women. However, Gloria doesn't care; she will do anything to be with Michel, including commit murder.",
     "directors": [
         "Fabrice Du Welz"
     ],
-    "title": "Allelu",
-    "country": "France"
+    "year": 2014,
+    "title": "Alleluia",
+    "runtime": 95
 }

@@ -1,10 +1,13 @@
 {
-    "runtime": 15,
-    "raw_body": "Brief Summary\n\n\tFrank is a bedridden man in a squalid London house who is able to communicate with the dead in a most unusual fashion. With his health failing, he opts to do one last job before quitting the spirit medium business for good. But some local gangsters have other plans\u2026\n",
     "year": 2014,
+    "title": "The Stomach",
+    "countries": [
+        "United States"
+    ],
+    "description": "Ben Steiner (Director), Dan Dixon (Producer)",
     "directors": [
         "Ben Steiner"
     ],
-    "title": "The Stomach",
-    "country": "United States"
+    "synopsis": "Frank is a bedridden man in a squalid London house who is able to communicate with the dead in a most unusual fashion. With his health failing, he opts to do one last job before quitting the spirit medium business for good. But some local gangsters have other plans\u2026",
+    "runtime": 15
 }

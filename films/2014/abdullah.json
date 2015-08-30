@@ -1,10 +1,13 @@
 {
-    "runtime": 12,
-    "raw_body": "Brief Summary\n\n\tAbdullah is a lonely London cab driver who goes through the motions of his day while clearly disconnected from his environment. When he is invited to interact with a client, Abdullah chooses a frightening form of contact.\n",
-    "year": 2014,
+    "countries": [
+        "United Kingdom"
+    ],
+    "synopsis": "Abdullah is a lonely London cab driver who goes through the motions of his day while clearly disconnected from his environment. When he is invited to interact with a client, Abdullah chooses a frightening form of contact.",
+    "description": "",
     "directors": [
         "Evrim Ersoy"
     ],
-    "title": "ABDULLAH",
-    "country": "United Kingdom"
+    "year": 2014,
+    "title": "Abdullah",
+    "runtime": 12
 }

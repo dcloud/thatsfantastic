@@ -1,10 +1,13 @@
 {
-    "runtime": 7,
-    "raw_body": "Brief Summary\n\n\tDIY collage-animating legend Martha Colburn turns her talents to three-dimensional stop motion and found footage in this transformative experimental nightmare originally commissioned by the Rotterdam Philharmonic Orchestra.\n",
     "year": 2013,
+    "title": "Metamorfoza",
+    "countries": [
+        "Netherlands"
+    ],
+    "description": "",
     "directors": [
         "Martah Colburn"
     ],
-    "title": "Metamorfoz",
-    "country": "Netherlands"
+    "synopsis": "DIY collage-animating legend Martha Colburn turns her talents to three-dimensional stop motion and found footage in this transformative experimental nightmare originally commissioned by the Rotterdam Philharmonic Orchestra.",
+    "runtime": 7
 }

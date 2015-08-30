@@ -1,8 +1,9 @@
 import lxml.html
 from lxml.cssselect import CSSSelector
 import re
-from scraper.models import Movie
-from scraper.utils import decode_html, unicode_normalize, clean_string, string_to_list
+from scraper.models import Film
+from scraper.utils import decode_html, unicode_normalize, \
+                          clean_string, string_to_list, titlecase
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
 BODY_TEXT_SELECTOR = CSSSelector('article h4 + p', translator='html')
@@ -32,7 +33,7 @@ class HTMLScraper:
 
 
 class FantasticMovieListScraper(HTMLScraper):
-    """Scrapes a movie list page for links to movie pages."""
+    """Scrapes a film list page for links to film pages."""
     def __init__(self, raw_html):
         super(FantasticMovieListScraper, self).__init__(raw_html)
         self.anchor_list = []
@@ -48,11 +49,11 @@ class FantasticMovieListScraper(HTMLScraper):
 
 
 class FantasticMovieScraper(HTMLScraper):
-    """Scrapes movie web pages from http://fantasticfest.com/"""
+    """Scrapes film web pages from http://fantasticfest.com/"""
     def __init__(self, raw_html):
         super(FantasticMovieScraper, self).__init__(raw_html)
-        self.movie = Movie()
-        for attrname in Movie.attributes:
+        self.film = Film()
+        for attrname in Film.attributes:
             attr_iname = '_raw_{}'.format(attrname)
             setattr(self, attr_iname, None)
         self._raw_metadata = None
@@ -75,19 +76,19 @@ class FantasticMovieScraper(HTMLScraper):
         return self.clean()
 
     def _scrape_raw(self):
-        for attrname in self.movie.__dict__:
+        for attrname in self.film.__dict__:
             methodname = 'raw_{}'.format(attrname)
             func = getattr(self, methodname, None)
             if callable(func):
-                setattr(self.movie, attrname, func())
+                setattr(self.film, attrname, func())
 
     def clean(self):
-        for attrname in self.movie.__dict__:
+        for attrname in self.film.__dict__:
             methodname = 'clean_{}'.format(attrname)
             func = getattr(self, methodname, None)
             if callable(func):
-                setattr(self.movie, attrname, func())
-        return self.movie
+                setattr(self.film, attrname, func())
+        return self.film
 
     @property
     def raw_title(self):
@@ -98,7 +99,8 @@ class FantasticMovieScraper(HTMLScraper):
 
     def clean_title(self):
         title = self.raw_title.replace(' | Fantastic Fest', '').title()
-        return self._clean_and_normalize_unicode(title)
+        title = self._clean_and_normalize_unicode(title)
+        return titlecase(title)
 
     @property
     def raw_description(self):

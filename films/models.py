@@ -44,9 +44,9 @@ class Film(models.Model):
     language = TextArrayField(default=default_list)
     year = models.PositiveIntegerField(blank=True, null=True, help_text=_("Release year"))
     runtime = models.IntegerField(blank=True, null=True, help_text=_("Film runtime, in whole minutes"))
-    directors = models.ManyToManyField('Person', related_name='directed', blank=True, null=True,
+    directors = models.ManyToManyField('Person', related_name='directed',
                                        help_text=_("Usually one person, but can accomodate multiple directors"))
-    actors = models.ManyToManyField('Person', related_name='acted_in', blank=True, null=True)
+    actors = models.ManyToManyField('Person', related_name='acted_in')
 
     class Meta:
         verbose_name = _('Film')

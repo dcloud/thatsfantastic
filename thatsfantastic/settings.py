@@ -12,7 +12,7 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as DEFAULT_CONTEXT_PROCESSORS
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -22,8 +22,6 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', None)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv('DEBUG', 'True') == 'True' else False
-
-TEMPLATE_DEBUG = True if os.getenv('TEMPLATE_DEBUG', 'True') == 'True' else DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -39,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'django_countries',
-    'thatsfantastic',
+    'films',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,6 +66,20 @@ DATABASES = {
 }
 
 DATABASES['default'] = dj_database_url.config()
+
+# Templates
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'OPTIONS': {
+            'context_processors': DEFAULT_CONTEXT_PROCESSORS,
+            'debug': True if os.getenv('TEMPLATE_DEBUG', 'True') == 'True' else DEBUG
+        }
+    },
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

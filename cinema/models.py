@@ -73,13 +73,49 @@ class Screening(models.Model):
     film = models.ForeignKey('Film')
     location = models.CharField(blank=True, default='', max_length=120,
                                 help_text=_("Location of film screening"))
+    event = models.ForeignKey('Event')
 
     class Meta:
         verbose_name = _('Screening')
         verbose_name_plural = _('Screenings')
 
     def __unicode__(self):
-        '{title}: {start}-{end}'.format(title=self.film.title, start=self.start_time, end=self.end_time)
+        return '{title}: {start}-{end}'.format(title=self.film.title, start=self.start_time, end=self.end_time)
+
+    def __str__(self):
+        return self.__unicode__()
+
+
+class Event(models.Model):
+    title = models.CharField(max_length=80)
+    slug = models.SlugField(max_length=140, unique=True, null=True, blank=True)
+    start_date = models.DateField(null=True)
+    end_date = models.DateField(null=True)
+    location = models.CharField(blank=True, default='', max_length=50,
+                                help_text=_("Geographic location of event, i.e. Austin, Texas"))
+    films = models.ManyToManyField('Film', related_name='shown_at')
+
+    class Meta:
+        verbose_name = "Event"
+        verbose_name_plural = "Events"
+
+    def save(self, *args, **kwargs):
+        if self.slug is None or self.slug == '':
+            title_str = self.title
+            if len(self.title) > 140:
+                title_str = title_str[:140]
+            self.slug = slugify(title_str)
+        super(Event, self).save(*args, **kwargs)
+
+    def __unicode__(self):
+        subinfo = ''
+        if self.start_date and self.end_date:
+            time_format = '%x'
+            subinfo = '{} - {}'.format(self.start_date.strftime(time_format),
+                                       self.end_date.strftime(time_format))
+        elif self.location:
+            subinfo = '({})'.format(self.location)
+        return '{title}: {subinfo}'.format(title=self.title, subinfo=subinfo)
 
     def __str__(self):
         return self.__unicode__()

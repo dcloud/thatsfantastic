@@ -37,7 +37,8 @@ class Command(BaseCommand):
         self._setup_styles(no_color=options.get('no_color', False))
         self.verbosity = options['verbosity']
         self.url = options.get('url', None)
-        self._stdout_info("Fetching {}".format(self.url))
+        if self.verbosity > 0:
+            self._stdout_info("Fetching {}".format(self.url))
         self.outfile = options.get('outfile', None)
         self.savepath = options.get('savepath', None)
         if self.savepath and not os.path.isdir(self.savepath):
@@ -47,7 +48,7 @@ class Command(BaseCommand):
         response = requests.request('GET', self.url, timeout=options['timeout'])
         if response.ok:
             if self.verbosity > 1:
-                self.stdout.write("Fetched {}".format(self.url))
+                self._stdout_info("Fetched {}".format(self.url))
             movie_scraper = FantasticMovieScraper(response.content)
             obj = movie_scraper.scrape()
             url_slug = urlparse(response.url).path.split('/')[-1]
@@ -64,8 +65,8 @@ class Command(BaseCommand):
         else:
             self.stderr.write("Unable to GET {} [{}]'".format(self.url, response.status_code))
 
-    def _save_json(self, fp, obj):
-        json.dump(obj.data, fp, ensure_ascii=False)
+    def _save_json(self, fp, obj, indent=4):
+        json.dump(obj.data, fp, ensure_ascii=False, sort_keys=True, indent=indent)
 
     def _film_to_json_string(self, obj, indent=4):
-        return json.dumps(obj.data, ensure_ascii=False, indent=indent)
+        return json.dumps(obj.data, ensure_ascii=False, sort_keys=True, indent=indent)

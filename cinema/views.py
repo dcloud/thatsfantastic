@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView
-from films.models import Film
+from cinema.models import Film
 
 
 class FilmDetailView(DetailView):

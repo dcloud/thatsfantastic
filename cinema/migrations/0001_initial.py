@@ -50,7 +50,7 @@ class Migration(migrations.Migration):
                 ('start_time', models.DateTimeField()),
                 ('end_time', models.DateTimeField(null=True, blank=True)),
                 ('location', models.CharField(default='', max_length=120, help_text='Location of film screening', blank=True)),
-                ('film', models.ForeignKey(to='films.Film')),
+                ('film', models.ForeignKey(to='cinema.Film')),
             ],
             options={
                 'verbose_name_plural': 'Screenings',
@@ -60,11 +60,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='film',
             name='actors',
-            field=models.ManyToManyField(to='films.Person', related_name='acted_in'),
+            field=models.ManyToManyField(to='cinema.Person', related_name='acted_in'),
         ),
         migrations.AddField(
             model_name='film',
             name='directors',
-            field=models.ManyToManyField(to='films.Person', related_name='directed', help_text='Usually one person, but can accomodate multiple directors'),
+            field=models.ManyToManyField(to='cinema.Person', related_name='directed', help_text='Usually one person, but can accomodate multiple directors'),
         ),
     ]

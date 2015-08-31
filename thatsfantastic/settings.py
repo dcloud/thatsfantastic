@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'django_countries',
-    'films',
+    'cinema',
 )
 
 MIDDLEWARE_CLASSES = (

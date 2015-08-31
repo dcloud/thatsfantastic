@@ -1,5 +1,5 @@
 from django.contrib import admin
-from films.models import (Film, Person, Screening)
+from cinema.models import (Film, Person, Screening)
 
 
 @admin.register(Film)

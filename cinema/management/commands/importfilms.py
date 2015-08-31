@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from films.models import Film, Person
+from cinema.models import Film, Person
 import os.path
 from os import listdir
 import json

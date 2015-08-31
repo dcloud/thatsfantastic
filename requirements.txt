@@ -7,4 +7,3 @@ gunicorn==19.3.0
 requests
 cchardet
 lxml
-click

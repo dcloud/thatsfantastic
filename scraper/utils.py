@@ -12,7 +12,7 @@ CHAR_REPLACEMENT_MAP = {
 SMALL_WORDS_REG = r'(?<!^)(?<!(\:|\.|\!)\s)(a|an|and|by|for|in|of|the)\b'
 ROMANS_REG = r'\bM{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(\b|\:|\.)'
 APOS_REG = r"[A-Za-z]+('[A-Za-z]+)?"
-CALENDAR_ERA_REG = r'\d{,4}\s?(AD|BC)([^A-Z]|$)'
+CALENDAR_ERA_REG = r'(?<=\d)\s?(A\.?D\.?|B\.?C\.?)([^A-Z]|$)'
 
 
 def deeducate_quotes(string):

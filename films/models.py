@@ -34,8 +34,8 @@ class Person(models.Model):
 class Film(models.Model):
     title = models.CharField(max_length=120)
     slug = models.SlugField(max_length=140, unique=True, null=True, blank=True)
-    summary = models.TextField(blank=True)
-    long_description = models.TextField(blank=True)
+    synopsis = models.TextField(blank=True)
+    description = models.TextField(blank=True)
     countries = ArrayField(models.CharField(choices=COUNTRY_CODES, max_length=2), default=list)
     languages = ArrayField(models.CharField(max_length=30), default=list)
     year = models.PositiveIntegerField(blank=True, null=True, help_text=_("Release year"))

@@ -9,9 +9,13 @@ CHAR_REPLACEMENT_MAP = {
     '\u201D': '\u0022',
 }
 
-SMALL_WORDS_REG = r'(?<!^)(?<!(\:|\.|\!)\s)(a|an|and|by|for|in|of|the)\b'
+# This small words list includes English and other languages
+SMALL_WORDS = ['A', 'AN', 'AND', 'BY', 'DE', 'EL', 'FOR', 'IN', 'OF', 'THE', 'UN', 'VS', 'Y']
+REPLACEMENTS = {
+                    'ABCS': 'ABCs',
+                    'V/H/S': 'V/H/S'
+                }
 ROMANS_REG = r'\bM{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(\b|\:|\.)'
-APOS_REG = r"[A-Za-z]+('[A-Za-z]+)?"
 CALENDAR_ERA_REG = r'(?<=\d)\s?(A\.?D\.?|B\.?C\.?)([^A-Z]|$)'
 
 
@@ -42,15 +46,24 @@ def string_to_list(string):
     return [clean_string(x) for x in string.split(',') if x.strip()]
 
 
-def titlecase(s):
-    s = re.sub(APOS_REG,
-               lambda mo: mo.group(0)[0].upper() +
-               mo.group(0)[1:].lower(),
-               s)
-    s = re.sub(SMALL_WORDS_REG,
-               lambda mo: mo.group().lower(),
-               s, flags=re.I)
-    s = re.sub(r'|'.join([ROMANS_REG, CALENDAR_ERA_REG]),
-               lambda mo: mo.group().upper(),
-               s, flags=re.I)
-    return s
+def titlecase(string, exceptions=SMALL_WORDS, replacements=REPLACEMENTS, fix_oddities=True):
+    parts = re.split(': ', string.upper())
+    if len(parts) > 1:
+        return ': '.join([titlecase(p, exceptions=exceptions, fix_oddities=False) for p in parts])
+    else:
+        words = re.split(' ', parts[0])
+        title_words = [words[0] in replacements and replacements[words[0]] or words[0].capitalize()]
+        for w in words[1:]:
+            if w in replacements:
+                title_words.append(replacements[w])
+            # Handle parentheticals
+            elif w not in exceptions and len(w) > 1 and w[0] == '(':
+                title_words.append(w[0] + w[1:].capitalize())
+            else:
+                title_words.append(w in exceptions and w.lower() or w.capitalize())
+        s = ' '.join(title_words)
+        if fix_oddities:
+            s = re.sub(r'|'.join([ROMANS_REG, CALENDAR_ERA_REG]),
+                       lambda mo: mo.group().upper(),
+                       s, flags=re.I)
+        return s

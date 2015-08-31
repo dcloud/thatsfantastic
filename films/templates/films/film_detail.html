@@ -8,15 +8,15 @@
     </div>
     <section class="row">
         <div class="columns">
-            <h3>Summary</h3>
-            {{ object.summary|linebreaks }}
+            <h3>Synopsis</h3>
+            {{ object.synopsis|linebreaks }}
         </div>
     </section>
-    {% if object.long_description %}
+    {% if object.description %}
     <section class="row">
         <div class="columns">
             <h3>Description</h3>
-            {{ object.long_description|linebreaks }}
+            {{ object.description|linebreaks }}
         </div>
     </section>
     {% endif %}

@@ -1,5 +1,4 @@
 from django.core.management.base import BaseCommand, CommandError
-from django.core.management.color import no_style
 from django.utils.termcolors import make_style
 import argparse
 from urllib.parse import urlparse
@@ -12,10 +11,12 @@ from scraper.scrape import FantasticMovieScraper
 class Command(BaseCommand):
     """scrape a Fantatsic Fest film from a url"""
 
-    def __init__(self, stdout=None, stderr=None, no_color=False):
-        super(Command, self).__init__(stdout=stdout, stderr=stderr, no_color=no_color)
-        self.info_style = make_style(fg='yellow') if self.stdout.isatty() else lambda x: x
-        self.json_style = make_style(fg='blue') if self.stdout.isatty() else lambda x: x
+    def _setup_styles(self, no_color=False):
+        if no_color or not self.stdout.isatty():
+            self.info_style = self.json_style = lambda x: x
+        else:
+            self.info_style = make_style(fg='yellow')
+            self.json_style = make_style(fg='blue')
 
     def _stdout_info(self, string):
         self.stdout.write(self.info_style(string))
@@ -33,6 +34,7 @@ class Command(BaseCommand):
                             help='Provide a path to a directory to save the file to. Exclusive from -o/--outfile.')
 
     def handle(self, *args, **options):
+        self._setup_styles(no_color=options.get('no_color', False))
         self.verbosity = options['verbosity']
         self.url = options.get('url', None)
         self._stdout_info("Fetching {}".format(self.url))

@@ -46,10 +46,10 @@ def string_to_list(string):
     return [clean_string(x) for x in string.split(',') if x.strip()]
 
 
-def titlecase(string, exceptions=SMALL_WORDS, replacements=REPLACEMENTS, fix_oddities=True):
+def titlecase(string, exceptions=SMALL_WORDS, replacements=REPLACEMENTS):
     parts = re.split(': ', string.upper())
     if len(parts) > 1:
-        return ': '.join([titlecase(p, exceptions=exceptions, fix_oddities=False) for p in parts])
+        return ': '.join([titlecase(p, exceptions=exceptions) for p in parts])
     else:
         words = re.split(' ', parts[0])
         title_words = [words[0] in replacements and replacements[words[0]] or words[0].capitalize()]
@@ -62,8 +62,7 @@ def titlecase(string, exceptions=SMALL_WORDS, replacements=REPLACEMENTS, fix_odd
             else:
                 title_words.append(w in exceptions and w.lower() or w.capitalize())
         s = ' '.join(title_words)
-        if fix_oddities:
-            s = re.sub(r'|'.join([ROMANS_REG, CALENDAR_ERA_REG]),
-                       lambda mo: mo.group().upper(),
-                       s, flags=re.I)
+        s = re.sub(r'|'.join([ROMANS_REG, CALENDAR_ERA_REG]),
+                   lambda mo: mo.group().upper(),
+                   s, flags=re.I)
         return s

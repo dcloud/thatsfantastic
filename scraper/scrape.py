@@ -1,7 +1,7 @@
 import lxml.html
 from lxml.cssselect import CSSSelector
 import re
-from scraper.models import Film
+from scraper.models import FilmDict
 from scraper.utils import decode_html, unicode_normalize, \
                           clean_string, string_to_list, titlecase
 
@@ -53,8 +53,8 @@ class FantasticMovieScraper(HTMLScraper):
     """Scrapes film web pages from http://fantasticfest.com/"""
     def __init__(self, raw_html):
         super(FantasticMovieScraper, self).__init__(raw_html)
-        self.film = Film()
-        for attrname in Film.attributes:
+        self.film = FilmDict()
+        for attrname in FilmDict.attributes:
             attr_iname = '_raw_{}'.format(attrname)
             setattr(self, attr_iname, None)
         self._raw_metadata = None
@@ -77,14 +77,14 @@ class FantasticMovieScraper(HTMLScraper):
         return self.clean()
 
     def _scrape_raw(self):
-        for attrname in self.film.__dict__:
+        for attrname in FilmDict.attributes:
             methodname = 'raw_{}'.format(attrname)
             func = getattr(self, methodname, None)
             if callable(func):
                 setattr(self.film, attrname, func())
 
     def clean(self):
-        for attrname in self.film.__dict__:
+        for attrname in FilmDict.attributes:
             methodname = 'clean_{}'.format(attrname)
             func = getattr(self, methodname, None)
             if callable(func):

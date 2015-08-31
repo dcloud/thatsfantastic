@@ -1,16 +1,30 @@
+from collections import UserDict
 
 
-class Film:
-    """docstring for Film"""
+class FilmDict(UserDict):
+    """FilmDict is a dictionary with a default set of keys/attributes.
+       Each key/attribute is initialized to None if a value isn't provided.
+       Values for key/attribute may be set/retrieved using object attribute notation."""
 
     attributes = ('title', 'description', 'synopsis', 'directors',
                   'countries', 'runtime', 'year')
 
-    def __init__(self, **kwargs):
-        super(Film, self).__init__()
-        for attr in Film.attributes:
-            setattr(self, attr, None)
-        self._dictionary = None
+    def __init__(self, initialdata=None, **elements):
+        super(FilmDict, self).__init__(initialdata)
+        for key in FilmDict.attributes:
+            if key not in self:
+                self[key] = None
 
-    def to_dict(self):
-        return {k: self.__dict__[k] for k in Film.attributes}
+    def __getattr__(self, name):
+        if name in self:
+            return self[name]
+        else:
+            raise AttributeError("Film instance has no attribute/key '{}'".format(name))
+
+    def __setattr__(self, name, value):
+        if name in FilmDict.attributes:
+            self[name] = value
+        elif name is 'data':
+            super(FilmDict, self).__setattr__(name, value)
+        else:
+            raise AttributeError("Only keys from FilmDict.attributes may be set using attribute notation.")

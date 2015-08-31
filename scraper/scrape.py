@@ -13,8 +13,9 @@ ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)'
 
 class HTMLScraper:
     """docstring for HTMLScraper"""
-    def __init__(self, raw_html):
+    def __init__(self, raw_html, source_url=None):
         super(HTMLScraper, self).__init__()
+        self.source_url = source_url
         self.raw_html = raw_html
         self._tree = None
 
@@ -34,8 +35,8 @@ class HTMLScraper:
 
 class FantasticMovieListScraper(HTMLScraper):
     """Scrapes a film list page for links to film pages."""
-    def __init__(self, raw_html):
-        super(FantasticMovieListScraper, self).__init__(raw_html)
+    def __init__(self, raw_html, source_url=None):
+        super(FantasticMovieListScraper, self).__init__(raw_html, source_url=source_url)
         self.anchor_list = []
 
     def get_film_page_urls(self):
@@ -51,9 +52,13 @@ class FantasticMovieListScraper(HTMLScraper):
 
 class FantasticMovieScraper(HTMLScraper):
     """Scrapes film web pages from http://fantasticfest.com/"""
-    def __init__(self, raw_html):
-        super(FantasticMovieScraper, self).__init__(raw_html)
+    def __init__(self, raw_html, source_url=None):
+        super(FantasticMovieScraper, self).__init__(raw_html, source_url=source_url)
         self.film = FilmDict()
+        if self.source_url:
+            self.film['meta'] = {
+                'source_url': self.source_url,
+            }
         for attrname in FilmDict.attributes:
             attr_iname = '_raw_{}'.format(attrname)
             setattr(self, attr_iname, None)

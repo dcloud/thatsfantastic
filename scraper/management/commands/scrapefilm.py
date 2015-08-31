@@ -49,7 +49,7 @@ class Command(BaseCommand):
         if response.ok:
             if self.verbosity > 1:
                 self._stdout_info("Fetched {}".format(self.url))
-            movie_scraper = FantasticMovieScraper(response.content)
+            movie_scraper = FantasticMovieScraper(response.content, response.url)
             obj = movie_scraper.scrape()
             url_slug = urlparse(response.url).path.split('/')[-1]
             if self.outfile:

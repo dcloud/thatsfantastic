@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "Philippines"
-    ],
     "runtime": 121,
     "title": "On the Job",
+    "year": 2013,
     "directors": [
         "Erik Matti"
     ],
-    "year": 2013,
-    "synopsis": "Corruption abounds in this stylish, Cannes-selected, ripped-from-the-headlines story of prisoners released on a day pass to work as killers. The cops must bring them in, never knowing how far the corruption spreads and who they can trust.",
-    "description": "Director Erik Matti LIVE in attendance!"
+    "countries": [
+        "Philippines"
+    ],
+    "description": "Director Erik Matti LIVE in attendance!",
+    "synopsis": "Corruption abounds in this stylish, Cannes-selected, ripped-from-the-headlines story of prisoners released on a day pass to work as killers. The cops must bring them in, never knowing how far the corruption spreads and who they can trust."
 }

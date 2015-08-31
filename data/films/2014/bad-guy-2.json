@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "United States"
-    ],
-    "synopsis": "This outrageously gory Austin-based crime comedy follows a struggling hitman whose upward mobility lands him at the dreaded position of Bad Guy #2\u2013a prominent but ultimately expendable character in the bad guy pantheon\u2013leaving him no choice but to up his game or die violently at the hands of his emotionally erratic boss. Full of over-the-top practical FX and dazzling comedic performances.",
-    "description": "Chris McInroy (Director), Berndt Mader (Producer)",
     "directors": [
         "Chris McInroy"
     ],
     "year": 2014,
-    "title": "BAD Guy #2",
-    "runtime": 10
+    "synopsis": "This outrageously gory Austin-based crime comedy follows a struggling hitman whose upward mobility lands him at the dreaded position of Bad Guy #2\u2013a prominent but ultimately expendable character in the bad guy pantheon\u2013leaving him no choice but to up his game or die violently at the hands of his emotionally erratic boss. Full of over-the-top practical FX and dazzling comedic performances.",
+    "title": "Bad Guy #2",
+    "countries": [
+        "United States"
+    ],
+    "runtime": 10,
+    "description": "Chris McInroy (Director), Berndt Mader (Producer)"
 }

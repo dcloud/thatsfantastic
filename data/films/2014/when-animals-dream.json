@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "Denmark"
-    ],
-    "synopsis": "In an isolated Danish fishing town, 16-year-old Marie hides a terrifying secret and deadly consequences for the unwary in this unique coming-of-age story from director Jonas Alexander Arnby.",
-    "description": "In an isolated town on the west coast of Denmark lives 16-year-old Marie, with her almost-catatonic mother and her nervous, caring father. At first glance, Marie's life is familiar: growing pains, a new job, and a fledgling romance all point to the world of a typical teenager. However, under the surface lies a secret so dark that it threatens to upset the existence of her family and the entire town.",
     "directors": [
         "Jonas Alexander Arnby"
     ],
     "year": 2015,
+    "synopsis": "In an isolated Danish fishing town, 16-year-old Marie hides a terrifying secret and deadly consequences for the unwary in this unique coming-of-age story from director Jonas Alexander Arnby.",
     "title": "When Animals Dream",
-    "runtime": 81
+    "countries": [
+        "Denmark"
+    ],
+    "runtime": 81,
+    "description": "In an isolated town on the west coast of Denmark lives 16-year-old Marie, with her almost-catatonic mother and her nervous, caring father. At first glance, Marie's life is familiar: growing pains, a new job, and a fledgling romance all point to the world of a typical teenager. However, under the surface lies a secret so dark that it threatens to upset the existence of her family and the entire town."
 }

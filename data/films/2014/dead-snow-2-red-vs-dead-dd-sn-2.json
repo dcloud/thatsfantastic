@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Tommy Wirkola"
+    ],
     "year": 2014,
+    "synopsis": "Lone survivor Martin must enlist help from America to battle Colonel Herzog and his horde in this wild sequel to the original Norwegian Nazi zombie film.",
     "title": "Dead Snow 2: Red Vs Dead (D\u00f8D Sn\u00f8 2)",
     "countries": [
         "Iceland"
     ],
-    "description": "Picking up right where the first film left off, Martin narrowly escapes Colonel Herzog and his horde of Nazi zombies, losing his arm in the process. But Martin's troubles are just beginning. When he wakes up in the hospital, the police believe that he was the one who killed everyone at the cabin. Not only that, but the doctors have accidentally reattached the wrong limb, giving him Herzog's arm instead of his own. Martin goes on the run with both the police and the Nazis after him, while Herzog's arm tries to kill everyone he meets.",
-    "directors": [
-        "Tommy Wirkola"
-    ],
-    "synopsis": "Lone survivor Martin must enlist help from America to battle Colonel Herzog and his horde in this wild sequel to the original Norwegian Nazi zombie film.",
-    "runtime": 100
+    "runtime": 100,
+    "description": "Picking up right where the first film left off, Martin narrowly escapes Colonel Herzog and his horde of Nazi zombies, losing his arm in the process. But Martin's troubles are just beginning. When he wakes up in the hospital, the police believe that he was the one who killed everyone at the cabin. Not only that, but the doctors have accidentally reattached the wrong limb, giving him Herzog's arm instead of his own. Martin goes on the run with both the police and the Nazis after him, while Herzog's arm tries to kill everyone he meets."
 }

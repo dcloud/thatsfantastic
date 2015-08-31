@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Alain Fournier"
+    ],
     "year": 2014,
+    "synopsis": "We return to the whipping waves of the sea for our program's closing film, a lighthouse terror tale performed by marionettes and infused with that wistful melancholia that only the Old Ones and ancient mariners understand.",
     "title": "Broken Face (Sale Gueule)",
     "countries": [
         "Canada"
     ],
-    "description": "",
-    "directors": [
-        "Alain Fournier"
-    ],
-    "synopsis": "We return to the whipping waves of the sea for our program's closing film, a lighthouse terror tale performed by marionettes and infused with that wistful melancholia that only the Old Ones and ancient mariners understand.",
-    "runtime": 17
+    "runtime": 17,
+    "description": ""
 }

@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "United States"
-    ],
-    "synopsis": "",
-    "description": "Presented by the American Genre Film Archive.",
     "directors": [
         "Craig Denney"
     ],
     "year": 1975,
+    "synopsis": "",
     "title": "The Astrologer",
-    "runtime": 96
+    "countries": [
+        "United States"
+    ],
+    "runtime": 96,
+    "description": "Presented by the American Genre Film Archive."
 }

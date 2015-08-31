@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "David Robert Mitchell"
+    ],
     "year": 2015,
+    "synopsis": "After an innocent sexual encounter with her boyfriend, a teenager is stalked by an increasingly evil force in the year's smartest and scariest horror film.",
     "title": "It Follows",
     "countries": [
         "United States"
     ],
-    "description": "The less you know about IT FOLLOWS, the better. You should know its borrows from the best\u2014Spielberg's JAWS, Carpenter's HALLOWEEN, Nakata's RINGU, Cronenberg's THEY CAME FROM WITHIN\u2014but like all good lendees, it takes what it borrows and builds something entirely new.",
-    "directors": [
-        "David Robert Mitchell"
-    ],
-    "synopsis": "After an innocent sexual encounter with her boyfriend, a teenager is stalked by an increasingly evil force in the year's smartest and scariest horror film.",
-    "runtime": 107
+    "runtime": 107,
+    "description": "The less you know about IT FOLLOWS, the better. You should know its borrows from the best\u2014Spielberg's JAWS, Carpenter's HALLOWEEN, Nakata's RINGU, Cronenberg's THEY CAME FROM WITHIN\u2014but like all good lendees, it takes what it borrows and builds something entirely new."
 }

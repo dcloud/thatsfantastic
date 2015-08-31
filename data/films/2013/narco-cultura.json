@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "United States"
-    ],
     "runtime": 103,
     "title": "Narco Cultura",
+    "year": 2013,
     "directors": [
         "Shaul Schwarz"
     ],
-    "year": 2013,
-    "synopsis": "NARCO CULTURA is a graphically disturbing documentary that examines the parallels between the Mexican drug war and the increasingly popular musical style of narcocorridos (drug ballads).",
-    "description": "Director Shaul Schwarz LIVE in attendance!"
+    "countries": [
+        "United States"
+    ],
+    "description": "Director Shaul Schwarz LIVE in attendance!",
+    "synopsis": "NARCO CULTURA is a graphically disturbing documentary that examines the parallels between the Mexican drug war and the increasingly popular musical style of narcocorridos (drug ballads)."
 }

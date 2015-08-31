@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Lars Von Trier"
+    ],
     "year": 2014,
+    "synopsis": "Fantastic Fest proudly presents the complete, uncut version of Lars von Trier's epic and highly controversial film.",
     "title": "Nymphomaniac: Extended Directors Cut",
     "countries": [
         "United Kingdom"
     ],
-    "description": "It's a cold snowy night. Seligman (Stellan Skarsg\u00e5rd) leaves his home to buy some groceries. On his way home, he comes across a woman named Joe (Charlotte Gainsbourg), lying bloody and beaten in an alley. Joe initially resists his offer of aid, but she soon relents. Once the pair retreat to Seligman's home, a conversation ensues. He's understandably curious about Joe and how she ended up in the alley. Thus begins a bizarre multi-hour conversation in which Joe reveals her life-long pursuit of sexual satisfaction and personal destruction.",
-    "directors": [
-        "Lars Von Trier"
-    ],
-    "synopsis": "Fantastic Fest proudly presents the complete, uncut version of Lars von Trier's epic and highly controversial film.",
-    "runtime": 324
+    "runtime": 324,
+    "description": "It's a cold snowy night. Seligman (Stellan Skarsg\u00e5rd) leaves his home to buy some groceries. On his way home, he comes across a woman named Joe (Charlotte Gainsbourg), lying bloody and beaten in an alley. Joe initially resists his offer of aid, but she soon relents. Once the pair retreat to Seligman's home, a conversation ensues. He's understandably curious about Joe and how she ended up in the alley. Thus begins a bizarre multi-hour conversation in which Joe reveals her life-long pursuit of sexual satisfaction and personal destruction."
 }

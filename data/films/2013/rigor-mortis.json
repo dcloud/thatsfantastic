@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "Hong Kong"
-    ],
     "runtime": 105,
     "title": "Rigor Mortis",
+    "year": 2013,
     "directors": [
         "Juno Mak"
     ],
-    "year": 2013,
-    "synopsis": "A former movie star gets a battle he didn't bargain for when he moves into a haunted public housing tenement inhabited by various degrees of the undead.",
-    "description": "Director Juno Mak LIVE in attendance!"
+    "countries": [
+        "Hong Kong"
+    ],
+    "description": "Director Juno Mak LIVE in attendance!",
+    "synopsis": "A former movie star gets a battle he didn't bargain for when he moves into a haunted public housing tenement inhabited by various degrees of the undead."
 }

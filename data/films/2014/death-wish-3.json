@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Michael Winner"
+    ],
     "year": 1985,
+    "synopsis": "",
     "title": "Death Wish 3",
     "countries": [
         "United States"
     ],
-    "description": "Screening in a beautiful 35mm print in conjunction with CANNON FILMS / ELECTRIC BOOGALOO.",
-    "directors": [
-        "Michael Winner"
-    ],
-    "synopsis": "",
-    "runtime": 92
+    "runtime": 92,
+    "description": "Screening in a beautiful 35mm print in conjunction with CANNON FILMS / ELECTRIC BOOGALOO."
 }

@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Isaac Ezban"
+    ],
     "year": 2014,
+    "synopsis": "Two parallel stories about characters trapped in illogical endless spaces: two brothers and a detective locked on an infinite staircase, and a family locked on an infinite road - for a very long time.",
     "title": "The Incident (El Incidente)",
     "countries": [
         "Mexico"
     ],
-    "description": "A pair of brothers are confronted by a policeman in their apartment. A violent struggle ensues. The fight continues into a stairwell. When they attempt to exit, they find that the staircase has turned into an infinitely repeating corridor from which they cannot escape. During the same time frame, a family leaves home for a vacation. They travel down a familiar road towards their destination. As time passes, the stretch of road and the surrounding desert begin to repeat. Like their counterparts in the stairwell, they are also stuck in a loop.",
-    "directors": [
-        "Isaac Ezban"
-    ],
-    "synopsis": "Two parallel stories about characters trapped in illogical endless spaces: two brothers and a detective locked on an infinite staircase, and a family locked on an infinite road - for a very long time.",
-    "runtime": 100
+    "runtime": 100,
+    "description": "A pair of brothers are confronted by a policeman in their apartment. A violent struggle ensues. The fight continues into a stairwell. When they attempt to exit, they find that the staircase has turned into an infinitely repeating corridor from which they cannot escape. During the same time frame, a family leaves home for a vacation. They travel down a familiar road towards their destination. As time passes, the stretch of road and the surrounding desert begin to repeat. Like their counterparts in the stairwell, they are also stuck in a loop."
 }

@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Heidi Lee Douglas"
+    ],
     "year": 2014,
+    "synopsis": "Winner of the Stranger with My Face Horror Film Festival's annual scriptwriting contest, writer/director/producer Heidi Lee Douglas' gothic period piece is set in the wilds of 19th century Van Diemen's Land, where the inhabitants of a brutal women's prison are occasionally plucked from the system by a mysterious benefactor who allegedly engages them as servants. Anxious to get out of jail, a feisty young prisoner volunteers herself as his next employee, not realizing that her new master has a dark secret.",
     "title": "Little Lamb",
     "countries": [
         "Australia"
     ],
-    "description": "Heidi Douglas (Director)",
-    "directors": [
-        "Heidi Lee Douglas"
-    ],
-    "synopsis": "Winner of the Stranger with My Face Horror Film Festival's annual scriptwriting contest, writer/director/producer Heidi Lee Douglas' gothic period piece is set in the wilds of 19th century Van Diemen's Land, where the inhabitants of a brutal women's prison are occasionally plucked from the system by a mysterious benefactor who allegedly engages them as servants. Anxious to get out of jail, a feisty young prisoner volunteers herself as his next employee, not realizing that her new master has a dark secret.",
-    "runtime": 22
+    "runtime": 22,
+    "description": "Heidi Douglas (Director)"
 }

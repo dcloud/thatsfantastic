@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Davide Di Saro"
+    ],
     "year": 2014,
+    "synopsis": "Video and sound artist Davide Di Saro's incredibly ambitious animated music video for Toronto band Ronley Teper and the Lipliners has a roster of weirdo characters and infernal landscapes to rival a 1930s Fleischer Brothers cartoon.",
     "title": "Lucky and Finnegan",
     "countries": [
         "Canada"
     ],
-    "description": "",
-    "directors": [
-        "Davide Di Saro"
-    ],
-    "synopsis": "Video and sound artist Davide Di Saro's incredibly ambitious animated music video for Toronto band Ronley Teper and the Lipliners has a roster of weirdo characters and infernal landscapes to rival a 1930s Fleischer Brothers cartoon.",
-    "runtime": 9
+    "runtime": 9,
+    "description": ""
 }

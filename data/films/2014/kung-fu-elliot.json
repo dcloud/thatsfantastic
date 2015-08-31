@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Jaret Belliveau"
+    ],
     "year": 2014,
+    "synopsis": "A hilarious and disturbing documentary about a man's quest to become an international action star.",
     "title": "Kung Fu Elliot",
     "countries": [
         "Canada"
     ],
-    "description": "Elliot \"White Lightning\" Scott is a man of many talents. This Nova Scotia native is a martial artist, a director, a special effects technician and Sinophile. Known throughout the region for films such as BLOOD FIGHT and THEY KILLED MY CAT, Elliot's ultimate goal is to become Canada's \"first action star.\" He spends all of his time\u2014and all of his girlfriend Linda's money\u2014in an attempt to make this dream come true. However, Elliot is not the person that he seems to be.",
-    "directors": [
-        "Jaret Belliveau"
-    ],
-    "synopsis": "A hilarious and disturbing documentary about a man's quest to become an international action star.",
-    "runtime": 88
+    "runtime": 88,
+    "description": "Elliot \"White Lightning\" Scott is a man of many talents. This Nova Scotia native is a martial artist, a director, a special effects technician and Sinophile. Known throughout the region for films such as BLOOD FIGHT and THEY KILLED MY CAT, Elliot's ultimate goal is to become Canada's \"first action star.\" He spends all of his time\u2014and all of his girlfriend Linda's money\u2014in an attempt to make this dream come true. However, Elliot is not the person that he seems to be."
 }

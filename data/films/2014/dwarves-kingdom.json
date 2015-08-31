@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Matthew Salton"
+    ],
     "year": 2014,
+    "synopsis": "Some have called The Kingdom of Little People the most offensive theme park in the world. DWARVES KINGDOM takes us inside to meet its performer residents.",
     "title": "Dwarves Kingdom",
     "countries": [
         "United States"
     ],
-    "description": "A quick Google search will reveal several websites calling The Kingdom of Little People one of the world's \"most offensive\" theme parks. The park, located in China, is home to over a hundred performers, all of whom have dwarfism and put on elaborate shows for snapshot-happy tourists. Director Matthew Salton takes his cameras to China to meet with the people living here, as well as with the park's creator and manager, to get a real feel about how those that actually rely on the park for their livelihood feel about the potentially exploitative attraction.",
-    "directors": [
-        "Matthew Salton"
-    ],
-    "synopsis": "Some have called The Kingdom of Little People the most offensive theme park in the world. DWARVES KINGDOM takes us inside to meet its performer residents.",
-    "runtime": 80
+    "runtime": 80,
+    "description": "A quick Google search will reveal several websites calling The Kingdom of Little People one of the world's \"most offensive\" theme parks. The park, located in China, is home to over a hundred performers, all of whom have dwarfism and put on elaborate shows for snapshot-happy tourists. Director Matthew Salton takes his cameras to China to meet with the people living here, as well as with the park's creator and manager, to get a real feel about how those that actually rely on the park for their livelihood feel about the potentially exploitative attraction."
 }

@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Victoria Cocks"
+    ],
     "year": 2014,
+    "synopsis": "The Apocalypse has come and gone; its survivors forming small communities for protection. Banished to the vast Wasteland, Isaac - a giant humanoid panda - sets out to find a young girl and reinstate his family into the Tribe of Legion.",
     "title": "Wastelander Panda: Exile",
     "countries": [
         "Australia"
     ],
-    "description": "The Apocalypse has come and gone; its survivors forming small communities for protection. Banished to the vast Wasteland, Isaac - a giant humanoid panda - sets out to find a young girl and reinstate his family into the Tribe of Legion.",
-    "directors": [
-        "Victoria Cocks"
-    ],
-    "synopsis": "The Apocalypse has come and gone; its survivors forming small communities for protection. Banished to the vast Wasteland, Isaac - a giant humanoid panda - sets out to find a young girl and reinstate his family into the Tribe of Legion.",
-    "runtime": 60
+    "runtime": 60,
+    "description": "The Apocalypse has come and gone; its survivors forming small communities for protection. Banished to the vast Wasteland, Isaac - a giant humanoid panda - sets out to find a young girl and reinstate his family into the Tribe of Legion."
 }

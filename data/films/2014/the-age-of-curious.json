@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "United Kingdom"
-    ],
-    "synopsis": "Luca Toth's Royal College of Art graduation film is a tactile, subversively sensual coming of age film that explores the rituals of puberty and the mysteries that lay beneath manes of flowing hair.",
-    "description": "",
     "directors": [
         "Luca Toth"
     ],
     "year": 2013,
+    "synopsis": "Luca Toth's Royal College of Art graduation film is a tactile, subversively sensual coming of age film that explores the rituals of puberty and the mysteries that lay beneath manes of flowing hair.",
     "title": "The Age of Curious",
-    "runtime": 9
+    "countries": [
+        "United Kingdom"
+    ],
+    "runtime": 9,
+    "description": ""
 }

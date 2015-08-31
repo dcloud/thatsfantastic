@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "Norway"
-    ],
-    "synopsis": "Fantastic Fest is proud to unleash the latest short from Fredrik Hana, who won last year's Short Fuse competition with his film ANGST, PISS AND DRID. This time around, Hana fashions a Lovecraftian tale of a reclusive fisherman in service to an entity that inhabits the rolling mists of the sea.",
-    "description": "Fredrik S. Hana (Director/Writer), Christer B. Runde (Director of Photography), Jan Erik Hagevold (Sound), Karl Andre Bru (Chief Lighting Technician)",
     "directors": [
         "Fredrik Hana"
     ],
     "year": 2014,
+    "synopsis": "Fantastic Fest is proud to unleash the latest short from Fredrik Hana, who won last year's Short Fuse competition with his film ANGST, PISS AND DRID. This time around, Hana fashions a Lovecraftian tale of a reclusive fisherman in service to an entity that inhabits the rolling mists of the sea.",
     "title": "Autumn Harvest",
-    "runtime": 17
+    "countries": [
+        "Norway"
+    ],
+    "runtime": 17,
+    "description": "Fredrik S. Hana (Director/Writer), Christer B. Runde (Director of Photography), Jan Erik Hagevold (Sound), Karl Andre Bru (Chief Lighting Technician)"
 }

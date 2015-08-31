@@ -1,13 +1,13 @@
 {
-    "countries": [
-        "France"
-    ],
     "runtime": 125,
     "title": "Mood Indigo",
+    "year": 2013,
     "directors": [
         "Michel Gondry"
     ],
-    "year": 2013,
-    "synopsis": "Michel Gondry returns with his most visually inventive film to date, a darkly whimsical love story adapted from the novel by Boris Vian.",
-    "description": "Colin (Romain Duris) appears to have everything. He's young, clever and healthy. He has great friends, an incredibly peculiar home and a musical instrument that mixes drinks based on the music played on it. What more could he need? Well, love, for one thing, which ultimately leads Colin to Chloe (AMELIE's Audrey Tatou). Before you know it, the pair are not only in love, but married, and life appears to be perfect... until Chloe falls ill with a mysterious flower growing in her lung."
+    "countries": [
+        "France"
+    ],
+    "description": "Colin (Romain Duris) appears to have everything. He's young, clever and healthy. He has great friends, an incredibly peculiar home and a musical instrument that mixes drinks based on the music played on it. What more could he need? Well, love, for one thing, which ultimately leads Colin to Chloe (AMELIE's Audrey Tatou). Before you know it, the pair are not only in love, but married, and life appears to be perfect... until Chloe falls ill with a mysterious flower growing in her lung.",
+    "synopsis": "Michel Gondry returns with his most visually inventive film to date, a darkly whimsical love story adapted from the novel by Boris Vian."
 }

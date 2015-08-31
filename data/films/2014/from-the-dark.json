@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Conor McMahon"
+    ],
     "year": 2015,
+    "synopsis": "Mark and Sarah are trapped, darkness is falling and the creature outside only attacks by night in this fast-paced Irish horror.",
     "title": "From the Dark",
     "countries": [
         "Ireland"
     ],
-    "description": "Mark and Sarah are travelling into the Irish countryside on holiday. When Mark's overconfident navigation turns them down a muddy road, they become stranded. Inside the closest house, Mark finds a disoriented farmer alone in the darkness and promises to get help. Bringing Sarah back with him, Mark unknowingly traps them once again.",
-    "directors": [
-        "Conor McMahon"
-    ],
-    "synopsis": "Mark and Sarah are trapped, darkness is falling and the creature outside only attacks by night in this fast-paced Irish horror.",
-    "runtime": 90
+    "runtime": 90,
+    "description": "Mark and Sarah are travelling into the Irish countryside on holiday. When Mark's overconfident navigation turns them down a muddy road, they become stranded. Inside the closest house, Mark finds a disoriented farmer alone in the darkness and promises to get help. Bringing Sarah back with him, Mark unknowingly traps them once again."
 }

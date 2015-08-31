@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Mat\u00fa\u0161 Viz\u00e1r"
+    ],
     "year": 2013,
+    "synopsis": "This apocalyptic short about the evolution of the Panda Bear from prehistory to the dystopian future is oozing with the psychedelic vitality of the \"lowbrow\" underground art style associated with Robert Williams and Gilbert Shelton.",
     "title": "Pandas (Pandy)",
     "countries": [
         "Czech Republic"
     ],
-    "description": "The Apocalypse has come and gone; its survivors forming small communities for protection. Banished to the vast Wasteland, Isaac - a giant humanoid panda - sets out to find a young girl and reinstate his family into the Tribe of Legion.",
-    "directors": [
-        "Mat\u00fa\u0161 Viz\u00e1r"
-    ],
-    "synopsis": "This apocalyptic short about the evolution of the Panda Bear from prehistory to the dystopian future is oozing with the psychedelic vitality of the \"lowbrow\" underground art style associated with Robert Williams and Gilbert Shelton.",
-    "runtime": 11
+    "runtime": 11,
+    "description": "The Apocalypse has come and gone; its survivors forming small communities for protection. Banished to the vast Wasteland, Isaac - a giant humanoid panda - sets out to find a young girl and reinstate his family into the Tribe of Legion."
 }

@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Pascal Chind"
+    ],
     "year": 2014,
+    "synopsis": "A sordid, politically incorrect twist on Carlo Collodi's classic 19th century children's story, where our \"Gepetto\" is a portly pedophile and his wooden boy is in fact a disguised junkie dwarf out to find the pervert's hidden stash of cash. So wrong in every way.",
     "title": "Extreme Pinocchio",
     "countries": [
         "France"
     ],
-    "description": "Anna Brooke (Producer), Olivier Lamy (Producer)",
-    "directors": [
-        "Pascal Chind"
-    ],
-    "synopsis": "A sordid, politically incorrect twist on Carlo Collodi's classic 19th century children's story, where our \"Gepetto\" is a portly pedophile and his wooden boy is in fact a disguised junkie dwarf out to find the pervert's hidden stash of cash. So wrong in every way.",
-    "runtime": 23
+    "runtime": 23,
+    "description": "Anna Brooke (Producer), Olivier Lamy (Producer)"
 }

@@ -41,6 +41,7 @@ class FantasticMovieListScraper(HTMLScraper):
     def get_film_page_urls(self):
         anchor_els = ANCHOR_SELECTOR(self.tree)
         self.anchor_list = list(a.attrib.get('href', None) for a in anchor_els)
+        self.anchor_list = filter(lambda x: 'secret-screening' not in x, self.anchor_list)
         return self.anchor_list
 
     def scrape(self):

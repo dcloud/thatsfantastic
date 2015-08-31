@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Sol Friedman"
+    ],
     "year": 2014,
+    "synopsis": "Last year's Fantastic Shorts winner Sol Friedman (BEASTS IN THE REAL WORLD) returns with a new animated film about what really happened on Noah's Ark\u2026 and it ain't pretty. You could say it's a clusterfuck of biblical proportions.",
     "title": "Day 40",
     "countries": [
         "Canada"
     ],
-    "description": "Sol Friedman (Director), Sarah Clifford-Rashotte (Producer)",
-    "directors": [
-        "Sol Friedman"
-    ],
-    "synopsis": "Last year's Fantastic Shorts winner Sol Friedman (BEASTS IN THE REAL WORLD) returns with a new animated film about what really happened on Noah's Ark\u2026 and it ain't pretty. You could say it's a clusterfuck of biblical proportions.",
-    "runtime": 6
+    "runtime": 6,
+    "description": "Sol Friedman (Director), Sarah Clifford-Rashotte (Producer)"
 }

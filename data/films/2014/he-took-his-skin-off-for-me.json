@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Ben Aston"
+    ],
     "year": 2014,
+    "synopsis": "An exquisite short from relative newcomer Ben Aston, about a man who removes his skin at his girlfriend's whim, only to realize that it wasn't the best idea. A poignant, yet guignol-esque analogy for what many go through as their relationships decline.",
     "title": "He Took His Skin Off for Me",
     "countries": [
         "United Kingdom"
     ],
-    "description": "Ben Aston (Director)",
-    "directors": [
-        "Ben Aston"
-    ],
-    "synopsis": "An exquisite short from relative newcomer Ben Aston, about a man who removes his skin at his girlfriend's whim, only to realize that it wasn't the best idea. A poignant, yet guignol-esque analogy for what many go through as their relationships decline.",
-    "runtime": 11
+    "runtime": 11,
+    "description": "Ben Aston (Director)"
 }

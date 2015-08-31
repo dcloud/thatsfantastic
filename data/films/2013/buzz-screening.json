@@ -1,11 +1,11 @@
 {
-    "countries": [],
     "runtime": 120,
     "title": "Buzz Screening",
+    "year": 2013,
     "directors": [
         "Secret"
     ],
-    "year": 2013,
-    "synopsis": "TBD screenings of popular films at the fest.",
-    "description": "Buzz Screenings will be added to the schedule throughout the fest to meet the demand for popular films. Films will be confirmed in these slots the day before their scheduled screenings."
+    "countries": [],
+    "description": "Buzz Screenings will be added to the schedule throughout the fest to meet the demand for popular films. Films will be confirmed in these slots the day before their scheduled screenings.",
+    "synopsis": "TBD screenings of popular films at the fest."
 }

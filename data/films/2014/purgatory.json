@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Pau Teixidor"
+    ],
     "year": 2014,
+    "synopsis": "A\u00a0 woman must survive the night after she welcomes a neighbor's child into her home.",
     "title": "Purgatory",
     "countries": [
         "Spain"
     ],
-    "description": "Marta (Oona Chaplin) and Luis (Andres Gertrudix) move into a new apartment after the death of their child. Luis is called away on business, thus leaving Marta to spend the night in the apartment alone. Marta's evening is interrupted when a neighbor knocks on her door. The neighbor's husband has been in an accident. She wants to leave her young son Daniel (Sergi M\u00e9ndez). Marta accepts the boy into her home, and quickly finds out that something is very wrong with the child.",
-    "directors": [
-        "Pau Teixidor"
-    ],
-    "synopsis": "A\u00a0 woman must survive the night after she welcomes a neighbor's child into her home.",
-    "runtime": 83
+    "runtime": 83,
+    "description": "Marta (Oona Chaplin) and Luis (Andres Gertrudix) move into a new apartment after the death of their child. Luis is called away on business, thus leaving Marta to spend the night in the apartment alone. Marta's evening is interrupted when a neighbor knocks on her door. The neighbor's husband has been in an accident. She wants to leave her young son Daniel (Sergi M\u00e9ndez). Marta accepts the boy into her home, and quickly finds out that something is very wrong with the child."
 }

@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Fraser Munden"
+    ],
     "year": 2014,
+    "synopsis": "This funky animated/stop-motion/documentary hybrid utilizes over 10,000 crayon drawings to recount the true story of a heroic 1970s high school teacher who takes on an army of bikers single-handedly when they crash the school dance.",
     "title": "The Chaperone",
     "countries": [
         "Canada"
     ],
-    "description": "Fraser Munden (Director), Michael Glasz (Producer)",
-    "directors": [
-        "Fraser Munden"
-    ],
-    "synopsis": "This funky animated/stop-motion/documentary hybrid utilizes over 10,000 crayon drawings to recount the true story of a heroic 1970s high school teacher who takes on an army of bikers single-handedly when they crash the school dance.",
-    "runtime": 13
+    "runtime": 13,
+    "description": "Fraser Munden (Director), Michael Glasz (Producer)"
 }

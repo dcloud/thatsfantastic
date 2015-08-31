@@ -1,10 +1,4 @@
 {
-    "year": 2014,
-    "title": "V/H/S Viral",
-    "countries": [
-        "Spain"
-    ],
-    "description": "Everyone loves a good horror anthology and the V/H/S series continues to feed that hunger. The latest installment expands the universe and continues a streak of terror, violence and a wicked sense of humor set forth by the previous films. VHS VIRAL brings together Fantastic Fest alumni Nacho Vigalando (TIMECRIMES) and Marcel Sarmiento (DEADGIRL) along with hot genre directors Gregg Bishop (DANCE OF THE DEAD) and Justin Benson and Aaron Moorhead (RESOLUTION). With titles like \"Bonestorm\", \"Dante the Great\" and \"Parallel Monsters\", there is something here for every kind of horror fan.",
     "directors": [
         "Marcel Sarmiento",
         "Nacho Vigalondo",
@@ -12,6 +6,12 @@
         "Aaron Moorhead",
         "Gregg Bishop"
     ],
+    "year": 2014,
     "synopsis": "Fantastic Fest alumni Nacho Vigalondo & Marcel Sarmiento join several other genre filmmaking greats in this 3rd installment of the twisted found footage horror anthology franchise.",
-    "runtime": 98
+    "title": "V/H/S Viral",
+    "countries": [
+        "Spain"
+    ],
+    "runtime": 98,
+    "description": "Everyone loves a good horror anthology and the V/H/S series continues to feed that hunger. The latest installment expands the universe and continues a streak of terror, violence and a wicked sense of humor set forth by the previous films. VHS VIRAL brings together Fantastic Fest alumni Nacho Vigalando (TIMECRIMES) and Marcel Sarmiento (DEADGIRL) along with hot genre directors Gregg Bishop (DANCE OF THE DEAD) and Justin Benson and Aaron Moorhead (RESOLUTION). With titles like \"Bonestorm\", \"Dante the Great\" and \"Parallel Monsters\", there is something here for every kind of horror fan."
 }

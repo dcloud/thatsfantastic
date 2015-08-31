@@ -1,13 +1,13 @@
 {
+    "directors": [
+        "Ryan Coonan"
+    ],
     "year": 2014,
+    "synopsis": "Move over, Skippy! There's a new 'roo in town and he's undead and pissed off. An environmental worker sent to investigate a report of dodgy water in rural Australia has his hands full when the local wildlife turns deadly.",
     "title": "Waterborne",
     "countries": [
         "Australia"
     ],
-    "description": "Ryan Coonan (Director), Marisa Brown (Producer), Chris Tomkins (Editor)",
-    "directors": [
-        "Ryan Coonan"
-    ],
-    "synopsis": "Move over, Skippy! There's a new 'roo in town and he's undead and pissed off. An environmental worker sent to investigate a report of dodgy water in rural Australia has his hands full when the local wildlife turns deadly.",
-    "runtime": 9
+    "runtime": 9,
+    "description": "Ryan Coonan (Director), Marisa Brown (Producer), Chris Tomkins (Editor)"
 }

@@ -1,13 +1,16 @@
 {
-    "synopsis": "Mort, a lonely and disillusioned owner of a comic book shop, has fallen for his new employee Ellen, a smart, aspiring graphic novelist. But a dark past and a missing girl will complicate their story more than anyone can imagine.",
+    "countries": [
+        "United States"
+    ],
     "description": "Mort lives a lonely and disillusioned life. In debt, single and unable to make ends meet, he relies on his brother and mother for loans, still drives his dad's old car and spends most evenings listening to self-affirmation tapes that he personally recorded. However, there's one ray of hope within his life: the new employee he's hired for his comic book shop. Ellen is everything Mort is not, a smart, aspiring graphic novelist with an acerbic wit. However, Ellen also has her own share of secrets, and the return of Mort's bullying high school friend will be the catalyst for events that will change everyone's lives forever.\n\nTHE MISSING GIRL is the new effort from genre director A.D. Calvo, who, for the first time, expands his efforts into something very, very different: the story of everyday people. It's a smart character study, a black comedy with a genuine heart.\n\nBlessed with brilliant lead performances from Robert Longstreet and Alexia Rasmussen, the film is a beautiful, low-key exploration of the consequences of our actions, our connection to others and our obsession with the past. Shot with a subtle and melancholy color palette, THE MISSING GIRL also uses chapter headings and split panels to create an ever-expanding sense of being an independent comic book. All the way from the first frame to the end credit sequence, the film's look successfully combines storytelling and comic book imagery.\n\nWithout ever resorting to grand statements, THE MISSING GIRL slowly, quietly explores its relatable characters' lives with intense kindness and understanding, leading all the way to satisfying conclusions, both emotional and narrative. It's a low-key wonder of a film which will remain in your thoughts long after the lights come up. (Evrim Ersoy)",
     "directors": [
         "A.D.Calvo"
     ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-missing-girl"
+    },
     "runtime": 89,
-    "year": 2015,
-    "countries": [
-        "United States"
-    ],
-    "title": "The Missing Girl"
+    "synopsis": "Mort, a lonely and disillusioned owner of a comic book shop, has fallen for his new employee Ellen, a smart, aspiring graphic novelist. But a dark past and a missing girl will complicate their story more than anyone can imagine.",
+    "title": "The Missing Girl",
+    "year": 2015
 }

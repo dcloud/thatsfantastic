@@ -1,13 +1,16 @@
 {
-    "runtime": 100,
-    "title": "Ragnarok",
-    "year": 2013,
-    "directors": [
-        "Mikkel Sandemose"
-    ],
     "countries": [
         "Norway"
     ],
-    "description": "Director Mikkel Sandemose, Producer Are Heidenstrom, Writer\u00a0John K\u00e5re\u00a0Raake,\u00a0and Actors Pal Sverre Hagen and Nicolai Cleve Broch LIVE in attendance!",
-    "synopsis": "The ancient and modern worlds collide in this rousing Norwegian action adventure."
+    "description": "Director Mikkel Sandemose, Producer Are Heidenstrom, Writer John Kåre Raake, and Actors Pal Sverre Hagen and Nicolai Cleve Broch LIVE in attendance!",
+    "directors": [
+        "Mikkel Sandemose"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/ragnarok"
+    },
+    "runtime": 100,
+    "synopsis": "The ancient and modern worlds collide in this rousing Norwegian action adventure.",
+    "title": "Ragnarok",
+    "year": 2013
 }

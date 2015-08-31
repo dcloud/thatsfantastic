@@ -1,11 +1,14 @@
 {
-    "runtime": 13,
-    "title": "Kick-Heart",
-    "year": 2013,
+    "countries": [],
+    "description": "",
     "directors": [
         "Masaaki Yuasa"
     ],
-    "countries": [],
-    "description": "",
-    "synopsis": "The latest from anime outlaw Masaaki Yuasa (MIND GAME) is a candy-colored story of secret obsession: professional wrestler Maskman M derives masochistic pleasure from being pummelled by his Amazonian opponent Lady S, who clearly reciprocates in savouring their violent public trysts. But do they have a chance in the real world?"
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/kick-heart"
+    },
+    "runtime": 13,
+    "synopsis": "The latest from anime outlaw Masaaki Yuasa (MIND GAME) is a candy-colored story of secret obsession: professional wrestler Maskman M derives masochistic pleasure from being pummelled by his Amazonian opponent Lady S, who clearly reciprocates in savouring their violent public trysts. But do they have a chance in the real world?",
+    "title": "Kick-heart",
+    "year": 2013
 }

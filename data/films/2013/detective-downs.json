@@ -1,13 +1,16 @@
 {
-    "runtime": 90,
-    "title": "Detective Downs",
-    "year": 2013,
-    "directors": [
-        "B\u00e5rd Breien"
-    ],
     "countries": [
         "Norway"
     ],
-    "description": "Director B\u00e5rd Breien, Actor\u00a0Svein Andr\u00e9 Hofs\u00f8, and\u00a0Producers\u00a0Asle Vatn and\u00a0P\u00e5l R\u00f8ed LIVE in attendance!",
-    "synopsis": "What makes Robert a unique P.I. isn't that he has Down Syndrome; it's that he uses empathy to solve his cases. And empathy will come in handy as he investigates a complicated, conspiracy-laden disappearance."
+    "description": "Director Bård Breien, Actor Svein André Hofsø, and Producers Asle Vatn and Pål Røed LIVE in attendance!",
+    "directors": [
+        "Bård Breien"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/detective-downs"
+    },
+    "runtime": 90,
+    "synopsis": "What makes Robert a unique P.I. isn't that he has Down Syndrome; it's that he uses empathy to solve his cases. And empathy will come in handy as he investigates a complicated, conspiracy-laden disappearance.",
+    "title": "Detective Downs",
+    "year": 2013
 }

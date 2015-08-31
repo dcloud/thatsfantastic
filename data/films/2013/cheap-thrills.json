@@ -1,13 +1,16 @@
 {
-    "runtime": 85,
-    "title": "Cheap Thrills",
-    "year": 2013,
-    "directors": [
-        "E.L. Katz"
-    ],
     "countries": [
         "United States"
     ],
-    "description": "Director Evan Katz, Eecutive Producer\u00a0Gena Wilbur, Producer\u00a0Travis Stevens\u00a0and cast members Pat Healy,David Koechner\u00a0and Ethan Embry LIVE in attendance!",
-    "synopsis": "A recently fired father facing eviction is paid to take on an escalating series of insane challenges from a rich couple with a twisted sense of humor."
+    "description": "Director Evan Katz, Eecutive Producer Gena Wilbur, Producer Travis Stevens and cast members Pat Healy,David Koechner and Ethan Embry LIVE in attendance!",
+    "directors": [
+        "E.L. Katz"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/cheap-thrills"
+    },
+    "runtime": 85,
+    "synopsis": "A recently fired father facing eviction is paid to take on an escalating series of insane challenges from a rich couple with a twisted sense of humor.",
+    "title": "Cheap Thrills",
+    "year": 2013
 }

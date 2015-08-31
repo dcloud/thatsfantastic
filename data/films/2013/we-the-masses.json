@@ -1,13 +1,16 @@
 {
-    "runtime": 13,
-    "title": "We, the Masses",
-    "year": 2011,
-    "directors": [
-        "Eoghan Kidney"
-    ],
     "countries": [
         "Ireland"
     ],
     "description": "",
-    "synopsis": "In a snowy landscape after an unnamed cataclysmic event, a lost man looks for signs of civilization, falling in with an anarchic smattering of humanoids whose destructive impulses are at odds with his need for transcendence. Based on drawings by artist Robyn O'Neil, this fourth short from former member of Irish animation collective Delicious 9 Eoghan Kidney is a disquieting journey through the machinations of social trauma."
+    "directors": [
+        "Eoghan Kidney"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/we-the-masses"
+    },
+    "runtime": 13,
+    "synopsis": "In a snowy landscape after an unnamed cataclysmic event, a lost man looks for signs of civilization, falling in with an anarchic smattering of humanoids whose destructive impulses are at odds with his need for transcendence. Based on drawings by artist Robyn O'Neil, this fourth short from former member of Irish animation collective Delicious 9 Eoghan Kidney is a disquieting journey through the machinations of social trauma.",
+    "title": "We, the Masses",
+    "year": 2011
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Sam Firstenberg"
-    ],
-    "year": 1985,
-    "synopsis": "",
-    "title": "Ninja III: The Domination",
     "countries": [
         "United States"
     ],
+    "description": "Screening in a beautiful 35mm print in conjunction with CANNON FILMS / ELECTRIC BOOGALOO.",
+    "directors": [
+        "Sam Firstenberg"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/ninja-iii-the-domination"
+    },
     "runtime": 92,
-    "description": "Screening in a beautiful 35mm print in conjunction with CANNON FILMS / ELECTRIC BOOGALOO."
+    "synopsis": "",
+    "title": "Ninja III: The Domination",
+    "year": 1985
 }

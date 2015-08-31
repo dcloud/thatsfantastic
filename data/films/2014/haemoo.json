@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Sung Bo Shim"
-    ],
-    "year": 2013,
-    "synopsis": "A gripping maritime thriller from director Shim Sung-Bo and producer/co-writer Bong Joon-Ho.",
-    "title": "Haemoo",
     "countries": [
         "Republic Of"
     ],
+    "description": "Kang (Kim Yoon-Seok) is the captain of large fishing vessel. The boat's owner wants to sell it, which would put Kang and his crew, including a young man named Dong-sik (K-pop star Yu-Chun Park), out of work. Kang can't afford to buy the boat, but he can't afford to lose it either. In this desperate time, Kang is offered a way out: the highly dangerous job of picking up a group of illegal Chinese-Korean immigrants and bringing them back to Korea. Kang and his crew accept the challenge. Of course, nothing goes as planned.",
+    "directors": [
+        "Sung Bo Shim"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/haemoo"
+    },
     "runtime": 111,
-    "description": "Kang (Kim Yoon-Seok) is the captain of large fishing vessel. The boat's owner wants to sell it, which would put Kang and his crew, including a young man named Dong-sik (K-pop star Yu-Chun Park), out of work. Kang can't afford to buy the boat, but he can't afford to lose it either. In this desperate time, Kang is offered a way out: the highly dangerous job of picking up a group of illegal Chinese-Korean immigrants and bringing them back to Korea. Kang and his crew accept the challenge. Of course, nothing goes as planned."
+    "synopsis": "A gripping maritime thriller from director Shim Sung-Bo and producer/co-writer Bong Joon-Ho.",
+    "title": "Haemoo",
+    "year": 2013
 }

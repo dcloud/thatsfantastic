@@ -1,14 +1,17 @@
 {
-    "directors": [
-        "St\u00e9phane Aubier",
-        "Victor Jaquier"
-    ],
-    "year": 2014,
-    "synopsis": "Our most highly anticipated addition to that time-honored tradition known as the weirdo Christmas special, this latest stop motion short from Stephane Aubier and Vincent Patar reunites their beloved plastic heroes Cowboy, Indian and Horse for a raucous, forehead-slapping adventure to the North Pole and back again. When Cowboy and Indian ruin Horse's beautiful yule log, Horse convinces Santa to hold back their presents until they can redeem themselves. But why do that when they can just steal Farmer Steven's yule log?",
-    "title": "A Town Called Panic: The Christmas Log (La B\u00fbche De No\u00ebL)",
     "countries": [
         "France"
     ],
+    "description": "When Adolf Hitler surfaces posing as a 1980s high school student, there can be only one response! The crack team of Danger 5 are pressed back into service to eliminate the Nazi threat once and for all!",
+    "directors": [
+        "Stéphane Aubier",
+        "Victor Jaquier"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/a-town-called-panic-the-christmas-log-la-buche-de-noel"
+    },
     "runtime": 26,
-    "description": "When Adolf Hitler surfaces posing as a 1980s high school student, there can be only one response! The crack team of Danger 5 are pressed back into service to eliminate the Nazi threat once and for all!"
+    "synopsis": "Our most highly anticipated addition to that time-honored tradition known as the weirdo Christmas special, this latest stop motion short from Stephane Aubier and Vincent Patar reunites their beloved plastic heroes Cowboy, Indian and Horse for a raucous, forehead-slapping adventure to the North Pole and back again. When Cowboy and Indian ruin Horse's beautiful yule log, Horse convinces Santa to hold back their presents until they can redeem themselves. But why do that when they can just steal Farmer Steven's yule log?",
+    "title": "A Town Called Panic: The Christmas Log (La Bûche de Noël)",
+    "year": 2014
 }

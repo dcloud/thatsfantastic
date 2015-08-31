@@ -1,13 +1,16 @@
 {
-    "runtime": 8,
-    "title": "Beasts in the Real World",
-    "year": 2013,
-    "directors": [
-        "Sol Friedman"
-    ],
     "countries": [
         "Canada"
     ],
     "description": "",
-    "synopsis": "Sol Friedman follows up his brilliant LOVE SONGS FROM AN ANDROID and A MESSAGE FROM YOUR ROBOT PRESIDENT with this iconoclastic blend of documentary, animation and action fantasy about an exasperated amphibious creature recalling the adventure that led him to a sushi restaurant chopping block."
+    "directors": [
+        "Sol Friedman"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/beasts-in-the-real-world"
+    },
+    "runtime": 8,
+    "synopsis": "Sol Friedman follows up his brilliant LOVE SONGS FROM AN ANDROID and A MESSAGE FROM YOUR ROBOT PRESIDENT with this iconoclastic blend of documentary, animation and action fantasy about an exasperated amphibious creature recalling the adventure that led him to a sushi restaurant chopping block.",
+    "title": "Beasts in the Real World",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 87,
-    "title": "O'apostolo",
-    "year": 2013,
-    "directors": [
-        "Fernando Cortizo"
-    ],
     "countries": [
         "Spain"
     ],
-    "description": "After escaping from prison, Ram\u00f3n heads for a mysterious village where a fellow inmate claims to have hidden a stash of stolen jewels years earlier. Nestled deep within the twisted and foreboding woods of Galicia, Spain and positioned along a well-worn pilgrimage route, the village is a secluded and traditions-obsessed relic of ancient times. Its inhabitants take a peculiar interest in travelers passing through and the local church cleric Don Cesareo is quick to integrate Ram\u00f3n into his flock, annoyingly preventing him from paying a visit to the house where his treasure awaits. When night falls and Ram\u00f3n witnesses the entire village disappearing into the confines of the church, his curiosity is piqued. But Ram\u00f3n will quickly discover that he has stumbled upon a place where archaic legends are reality and he may never be able to leave.",
-    "synopsis": "Gothic legends are brought to life by gorgeous stop-motion animation in this adult fantasy film from Spain."
+    "description": "After escaping from prison, Ramón heads for a mysterious village where a fellow inmate claims to have hidden a stash of stolen jewels years earlier. Nestled deep within the twisted and foreboding woods of Galicia, Spain and positioned along a well-worn pilgrimage route, the village is a secluded and traditions-obsessed relic of ancient times. Its inhabitants take a peculiar interest in travelers passing through and the local church cleric Don Cesareo is quick to integrate Ramón into his flock, annoyingly preventing him from paying a visit to the house where his treasure awaits. When night falls and Ramón witnesses the entire village disappearing into the confines of the church, his curiosity is piqued. But Ramón will quickly discover that he has stumbled upon a place where archaic legends are reality and he may never be able to leave.",
+    "directors": [
+        "Fernando Cortizo"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/oapostolo"
+    },
+    "runtime": 87,
+    "synopsis": "Gothic legends are brought to life by gorgeous stop-motion animation in this adult fantasy film from Spain.",
+    "title": "O'apostolo",
+    "year": 2013
 }

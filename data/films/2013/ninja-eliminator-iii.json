@@ -1,15 +1,18 @@
 {
-    "runtime": 4,
-    "title": "Ninja Eliminator III",
-    "year": 2013,
-    "directors": [
-        "Anouk Whissell",
-        "Yoann-Karl Whissell",
-        "Fran\u00e7ois Simard"
-    ],
     "countries": [
         "Canada"
     ],
-    "description": "The classic anime series \u2013 known variously as BATTLE OF THE PLANETS and G-FORCE \u2013 explodes on the big screen with its first live action adaptation.",
-    "synopsis": "The latest gonzo short from Canadian collective Roadkill Superstar, (whose TURBO KID feature is about to head into production) this mock-trailer delivers everything you could want in a long-lost Godfrey Ho flick, including the obligatory \"Ninja\" headbands and boobs that turn into cats."
+    "description": "The classic anime series – known variously as BATTLE OF THE PLANETS and G-FORCE – explodes on the big screen with its first live action adaptation.",
+    "directors": [
+        "Anouk Whissell",
+        "Yoann-Karl Whissell",
+        "François Simard"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/ninja-eliminator-iii"
+    },
+    "runtime": 4,
+    "synopsis": "The latest gonzo short from Canadian collective Roadkill Superstar, (whose TURBO KID feature is about to head into production) this mock-trailer delivers everything you could want in a long-lost Godfrey Ho flick, including the obligatory \"Ninja\" headbands and boobs that turn into cats.",
+    "title": "Ninja Eliminator III",
+    "year": 2013
 }

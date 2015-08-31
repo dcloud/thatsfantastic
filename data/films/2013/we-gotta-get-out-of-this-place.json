@@ -1,14 +1,17 @@
 {
-    "runtime": 91,
-    "title": "We Gotta Get Out of This Place",
-    "year": 2013,
-    "directors": [
-        "Simon Hawkins",
-        "Zeke Hawkins"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Producer Justin Duprie LIVE in attendance!",
-    "synopsis": "Three fun-seeking teenagers end up on the VERY wrong side of a bloodthirsty crew of rural crimelords."
+    "directors": [
+        "Simon Hawkins",
+        "Zeke Hawkins"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/we-gotta-get-out-of-this-place"
+    },
+    "runtime": 91,
+    "synopsis": "Three fun-seeking teenagers end up on the VERY wrong side of a bloodthirsty crew of rural crimelords.",
+    "title": "We Gotta Get Out of This Place",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 19,
-    "title": "Ziegenort",
-    "year": 2013,
-    "directors": [
-        "Tomasz Popakul"
-    ],
     "countries": [
         "Poland"
     ],
     "description": "",
-    "synopsis": "A fishboy living in a coastal village resorts to shocking behavior when shunned by his peers. Making great use of manufactured chiaroscuro lighting and striking color flourishes, this award-winning short is a dramatic slice of teen angst at its most nightmarish."
+    "directors": [
+        "Tomasz Popakul"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/ziegenort"
+    },
+    "runtime": 19,
+    "synopsis": "A fishboy living in a coastal village resorts to shocking behavior when shunned by his peers. Making great use of manufactured chiaroscuro lighting and striking color flourishes, this award-winning short is a dramatic slice of teen angst at its most nightmarish.",
+    "title": "Ziegenort",
+    "year": 2013
 }

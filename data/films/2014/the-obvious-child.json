@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Stephen Irwin"
-    ],
-    "year": 2013,
-    "synopsis": "One of the wildest, most richly perverse animators of recent years, UK-based filmmaker Stephen Irwin (MOXIE; THE BLACK DOG'S PROGRESS) returns with this controversial tale of a chain-smoking toddler whose stuffed rabbit helps her get her dead parents' dismembered limbs into heaven.",
-    "title": "The Obvious Child",
     "countries": [
         "United Kingdom"
     ],
+    "description": "",
+    "directors": [
+        "Stephen Irwin"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-obvious-child"
+    },
     "runtime": 12,
-    "description": ""
+    "synopsis": "One of the wildest, most richly perverse animators of recent years, UK-based filmmaker Stephen Irwin (MOXIE; THE BLACK DOG'S PROGRESS) returns with this controversial tale of a chain-smoking toddler whose stuffed rabbit helps her get her dead parents' dismembered limbs into heaven.",
+    "title": "The Obvious Child",
+    "year": 2013
 }

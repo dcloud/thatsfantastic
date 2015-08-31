@@ -1,11 +1,14 @@
 {
-    "runtime": 3,
-    "title": "Drunker Than a Skunk",
-    "year": 2012,
+    "countries": [],
+    "description": "",
     "directors": [
         "Bill Plympton"
     ],
-    "countries": [],
-    "description": "",
-    "synopsis": "Animation vet and Fantastic Fest fave Bill Plympton's latest is a wily adaptation of Walt Curtis' 1973 poem 'The Time The Drunk Came To Town And Got Drunker Than A Skunk, Or So He Thought', about a roving drunk who is brutally tormented by mean-spirited townsfolk."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/drunker-than-a-skunk"
+    },
+    "runtime": 3,
+    "synopsis": "Animation vet and Fantastic Fest fave Bill Plympton's latest is a wily adaptation of Walt Curtis' 1973 poem 'The Time The Drunk Came To Town And Got Drunker Than A Skunk, Or So He Thought', about a roving drunk who is brutally tormented by mean-spirited townsfolk.",
+    "title": "Drunker Than a Skunk",
+    "year": 2012
 }

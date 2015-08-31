@@ -1,13 +1,16 @@
 {
-    "runtime": 95,
-    "title": "Ninja: Shadow of a Tear",
-    "year": 2013,
-    "directors": [
-        "Isaac Florentine"
-    ],
     "countries": [
         "United States"
     ],
-    "description": "Director Isaac Florentine, Actors Scott Adkins and Mika\u00a0Hijii, and Producer Frank De Martini LIVE in attendance!",
-    "synopsis": "Scott Adkins returns as Casey Bowman, a Ninjitsu master out to avenge the death of his wife in director Isaac Florentine's follow-up to his 2009 film NINJA."
+    "description": "Director Isaac Florentine, Actors Scott Adkins and Mika Hijii, and Producer Frank De Martini LIVE in attendance!",
+    "directors": [
+        "Isaac Florentine"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/ninja-ii-shadow-of-a-tear"
+    },
+    "runtime": 95,
+    "synopsis": "Scott Adkins returns as Casey Bowman, a Ninjitsu master out to avenge the death of his wife in director Isaac Florentine's follow-up to his 2009 film NINJA.",
+    "title": "Ninja: Shadow of a Tear",
+    "year": 2013
 }

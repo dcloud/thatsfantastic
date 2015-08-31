@@ -1,13 +1,16 @@
 {
-    "runtime": 101,
-    "title": "The Fake",
-    "year": 2013,
-    "directors": [
-        "YEON Sang-ho"
-    ],
     "countries": [
         "Republic Of"
     ],
     "description": "A village is being evacuated to make way for a dam. The residents are being paid to move. In their time of need, the displaced people rely on the healing powers of Sung, a charismatic preacher who promises to build them a new church and housing. In exchange, the villagers give the pastor all of their money. Min-chul (voiced by Yang Ik-june of BREATHLESS and KING OF PIGS fame) is a drunken hellraiser who has just been released from jail. Immediately after returning home, he gets into a bar fight. He soon discovers that the man he fought in a bar is a con artist who works for Pastor Sung. Min-chul sets out to expose the church as a fraud. Min-chul has one major obstacle standing in his way: nobody believes him.",
-    "synopsis": "Yeun Sang-ho's follow-up to THE KING OF PIGS tells the story of a brutal scumbag who tries to expose a religious fraud."
+    "directors": [
+        "YEON Sang-ho"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-fake"
+    },
+    "runtime": 101,
+    "synopsis": "Yeun Sang-ho's follow-up to THE KING OF PIGS tells the story of a brutal scumbag who tries to expose a religious fraud.",
+    "title": "The Fake",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Pat Bishow"
-    ],
-    "year": 1987,
-    "synopsis": "",
-    "title": "The Soultangler",
     "countries": [
         "United States"
     ],
+    "description": "Bleeding Skull! Video presents the first-ever theatrical screening of the long-lost, straight-to-VHS mad science messterpiece!",
+    "directors": [
+        "Pat Bishow"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-soultangler"
+    },
     "runtime": 90,
-    "description": "Bleeding Skull! Video presents the first-ever theatrical screening of the long-lost, straight-to-VHS mad science messterpiece!"
+    "synopsis": "",
+    "title": "The Soultangler",
+    "year": 1987
 }

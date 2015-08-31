@@ -1,14 +1,17 @@
 {
-    "runtime": 110,
-    "title": "Big Bad Wolves",
-    "year": 2013,
-    "directors": [
-        "Navot Papushado",
-        "Aharon Keshales"
-    ],
     "countries": [
         "Israel"
     ],
     "description": "Writers/Directors Aharon Keshales and Navot Papushado LIVE in attendance!",
-    "synopsis": "The directing team behind the 2010 cult smash RABIES return to Fantastic Fest with one of the best genre films of 2013."
+    "directors": [
+        "Navot Papushado",
+        "Aharon Keshales"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/big-bad-wolves"
+    },
+    "runtime": 110,
+    "synopsis": "The directing team behind the 2010 cult smash RABIES return to Fantastic Fest with one of the best genre films of 2013.",
+    "title": "Big Bad Wolves",
+    "year": 2013
 }

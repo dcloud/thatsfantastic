@@ -1,13 +1,16 @@
 {
-    "runtime": 15,
-    "title": "The Naturalist",
-    "year": 2013,
-    "directors": [
-        "Connor Hurley"
-    ],
     "countries": [
         "United States"
     ],
     "description": "",
-    "synopsis": "What if you could take a drug to change your orientation? In a future where only the genetically-modified thrive, one man is faced with a horrible decision. One of the most poignant and disturbing bits of dystopian sci-fi we've seen this year."
+    "directors": [
+        "Connor Hurley"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-naturalist"
+    },
+    "runtime": 15,
+    "synopsis": "What if you could take a drug to change your orientation? In a future where only the genetically-modified thrive, one man is faced with a horrible decision. One of the most poignant and disturbing bits of dystopian sci-fi we've seen this year.",
+    "title": "The Naturalist",
+    "year": 2013
 }

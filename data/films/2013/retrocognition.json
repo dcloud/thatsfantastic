@@ -1,13 +1,16 @@
 {
-    "runtime": 18,
-    "title": "Retrocognition",
-    "year": 2012,
-    "directors": [
-        "Eric Patrick"
-    ],
     "countries": [
         "United States"
     ],
     "description": "",
-    "synopsis": "A brilliant and disturbing pastiche of melodramatic 1940s radio dramas, former Texan Eric Patrick's distorted domestic characters - with their cracked faces and murderous longings - offer an uncanny underside to the idyllic nuclear family."
+    "directors": [
+        "Eric Patrick"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/retrocognition"
+    },
+    "runtime": 18,
+    "synopsis": "A brilliant and disturbing pastiche of melodramatic 1940s radio dramas, former Texan Eric Patrick's distorted domestic characters - with their cracked faces and murderous longings - offer an uncanny underside to the idyllic nuclear family.",
+    "title": "Retrocognition",
+    "year": 2012
 }

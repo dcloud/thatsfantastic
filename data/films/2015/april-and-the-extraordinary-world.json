@@ -1,14 +1,17 @@
 {
-    "synopsis": "In an alternate history where Napoleon's heirs rule France, scientists and scholars have gone missing for years, leaving behind a world deprived of their technological innovations. In this land powered by coal and steam, young April searches for her missing scientist parents.",
+    "countries": [
+        "Belgium"
+    ],
     "description": "In an alternate reality, Napoleon doesn't die at the Battle of Waterloo. Instead, while attempting to engineer an indestructible super soldier, he meets his demise in an accidental laboratory explosion. In the wake of this catastrophe, his heirs maintain control of France, and by 1941 it's Napoleon V who has come to power. Ever since the death of Napoleon I, however, scientists and scholars have mysteriously gone missing, leaving behind a world deprived of their technological innovations. A thick cloud of pollution hangs over Paris, a result of the use of coal and steam power. Operating in secrecy, a young teenage girl named April, together with her sharp-tongued talking cat Darwin (long story), searches for her abducted scientist parents while attempting to continue their research. But the police, led by the boorish but tenacious Detective Pizoni, are also interested in April's whereabouts. With the shortage of great minds, all non-abducted scientists are forced into labor for the state war machine. If she can stay one step ahead of Pizoni and his goons, April may just hold the key to the world's salvation. Then again, she might also trigger its destruction.\n\nBeautifully animated, APRIL AND THE EXTRAORDINARY WORLD is an adaptation of the work of famed French comic artist Jacques Tardi, creator of Adele Blanc-Sec among other works. Drawing inspiration from everything from Dickens to Jules Verne to Miyazaki, APRIL AND THE EXTRAORDINARY WORLD is colorful and funny, but with more than a hint of melancholy and sociopolitical commentary. The greed and gluttony from those in power has trickled down creating an overwhelming cloud of sadness and despair, not unlike the thick pollution that hangs over the city. APRIL's titular character may wallow in this dark, grimy soot-stained world, but she maintains a bright and shiny hope for the future. (Luke Mullen)",
     "directors": [
         "Christian Desmares",
         "Franck Ekinci"
     ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/april-and-the-extraordinary-world"
+    },
     "runtime": 90,
-    "year": 2015,
-    "countries": [
-        "Belgium"
-    ],
-    "title": "April and the Extraordinary World"
+    "synopsis": "In an alternate history where Napoleon's heirs rule France, scientists and scholars have gone missing for years, leaving behind a world deprived of their technological innovations. In this land powered by coal and steam, young April searches for her missing scientist parents.",
+    "title": "April and the Extraordinary World",
+    "year": 2015
 }

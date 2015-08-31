@@ -1,13 +1,16 @@
 {
-    "synopsis": "A young woman slowly goes crazy after taking a job as the caretaker for an ancient New York home in the new film from writer/director Mickey Keating.",
+    "countries": [
+        "United States"
+    ],
     "description": "In DARLING, a young woman takes a seemingly simple job as the caretaker for an enormous, historic New York estate. In fact, as she's picking up the keys, the woman who hired her mentions that it's the oldest house in New York. And with that age comes several stories, including odd rumors about the former caretaker. When the young woman asks what happened, the owner begrudgingly admits that he committed suicide, but they don't know why and \"it's nothing to worry about. Nothing like that could ever happen again.\" With that, she is out the door, leaving the replacement with a check and the first pangs of anxiety about her latest career move. But with no other choice, she resigns herself to her decision, and starts to get to know the place. She discovers an odd necklace with an upside down cross as well as a single locked door at the end of a short hallway. Both are strangely ominous, just like the odd noises she hears at night. When she finds herself frightened by an innocuous encounter with a man on the street, she starts to spiral out of control.\n\nMickey Keating returns to Austin hot on the heels of the SXSW premiere of his film POD. Filmed in black and white with disorienting sequences of fast edits, DARLING feels nightmarish with a thick atmosphere of fear and apprehension that calls to mind elements of REPULSION. Lauren Ashley Carter, who fans will recognize from JUG FACE as well as POD, stars as the main character and perfectly depicts the descent into madness. Punctuated by heightened sound effects and a score that's constantly evolving to drive the tension, DARLING is a dark, unsettling experience filled with dread and the constant threat of impending doom. (Luke Mullen)",
     "directors": [
         "Mickey Keating"
     ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/darling"
+    },
     "runtime": 78,
-    "year": 2015,
-    "countries": [
-        "United States"
-    ],
-    "title": "Darling"
+    "synopsis": "A young woman slowly goes crazy after taking a job as the caretaker for an ancient New York home in the new film from writer/director Mickey Keating.",
+    "title": "Darling",
+    "year": 2015
 }

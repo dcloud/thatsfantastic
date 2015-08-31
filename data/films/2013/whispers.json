@@ -1,13 +1,16 @@
 {
-    "runtime": 7,
-    "title": "Whispers",
-    "year": 2013,
-    "directors": [
-        "Max Issacson"
-    ],
     "countries": [
         "United States"
     ],
     "description": "An erstwhile plumber undergoes a hideous transformation when trapped inside a septic tank and tormented by the bizarre residents of his town's sewage treatment plant.",
-    "synopsis": "Convinced that the rats rampant in his home are trying to infest his body, a man slowly goes insane in a dank basement, surrounding himself with bloody trophies."
+    "directors": [
+        "Max Issacson"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/whispers"
+    },
+    "runtime": 7,
+    "synopsis": "Convinced that the rats rampant in his home are trying to infest his body, a man slowly goes insane in a dank basement, surrounding himself with bloody trophies.",
+    "title": "Whispers",
+    "year": 2013
 }

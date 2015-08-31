@@ -1,13 +1,16 @@
 {
-    "runtime": 144,
-    "title": "Nightbreed - the Cabal Cut",
-    "year": 2012,
-    "directors": [
-        "Russell Cherrington"
-    ],
     "countries": [
         "United Kingdom"
     ],
     "description": "Restoration Director Russell Cherrington LIVE in attendance!",
-    "synopsis": "NIGHTBREED: THE CABAL CUT is a new director's cut of Clive Barker's horror classic that places the film in an entirely different light."
+    "directors": [
+        "Russell Cherrington"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/night-breed-the-cabal-cut"
+    },
+    "runtime": 144,
+    "synopsis": "NIGHTBREED: THE CABAL CUT is a new director's cut of Clive Barker's horror classic that places the film in an entirely different light.",
+    "title": "Nightbreed - the Cabal Cut",
+    "year": 2012
 }

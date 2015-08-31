@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Craig Denney"
-    ],
-    "year": 1975,
-    "synopsis": "",
-    "title": "The Astrologer",
     "countries": [
         "United States"
     ],
+    "description": "Presented by the American Genre Film Archive.",
+    "directors": [
+        "Craig Denney"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-astrologer"
+    },
     "runtime": 96,
-    "description": "Presented by the American Genre Film Archive."
+    "synopsis": "",
+    "title": "The Astrologer",
+    "year": 1975
 }

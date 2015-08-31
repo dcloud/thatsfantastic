@@ -1,13 +1,16 @@
 {
-    "runtime": 100,
-    "title": "Kid's Police",
-    "year": 2013,
-    "directors": [
-        "Yuichi Fukuda"
-    ],
     "countries": [
         "Japan"
     ],
     "description": "In the annals of crime, there have been few organizations quite so evil, quite so pernicious as the dastardly Red Venus. Always plotting on a grand scale, always performing acts of evil and violence to build their own power, Red Venus operates in the shadows - seemingly able to strike anywhere without notice before disappearing with only their signature business card left behind as a demeaning taunt to law and order.",
-    "synopsis": "When evil criminal organization Red Venus strikes, there's only one team of highly specialized cops who can help. Unfortunately, they've been dosed with anti-aging gas that has turned them all into children."
+    "directors": [
+        "Yuichi Fukuda"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/kids-police"
+    },
+    "runtime": 100,
+    "synopsis": "When evil criminal organization Red Venus strikes, there's only one team of highly specialized cops who can help. Unfortunately, they've been dosed with anti-aging gas that has turned them all into children.",
+    "title": "Kid's Police",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Peter Strickland"
-    ],
-    "year": 2014,
-    "synopsis": "Peter Strickland's (BERBERIAN SOUND STUDIO) dark melodrama follows the impassioned sexual relationship between two women. If BERBERIAN was Strickland's aural roller-coaster ride, BURGUNDY is definitely his visual feast.",
-    "title": "Duke of Burgundy",
     "countries": [
         "United Kingdom"
     ],
+    "description": "Peter Strickland's (BERBERIAN SOUND STUDIO) dark melodrama follows the impassioned sexual relationship between two women. If BERBERIAN was Strickland's aural roller-coaster ride, BURGUNDY is definitely his visual feast.",
+    "directors": [
+        "Peter Strickland"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/duke-of-burgundy"
+    },
     "runtime": 104,
-    "description": "Peter Strickland's (BERBERIAN SOUND STUDIO) dark melodrama follows the impassioned sexual relationship between two women. If BERBERIAN was Strickland's aural roller-coaster ride, BURGUNDY is definitely his visual feast."
+    "synopsis": "Peter Strickland's (BERBERIAN SOUND STUDIO) dark melodrama follows the impassioned sexual relationship between two women. If BERBERIAN was Strickland's aural roller-coaster ride, BURGUNDY is definitely his visual feast.",
+    "title": "Duke of Burgundy",
+    "year": 2014
 }

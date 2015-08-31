@@ -1,13 +1,16 @@
 {
-    "runtime": 103,
-    "title": "Narco Cultura",
-    "year": 2013,
-    "directors": [
-        "Shaul Schwarz"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Director Shaul Schwarz LIVE in attendance!",
-    "synopsis": "NARCO CULTURA is a graphically disturbing documentary that examines the parallels between the Mexican drug war and the increasingly popular musical style of narcocorridos (drug ballads)."
+    "directors": [
+        "Shaul Schwarz"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/narco-cultura"
+    },
+    "runtime": 103,
+    "synopsis": "NARCO CULTURA is a graphically disturbing documentary that examines the parallels between the Mexican drug war and the increasingly popular musical style of narcocorridos (drug ballads).",
+    "title": "Narco Cultura",
+    "year": 2013
 }

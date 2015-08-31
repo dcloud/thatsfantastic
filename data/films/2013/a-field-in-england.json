@@ -1,13 +1,16 @@
 {
-    "runtime": 90,
-    "title": "A Field in England",
-    "year": 2013,
-    "directors": [
-        "Ben Wheatley"
-    ],
     "countries": [
         "United Kingdom"
     ],
     "description": "Director Ben Wheatley LIVE in attendance!",
-    "synopsis": "During the British Civil War, when magic was science, an alchemist forces a group of deserters to help him locate buried treasure, and sends them all straight into the mouth of madness."
+    "directors": [
+        "Ben Wheatley"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/a-field-in-england"
+    },
+    "runtime": 90,
+    "synopsis": "During the British Civil War, when magic was science, an alchemist forces a group of deserters to help him locate buried treasure, and sends them all straight into the mouth of madness.",
+    "title": "A Field in England",
+    "year": 2013
 }

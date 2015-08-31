@@ -1,14 +1,17 @@
 {
-    "runtime": 10,
-    "title": "The Last Video Store",
-    "year": 2013,
-    "directors": [
-        "Cody Kennedy",
-        "Tim Rutherford"
-    ],
     "countries": [
         "Canada"
     ],
     "description": "A man who disappeared under mysterious circumstances returns to wreak havoc upon a small town.",
-    "synopsis": "The crew behind Edmonton's DEDFest and cult video store The Lobby bring you this histrionic tidal wave of VHS nostalgia, featuring robots, evil corporations, a killer theme song and guest-FX by Astron-6's Steve Kostanski."
+    "directors": [
+        "Cody Kennedy",
+        "Tim Rutherford"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-last-video-store"
+    },
+    "runtime": 10,
+    "synopsis": "The crew behind Edmonton's DEDFest and cult video store The Lobby bring you this histrionic tidal wave of VHS nostalgia, featuring robots, evil corporations, a killer theme song and guest-FX by Astron-6's Steve Kostanski.",
+    "title": "The Last Video Store",
+    "year": 2013
 }

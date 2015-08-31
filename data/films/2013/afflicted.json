@@ -1,14 +1,17 @@
 {
-    "runtime": 85,
-    "title": "Afflicted",
-    "year": 2014,
-    "directors": [
-        "Clif Prowse",
-        "Derek Lee"
-    ],
     "countries": [
         "Canada"
     ],
     "description": "Directors Clif Prowse and Derek Lee LIVE in attendance!",
-    "synopsis": "Derek and Clif, best friends documenting their journey across the world, are in for an unexpected adventure when one of them comes down with a sinister sickness."
+    "directors": [
+        "Clif Prowse",
+        "Derek Lee"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/afflicted"
+    },
+    "runtime": 85,
+    "synopsis": "Derek and Clif, best friends documenting their journey across the world, are in for an unexpected adventure when one of them comes down with a sinister sickness.",
+    "title": "Afflicted",
+    "year": 2014
 }

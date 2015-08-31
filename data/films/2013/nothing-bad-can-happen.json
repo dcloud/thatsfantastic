@@ -1,13 +1,16 @@
 {
-    "runtime": 110,
-    "title": "Nothing Bad Can Happen",
-    "year": 2013,
-    "directors": [
-        "Katrin Gebbe"
-    ],
     "countries": [
         "Germany"
     ],
     "description": "Director Katrin Gebbe and Producer Verena Graefe-Hoeft LIVE in attendance!",
-    "synopsis": "Tore, a member of the counter-culture Christian movement Jesus Freaks, is befriended and taken in by a family who play an increasingly cruel, violent game and push his capacity to love to its limits."
+    "directors": [
+        "Katrin Gebbe"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/nothing-bad-can-happen"
+    },
+    "runtime": 110,
+    "synopsis": "Tore, a member of the counter-culture Christian movement Jesus Freaks, is befriended and taken in by a family who play an increasingly cruel, violent game and push his capacity to love to its limits.",
+    "title": "Nothing Bad Can Happen",
+    "year": 2013
 }

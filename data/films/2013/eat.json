@@ -1,11 +1,14 @@
 {
-    "runtime": 7,
-    "title": "Eat",
-    "year": 2012,
+    "countries": [],
+    "description": "",
     "directors": [
         "Mortiz Kramer"
     ],
-    "countries": [],
-    "description": "",
-    "synopsis": "A fashion model fantasizes about indulging herself in a world where everything is edible."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/eat"
+    },
+    "runtime": 7,
+    "synopsis": "A fashion model fantasizes about indulging herself in a world where everything is edible.",
+    "title": "Eat",
+    "year": 2012
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Nikolas List"
-    ],
-    "year": 2014,
-    "synopsis": "Young David awakens battered and disoriented on the edge of town, knowing only one thing: He wants to get away. But no matter what he tries, he's always led back to the same dark, disturbing place. Welcome to Tombville.",
-    "title": "Tombville",
     "countries": [
         "Belgium"
     ],
+    "description": "David has a problem. That much is clear. But he just can't remember what it is. The fact that he's awoken battered and bruised on the outskirts of Tombville would be problem enough, you'd think. Or the fact that he has no substantive memory of how he got there or even much of who he is. Or that the town is filled with bizarre back country characters who seem to delight in his torment. Any one of these would seem to be enough of a problem but they're all secondary to the fact that a mysterious force is preventing him from leaving Tombville no matter how hard he may try, and that the key to the force appears to lie somewhere in his fractured past.\n\nA microbudget tour-de-force in mood and atmosphere from first time Belgian feature director Nikolas List, TOMBVILLE bears all the marks of a director who has absorbed the influences of Lynch, Cronenberg and the like and twisted them into something uniquely his own. List makes the darker urges of the psyche his playground, creating a dank and oppressive world that cannot be escaped. Despite the miniscule budget, List manages to create a deeply immersive sensory experience, his debut feature marking him as a striking talent and a worthy addition to the young cadre of Belgian talent that already includes Fabrice du Welz (CALVAIRE) and AMER / STRANGE COLOUR OF YOUR BODY'S TEARS duo Bruno Frozani & Helene Cattet.  (Todd Brown)",
+    "directors": [
+        "Nikolas List"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/tombville"
+    },
     "runtime": 69,
-    "description": "David has a problem. That much is clear. But he just can't remember what it is. The fact that he's awoken battered and bruised on the outskirts of Tombville would be problem enough, you'd think. Or the fact that he has no substantive memory of how he got there or even much of who he is. Or that the town is filled with bizarre back country characters who seem to delight in his torment. Any one of these would seem to be enough of a problem but they're all secondary to the fact that a mysterious force is preventing him from leaving Tombville no matter how hard he may try, and that the key to the force appears to lie somewhere in his fractured past.\n\nA microbudget tour-de-force in mood and atmosphere from first time Belgian feature director Nikolas List, TOMBVILLE bears all the marks of a director who has absorbed the influences of Lynch, Cronenberg and the like and twisted them into something uniquely his own. List makes the darker urges of the psyche his playground, creating a dank and oppressive world that cannot be escaped. Despite the miniscule budget, List manages to create a deeply immersive sensory experience, his debut feature marking him as a striking talent and a worthy addition to the young cadre of Belgian talent that already includes Fabrice du Welz (CALVAIRE) and AMER / STRANGE COLOUR OF YOUR BODY'S TEARS duo Bruno Frozani & Helene Cattet.\u00a0 (Todd Brown)"
+    "synopsis": "Young David awakens battered and disoriented on the edge of town, knowing only one thing: He wants to get away. But no matter what he tries, he's always led back to the same dark, disturbing place. Welcome to Tombville.",
+    "title": "Tombville",
+    "year": 2014
 }

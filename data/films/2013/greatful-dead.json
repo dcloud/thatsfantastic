@@ -1,13 +1,16 @@
 {
-    "runtime": 97,
-    "title": "Greatful Dead",
-    "year": 2013,
-    "directors": [
-        "Eiji Uchida"
-    ],
     "countries": [
         "Japan"
     ],
     "description": "Director Eiji Uchida and Actress Kumi Takiuchi LIVE in attendance!",
-    "synopsis": "A young female peeping tom develops a fatal attraction to a virile old man."
+    "directors": [
+        "Eiji Uchida"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/greatful-dead"
+    },
+    "runtime": 97,
+    "synopsis": "A young female peeping tom develops a fatal attraction to a virile old man.",
+    "title": "Greatful Dead",
+    "year": 2013
 }

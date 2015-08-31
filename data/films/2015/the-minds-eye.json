@@ -1,13 +1,16 @@
 {
-    "synopsis": "On the heels of his Fantastic Fest debut ALMOST HUMAN, Joe Begos returns with a classic battle of good versus evil.\u00a0 A drifter with suppressed psychic powers must learn to unleash them to save the woman he loves.",
+    "countries": [
+        "United States"
+    ],
     "description": "Isolated as a result of his supernatural abilities and searching for the woman he loves, drifter Zack Connors innocently walks through a small town only to have a violent run-in with the local police. The authorities call in Dr. Michael Slovak, an author and scientist who runs a research center dedicated to studying people like Zack and the powers he displays. Zack is wary, but it's Dr. Slovak's mention of the girl, Rachel, that piques his interest. She's being treated at Slovak's facility, so Zack agrees to go there for treatment as well, on the condition that Slovak will let him see her. But after several months, Slovak still refuses to let Zack see Rachel. This betrayal, along with the strange research tactics employed at the facility, leads Zack to become increasingly suspicious of Slovak and his true motives.\n\nFast on the heels of his debut feature, FF2013's ALMOST HUMAN, writer/director Joe Begos has once again crafted a fun, action-packed shocker tailor-made for those of us weaned on 1980s VHS horror. Eschewing the modern CGI crutch, Begos instead deploys old-school wire work and practical effects, never skimping on the blood and guts as he stretches his budget to the limit. The action is enhanced by a pounding, synth-heavy score by Steve Moore (THE GUEST; CUB), and the supporting cast is full of familiar faces like genre legend Larry Fessenden, Fantastic Debates alum Noah Segan, producer/editor Josh Ethier, and THE BATTERY's Jeremy Gardner. Drawing inspiration from classics as diverse as FIRST BLOOD and SCANNERS as well as newer films like BEYOND THE BLACK RAINBOW, THE MIND'S EYE is an intense, splatter-filled ride. (Luke Mullen)",
     "directors": [
         "Joe Begos"
     ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-minds-eye"
+    },
     "runtime": 87,
-    "year": 2015,
-    "countries": [
-        "United States"
-    ],
-    "title": "The Mind's Eye"
+    "synopsis": "On the heels of his Fantastic Fest debut ALMOST HUMAN, Joe Begos returns with a classic battle of good versus evil.  A drifter with suppressed psychic powers must learn to unleash them to save the woman he loves.",
+    "title": "The Mind's Eye",
+    "year": 2015
 }

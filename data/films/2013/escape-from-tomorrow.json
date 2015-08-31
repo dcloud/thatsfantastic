@@ -1,13 +1,16 @@
 {
-    "runtime": 90,
-    "title": "Escape From Tomorrow",
-    "year": 2013,
-    "directors": [
-        "Randy Moore"
-    ],
     "countries": [
         "United States"
     ],
-    "description": "Writer/Director Randy Moore, Actor\u00a0Roy\u00a0Abramsohn, and Cinematopgrapher\u00a0Lucas Lee\u00a0Graham\u00a0LIVE in attendance!",
-    "synopsis": "A family vacation at the happiest place on Earth devolves into a hellish nightmare."
+    "description": "Writer/Director Randy Moore, Actor Roy Abramsohn, and Cinematopgrapher Lucas Lee Graham LIVE in attendance!",
+    "directors": [
+        "Randy Moore"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/escape-from-tomorrow"
+    },
+    "runtime": 90,
+    "synopsis": "A family vacation at the happiest place on Earth devolves into a hellish nightmare.",
+    "title": "Escape From Tomorrow",
+    "year": 2013
 }

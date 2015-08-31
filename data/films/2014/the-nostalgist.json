@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Giacomo Cimini"
-    ],
-    "year": 2014,
-    "synopsis": "When his glasses break, a man must leave his son alone in their hermetically-sealed apartment as he goes out to get them fixed. Ignoring his father's instructions, the little boy follows him and learns the horrible truth about the outside world. Based on the award-winning short story by Daniel H. Wilson, THE NOSTALGIST is a stunning example of dystopian sci-fi whose ambitious production design is matched by its poignancy and emotional depth.",
-    "title": "The Nostalgist",
     "countries": [
         "United Kingdom"
     ],
+    "description": "Giacomo Cimini (Director)",
+    "directors": [
+        "Giacomo Cimini"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-nostalgist"
+    },
     "runtime": 18,
-    "description": "Giacomo Cimini (Director)"
+    "synopsis": "When his glasses break, a man must leave his son alone in their hermetically-sealed apartment as he goes out to get them fixed. Ignoring his father's instructions, the little boy follows him and learns the horrible truth about the outside world. Based on the award-winning short story by Daniel H. Wilson, THE NOSTALGIST is a stunning example of dystopian sci-fi whose ambitious production design is matched by its poignancy and emotional depth.",
+    "title": "The Nostalgist",
+    "year": 2014
 }

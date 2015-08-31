@@ -1,13 +1,16 @@
 {
-    "runtime": 17,
-    "title": "My Pain Is Worse Than Your Pain",
-    "year": 2013,
-    "directors": [
-        "Adam Hall"
-    ],
     "countries": [
         "United States"
     ],
     "description": "",
-    "synopsis": "Based on the short story by T.C Boyle, Adam Hall's short film about the ostracization of a desperate man (Clark Middleton, SIN CITY; KILL BILL VOL. 2) following his professed obsession with a female neighbour explores the subjective toll of daily humiliation."
+    "directors": [
+        "Adam Hall"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/my-pain-is-worse-than-your-pain"
+    },
+    "runtime": 17,
+    "synopsis": "Based on the short story by T.C Boyle, Adam Hall's short film about the ostracization of a desperate man (Clark Middleton, SIN CITY; KILL BILL VOL. 2) following his professed obsession with a female neighbour explores the subjective toll of daily humiliation.",
+    "title": "My Pain Is Worse Than Your Pain",
+    "year": 2013
 }

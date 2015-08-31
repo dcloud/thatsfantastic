@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Liv Corfixen"
-    ],
-    "year": 2014,
-    "synopsis": "An impossibly personal portrait of unique filmmaker Nicolas Winding Refn over the course of the shooting/release of his 2013 film ONLY GOD FORGIVES.",
-    "title": "My Life Directed by Nicolas Winding Refn",
     "countries": [
         "United States"
     ],
+    "description": "Nicolas Winding Refn burst onto the film scene in the late 1990s with the delightfully nasty PUSHER trilogy, and has continued to produce some of the most thought-provoking and visually spectacular genre-benders of any modern auteur. From Tom Hardy's career-defining titular Bronson to Mads Mikkelsen's feral One Eye to Ryan Gosling's icy cold Driver, Refn has time and again crafted nuanced portraits of deeply conflicted but undeniably charismatic antiheroes.",
+    "directors": [
+        "Liv Corfixen"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/my-life-directed-by-nicolas-winding-refn"
+    },
     "runtime": 58,
-    "description": "Nicolas Winding Refn burst onto the film scene in the late 1990s with the delightfully nasty PUSHER trilogy, and has continued to produce some of the most thought-provoking and visually spectacular genre-benders of any modern auteur. From Tom Hardy's career-defining titular Bronson to Mads Mikkelsen's feral One Eye to Ryan Gosling's icy cold Driver, Refn has time and again crafted nuanced portraits of deeply conflicted but undeniably charismatic antiheroes."
+    "synopsis": "An impossibly personal portrait of unique filmmaker Nicolas Winding Refn over the course of the shooting/release of his 2013 film ONLY GOD FORGIVES.",
+    "title": "My Life Directed by Nicolas Winding Refn",
+    "year": 2014
 }

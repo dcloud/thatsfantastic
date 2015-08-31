@@ -1,11 +1,14 @@
 {
-    "runtime": 1,
-    "title": "Raw Data",
-    "year": 2013,
+    "countries": [],
+    "description": "",
     "directors": [
         "Jake Fried"
     ],
-    "countries": [],
-    "description": "",
-    "synopsis": "Jake Fried's mythologically-charged hand-drawn animations made with white-out, gouache and coffee have won the attention of arthounds from PBS to Juxtapoz with their kinetically layered one-minute mania."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/raw-data"
+    },
+    "runtime": 1,
+    "synopsis": "Jake Fried's mythologically-charged hand-drawn animations made with white-out, gouache and coffee have won the attention of arthounds from PBS to Juxtapoz with their kinetically layered one-minute mania.",
+    "title": "Raw Data",
+    "year": 2013
 }

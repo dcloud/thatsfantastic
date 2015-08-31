@@ -1,13 +1,16 @@
 {
-    "runtime": 92,
-    "title": "Metallica Through the Never",
-    "year": 2013,
-    "directors": [
-        "Nimr\u00f3d Antal"
-    ],
     "countries": [
         "United States"
     ],
-    "description": "Director Nimr\u00f3d Antal with Kirk Hammett and Robert Trujilllo LIVE in attendance!",
-    "synopsis": ""
+    "description": "Director Nimród Antal with Kirk Hammett and Robert Trujilllo LIVE in attendance!",
+    "directors": [
+        "Nimród Antal"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/metallica-through-the-never"
+    },
+    "runtime": 92,
+    "synopsis": "",
+    "title": "Metallica Through the Never",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 25,
-    "title": "Exquisite Corpse",
-    "year": 2013,
-    "directors": [
-        "L\u00e9a Mysius"
-    ],
     "countries": [
         "France"
     ],
     "description": "",
-    "synopsis": "Director L\u00e9a Mysius turns a grim premise into an utterly adorable film debut with this story of an insolent tomboy living in the French countryside who finds an unlikely playmate in the dead body she drags out of the local swamp."
+    "directors": [
+        "Léa Mysius"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/exquisite-corpse"
+    },
+    "runtime": 25,
+    "synopsis": "Director Léa Mysius turns a grim premise into an utterly adorable film debut with this story of an insolent tomboy living in the French countryside who finds an unlikely playmate in the dead body she drags out of the local swamp.",
+    "title": "Exquisite Corpse",
+    "year": 2013
 }

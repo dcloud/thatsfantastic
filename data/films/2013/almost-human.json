@@ -1,13 +1,16 @@
 {
-    "runtime": 80,
-    "title": "Almost Human",
-    "year": 2013,
-    "directors": [
-        "Joe Begos"
-    ],
     "countries": [
         "United States"
     ],
-    "description": "Director Joe Begos, Producer / Actor Josh\u00a0Ethier, Actor Graham Skipper, and Jon\u00a0Killoran\u00a0\u00a0LIVE in attendance!",
-    "synopsis": "A man who disappeared under mysterious circumstances returns to wreak havoc upon a small town."
+    "description": "Director Joe Begos, Producer / Actor Josh Ethier, Actor Graham Skipper, and Jon Killoran  LIVE in attendance!",
+    "directors": [
+        "Joe Begos"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/almost-human"
+    },
+    "runtime": 80,
+    "synopsis": "A man who disappeared under mysterious circumstances returns to wreak havoc upon a small town.",
+    "title": "Almost Human",
+    "year": 2013
 }

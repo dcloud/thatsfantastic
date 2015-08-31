@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Krzysztof Skonieczny"
-    ],
-    "year": 2014,
-    "synopsis": "A misanthropic young man plunges into an intense relationship with the daughter of the couple he means to kill.",
-    "title": "Hardkor Disco",
     "countries": [
         "Poland"
     ],
+    "description": "Marcin has murder on his mind. Not mindless violence nor a random strike, but coldly calculated and narrowly targeted murder. He arrives in Warsaw with eyes only for his intended victims, but when fate drops their daughter in his path instead, what begins as an opportunistic means to access his would-be victims becomes something far more complex.",
+    "directors": [
+        "Krzysztof Skonieczny"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/hardkor-disco"
+    },
     "runtime": 87,
-    "description": "Marcin has murder on his mind. Not mindless violence nor a random strike, but coldly calculated and narrowly targeted murder. He arrives in Warsaw with eyes only for his intended victims, but when fate drops their daughter in his path instead, what begins as an opportunistic means to access his would-be victims becomes something far more complex."
+    "synopsis": "A misanthropic young man plunges into an intense relationship with the daughter of the couple he means to kill.",
+    "title": "Hardkor Disco",
+    "year": 2014
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 95,
-    "title": "Patrick",
-    "year": 2013,
-    "directors": [
-        "Mark Hartley"
-    ],
     "countries": [
         "Australia"
     ],
     "description": "Director Mark Hartley, Producers Justin King and Antony Ginnane LIVE in attendance!",
-    "synopsis": "Nurse Kathy Jaquard didn't expect a lot of trouble on the coma ward but she gets more than she can handle when she meets the telekinetic Patrick in Mark Hartley's remake of the Ozsploitation classic."
+    "directors": [
+        "Mark Hartley"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/patrick"
+    },
+    "runtime": 95,
+    "synopsis": "Nurse Kathy Jaquard didn't expect a lot of trouble on the coma ward but she gets more than she can handle when she meets the telekinetic Patrick in Mark Hartley's remake of the Ozsploitation classic.",
+    "title": "Patrick",
+    "year": 2013
 }

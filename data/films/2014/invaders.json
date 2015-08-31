@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Jason Kupfer"
-    ],
-    "year": 2014,
-    "synopsis": "A Thanksgiving home invasion does not turn out as planned.",
-    "title": "Invaders",
     "countries": [
         "United States"
     ],
+    "description": "Jason Kupfer (Director), Tighe Arnold (Producer)",
+    "directors": [
+        "Jason Kupfer"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/invaders"
+    },
     "runtime": 6,
-    "description": "Jason Kupfer (Director), Tighe Arnold (Producer)"
+    "synopsis": "A Thanksgiving home invasion does not turn out as planned.",
+    "title": "Invaders",
+    "year": 2014
 }

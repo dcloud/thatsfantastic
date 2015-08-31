@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Alice Lowe"
-    ],
-    "year": 2014,
-    "synopsis": "Fantastic Fest is proud to premiere the directorial debut of writer/actress Alice Lowe (SIGHTSEERS; GARTH MARENGHI'S DARKPLACE), an austere tale of a nun in isolation at a rural convent who is terrorized by an encroaching darkness\u2026 that may be coming from within.",
-    "title": "Solitudo",
     "countries": [
         "United Kingdom"
     ],
+    "description": "Alice Lowe (Director)",
+    "directors": [
+        "Alice Lowe"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/solitudo"
+    },
     "runtime": 10,
-    "description": "Alice Lowe (Director)"
+    "synopsis": "Fantastic Fest is proud to premiere the directorial debut of writer/actress Alice Lowe (SIGHTSEERS; GARTH MARENGHI'S DARKPLACE), an austere tale of a nun in isolation at a rural convent who is terrorized by an encroaching darkness… that may be coming from within.",
+    "title": "Solitudo",
+    "year": 2014
 }

@@ -1,11 +1,14 @@
 {
-    "runtime": 120,
-    "title": "Buzz Screening",
-    "year": 2013,
+    "countries": [],
+    "description": "Buzz Screenings will be added to the schedule throughout the fest to meet the demand for popular films. Films will be confirmed in these slots the day before their scheduled screenings.",
     "directors": [
         "Secret"
     ],
-    "countries": [],
-    "description": "Buzz Screenings will be added to the schedule throughout the fest to meet the demand for popular films. Films will be confirmed in these slots the day before their scheduled screenings.",
-    "synopsis": "TBD screenings of popular films at the fest."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/buzz-screening"
+    },
+    "runtime": 120,
+    "synopsis": "TBD screenings of popular films at the fest.",
+    "title": "Buzz Screening",
+    "year": 2013
 }

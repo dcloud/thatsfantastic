@@ -1,13 +1,16 @@
 {
-    "runtime": 88,
-    "title": "Jodorowsky's Dune",
-    "year": 2013,
-    "directors": [
-        "Frank Pavich"
-    ],
     "countries": [
         "United States"
     ],
-    "description": "Director Frank\u00a0Pavich and\u00a0Producers Travis Stevens and Steven Scarlata LIVE in attendance!",
-    "synopsis": "This is the story of the greatest film never made: Alejandro Jodorowsky's adaptation of Frank Herbert's DUNE."
+    "description": "Director Frank Pavich and Producers Travis Stevens and Steven Scarlata LIVE in attendance!",
+    "directors": [
+        "Frank Pavich"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/jodorowskys-dune"
+    },
+    "runtime": 88,
+    "synopsis": "This is the story of the greatest film never made: Alejandro Jodorowsky's adaptation of Frank Herbert's DUNE.",
+    "title": "Jodorowsky's Dune",
+    "year": 2013
 }

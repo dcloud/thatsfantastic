@@ -1,13 +1,16 @@
 {
-    "runtime": 95,
-    "title": "The Sacrament",
-    "year": 2013,
-    "directors": [
-        "Ti West"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Director Ti West and Actor A.J. Bowen LIVE in attendance!",
-    "synopsis": "Ti West's latest follows a Vice news team deep into the heart of darkness as they investigate a utopian, messianic commune."
+    "directors": [
+        "Ti West"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-sacrament"
+    },
+    "runtime": 95,
+    "synopsis": "Ti West's latest follows a Vice news team deep into the heart of darkness as they investigate a utopian, messianic commune.",
+    "title": "The Sacrament",
+    "year": 2013
 }

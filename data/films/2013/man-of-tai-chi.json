@@ -1,13 +1,16 @@
 {
-    "runtime": 102,
-    "title": "Man of Tai Chi",
-    "year": 2013,
-    "directors": [
-        "Keanu Reeves"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Director Keanu Reeves and Actor Tiger Chen LIVE in attendance!",
-    "synopsis": "Keanu Reeves stars in and directs this epic tale about a young martial artist who must compete in an underground fight club to protect his way of life. As the fights intensify so does his will to survive."
+    "directors": [
+        "Keanu Reeves"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/man-of-tai-chi"
+    },
+    "runtime": 102,
+    "synopsis": "Keanu Reeves stars in and directs this epic tale about a young martial artist who must compete in an underground fight club to protect his way of life. As the fights intensify so does his will to survive.",
+    "title": "Man of Tai Chi",
+    "year": 2013
 }

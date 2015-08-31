@@ -1,13 +1,16 @@
 {
-    "runtime": 15,
-    "title": "Remember Me",
-    "year": 2013,
-    "directors": [
-        "Jean-Fran\u00e7ois Asselin"
-    ],
     "countries": [
         "Canada"
     ],
     "description": "",
-    "synopsis": "In this savvy commentary on the narcissistic pull of social media platforms, a self-obsessed man is convinced that he will cease to exist unless someone is thinking about him at all times, causing him to stoop to the lowest levels of unethical and debasing behaviour to satiate his need for constant attention."
+    "directors": [
+        "Jean-François Asselin"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/remember-me"
+    },
+    "runtime": 15,
+    "synopsis": "In this savvy commentary on the narcissistic pull of social media platforms, a self-obsessed man is convinced that he will cease to exist unless someone is thinking about him at all times, causing him to stoop to the lowest levels of unethical and debasing behaviour to satiate his need for constant attention.",
+    "title": "Remember Me",
+    "year": 2013
 }

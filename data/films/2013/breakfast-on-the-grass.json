@@ -1,12 +1,15 @@
 {
-    "runtime": 5,
-    "title": "Breakfast On the Grass",
-    "year": 2011,
+    "countries": [],
+    "description": "",
     "directors": [
         "Erik Alunurm",
         "Mari Liis Rebane"
     ],
-    "countries": [],
-    "description": "",
-    "synopsis": "A hilarious claymation take on the making of a masterpiece, brought to us by students of acclaimed Estonian animator Priit Parn."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/breakfast-on-the-grass"
+    },
+    "runtime": 5,
+    "synopsis": "A hilarious claymation take on the making of a masterpiece, brought to us by students of acclaimed Estonian animator Priit Parn.",
+    "title": "Breakfast On the Grass",
+    "year": 2011
 }

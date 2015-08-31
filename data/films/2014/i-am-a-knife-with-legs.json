@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Bennett Jones"
-    ],
-    "year": 2014,
-    "synopsis": "First his girlfriend dies in a suicide bombing. Then a fatwa is issued against him. And now international Europop star Ben\u00e9's eclair is weird.",
-    "title": "I Am a Knife With Legs",
     "countries": [
         "United States"
     ],
+    "description": "Hiding in an undisclosed Los Angeles apartment is international Europop star Bené (writer/director/producer/composer/editor/sound designer Bennett Jones). He's dealing with a host of problems: his girlfriend was recently killed by a suicide bomber, a fatwa has been issued against him, and his delicious looking eclair is, sadly, \"weird.\" With only his manager Beefy to keep him company, Bené develops security strategies and disguises, writes songs and plays with his neighbor's cat as he waits for the inevitable onslaught of would-be assassins.",
+    "directors": [
+        "Bennett Jones"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/i-am-a-knife-with-legs"
+    },
     "runtime": 83,
-    "description": "Hiding in an undisclosed Los Angeles apartment is international Europop star Ben\u00e9 (writer/director/producer/composer/editor/sound designer Bennett Jones). He's dealing with a host of problems: his girlfriend was recently killed by a suicide bomber, a fatwa has been issued against him, and his delicious looking eclair is, sadly, \"weird.\" With only his manager Beefy to keep him company, Ben\u00e9 develops security strategies and disguises, writes songs and plays with his neighbor's cat as he waits for the inevitable onslaught of would-be assassins."
+    "synopsis": "First his girlfriend dies in a suicide bombing. Then a fatwa is issued against him. And now international Europop star Bené's eclair is weird.",
+    "title": "I Am a Knife With Legs",
+    "year": 2014
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 91,
-    "title": "Goldberg & Eisenberg",
-    "year": 2013,
-    "directors": [
-        "Oren Carmi"
-    ],
     "countries": [
         "Israel"
     ],
     "description": "Writer/Director Oren Carmi LIVE in attendance!",
-    "synopsis": "A psychopath develops a dangerous obsession with a schlubby computer programmer."
+    "directors": [
+        "Oren Carmi"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/goldberg-eisenberg"
+    },
+    "runtime": 91,
+    "synopsis": "A psychopath develops a dangerous obsession with a schlubby computer programmer.",
+    "title": "Goldberg & Eisenberg",
+    "year": 2013
 }

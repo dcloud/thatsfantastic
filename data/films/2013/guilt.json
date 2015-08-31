@@ -1,11 +1,14 @@
 {
-    "runtime": 6,
-    "title": "Guilt",
-    "year": 2013,
+    "countries": [],
+    "description": "",
     "directors": [
         "Reda Bartkute"
     ],
-    "countries": [],
-    "description": "",
-    "synopsis": "In this promising debut from Lithuanian animator Reda Bartkute, a nervous female fox retreats into the shifting landscape of her subconscious to face a shadowy doppelganger."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/guilt"
+    },
+    "runtime": 6,
+    "synopsis": "In this promising debut from Lithuanian animator Reda Bartkute, a nervous female fox retreats into the shifting landscape of her subconscious to face a shadowy doppelganger.",
+    "title": "Guilt",
+    "year": 2013
 }

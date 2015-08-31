@@ -1,13 +1,16 @@
 {
-    "runtime": 122,
-    "title": "The Congress",
-    "year": 2013,
-    "directors": [
-        "Ari Folman"
-    ],
     "countries": [
         "Germany"
     ],
-    "description": "In THE CONGRESS, Robin Wright, playing a fictionalized version of herself, gets an offer from a major studio to sell her soul and cinematic identity so that she'll be \"scanned\" and her digitalized alias can be used with no restrictions in all kinds of Hollywood films \u2013 even the most commercial ones that she previously refused. In exchange, she receives a massive financial reward, but most importantly, the studio can keep her forever young, for all eternity, in all her movies.",
-    "synopsis": "Robin Wright (playing herself) receives the last offer she'll ever get from a Hollywood studio in Ari Folman's adaptation of Stanislaw Lem's classic scifi novel, and his follow-up to WALTZ WITH BASHIR."
+    "description": "In THE CONGRESS, Robin Wright, playing a fictionalized version of herself, gets an offer from a major studio to sell her soul and cinematic identity so that she'll be \"scanned\" and her digitalized alias can be used with no restrictions in all kinds of Hollywood films – even the most commercial ones that she previously refused. In exchange, she receives a massive financial reward, but most importantly, the studio can keep her forever young, for all eternity, in all her movies.",
+    "directors": [
+        "Ari Folman"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-congress"
+    },
+    "runtime": 122,
+    "synopsis": "Robin Wright (playing herself) receives the last offer she'll ever get from a Hollywood studio in Ari Folman's adaptation of Stanislaw Lem's classic scifi novel, and his follow-up to WALTZ WITH BASHIR.",
+    "title": "The Congress",
+    "year": 2013
 }

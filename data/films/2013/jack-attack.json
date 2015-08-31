@@ -1,14 +1,17 @@
 {
-    "runtime": 9,
-    "title": "Jack Attack",
-    "year": 2013,
-    "directors": [
-        "Antonio Padovan",
-        "Bryan Norton"
-    ],
     "countries": [
         "United States"
     ],
     "description": "",
-    "synopsis": "\"Do pumpkins feel pain?\" Helen Rogers of V/H/S and 24 EXPOSURES stars as a babysitter who learns the answer the hard way in this soon-to-be Halloween classic."
+    "directors": [
+        "Antonio Padovan",
+        "Bryan Norton"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/jack-attack"
+    },
+    "runtime": 9,
+    "synopsis": "\"Do pumpkins feel pain?\" Helen Rogers of V/H/S and 24 EXPOSURES stars as a babysitter who learns the answer the hard way in this soon-to-be Halloween classic.",
+    "title": "Jack Attack",
+    "year": 2013
 }

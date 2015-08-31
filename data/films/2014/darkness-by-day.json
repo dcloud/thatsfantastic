@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Martin Desalvo"
-    ],
-    "year": 2013,
-    "synopsis": "Things are a bit off in Virginia's tiny village. Something dark is coming her way. And now she's left alone with her sick cousin, unaware of the dangers around her.",
-    "title": "Darkness by Day",
     "countries": [
         "Argentina"
     ],
+    "description": "In an a old house in a tiny village, Virginia is left alone after her father leaves to check on his ill niece. That is, until her cousin Anabel, who also seems to be under the weather, is brought and left with her. Thankful for another person to talk to, Virginia makes every effort to keep Anabel comfortable and to bond with her. Anabel sleeps most of the day, and at night can be found wandering the woods alone. The radio reports a rabies outbreak in the remote region of Argentina where the women are holed up. In this perpetual shadow of impending doom, Virginia and her cousin are left to face the darkness of things to come.",
+    "directors": [
+        "Martin Desalvo"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/darkness-by-day"
+    },
     "runtime": 76,
-    "description": "In an a old house in a tiny village, Virginia is left alone after her father leaves to check on his ill niece. That is, until her cousin Anabel, who also seems to be under the weather, is brought and left with her. Thankful for another person to talk to, Virginia makes every effort to keep Anabel comfortable and to bond with her. Anabel sleeps most of the day, and at night can be found wandering the woods alone. The radio reports a rabies outbreak in the remote region of Argentina where the women are holed up. In this perpetual shadow of impending doom, Virginia and her cousin are left to face the darkness of things to come."
+    "synopsis": "Things are a bit off in Virginia's tiny village. Something dark is coming her way. And now she's left alone with her sick cousin, unaware of the dangers around her.",
+    "title": "Darkness by Day",
+    "year": 2013
 }

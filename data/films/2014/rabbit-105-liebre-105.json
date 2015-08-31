@@ -1,14 +1,17 @@
 {
-    "directors": [
-        "Sebasti\u00e1n Rotstein",
-        "Federico Rotstein"
-    ],
-    "year": 2013,
-    "synopsis": "A tense, DePalma-esque dance of death in an underground parking garage, from first time directors Federico and Sebastian Rotstein.",
-    "title": "Rabbit 105 (Liebre 105)",
     "countries": [
         "Argentina"
     ],
+    "description": "A mentally fragile man must conquer his fear of death in order to stave off a killer's advances.",
+    "directors": [
+        "Sebastián Rotstein",
+        "Federico Rotstein"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/rabbit-105-liebre-105"
+    },
     "runtime": 17,
-    "description": "A mentally fragile man must conquer his fear of death in order to stave off a killer's advances."
+    "synopsis": "A tense, DePalma-esque dance of death in an underground parking garage, from first time directors Federico and Sebastian Rotstein.",
+    "title": "Rabbit 105 (Liebre 105)",
+    "year": 2013
 }

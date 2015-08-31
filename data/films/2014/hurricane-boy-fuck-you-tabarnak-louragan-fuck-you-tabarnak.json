@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Ara Ball"
-    ],
-    "year": 2013,
-    "synopsis": "Dripping with crass humor and Quebecois colloquialisms, this hilarious short is about a neglected, angry white trash kid with a mullet who rechristens himself \"The Hurricane\" and sets about terrorizing the neighborhood.",
-    "title": "Hurricane Boy Fuck You Tabarnak (L'ouragan Fuck You Tabarnak)",
     "countries": [
         "Canada"
     ],
+    "description": "Fantastic Fest is proud to host the US Premiere launch of Spectacular Optical's first anthology book, KID POWER! — all about cool, tuff and inspiring kids in cult film and television! Co-edited by Kier-La Janisse and Canuxploitation's Paul Corupe and featuring writing by a diverse array of genre film criticism's most unique voices (including Fantastic Fest's own Zack Carlson), Kid Power! covers the gamut from THE PEANUT BUTTER SOLUTION to THE ABC AFTERSCHOOL SPECIAL and the dark side of Disney. And tons more! The launch will be accompanied by a rare 35mm screening of BUGSY MALONE (1976) and selected short films... plus a real PIE FIGHT!",
+    "directors": [
+        "Ara Ball"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/hurricane-boy-fuck-you-tabarnak-louragan-fuck-you-tabarnak"
+    },
     "runtime": 14,
-    "description": "Fantastic Fest is proud to host the US Premiere launch of Spectacular Optical's first anthology book, KID POWER! \u2014 all about cool, tuff and inspiring kids in cult film and television! Co-edited by Kier-La Janisse and Canuxploitation's Paul Corupe and featuring writing by a diverse array of genre film criticism's most unique voices (including Fantastic Fest's own Zack Carlson), Kid Power! covers the gamut from THE PEANUT BUTTER SOLUTION to THE ABC AFTERSCHOOL SPECIAL and the dark side of Disney. And tons more! The launch will be accompanied by a rare 35mm screening of BUGSY MALONE (1976) and selected short films... plus a real PIE FIGHT!"
+    "synopsis": "Dripping with crass humor and Quebecois colloquialisms, this hilarious short is about a neglected, angry white trash kid with a mullet who rechristens himself \"The Hurricane\" and sets about terrorizing the neighborhood.",
+    "title": "Hurricane Boy Fuck You Tabarnak (L'ouragan Fuck You Tabarnak)",
+    "year": 2013
 }

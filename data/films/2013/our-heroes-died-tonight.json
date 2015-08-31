@@ -1,13 +1,16 @@
 {
-    "runtime": 94,
-    "title": "Our Heroes Died Tonight",
-    "year": 2013,
-    "directors": [
-        "David Perrault"
-    ],
     "countries": [
         "France"
     ],
-    "description": "Victor is, in many ways, a broken man. You can argue about whether it was the French Foreign Legion that broke him, or the Algerian occupation, or some combination of the two, but the end result is that\u2014now freshly returned home to the Paris of the 1960s\u2014Victor is just not comfortable in his own skin. He's no longer himself. And so work as a masked wrestler carries obvious appeal. His old friend Simon, who makes a living as a minor hero on a low level wrestling circuit, is just the man to get him in.",
-    "synopsis": "Freshly returned home from a stint in the French Foreign Legion, Victor finds work as a reluctantly villainous masked wrestler in this marvelously crafted ode to film noir from first-time director David Perrault."
+    "description": "Victor is, in many ways, a broken man. You can argue about whether it was the French Foreign Legion that broke him, or the Algerian occupation, or some combination of the two, but the end result is that—now freshly returned home to the Paris of the 1960s—Victor is just not comfortable in his own skin. He's no longer himself. And so work as a masked wrestler carries obvious appeal. His old friend Simon, who makes a living as a minor hero on a low level wrestling circuit, is just the man to get him in.",
+    "directors": [
+        "David Perrault"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/our-heroes-died-tonight"
+    },
+    "runtime": 94,
+    "synopsis": "Freshly returned home from a stint in the French Foreign Legion, Victor finds work as a reluctantly villainous masked wrestler in this marvelously crafted ode to film noir from first-time director David Perrault.",
+    "title": "Our Heroes Died Tonight",
+    "year": 2013
 }

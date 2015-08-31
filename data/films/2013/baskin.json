@@ -1,13 +1,16 @@
 {
-    "runtime": 11,
-    "title": "Baskin",
-    "year": 2013,
-    "directors": [
-        "Can Evrenol"
-    ],
     "countries": [
         "Turkey"
     ],
     "description": "",
-    "synopsis": "A group of Turkish police called in for backup in a desolate area stumble upon a squalid and blood-soaked den of satanic ritual. The latest from Fantastic Fest alumnus Can Evrenol (TO MY MOTHER AND FATHER) is a visceral trip into the darkest pits of a very palpable evil."
+    "directors": [
+        "Can Evrenol"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/baskin"
+    },
+    "runtime": 11,
+    "synopsis": "A group of Turkish police called in for backup in a desolate area stumble upon a squalid and blood-soaked den of satanic ritual. The latest from Fantastic Fest alumnus Can Evrenol (TO MY MOTHER AND FATHER) is a visceral trip into the darkest pits of a very palpable evil.",
+    "title": "Baskin",
+    "year": 2013
 }

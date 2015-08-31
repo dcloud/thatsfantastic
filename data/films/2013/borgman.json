@@ -1,13 +1,16 @@
 {
-    "runtime": 113,
-    "title": "Borgman",
-    "year": 2013,
-    "directors": [
-        "Alex van Warmerdam"
-    ],
     "countries": [
         "Netherlands"
     ],
     "description": "Three armed men, one of them a priest, are out hunting in the woods. Their prey is not sport, but Camiel Borgman, a dirty and unshaven, frail man who sleeps in a makeshift underground bunker below their feet. They seem to know he is underground. They stab the earth with a large metal spear. He barely escapes.",
-    "synopsis": "Something wicked this way comes in the form of the ordinary, the polite and the normal as a drifter and his followers invade the home of a bourgeois family."
+    "directors": [
+        "Alex van Warmerdam"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/borgman"
+    },
+    "runtime": 113,
+    "synopsis": "Something wicked this way comes in the form of the ordinary, the polite and the normal as a drifter and his followers invade the home of a bourgeois family.",
+    "title": "Borgman",
+    "year": 2013
 }

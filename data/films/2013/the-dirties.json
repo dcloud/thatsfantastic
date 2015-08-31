@@ -1,13 +1,16 @@
 {
-    "runtime": 83,
-    "title": "The Dirties",
-    "year": 2013,
-    "directors": [
-        "Matt Johnson"
-    ],
     "countries": [
         "Canada"
     ],
     "description": "Writer/Director/Producer/Actor Matt Johnson LIVE in attendance!",
-    "synopsis": "A pair of cinema-obsessed high school geeks are caught up in an escalating cycle of violence when the lines between fantasy and reality begin to blur."
+    "directors": [
+        "Matt Johnson"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-dirties"
+    },
+    "runtime": 83,
+    "synopsis": "A pair of cinema-obsessed high school geeks are caught up in an escalating cycle of violence when the lines between fantasy and reality begin to blur.",
+    "title": "The Dirties",
+    "year": 2013
 }

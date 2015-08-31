@@ -1,13 +1,16 @@
 {
-    "runtime": 15,
-    "title": "Munchausen",
-    "year": 2013,
-    "directors": [
-        "Ari Aster"
-    ],
     "countries": [
         "United States"
     ],
     "description": "American director Zack Parker delivers an unexpected, nasty little thriller about a woman whose life spins out of control following an attack on her unborn child.",
-    "synopsis": "A clingy mother (Bonnie Bedelia of THE STRANGE VENGEANCE OF ROSALIE and DIE HARD) goes to extreme lengths to prevent her son from going off to college. The latest from the prolific director of the disturbing THE STRANGE THING ABOUT THE JOHNSONS."
+    "directors": [
+        "Ari Aster"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/munchausen"
+    },
+    "runtime": 15,
+    "synopsis": "A clingy mother (Bonnie Bedelia of THE STRANGE VENGEANCE OF ROSALIE and DIE HARD) goes to extreme lengths to prevent her son from going off to college. The latest from the prolific director of the disturbing THE STRANGE THING ABOUT THE JOHNSONS.",
+    "title": "Munchausen",
+    "year": 2013
 }

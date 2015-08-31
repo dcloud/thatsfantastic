@@ -1,13 +1,16 @@
 {
-    "runtime": 94,
-    "title": "Lfo",
-    "year": 2013,
-    "directors": [
-        "Antonio Tubl\u00e9n"
-    ],
     "countries": [
         "Sweden"
     ],
-    "description": "Director Antonio Tubl\u00e9n, Producers Alexander Br\u00f8ndsted and Fredric Ollerstam, and Actors Patrik Karlson and\u00a0Izabella jo Tschig\u00a0LIVE in attendance!",
-    "synopsis": "A solitary man discovers audio frequencies that open the human mind wide to hypnotic suggestion and, ultimately, his total control in this slyly deadpan dark comedy from Sweden."
+    "description": "Director Antonio Tublén, Producers Alexander Brøndsted and Fredric Ollerstam, and Actors Patrik Karlson and Izabella jo Tschig LIVE in attendance!",
+    "directors": [
+        "Antonio Tublén"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/lfo"
+    },
+    "runtime": 94,
+    "synopsis": "A solitary man discovers audio frequencies that open the human mind wide to hypnotic suggestion and, ultimately, his total control in this slyly deadpan dark comedy from Sweden.",
+    "title": "Lfo",
+    "year": 2013
 }

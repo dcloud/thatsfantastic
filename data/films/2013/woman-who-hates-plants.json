@@ -1,13 +1,16 @@
 {
-    "runtime": 1,
-    "title": "Woman Who Hates Plants",
-    "year": 2013,
-    "directors": [
-        "Morgan Miller"
-    ],
     "countries": [
         "United States"
     ],
     "description": "",
-    "synopsis": "This woman really doesn't like plants."
+    "directors": [
+        "Morgan Miller"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/woman-who-hates-plants"
+    },
+    "runtime": 1,
+    "synopsis": "This woman really doesn't like plants.",
+    "title": "Woman Who Hates Plants",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Rakshit Shetty"
-    ],
-    "year": 2014,
-    "synopsis": "Mystery abounds in this fractured gangster story from Karnataka, India. Shades of SCARFACE, PULP FICTION and RASHOMON color Rakshit Shetty's entrancing story of good, evil and something else...",
-    "title": "As Seen by the Rest (Ulidavaru Kandante)",
     "countries": [
         "India"
     ],
+    "description": "Intrepid reporter Regina serves as our proxy in director Rakshit Shetty's epic story of love, violence, jealousy and longing set in the seaside city of Malpe, India. As Regina attempts to put together a complicated story for her readers, Shetty's viewers are taken on a whirlwind journey through the Karnataka underworld, and introduced to the vividly written and realized characters who make up its inhabitants. Director Shetty deftly hides the focus of the story while managing to engage the audience in the lives of various big and small time hoods, nobodies in love, and a vivid cast of characters all in need of anything to make their lives make sense.",
+    "directors": [
+        "Rakshit Shetty"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/as-seen-by-the-rest-ulidavaru-kandante"
+    },
     "runtime": 153,
-    "description": "Intrepid reporter Regina serves as our proxy in director Rakshit Shetty's epic story of love, violence, jealousy and longing set in the seaside city of Malpe, India. As Regina attempts to put together a complicated story for her readers, Shetty's viewers are taken on a whirlwind journey through the Karnataka underworld, and introduced to the vividly written and realized characters who make up its inhabitants. Director Shetty deftly hides the focus of the story while managing to engage the audience in the lives of various big and small time hoods, nobodies in love, and a vivid cast of characters all in need of anything to make their lives make sense."
+    "synopsis": "Mystery abounds in this fractured gangster story from Karnataka, India. Shades of SCARFACE, PULP FICTION and RASHOMON color Rakshit Shetty's entrancing story of good, evil and something else...",
+    "title": "As Seen by the Rest (Ulidavaru Kandante)",
+    "year": 2014
 }

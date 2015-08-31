@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Ben Steiner"
-    ],
-    "year": 2014,
-    "synopsis": "Frank is a bedridden man in a squalid London house who is able to communicate with the dead in a most unusual fashion. With his health failing, he opts to do one last job before quitting the spirit medium business for good. But some local gangsters have other plans\u2026",
-    "title": "The Stomach",
     "countries": [
         "United States"
     ],
+    "description": "Ben Steiner (Director), Dan Dixon (Producer)",
+    "directors": [
+        "Ben Steiner"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-stomach"
+    },
     "runtime": 15,
-    "description": "Ben Steiner (Director), Dan Dixon (Producer)"
+    "synopsis": "Frank is a bedridden man in a squalid London house who is able to communicate with the dead in a most unusual fashion. With his health failing, he opts to do one last job before quitting the spirit medium business for good. But some local gangsters have other plans…",
+    "title": "The Stomach",
+    "year": 2014
 }

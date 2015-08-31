@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Manuel Facal"
-    ],
-    "year": 2014,
-    "synopsis": "It's a stoner comedy from Uruguay. What else do you need to know?",
-    "title": "High Five (Relocos Y Repasados)",
     "countries": [
         "Uruguay"
     ],
+    "description": "Stoner pals Elias (Joaquín Tome) and Andres (Santiago Quintans) are on the verge of graduating from college. The only thing standing in their way is final exams. Their plans to get serious about studying are diverted after Elias discovers a cache of five illegal drugs: ecstacy, marijuana, LSD, cocaine and ketamine. Instead of reporting the dope to the police, Andres has another idea. He convinces Martin and three other friends (Luciano Demarco, Micaela Psinisnuc and Nicolás Furtado) to each take one of the drugs and see what happens. Like their study plans, their leisurely drug experiment goes up in smoke. Andres gets word that his girlfriend's grandmother dies. While high out of his mind on LSD, Andres must figure out how to deal with this sudden tragedy as well as prepare for final exams.",
+    "directors": [
+        "Manuel Facal"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/high-five-relocos-y-repasados"
+    },
     "runtime": 98,
-    "description": "Stoner pals Elias (Joaqu\u00edn Tome) and Andres (Santiago Quintans) are on the verge of graduating from college. The only thing standing in their way is final exams. Their plans to get serious about studying are diverted after Elias discovers a cache of five illegal drugs: ecstacy, marijuana, LSD, cocaine and ketamine. Instead of reporting the dope to the police, Andres has another idea. He convinces Martin and three other friends (Luciano Demarco, Micaela Psinisnuc and Nicol\u00e1s Furtado) to each take one of the drugs and see what happens. Like their study plans, their leisurely drug experiment goes up in smoke. Andres gets word that his girlfriend's grandmother dies. While high out of his mind on LSD, Andres must figure out how to deal with this sudden tragedy as well as prepare for final exams."
+    "synopsis": "It's a stoner comedy from Uruguay. What else do you need to know?",
+    "title": "High Five (Relocos y Repasados)",
+    "year": 2014
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 120,
-    "title": "Wolf",
-    "year": 2013,
-    "directors": [
-        "Jim Taihuttu"
-    ],
     "countries": [
         "Netherlands"
     ],
-    "description": "Majid has little to offer the world. The middle son of an immigrant family at a time when immigrants are not looked upon with particular kindness, he's freshly out on parole working a nothing job because anything else would land him back in jail. He's a lifetime hustler, uneducated and brimming with anger, whose only real assets are his fists. So when he gets the opportunity to earn a few bucks in the ring, Majid jumps at the opportunity. His success in the ring draws the attention of local gangsters, who offer employment in an environment where his skill set will be far more appreciated.\n\nMark down Jim Taihuttu's Dutch effort WOLF as the latest straight line descendant of Nicolas Winding Refn's PUSHER, and arguably one of the very best fruits to grow from that particular tree. Coming to Fantastic Fest fresh from its world premiere in San Sebastian, WOLF is raw, powerful stuff \u2013 a compelling portrait not just of Majid but of an entire generation of disaffected youth who seemingly have no place anywhere in society.\n\nMarwan Kenzari (you may recognize him from last year's Fantastic Fest selection BLACK OUT) delivers a lean, magnetic performance as Majid, his natural charisma and obvious physical attributes combining for what should be a true breakout performance. Also sure to attract attention if the work of director Taihuttu, who makes his solo feature debut here and is clearly poised for greater things. (Todd Brown)",
-    "synopsis": "Freshly released on parole and hailing from an immigrant family, Majid's only real assets are his fists. He's inexorably drawn into the worlds of competitive fighting and organized crime in this gritty crime thriller."
+    "description": "Majid has little to offer the world. The middle son of an immigrant family at a time when immigrants are not looked upon with particular kindness, he's freshly out on parole working a nothing job because anything else would land him back in jail. He's a lifetime hustler, uneducated and brimming with anger, whose only real assets are his fists. So when he gets the opportunity to earn a few bucks in the ring, Majid jumps at the opportunity. His success in the ring draws the attention of local gangsters, who offer employment in an environment where his skill set will be far more appreciated.\n\nMark down Jim Taihuttu's Dutch effort WOLF as the latest straight line descendant of Nicolas Winding Refn's PUSHER, and arguably one of the very best fruits to grow from that particular tree. Coming to Fantastic Fest fresh from its world premiere in San Sebastian, WOLF is raw, powerful stuff – a compelling portrait not just of Majid but of an entire generation of disaffected youth who seemingly have no place anywhere in society.\n\nMarwan Kenzari (you may recognize him from last year's Fantastic Fest selection BLACK OUT) delivers a lean, magnetic performance as Majid, his natural charisma and obvious physical attributes combining for what should be a true breakout performance. Also sure to attract attention if the work of director Taihuttu, who makes his solo feature debut here and is clearly poised for greater things. (Todd Brown)",
+    "directors": [
+        "Jim Taihuttu"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/wolf"
+    },
+    "runtime": 120,
+    "synopsis": "Freshly released on parole and hailing from an immigrant family, Majid's only real assets are his fists. He's inexorably drawn into the worlds of competitive fighting and organized crime in this gritty crime thriller.",
+    "title": "Wolf",
+    "year": 2013
 }

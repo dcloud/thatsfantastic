@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Luca Toth"
-    ],
-    "year": 2013,
-    "synopsis": "Luca Toth's Royal College of Art graduation film is a tactile, subversively sensual coming of age film that explores the rituals of puberty and the mysteries that lay beneath manes of flowing hair.",
-    "title": "The Age of Curious",
     "countries": [
         "United Kingdom"
     ],
+    "description": "",
+    "directors": [
+        "Luca Toth"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-age-of-curious"
+    },
     "runtime": 9,
-    "description": ""
+    "synopsis": "Luca Toth's Royal College of Art graduation film is a tactile, subversively sensual coming of age film that explores the rituals of puberty and the mysteries that lay beneath manes of flowing hair.",
+    "title": "The Age of Curious",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 115,
-    "title": "Witching & Bitching",
-    "year": 2013,
-    "directors": [
-        "Alex de la Iglesia"
-    ],
     "countries": [
         "Spain"
     ],
-    "description": "When a bank heist in the city doesn't all go according to plan, Jos\u00e9 and Tony find themselves in possession of some hostages and speeding through the mountains of Spain, hoping to quietly slip over the border. Not wanting to give up his custody days to his ex-wife, Jos\u00e9 has also brought his son along, for both the robbery and the ride. Little do they know that this is only the beginning of their troubles. When they decide to make a stop in a small tavern in the Basque countryside, the group encounters a series of local wackos. Falling victim to a mysterious spell, they soon find themselves the honored guests of a fractured family of witches who are preparing for an ancient ritual. More colorful characters begin to enter the picture, including a pair of hapless cops hot on the trail, a defecting vixen witch and Jos\u00e9's controlling ex-wife, and the situation spirals further out of control, heading towards a jaw-dropping climax.",
-    "synopsis": "Hit Spanish director Alex de la Iglesia (THE LAST CIRCUS) returns to Fantastic Fest with a hilarious and gory tale of thieves who find themselves in over their heads when faced with a coven of bloodthirsty witches."
+    "description": "When a bank heist in the city doesn't all go according to plan, José and Tony find themselves in possession of some hostages and speeding through the mountains of Spain, hoping to quietly slip over the border. Not wanting to give up his custody days to his ex-wife, José has also brought his son along, for both the robbery and the ride. Little do they know that this is only the beginning of their troubles. When they decide to make a stop in a small tavern in the Basque countryside, the group encounters a series of local wackos. Falling victim to a mysterious spell, they soon find themselves the honored guests of a fractured family of witches who are preparing for an ancient ritual. More colorful characters begin to enter the picture, including a pair of hapless cops hot on the trail, a defecting vixen witch and José's controlling ex-wife, and the situation spirals further out of control, heading towards a jaw-dropping climax.",
+    "directors": [
+        "Alex de la Iglesia"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/witching-bitching"
+    },
+    "runtime": 115,
+    "synopsis": "Hit Spanish director Alex de la Iglesia (THE LAST CIRCUS) returns to Fantastic Fest with a hilarious and gory tale of thieves who find themselves in over their heads when faced with a coven of bloodthirsty witches.",
+    "title": "Witching & Bitching",
+    "year": 2013
 }

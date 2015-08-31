@@ -1,13 +1,16 @@
 {
-    "runtime": 14,
-    "title": "Sweet Rabbit",
-    "year": 2012,
-    "directors": [
-        "Camiel Schouwenaar"
-    ],
     "countries": [
         "Netherlands"
     ],
     "description": "A young female peeping tom develops a fatal attraction to a virile old man.",
-    "synopsis": "Based on the book by Dutch children's writer Imme Dros, a middle-aged housewife is seized by anxiety when she starts to grow rabbit ears and finds the community unsympathetic to her predicament."
+    "directors": [
+        "Camiel Schouwenaar"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/sweet-rabbit"
+    },
+    "runtime": 14,
+    "synopsis": "Based on the book by Dutch children's writer Imme Dros, a middle-aged housewife is seized by anxiety when she starts to grow rabbit ears and finds the community unsympathetic to her predicament.",
+    "title": "Sweet Rabbit",
+    "year": 2012
 }

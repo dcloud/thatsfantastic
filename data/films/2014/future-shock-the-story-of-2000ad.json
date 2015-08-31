@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Paul Goodwin"
-    ],
-    "year": 2014,
-    "synopsis": "The anarchic and unruly history of 2000AD: the Galaxy's Greatest Comic.",
-    "title": "Future Shock! The Story of 2000AD",
     "countries": [
         "United Kingdom"
     ],
+    "description": "FUTURE SHOCK! tells the story of 2000AD: a UK science-fiction comic that came to change the face of the comics industry. First published in 1977 to cash in on the success of STAR WARS, 2000AD proved wildly popular with readers, but quickly forged its own distinct identity, light years away from the clear-cut heroes and villains of George Lucas' space operatics. The comic was violent, edgy, anti-authoritarian, blackly funny and above all, idiosyncratically British. Not only did it introduce seminal creators such as Alan Moore and Grant Morrison, it also had a profound influence on pop culture at large, with such cult cinema hits as ROBOCOP and HARDWARE paying overt homage to it soon after its initial publication.",
+    "directors": [
+        "Paul Goodwin"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/future-shock-the-story-of-2000ad"
+    },
     "runtime": 100,
-    "description": "FUTURE SHOCK! tells the story of 2000AD: a UK science-fiction comic that came to change the face of the comics industry. First published in 1977 to cash in on the success of STAR WARS, 2000AD proved wildly popular with readers, but quickly forged its own distinct identity, light years away from the clear-cut heroes and villains of George Lucas' space operatics. The comic was violent, edgy, anti-authoritarian, blackly funny and above all, idiosyncratically British. Not only did it introduce seminal creators such as Alan Moore and Grant Morrison, it also had a profound influence on pop culture at large, with such cult cinema hits as ROBOCOP and HARDWARE paying overt homage to it soon after its initial publication."
+    "synopsis": "The anarchic and unruly history of 2000AD: the Galaxy's Greatest Comic.",
+    "title": "Future Shock! the Story of 2000AD",
+    "year": 2014
 }

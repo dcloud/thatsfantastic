@@ -1,13 +1,16 @@
 {
-    "runtime": 7,
-    "title": "A House, a Home",
-    "year": 2012,
-    "directors": [
-        "Daniel Fickle"
-    ],
     "countries": [
         "United States"
     ],
     "description": "",
-    "synopsis": "Bearing the fantastical shades of Joe Massot's WONDERWALL, Daniel Fickle's music video for Alialujah Choir's \"A House, A Home\" explores the secret lives of two adolescents who live in small, antiquated rooms connected by underground tunnels. Inspired by a heartbreaking true story."
+    "directors": [
+        "Daniel Fickle"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/a-house-a-home"
+    },
+    "runtime": 7,
+    "synopsis": "Bearing the fantastical shades of Joe Massot's WONDERWALL, Daniel Fickle's music video for Alialujah Choir's \"A House, A Home\" explores the secret lives of two adolescents who live in small, antiquated rooms connected by underground tunnels. Inspired by a heartbreaking true story.",
+    "title": "A House, a Home",
+    "year": 2012
 }

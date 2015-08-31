@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Guillermo Amoedo Schultze"
-    ],
-    "year": 2014,
-    "synopsis": "A mysterious man returns to his home after sixteen years, which jumpstarts a bizarre and deadly chain of events.",
-    "title": "The Stranger",
     "countries": [
         "Chile"
     ],
+    "description": "Eli Roth's cinematic family tree is growing, from sponsoring and encouraging filmmakers he's discovered at horror conventions (GRACE's Paul Solet) to developing talent ready to take the next step into the show. In 2012, Fantastic Fest showcased the US premiere of Roth collaborator Nicolás López earthquake thriller AFTERSHOCK, and this year will feature Guillermo Amoedo's English language debut THE STRANGER. López and Amoedo worked with Roth on 2013 FF favorite THE GREEN INFERNO as well as his upcoming KNOCK KNOCK.",
+    "directors": [
+        "Guillermo Amoedo Schultze"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-stranger"
+    },
     "runtime": 92,
-    "description": "Eli Roth's cinematic family tree is growing, from sponsoring and encouraging filmmakers he's discovered at horror conventions (GRACE's Paul Solet) to developing talent ready to take the next step into the show. In 2012, Fantastic Fest showcased the US premiere of Roth collaborator Nicol\u00e1s L\u00f3pez earthquake thriller AFTERSHOCK, and this year will feature Guillermo Amoedo's English language debut THE STRANGER. L\u00f3pez and Amoedo worked with Roth on 2013 FF favorite THE GREEN INFERNO as well as his upcoming KNOCK KNOCK."
+    "synopsis": "A mysterious man returns to his home after sixteen years, which jumpstarts a bizarre and deadly chain of events.",
+    "title": "The Stranger",
+    "year": 2014
 }

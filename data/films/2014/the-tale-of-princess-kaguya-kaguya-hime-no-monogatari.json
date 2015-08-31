@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Isao Takahata"
-    ],
-    "year": 2014,
-    "synopsis": "A breathtakingly animated tale of a woman, the men who want to control her, and the moon. The latest from Studio Ghibli.",
-    "title": "The Tale of Princess Kaguya (Kaguya-Hime No Monogatari)",
     "countries": [
         "Japan"
     ],
+    "description": "An aging bamboo cutter happens upon a glowing stalk which opens to reveal a tiny nymph. After taking it home, the nymph turns into a baby girl who ages very rapidly. Claiming the child as their own, the man and his wife lovingly refer to her as \"Princess.\" When the bamboo cutter discovers gold and silks in the forest, he takes it as a sign that Princes is intended for bigger things. He moves his family into an extravagant palace and has his daughter trained in all manners of royalty. As suitors from across the land come to win her hand, the newly-named Kaguya longs for her simpler days in the forest, and does everything she can to change her fate.",
+    "directors": [
+        "Isao Takahata"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-tale-of-princess-kaguya-kaguya-hime-no-monogatari"
+    },
     "runtime": 137,
-    "description": "An aging bamboo cutter happens upon a glowing stalk which opens to reveal a tiny nymph. After taking it home, the nymph turns into a baby girl who ages very rapidly. Claiming the child as their own, the man and his wife lovingly refer to her as \"Princess.\" When the bamboo cutter discovers gold and silks in the forest, he takes it as a sign that Princes is intended for bigger things. He moves his family into an extravagant palace and has his daughter trained in all manners of royalty. As suitors from across the land come to win her hand, the newly-named Kaguya longs for her simpler days in the forest, and does everything she can to change her fate."
+    "synopsis": "A breathtakingly animated tale of a woman, the men who want to control her, and the moon. The latest from Studio Ghibli.",
+    "title": "The Tale of Princess Kaguya (Kaguya-hime No Monogatari)",
+    "year": 2014
 }

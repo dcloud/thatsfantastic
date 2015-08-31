@@ -1,13 +1,16 @@
 {
-    "runtime": 96,
-    "title": "The Unknown Known",
-    "year": 2013,
-    "directors": [
-        "Errol Morris"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Director Errol Morris LIVE in attendance!",
-    "synopsis": "Errol Morris' THE UNKNOWN KNOWN is a gripping exploration of the career and philosophy of former U.S Secretary of Defense Donald Rumsfeld."
+    "directors": [
+        "Errol Morris"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-unknown-known"
+    },
+    "runtime": 96,
+    "synopsis": "Errol Morris' THE UNKNOWN KNOWN is a gripping exploration of the career and philosophy of former U.S Secretary of Defense Donald Rumsfeld.",
+    "title": "The Unknown Known",
+    "year": 2013
 }

@@ -1,14 +1,17 @@
 {
+    "countries": [
+        "Netherlands"
+    ],
+    "description": "Max (Tim Haars) and Jules (Daniël Arends) are brothers from different mothers. Max and Jules make a promise to each other at a young age: never let a woman split them apart. Over time, the brothers grow from naive kids to irresponsible adults. Jules manages a grocery store while Max works in a video store. When they aren't working, the pair revel in endless nights of drunken hook-ups and sexist games. One fateful day, Max meets Anna (Sylvia Hoecks), the woman of his dreams. Jules quickly hooks up with her, which sparks a war between the brothers over the affection of this special woman.",
     "directors": [
         "Steffen Haars",
         "Flip van der Kuil"
     ],
-    "year": 2014,
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/bros-before-hos"
+    },
+    "runtime": 88,
     "synopsis": "A unashamedly offensive bromance from the killer comedy team behind NEW KIDS TURBO and NEW KIDS NITRO.",
     "title": "Bros Before Hos",
-    "countries": [
-        "Netherlands"
-    ],
-    "runtime": 88,
-    "description": "Max (Tim Haars) and Jules (Dani\u00ebl Arends) are brothers from different mothers. Max and Jules make a promise to each other at a young age: never let a woman split them apart. Over time, the brothers grow from naive kids to irresponsible adults. Jules manages a grocery store while Max works in a video store. When they aren't working, the pair revel in endless nights of drunken hook-ups and sexist games. One fateful day, Max meets Anna (Sylvia Hoecks), the woman of his dreams. Jules quickly hooks up with her, which sparks a war between the brothers over the affection of this special woman."
+    "year": 2014
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Dave Boyle"
-    ],
-    "year": 2014,
-    "synopsis": "A Japanese crime novelist in San Francisco tries to unravel a real life murder mystery in this acclaimed neo-noir featuring Takashi Miike regular Kazuki Kitamura.",
-    "title": "Man From Reno",
     "countries": [
         "Japan"
     ],
+    "description": "Aki is a stranger in a strange land, a Japanese crime novelist visiting San Francisco when she finds herself drawn into a real life murder mystery. Knowing virtually nobody and adrift in an unfamiliar culture and city with only an aging sheriff to help, can her literary skills help her unravel the truth?",
+    "directors": [
+        "Dave Boyle"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/man-from-reno"
+    },
     "runtime": 111,
-    "description": "Aki is a stranger in a strange land, a Japanese crime novelist visiting San Francisco when she finds herself drawn into a real life murder mystery. Knowing virtually nobody and adrift in an unfamiliar culture and city with only an aging sheriff to help, can her literary skills help her unravel the truth?"
+    "synopsis": "A Japanese crime novelist in San Francisco tries to unravel a real life murder mystery in this acclaimed neo-noir featuring Takashi Miike regular Kazuki Kitamura.",
+    "title": "Man From Reno",
+    "year": 2014
 }

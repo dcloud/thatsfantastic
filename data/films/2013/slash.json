@@ -1,11 +1,14 @@
 {
-    "runtime": 9,
-    "title": "S/Ash",
-    "year": 2013,
+    "countries": [],
+    "description": "A middle school student prone to wild daydreams devotes his waking hours to stretching and flexibility exercises with the ultimate goal of one day being able to lick his own penis.",
     "directors": [
         "Clay Liford"
     ],
-    "countries": [],
-    "description": "A middle school student prone to wild daydreams devotes his waking hours to stretching and flexibility exercises with the ultimate goal of one day being able to lick his own penis.",
-    "synopsis": "A 13 year old boy (Arthur Dale of GROW UP TONY PHILLIPS, whose director Emily Hagins also makes a cameo here) writes erotic Harry Potter fan fiction, leading to an awkwardly hilarious confrontation at the local Comicon."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/slash"
+    },
+    "runtime": 9,
+    "synopsis": "A 13 year old boy (Arthur Dale of GROW UP TONY PHILLIPS, whose director Emily Hagins also makes a cameo here) writes erotic Harry Potter fan fiction, leading to an awkwardly hilarious confrontation at the local Comicon.",
+    "title": "S/ash",
+    "year": 2013
 }

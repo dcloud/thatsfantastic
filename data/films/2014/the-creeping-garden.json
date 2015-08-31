@@ -1,14 +1,17 @@
 {
+    "countries": [
+        "United Kingdom"
+    ],
+    "description": "Who says you need a work of fiction to take you to the far reaches of space to explore the unusual, beautiful and strange? Too often we forget that world around us is positively littered with the odd and the alien. So enter directors Jasper Sharp and Tim Grabham with their gorgeously photographed documentary The Creeping Garden to remind us.",
     "directors": [
         "Tim Grabham",
         "Jasper Sharp"
     ],
-    "year": 2014,
-    "synopsis": "The slime mould: a form of microbial life with behavior somewhere between plant and animal and capable of primitive intelligence. Unusual? Yes, and just wait until you meet the people who study them \u2026",
-    "title": "The Creeping Garden",
-    "countries": [
-        "United Kingdom"
-    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-creeping-garden"
+    },
     "runtime": 81,
-    "description": "Who says you need a work of fiction to take you to the far reaches of space to explore the unusual, beautiful and strange? Too often we forget that world around us is positively littered with the odd and the alien. So enter directors Jasper Sharp and Tim Grabham with their gorgeously photographed documentary The Creeping Garden to remind us."
+    "synopsis": "The slime mould: a form of microbial life with behavior somewhere between plant and animal and capable of primitive intelligence. Unusual? Yes, and just wait until you meet the people who study them …",
+    "title": "The Creeping Garden",
+    "year": 2014
 }

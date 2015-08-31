@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Mores Zhan"
-    ],
-    "year": 2013,
-    "synopsis": "RITUAL OF CATHODE RAY TUBE began its life as a multi-screen gallery installation, in which a series of monochrome drawings interact with each other like a live news feed recording of a black magic happening. Hypnotic and awesome.",
-    "title": "Ritual of Cathode Ray Tube",
     "countries": [
         "Province Of China"
     ],
+    "description": "",
+    "directors": [
+        "Mores Zhan"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/ritual-of-cathode-ray-tube"
+    },
     "runtime": 5,
-    "description": ""
+    "synopsis": "RITUAL OF CATHODE RAY TUBE began its life as a multi-screen gallery installation, in which a series of monochrome drawings interact with each other like a live news feed recording of a black magic happening. Hypnotic and awesome.",
+    "title": "Ritual of Cathode Ray Tube",
+    "year": 2013
 }

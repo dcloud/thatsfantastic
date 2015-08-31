@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Nacho Vigalondo"
-    ],
-    "year": 2013,
-    "synopsis": "Nacho Vigalondo's latest is a completely unique and endlessly creative thriller for the internet age, taking place entirely on a single computer desktop.",
-    "title": "Open Windows",
     "countries": [
         "Spain"
     ],
+    "description": "Elijah Wood is Nick Chambers, admin of the Jill Goddard (Sasha Grey) fan site and all-around internet nerd. In Austin live-streaming a Q&A after a screening of Jill's latest film (taking place in Fantastic's Fest home at the Alamo Drafthouse South Lamar), he's the winner of a contest that will afford him the opportunity to have dinner with the object of his obsession. His hopes are dashed when a stranger named Chord calls to inform him that Jill has had to cancel. But then, in a strange and convincing display of his powers, Chord turns Nick's computer into the ultimate Jill Goddard spy machine, hacking cameras at the theater and even her cellphone, and allowing Nick an all-access pass into the star's life. Before long, it becomes apparent that Nick is trapped in some sort of sick game and Jill may be in danger.",
+    "directors": [
+        "Nacho Vigalondo"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/open-windows"
+    },
     "runtime": 100,
-    "description": "Elijah Wood is Nick Chambers, admin of the Jill Goddard (Sasha Grey) fan site and all-around internet nerd. In Austin live-streaming a Q&A after a screening of Jill's latest film (taking place in Fantastic's Fest home at the Alamo Drafthouse South Lamar), he's the winner of a contest that will afford him the opportunity to have dinner with the object of his obsession. His hopes are dashed when a stranger named Chord calls to inform him that Jill has had to cancel. But then, in a strange and convincing display of his powers, Chord turns Nick's computer into the ultimate Jill Goddard spy machine, hacking cameras at the theater and even her cellphone, and allowing Nick an all-access pass into the star's life. Before long, it becomes apparent that Nick is trapped in some sort of sick game and Jill may be in danger."
+    "synopsis": "Nacho Vigalondo's latest is a completely unique and endlessly creative thriller for the internet age, taking place entirely on a single computer desktop.",
+    "title": "Open Windows",
+    "year": 2013
 }

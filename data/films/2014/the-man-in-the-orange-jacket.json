@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Aik Karapetian"
-    ],
-    "year": 2014,
-    "synopsis": "A laid-off harbor worker wages a private war on the rich in this surrealistic Latvian horror film.",
-    "title": "The Man in the Orange Jacket",
     "countries": [
         "Estonia"
     ],
+    "description": "A business executive (Aris Rozentals) lays off hundreds of harbor workers after they go on strike. He and his wife (Anta Aizupe) plan to escape the stress by taking an Italian vacation. On the evening before the trip, one of the fired workers (Maxim Lazarev) slips into their home. He is identified by part of his uniform: an orange safety jacket. Although his immediate actions reveal a murderous intent, revenge is only the initial step.",
+    "directors": [
+        "Aik Karapetian"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-man-in-the-orange-jacket"
+    },
     "runtime": 71,
-    "description": "A business executive (Aris Rozentals) lays off hundreds of harbor workers after they go on strike. He and his wife (Anta Aizupe) plan to escape the stress by taking an Italian vacation. On the evening before the trip, one of the fired workers (Maxim Lazarev) slips into their home. He is identified by part of his uniform: an orange safety jacket. Although his immediate actions reveal a murderous intent, revenge is only the initial step."
+    "synopsis": "A laid-off harbor worker wages a private war on the rich in this surrealistic Latvian horror film.",
+    "title": "The Man in the Orange Jacket",
+    "year": 2014
 }

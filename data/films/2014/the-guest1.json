@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Adam Wingard"
-    ],
-    "year": 2014,
-    "synopsis": "Looks are definitely deceiving when a dashing soldier with a propensity for violence moves in with a grieving family in this fun-as-hell, Carpenter-esque action thriller.",
-    "title": "The Guest",
     "countries": [
         "United States"
     ],
+    "description": "A family grieves over the loss of their soldier son Caleb. A soldier named David (Dan Stevens of DOWNTON ABBEY fame) arrives on the doorstep. He's strikingly handsome, incredibly polite and, most importantly, on a mission given to him by Caleb before he died. Integrating himself into their lives, he helps console Caleb's mother, teaches Caleb's brother Luke how to stand up to bullies, and is the keg-toting savior at a party that Caleb's dubious sister Anna is attending. Anna's rising skepticism soon proves to be well-founded. David, as it turns out, has finely tuned skills that include more than impeccable table manners, and his proclivity for violence soon leaves the bodies piling up.",
+    "directors": [
+        "Adam Wingard"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-guest1"
+    },
     "runtime": 99,
-    "description": "A family grieves over the loss of their soldier son Caleb. A soldier named David (Dan Stevens of DOWNTON ABBEY fame) arrives on the doorstep. He's strikingly handsome, incredibly polite and, most importantly, on a mission given to him by Caleb before he died. Integrating himself into their lives, he helps console Caleb's mother, teaches Caleb's brother Luke how to stand up to bullies, and is the keg-toting savior at a party that Caleb's dubious sister Anna is attending. Anna's rising skepticism soon proves to be well-founded. David, as it turns out, has finely tuned skills that include more than impeccable table manners, and his proclivity for violence soon leaves the bodies piling up."
+    "synopsis": "Looks are definitely deceiving when a dashing soldier with a propensity for violence moves in with a grieving family in this fun-as-hell, Carpenter-esque action thriller.",
+    "title": "The Guest",
+    "year": 2014
 }

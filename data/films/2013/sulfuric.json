@@ -1,13 +1,16 @@
 {
-    "runtime": 9,
-    "title": "Sulfuric",
-    "year": 2013,
-    "directors": [
-        "Jeff Brown"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Cult director Sabu returns with his first original story in a decade! When a family has a zombie unexpectedly delivered to their house, they decide to keep her as a domestic servant.",
-    "synopsis": "A woman returns from vacation to find her roommate comatose and a pulsating organic substance in the bathroom wastebasket. A taut exercise in urban gothic dread."
+    "directors": [
+        "Jeff Brown"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/sulfuric"
+    },
+    "runtime": 9,
+    "synopsis": "A woman returns from vacation to find her roommate comatose and a pulsating organic substance in the bathroom wastebasket. A taut exercise in urban gothic dread.",
+    "title": "Sulfuric",
+    "year": 2013
 }

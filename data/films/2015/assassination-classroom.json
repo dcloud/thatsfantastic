@@ -1,13 +1,16 @@
 {
-    "synopsis": "The most heart-warming, touching coming-of-age tale of 2015 just also happens to be the story of how one classroom of kids gets trained as assassins so they can kill their teacher before he destroys Earth.",
+    "countries": [
+        "Japan"
+    ],
     "description": "Having destroyed the moon, a creature from outer space announces his intent to destroy our planet. However, he offers one concession: allow him to teach the class of failing students of Kunugigaoka College in the art of assassination so that they can kill him and stop imminent destruction. The Ministry of Defense agrees, on the condition that their own agents are allowed to also act as teachers within the school.\n\nSo begins the most frantic, brilliant and touching school year that you'll ever see. Koro-sensei is a seven-foot tentacled yellow octopus from outer space with a wicked sense of humor. And as the students attempt to murder him in various inventive ways, he'll teach them something about themselves, and change their lives in the process. Into this mix will come various assassins, other aliens and a threat even more real than Koro-sensei, making it a school year to remember.\n\nPossessing ample visual invention and set at a brilliantly blinding pace, this super-smart adaptation of the ever-popular manga proves that you can create a VFX-heavy film that can also be incredibly human, funny and strangely feel completely real. Although the performances of the entire student body are impressive, the real star of the show is Koro-sensei, an incredible creation which, by the end of the film, has become a fully-fledged character that's impossible not to love. ASSASSINATION CLASSROOM is fun, irreverent and completely on-target filmmaking that'll leave you with a huge grin for days to come. (Evrim Ersoy)",
     "directors": [
         "Eiichiro Hasumi"
     ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/assassination-classroom"
+    },
     "runtime": 110,
-    "year": 2015,
-    "countries": [
-        "Japan"
-    ],
-    "title": "Assassination Classroom"
+    "synopsis": "The most heart-warming, touching coming-of-age tale of 2015 just also happens to be the story of how one classroom of kids gets trained as assassins so they can kill their teacher before he destroys Earth.",
+    "title": "Assassination Classroom",
+    "year": 2015
 }

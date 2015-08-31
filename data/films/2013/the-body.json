@@ -1,13 +1,16 @@
 {
-    "runtime": 18,
-    "title": "The Body",
-    "year": 2013,
-    "directors": [
-        "Paul Davis"
-    ],
     "countries": [
         "United Kingdom"
     ],
     "description": "",
-    "synopsis": "A serial killer (Alfie Allen, GAME OF THRONES) discovers he can get away with anything on Halloween night, including dragging his latest victim around as a prop amidst a sea of oblivious London partiers."
+    "directors": [
+        "Paul Davis"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/the-body"
+    },
+    "runtime": 18,
+    "synopsis": "A serial killer (Alfie Allen, GAME OF THRONES) discovers he can get away with anything on Halloween night, including dragging his latest victim around as a prop amidst a sea of oblivious London partiers.",
+    "title": "The Body",
+    "year": 2013
 }

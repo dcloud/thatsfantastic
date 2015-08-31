@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Daniel De la Vega"
-    ],
-    "year": 2014,
-    "synopsis": "A mentally fragile man must conquer his fear of death in order to stave off a killer's advances.",
-    "title": "Necrophobia 3D",
     "countries": [
         "Argentina"
     ],
+    "description": "Dante (Luis Machín) is a tailor who shares an affliction with his recently deceased brother Tomas: a crippling fear of death and dead things (necrophobia). While at Tomas' funeral, Dante is overwhelmed with fear and comes to believe that someone is following him. Soon, people close to Dante begin to die in gruesome ways. Dante must overcome his necrophobia to solve the mystery that threatens his life and the lives of those around him.",
+    "directors": [
+        "Daniel De la Vega"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/necrophobia-necrofobia-3d"
+    },
     "runtime": 75,
-    "description": "Dante (Luis Mach\u00edn) is a tailor who shares an affliction with his recently deceased brother Tomas: a crippling fear of death and dead things (necrophobia). While at Tomas' funeral, Dante is overwhelmed with fear and comes to believe that someone is following him. Soon, people close to Dante begin to die in gruesome ways. Dante must overcome his necrophobia to solve the mystery that threatens his life and the lives of those around him."
+    "synopsis": "A mentally fragile man must conquer his fear of death in order to stave off a killer's advances.",
+    "title": "Necrophobia 3d",
+    "year": 2014
 }

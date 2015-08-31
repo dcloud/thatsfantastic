@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Evrim Ersoy"
-    ],
-    "year": 2014,
-    "synopsis": "Abdullah is a lonely London cab driver who goes through the motions of his day while clearly disconnected from his environment. When he is invited to interact with a client, Abdullah chooses a frightening form of contact.",
-    "title": "Abdullah",
     "countries": [
         "United Kingdom"
     ],
+    "description": "",
+    "directors": [
+        "Evrim Ersoy"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/abdullah"
+    },
     "runtime": 12,
-    "description": ""
+    "synopsis": "Abdullah is a lonely London cab driver who goes through the motions of his day while clearly disconnected from his environment. When he is invited to interact with a client, Abdullah chooses a frightening form of contact.",
+    "title": "Abdullah",
+    "year": 2014
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Gabe Iba\u00f1ez"
-    ],
-    "year": 2014,
-    "synopsis": "In the post-nuclear apocalypse there will be robots, and insurance agents played by Antonio Banderas. He's investigating an insurance claim on a faulty robot that leads to greater discoveries.\u00a0 Plays like BLADE RUNNER for a bit, then\u2026 it is its own film. Fantastic!",
-    "title": "Automata",
     "countries": [
         "United States"
     ],
+    "description": "If you love post-apocalyptic cinema, this one's for you. We have a walled city. Vast radiation zones. Rumors persist that there's still an ocean somewhere. However, it's not all doom and gloom. We have robots to make our lives easier. Some models even have sex. When a robot malfunctions or is damaged, an Insurance Investigator from the ROC Robotics Corporation is on the case. In our story, mild mannered insurance agent Jacq Vaucan is played by Antonio Banderas. He's burnt out, an expectant father and living in a world that isn't particularly soothing. Robert Forster plays his boss, Birgitte Hjort Sorensen is Mrs. Vaucan, Melanie Griffith modifies androids into sex-bots that she also provides the voices for.",
+    "directors": [
+        "Gabe Ibañez"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/automata"
+    },
     "runtime": 110,
-    "description": "If you love post-apocalyptic cinema, this one's for you. We have a walled city. Vast radiation zones. Rumors persist that there's still an ocean somewhere. However, it's not all doom and gloom. We have robots to make our lives easier. Some models even have sex. When a robot malfunctions or is damaged, an Insurance Investigator from the ROC Robotics Corporation is on the case. In our story, mild mannered insurance agent Jacq Vaucan is played by Antonio Banderas. He's burnt out, an expectant father and living in a world that isn't particularly soothing. Robert Forster plays his boss, Birgitte Hjort Sorensen is Mrs. Vaucan, Melanie Griffith modifies androids into sex-bots that she also provides the voices for."
+    "synopsis": "In the post-nuclear apocalypse there will be robots, and insurance agents played by Antonio Banderas. He's investigating an insurance claim on a faulty robot that leads to greater discoveries.  Plays like BLADE RUNNER for a bit, then… it is its own film. Fantastic!",
+    "title": "Automata",
+    "year": 2014
 }

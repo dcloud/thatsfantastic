@@ -1,11 +1,14 @@
 {
-    "runtime": 98,
-    "title": "Chanthaly",
-    "year": 2013,
+    "countries": [],
+    "description": "Director Mattie Do LIVE in attendance!",
     "directors": [
         "Mattie Do"
     ],
-    "countries": [],
-    "description": "Director Mattie Do LIVE in attendance!",
-    "synopsis": "A sickly young woman experiences visions of her dead mother. She struggles to determine if the apparition is simply a side effect of her daily medication, or her mother actually reaching out to her from beyond the grave."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/chanthaly"
+    },
+    "runtime": 98,
+    "synopsis": "A sickly young woman experiences visions of her dead mother. She struggles to determine if the apparition is simply a side effect of her daily medication, or her mother actually reaching out to her from beyond the grave.",
+    "title": "Chanthaly",
+    "year": 2013
 }

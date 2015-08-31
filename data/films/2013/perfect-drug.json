@@ -1,13 +1,16 @@
 {
-    "runtime": 14,
-    "title": "Perfect Drug",
-    "year": 2012,
-    "directors": [
-        "Toon Aerts"
-    ],
     "countries": [
         "Belgium"
     ],
     "description": "",
-    "synopsis": "After a bungled burglary, a gang of hoods sit in a parked car waiting to hand off their loot \u2013 a suitcase full of neon test tubes \u2013 to a merciless crime boss. But when one of them dives into the stash, psychedelic ultraviolent mayhem ensues. Pure body-swapping anarchy with ice cream and pickles."
+    "directors": [
+        "Toon Aerts"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/perfect-drug"
+    },
+    "runtime": 14,
+    "synopsis": "After a bungled burglary, a gang of hoods sit in a parked car waiting to hand off their loot – a suitcase full of neon test tubes – to a merciless crime boss. But when one of them dives into the stash, psychedelic ultraviolent mayhem ensues. Pure body-swapping anarchy with ice cream and pickles.",
+    "title": "Perfect Drug",
+    "year": 2012
 }

@@ -1,4 +1,8 @@
 {
+    "countries": [
+        "United States"
+    ],
+    "description": "ABCs OF DEATH 2 is the follow-up to the most ambitious anthology film ever conceived with productions spanning from Nigeria to UK to Brazil and everywhere in between. It features segments directed by over two dozen of the world's leading talents in contemporary genre film. Inspired by children's educational books, the motion picture is comprised of twenty-six individual chapters; each helmed by a different director assigned a letter of the alphabet.  The directors were then given free reign in choosing a word to create a story involving death. Provocative, shocking, funny and at times confrontational, ABCs OF DEATH 2 is another global celebration of next generation genre filmmaking.\n\nAfter it's release on home-video and especially Netflix, the first film evolved into the equivalent of a celluloid boogeyman with viewers daring each other via social media to check out the film. Others chose to play drinking games while watching with participants trying to guess what each letter stood for.\n\nWe sincerely hope ABCs OF DEATH 2 is as much as a raucous party as the first film proved to be with audiences around the world.",
     "directors": [
         "Larry Fessenden",
         "Todd Rohal",
@@ -25,18 +29,17 @@
         "Jen Soska",
         "Sylvia Soska",
         "Robert Morgan",
-        "Kristina Buo\u017eyt\u0117",
+        "Kristina Buožytė",
         "Bruno Samper",
-        "Alejandro Brugu\u00e9s",
+        "Alejandro Brugués",
         "Dennison Ramalho",
-        "Juan Mart\u00ednez Moreno"
+        "Juan Martínez Moreno"
     ],
-    "year": 2014,
-    "synopsis": "In 2013 the craziest anthology ever created was released to an unsuspecting public. It immediately divided audiences. Some claimed it was a much-needed adrenaline shot to the heart of genre film, while others claimed it was reprehensible and the death knell of cinema as we know it.",
-    "title": "Abcs of Death 2",
-    "countries": [
-        "United States"
-    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/abcs-of-death-2"
+    },
     "runtime": 125,
-    "description": "ABCs OF DEATH 2 is the follow-up to the most ambitious anthology film ever conceived with productions spanning from Nigeria to UK to Brazil and everywhere in between. It features segments directed by over two dozen of the world's leading talents in contemporary genre film. Inspired by children's educational books, the motion picture is comprised of twenty-six individual chapters; each helmed by a different director assigned a letter of the alphabet.\u00a0 The directors were then given free reign in choosing a word to create a story involving death. Provocative, shocking, funny and at times confrontational, ABCs OF DEATH 2 is another global celebration of next generation genre filmmaking.\n\nAfter it's release on home-video and especially Netflix, the first film evolved into the equivalent of a celluloid boogeyman with viewers daring each other via social media to check out the film. Others chose to play drinking games while watching with participants trying to guess what each letter stood for.\n\nWe sincerely hope ABCs OF DEATH 2 is as much as a raucous party as the first film proved to be with audiences around the world."
+    "synopsis": "In 2013 the craziest anthology ever created was released to an unsuspecting public. It immediately divided audiences. Some claimed it was a much-needed adrenaline shot to the heart of genre film, while others claimed it was reprehensible and the death knell of cinema as we know it.",
+    "title": "ABCs of Death 2",
+    "year": 2014
 }

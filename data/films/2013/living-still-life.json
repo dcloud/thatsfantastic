@@ -1,11 +1,14 @@
 {
-    "runtime": 15,
-    "title": "Living Still Life",
-    "year": 2012,
+    "countries": [],
+    "description": "",
     "directors": [
         "Bertrand Mandico"
     ],
-    "countries": [],
-    "description": "",
-    "synopsis": "Actress Elina L\u00f6wensohn (best known from Hal Hartley's SIMPLE MEN and AMATEUR) continues her collaboration with French director Bertrand Mandico (BORO IN THE BOX) as an isolated woman who brings dead things back to life in unusual ways."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/living-still-life"
+    },
+    "runtime": 15,
+    "synopsis": "Actress Elina Löwensohn (best known from Hal Hartley's SIMPLE MEN and AMATEUR) continues her collaboration with French director Bertrand Mandico (BORO IN THE BOX) as an isolated woman who brings dead things back to life in unusual ways.",
+    "title": "Living Still Life",
+    "year": 2012
 }

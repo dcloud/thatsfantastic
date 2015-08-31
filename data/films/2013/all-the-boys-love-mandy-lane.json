@@ -1,13 +1,16 @@
 {
-    "runtime": 98,
-    "title": "All the Boys Love Mandy Lane",
-    "year": 2006,
-    "directors": [
-        "Jonathan Levine"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Producers Brian Udovich and Keith Calder LIVE IN attendance!",
-    "synopsis": "All the boys love Mandy Lane and all the girls want to be her. There's at least one person, though, that wants Mandy and her friends dead."
+    "directors": [
+        "Jonathan Levine"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/all-the-boys-love-mandy-lane"
+    },
+    "runtime": 98,
+    "synopsis": "All the boys love Mandy Lane and all the girls want to be her. There's at least one person, though, that wants Mandy and her friends dead.",
+    "title": "All the Boys Love Mandy Lane",
+    "year": 2006
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 105,
-    "title": "We Are What We Are",
-    "year": 2013,
-    "directors": [
-        "Jim Mickle"
-    ],
     "countries": [
         "United States"
     ],
     "description": "Director/Co-Writer Jim Mickle and Producer Linsey Ramey LIVE in attendance!",
-    "synopsis": "Director Jim Mickle paints a gripping portrait of an introverted family struggling to keep their macabre traditions alive."
+    "directors": [
+        "Jim Mickle"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/we-are-what-we-are"
+    },
+    "runtime": 105,
+    "synopsis": "Director Jim Mickle paints a gripping portrait of an introverted family struggling to keep their macabre traditions alive.",
+    "title": "We Are What We Are",
+    "year": 2013
 }

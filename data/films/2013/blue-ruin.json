@@ -1,13 +1,16 @@
 {
-    "runtime": 90,
-    "title": "Blue Ruin",
-    "year": 2013,
-    "directors": [
-        "Jeremy Saulnier"
-    ],
     "countries": [
         "United States"
     ],
-    "description": "Writer/Director Jeremy Saulnier, Producer\u00a0Anish\u00a0Savjani,\u00a0and lead actor Macon\u00a0Blair\u00a0LIVE in attendance!",
-    "synopsis": "A classic American revenge story, Blue Ruin follows a mysterious outsider whose quiet life is turned upside down when he returns to his childhood home to carry out an act of vengeance. Proving himself an amateur assassin, he winds up in a brutal fight to protect his estranged family."
+    "description": "Writer/Director Jeremy Saulnier, Producer Anish Savjani, and lead actor Macon Blair LIVE in attendance!",
+    "directors": [
+        "Jeremy Saulnier"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/blue-ruin"
+    },
+    "runtime": 90,
+    "synopsis": "A classic American revenge story, Blue Ruin follows a mysterious outsider whose quiet life is turned upside down when he returns to his childhood home to carry out an act of vengeance. Proving himself an amateur assassin, he winds up in a brutal fight to protect his estranged family.",
+    "title": "Blue Ruin",
+    "year": 2013
 }

@@ -1,16 +1,19 @@
 {
-    "runtime": 85,
-    "title": "Mirage Men",
-    "year": 2013,
+    "countries": [
+        "United Kingdom"
+    ],
+    "description": "Director John Lundberg, Co-Director Roland Denning, and Writer Mark Pilkington LIVE in attendance!",
     "directors": [
         "John Lundberg",
         "Kypros Kyprianou",
         "Roland Denning",
         "Mark Pilkington"
     ],
-    "countries": [
-        "United Kingdom"
-    ],
-    "description": "Director John Lundberg, Co-Director Roland Denning, and Writer Mark Pilkington LIVE in attendance!",
-    "synopsis": "A mind-scrambling documentary that posits that popular myths about the existence of UFOs originated from a disinformation campaign by the U.S. government."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/mirage-men"
+    },
+    "runtime": 85,
+    "synopsis": "A mind-scrambling documentary that posits that popular myths about the existence of UFOs originated from a disinformation campaign by the U.S. government.",
+    "title": "Mirage Men",
+    "year": 2013
 }

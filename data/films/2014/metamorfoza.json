@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Martah Colburn"
-    ],
-    "year": 2013,
-    "synopsis": "DIY collage-animating legend Martha Colburn turns her talents to three-dimensional stop motion and found footage in this transformative experimental nightmare originally commissioned by the Rotterdam Philharmonic Orchestra.",
-    "title": "Metamorfoza",
     "countries": [
         "Netherlands"
     ],
+    "description": "",
+    "directors": [
+        "Martah Colburn"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/metamorfoza"
+    },
     "runtime": 7,
-    "description": ""
+    "synopsis": "DIY collage-animating legend Martha Colburn turns her talents to three-dimensional stop motion and found footage in this transformative experimental nightmare originally commissioned by the Rotterdam Philharmonic Orchestra.",
+    "title": "Metamorfoza",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "David Gregory"
-    ],
-    "year": 2014,
-    "synopsis": "The amazing true story of one of the most notorious Hollywood productions of the 1990s.",
-    "title": "Lost Soul - the Doomed Journey of Richard Stanley's Island of Dr. Moreau",
     "countries": [
         "United States"
     ],
+    "description": "Richard Stanley emerged in the early '90s as one of the world's hottest genre directors. His first two films—HARDWARE and DUST DEVIL—are rightly considered to be classics. Stanley's third film was a highly anticipated adaptation of H.G. Wells' THE ISLAND OF DR. MOREAU starring Marlon Brando and Val Kilmer. Early in the film's production, news of dissent and production troubles began to filter out from the set in Cairns, Australia. Ultimately, executives at New Line Films fired Stanley on the first day of shooting. Legendary director John Frankenheimer was brought in to \"save\" the production, but his efforts proved to be fruitless: THE ISLAND OF DR. MOREAU is still regarded as a major disaster.",
+    "directors": [
+        "David Gregory"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/lost-soul-the-doomed-journey-of-richard-stanleys-island-of-dr.-moreau"
+    },
     "runtime": 97,
-    "description": "Richard Stanley emerged in the early '90s as one of the world's hottest genre directors. His first two films\u2014HARDWARE and DUST DEVIL\u2014are rightly considered to be classics. Stanley's third film was a highly anticipated adaptation of H.G. Wells' THE ISLAND OF DR. MOREAU starring Marlon Brando and Val Kilmer. Early in the film's production, news of dissent and production troubles began to filter out from the set in Cairns, Australia. Ultimately, executives at New Line Films fired Stanley on the first day of shooting. Legendary director John Frankenheimer was brought in to \"save\" the production, but his efforts proved to be fruitless: THE ISLAND OF DR. MOREAU is still regarded as a major disaster."
+    "synopsis": "The amazing true story of one of the most notorious Hollywood productions of the 1990s.",
+    "title": "Lost Soul - the Doomed Journey of Richard Stanley's Island of Dr. Moreau",
+    "year": 2014
 }

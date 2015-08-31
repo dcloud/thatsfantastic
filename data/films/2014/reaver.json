@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Len LoBiondo"
-    ],
-    "year": 2014,
-    "synopsis": "Two teens deal with their departed father's estate. Lamenting his lifelong paranoia, they start dismantling the contraptions he obsessively affixed to the house to ward off a supernatural threat. A solidly acted and tightly directed exercise in mounting dread.",
-    "title": "Reaver",
     "countries": [
         "United States"
     ],
+    "description": "Len LoBiondo (Director), Molo Alcocer (Producer), Oliver Harwood (Editor)",
+    "directors": [
+        "Len LoBiondo"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/reaver"
+    },
     "runtime": 20,
-    "description": "Len LoBiondo (Director), Molo Alcocer (Producer), Oliver Harwood (Editor)"
+    "synopsis": "Two teens deal with their departed father's estate. Lamenting his lifelong paranoia, they start dismantling the contraptions he obsessively affixed to the house to ward off a supernatural threat. A solidly acted and tightly directed exercise in mounting dread.",
+    "title": "Reaver",
+    "year": 2014
 }

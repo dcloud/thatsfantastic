@@ -1,13 +1,16 @@
 {
-    "runtime": 100,
-    "title": "R100",
-    "year": 2013,
-    "directors": [
-        "Hitoshi Matsumoto"
-    ],
     "countries": [
         "Japan"
     ],
     "description": "Imagine Jerry Seinfeld in his prime. Then double that awareness and have Seinfeld running for 30 years (and be a bit more bizarre). That's who Hitoshi Matsumoto is to the nation of Japan; he's quite simply the most famous comedian who has ever existed.",
-    "synopsis": "The mad genius behind BIG MAN JAPAN returns to Fantastic Fest with his most crazed work yet, a brain-unraveling comic tale of male self-destruction."
+    "directors": [
+        "Hitoshi Matsumoto"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/r100"
+    },
+    "runtime": 100,
+    "synopsis": "The mad genius behind BIG MAN JAPAN returns to Fantastic Fest with his most crazed work yet, a brain-unraveling comic tale of male self-destruction.",
+    "title": "R100",
+    "year": 2013
 }

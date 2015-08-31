@@ -1,13 +1,16 @@
 {
-    "synopsis": "A young and in love Jeanne is attacked by the local lord and makes a pact with the Devil himself in one of the most important rediscoveries of this year. Never before released in the US, this seminal psychedelic masterpiece has been painstakingly restored in 4k digital.",
+    "countries": [
+        "Japan"
+    ],
     "description": "One of the great lost masterpieces of Japanese animation, never before officially released in the U.S., 'Belladonna of Sadness' is a mad, swirling, psychedelic light-show of medieval tarot-card imagery with horned demons, haunted forests and La Belle Dame Sans Merci, equal parts J.R.R. Tolkien and gorgeous, explicit Gustav Klimt-influenced eroticism. The last film in the adult-themed Animerama trilogy produced by the godfather of Japanese anime & manga, Osamu Tezuka and directed by his long time collaborator Eiichi Yamamoto (\"ASTRO BOY\" and \"KIMBA THE WHITE LION\"), BELLADONNA unfolds as a series of spectacular still watercolor paintings that bleed and twist together. An innocent young woman, Jeanne (voiced by Aiko Nagayama) is violently raped by the local lord on her wedding night. To take revenge, she makes a pact with the Devil himself (voiced by Tatsuya Nakadai, from Akira Kurosawa's RAN) who appears as an erotic sprite and transforms her into a black-robed vision of madness and desire.",
     "directors": [
         "Eiichi Yamamoto"
     ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/belladonna-of-sadness"
+    },
     "runtime": 86,
-    "year": 1973,
-    "countries": [
-        "Japan"
-    ],
-    "title": "Belladonna of Sadness"
+    "synopsis": "A young and in love Jeanne is attacked by the local lord and makes a pact with the Devil himself in one of the most important rediscoveries of this year. Never before released in the US, this seminal psychedelic masterpiece has been painstakingly restored in 4k digital.",
+    "title": "Belladonna of Sadness",
+    "year": 1973
 }

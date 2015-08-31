@@ -1,15 +1,18 @@
 {
-    "runtime": 7,
-    "title": "Sleep Clinic",
-    "year": 2013,
+    "countries": [
+        "New Zealand"
+    ],
+    "description": "",
     "directors": [
         "Louis Olsen",
         "Luke Scott",
         "Frances Haszard"
     ],
-    "countries": [
-        "New Zealand"
-    ],
-    "description": "",
-    "synopsis": "This WTF animated short made for New Zealand's 48Hrs Furious Fimmaking Challenge spends six mind-melting minutes entrenched in the desperate delusions of an insomniac. The most essential psychiatric fantasy musical since ON A CLEAR DAY YOU CAN SEE FOREVER."
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/sleep-clinic"
+    },
+    "runtime": 7,
+    "synopsis": "This WTF animated short made for New Zealand's 48Hrs Furious Fimmaking Challenge spends six mind-melting minutes entrenched in the desperate delusions of an insomniac. The most essential psychiatric fantasy musical since ON A CLEAR DAY YOU CAN SEE FOREVER.",
+    "title": "Sleep Clinic",
+    "year": 2013
 }

@@ -1,13 +1,16 @@
 {
-    "runtime": 83,
-    "title": "Halley",
-    "year": 2013,
-    "directors": [
-        "Sebastian Hofmann"
-    ],
     "countries": [
         "Netherlands"
     ],
     "description": "Director Sebastian Hofmann LIVE in attendance!",
-    "synopsis": "Though Beto's life may technically be over, he allows himself to experience it one last time before his body completely falls apart in this unique and contemplative horror film."
+    "directors": [
+        "Sebastian Hofmann"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/halley"
+    },
+    "runtime": 83,
+    "synopsis": "Though Beto's life may technically be over, he allows himself to experience it one last time before his body completely falls apart in this unique and contemplative horror film.",
+    "title": "Halley",
+    "year": 2013
 }

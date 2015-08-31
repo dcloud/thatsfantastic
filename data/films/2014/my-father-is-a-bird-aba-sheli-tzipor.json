@@ -1,13 +1,16 @@
 {
-    "directors": [
-        "Boaz Debby"
-    ],
-    "year": 2013,
-    "synopsis": "A young man realizes that he's literally killing his feathery father every time he masturbates. Can a pubescent boy withstand the temptations that surround him without sending his dad to an early grave?",
-    "title": "My Father Is a Bird (Aba Sheli Tzipor)",
     "countries": [
         "Israel"
     ],
+    "description": "",
+    "directors": [
+        "Boaz Debby"
+    ],
+    "meta": {
+        "source_url": "http://fantasticfest.com/films/my-father-is-a-bird-aba-sheli-tzipor"
+    },
     "runtime": 12,
-    "description": ""
+    "synopsis": "A young man realizes that he's literally killing his feathery father every time he masturbates. Can a pubescent boy withstand the temptations that surround him without sending his dad to an early grave?",
+    "title": "My Father Is a Bird (Aba Sheli Tzipor)",
+    "year": 2013
 }

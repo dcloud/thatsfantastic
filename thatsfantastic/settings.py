@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django_countries',
     'scraper',
     'cinema',
+    'fantasticfest',
 )
 
 MIDDLEWARE_CLASSES = (

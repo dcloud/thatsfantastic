@@ -43,6 +43,7 @@ class Film(models.Model):
     directors = models.ManyToManyField('Person', related_name='directed',
                                        help_text=_("Usually one person, but can accomodate multiple directors"))
     actors = models.ManyToManyField('Person', related_name='acted_in')
+    related_urls = ArrayField(models.URLField(), default=list)
 
     class Meta:
         verbose_name = _('Film')

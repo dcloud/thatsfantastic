@@ -108,3 +108,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
+
+# Cinema settings
+CINEMA_DEFAULT_EVENT = 'fantastic-fest-2015'

@@ -48,7 +48,7 @@ class Film(models.Model):
     class Meta:
         verbose_name = _('Film')
         verbose_name_plural = _('Films')
-        ordering = ('title',)
+        ordering = ('title', '-year')
 
     def save(self, *args, **kwargs):
         if self.slug is None or self.slug == '':
@@ -79,6 +79,7 @@ class Screening(models.Model):
     class Meta:
         verbose_name = _('Screening')
         verbose_name_plural = _('Screenings')
+        get_latest_by = 'start_time'
 
     def __unicode__(self):
         return '{title}: {start}-{end}'.format(title=self.film.title, start=self.start_time, end=self.end_time)
@@ -97,8 +98,10 @@ class Event(models.Model):
     films = models.ManyToManyField('Film', related_name='shown_at')
 
     class Meta:
-        verbose_name = "Event"
-        verbose_name_plural = "Events"
+        verbose_name = _("Event")
+        verbose_name_plural = _("Events")
+        ordering = ('-start_date', '-end_date', 'title')
+        get_latest_by = 'start_date'
 
     def save(self, *args, **kwargs):
         if self.slug is None or self.slug == '':

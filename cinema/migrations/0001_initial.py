@@ -25,6 +25,8 @@ class Migration(migrations.Migration):
             ],
             options={
                 'verbose_name_plural': 'Events',
+                'ordering': ('-start_date', '-end_date', 'title'),
+                'get_latest_by': 'start_date',
                 'verbose_name': 'Event',
             },
         ),
@@ -44,7 +46,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'verbose_name_plural': 'Films',
-                'ordering': ('title',),
+                'ordering': ('title', 'year'),
                 'verbose_name': 'Film',
             },
         ),
@@ -72,6 +74,7 @@ class Migration(migrations.Migration):
                 ('film', models.ForeignKey(to='cinema.Film')),
             ],
             options={
+                'get_latest_by': 'start_time',
                 'verbose_name_plural': 'Screenings',
                 'verbose_name': 'Screening',
             },

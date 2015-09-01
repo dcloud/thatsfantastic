@@ -6,7 +6,7 @@ from cinema.models import (Film, Person, Screening, Event)
 class FilmAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'runtime', 'year', 'slug')
-    search_fields = ('title', 'long_description')
+    search_fields = ('title', 'description')
 
 
 @admin.register(Event)

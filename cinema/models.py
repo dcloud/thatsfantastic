@@ -36,14 +36,15 @@ class Film(models.Model):
     slug = models.SlugField(max_length=140, unique=True, null=True, blank=True)
     synopsis = models.TextField(blank=True)
     description = models.TextField(blank=True)
-    countries = ArrayField(models.CharField(choices=COUNTRY_CODES, max_length=2), default=list)
-    languages = ArrayField(models.CharField(max_length=30), default=list)
+    countries = ArrayField(models.CharField(choices=COUNTRY_CODES, max_length=2),
+                           default=list, blank=True)
+    languages = ArrayField(models.CharField(max_length=30), default=list, blank=True)
     year = models.PositiveIntegerField(blank=True, null=True, help_text=_("Release year"))
     runtime = models.IntegerField(blank=True, null=True, help_text=_("Film runtime, in whole minutes"))
-    directors = models.ManyToManyField('Person', related_name='directed',
+    directors = models.ManyToManyField('Person', related_name='directed', blank=True,
                                        help_text=_("Usually one person, but can accomodate multiple directors"))
-    actors = models.ManyToManyField('Person', related_name='acted_in')
-    related_urls = ArrayField(models.URLField(), default=list)
+    actors = models.ManyToManyField('Person', related_name='acted_in', blank=True)
+    related_urls = ArrayField(models.URLField(), default=list, blank=True)
 
     class Meta:
         verbose_name = _('Film')

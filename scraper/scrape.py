@@ -3,7 +3,8 @@ from lxml.cssselect import CSSSelector
 import re
 from scraper.models import FilmDict
 from scraper.utils import decode_html, unicode_normalize, \
-                          clean_string, string_to_list, titlecase
+                          clean_string, string_to_list
+from cinema.utils import titlecase
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
 BODY_TEXT_SELECTOR = CSSSelector('article h4 + p', translator='html')

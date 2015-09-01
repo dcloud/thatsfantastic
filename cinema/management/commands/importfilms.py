@@ -1,10 +1,11 @@
 from django.core.management.base import BaseCommand, CommandError
-from cinema.models import Film, Person, Event
 import os.path
 from os import listdir
 import json
 from nameparser import HumanName
 from django_countries import countries
+from cinema.models import Film, Person, Event
+from cinema.utils import titlecase
 
 
 class Command(BaseCommand):
@@ -47,9 +48,12 @@ class Command(BaseCommand):
             (head, tail) = os.path.split(path)
             (name, ext) = os.path.splitext(tail)
             countries_abbrs = (self._lookup_country(c) for c in data.get('countries', []))
+            title = data.get('title', None)
             directors = self._process_directors(data.get('directors', []))
+            if not title:
+                raise CommandError("Film data has no title!")
             (object, created) = Film.objects\
-                .get_or_create(title=data.get('title', None),
+                .get_or_create(title=titlecase(title),
                                slug=name,
                                synopsis=data.get('synopsis', ''),
                                description=data.get('description', ''),

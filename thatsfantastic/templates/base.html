@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <title>That's Fantastic</title>
+        <title>{% block pagetitle %}That's Fantastic{% endblock pagetitle %}</title>
         <link rel="stylesheet" href='{% static "css/foundation.css" %}'>
         <link rel="stylesheet" href='{% static "css/site.css" %}'>
         <script src='{% static "js/vendor/modernizr.js" %}'></script>

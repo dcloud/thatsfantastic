@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block pagetitle %}{{ block.super }} | {{ object.title }}{% endblock pagetitle %}
 {% block content %}
     <div class="row">
         <div class="columns">
@@ -20,4 +21,14 @@
         </div>
     </section>
     {% endif %}
+    <section class="row">
+        <div class="columns">
+            {% if object.related_urls %}
+                <h3>Related URLS</h3>
+                <ul>{% for url in object.related_urls %}
+                    <li>{{ url|urlize }}</li>{% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </section>
 {% endblock content %}

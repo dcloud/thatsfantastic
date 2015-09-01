@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from cinema.models import Film, Person
+from cinema.models import Film, Person, Event
 import os.path
 from os import listdir
 import json
@@ -14,17 +14,22 @@ class Command(BaseCommand):
         parser.add_argument('path',
                             help='A path to a directory of JSON files or \
                                   single file with film data.')
+        parser.add_argument('--event', nargs='?',
+                            help='Slug for an event to associate this film with.')
         parser.add_argument('-n', '--dry-run', action='store_true', dest='dryrun')
 
     def handle(self, *args, **options):
         self.verbosity = options['verbosity']
         self.dryrun = options['dryrun']
+        self.event = options.get('event', None)
         if self.dryrun:
             self.stdout.write("Dry run. Nothing will be created in the database.")
         if os.path.exists(options['path']):
             path = os.path.abspath(options['path'])
             json_files = []
             if os.path.isdir(path):
+                if self.verbosity > 0:
+                    self.stdout.write("Examining JSON files at {}".format(path))
                 json_files = [os.path.join(path, f) for f in listdir(path) if f.endswith('.json')]
             elif os.path.isfile(path):
                 json_files = [path]
@@ -51,9 +56,19 @@ class Command(BaseCommand):
                                runtime=data.get('runtime', None),
                                year=data.get('year', None),
                                )
-            object.countries = [c for c in countries_abbrs if c]
+            object.countries.extend([c for c in countries_abbrs if c])
             object.directors = directors
+            if 'meta' in data and 'source_url' in data['meta']:
+                object.related_urls.append(data['meta']['source_url'])
             object.save()
+            if self.event:
+                try:
+                    event = Event.objects.get(slug=self.event)
+                    event.films.add(object)
+                    if self.verbosity > 2:
+                        self.stdout.write("Associated '{}' with '{}'".format(object.title, event.title))
+                except Event.DoesNotExist:
+                    self.stderr.write("Record does not exist for slug '{}'".format(self.event))
             self.stdout.write("{} film '{}'".format('Created' if created else 'Updated', str(object)))
         else:
             self.stderr.write("Error reading film data from a non-dictionary object")

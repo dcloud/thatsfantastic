@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load static from staticfiles %}
+<!DOCTYPE html>{% load pipeline %}
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
@@ -6,9 +6,8 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <title>{% block pagetitle %}That's Fantastic{% endblock pagetitle %}</title>
-        <link rel="stylesheet" href='{% static "css/foundation.css" %}'>
-        <link rel="stylesheet" href='{% static "css/site.css" %}'>
-        <script src='{% static "js/vendor/modernizr.js" %}'></script>
+        {% stylesheet 'main' %}
+        {% javascript 'headjs' %}
     </head>
     <body>
         <nav class="top-bar" data-topbar role="navigation">
@@ -36,11 +35,7 @@
         </section>
         </nav>
 {% block content %}{% endblock content %}
-        <script src='{% static "js/vendor/jquery.js" %}'></script>
-        <script src='{% static "js/foundation.min.js" %}'></script>
-        <script>
-          $(document).foundation();
-        </script>
+        {% javascript 'postbodyjs' %}
 {% block extrajs %}{% endblock extrajs %}
     </body>
 </html>

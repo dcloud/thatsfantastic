@@ -1,0 +1,31 @@
+// Typography
+$base-font-family: $helvetica;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Font Weights
+$base-font-weight: 300;
+$heading-font-weight: 100;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Letter spacing
+$base-letter-spacing: em(0.5);
+$heading-letter-spacing: $base-letter-spacing * 2;
+
+// Margins
+$base-heading-margin: 1em;
+
+// Colors
+$almost-black: #242526;
+$light-gray: #A6ACB3;
+$dark-grayblue: #2D3D4D;
+$medium-blue: #1A5A9B;
+
+$base-font-color: $light-gray;
+$base-background-color: $almost-black;
+$action-color: $medium-blue;

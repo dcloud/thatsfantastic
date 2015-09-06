@@ -1,0 +1,48 @@
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
+@import "variables";
+@import "reset";
+
+
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  color: $base-font-color;
+  background-color: $base-background-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin: 0 0 $base-heading-margin;
+  letter-spacing: $heading-letter-spacing;
+  color: $dark-grayblue;
+}
+
+p {
+    font-weight: $base-font-weight;
+    letter-spacing: $base-letter-spacing;
+}
+
+h1, h1 > a {
+    font-size: $base-font-size * 1.2;
+}
+
+h2 {
+    font-size: $base-font-size * 1.5;
+    color: $base-font-color;
+}
+
+
+h3 {
+    font-size: $base-font-size * 1.5;
+}

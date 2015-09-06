@@ -12,3 +12,5 @@ __pycache__/
 sandbox/*
 
 staticfiles
+.sass-cache
+thatsfantastic/static/sass/vendor

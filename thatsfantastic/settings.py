@@ -8,7 +8,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as DEFAULT_CONTEXT_PROCESSORS
+from django.conf.global_settings import \
+            TEMPLATE_CONTEXT_PROCESSORS as DEFAULT_CONTEXT_PROCESSORS,\
+            STATICFILES_FINDERS as DEFAULT_STATICFILES_FINDERS
 import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -22,7 +24,7 @@ BASE_DIR = os.path.dirname(PROJ_DIR)
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', None)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.getenv('DEBUG', 'True') == 'True' else False
+DEBUG = True if os.getenv('DEBUG', 'False') == 'True' else False
 
 ALLOWED_HOSTS = []
 
@@ -38,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'django_countries',
+    'pipeline',
+
     'scraper',
     'cinema',
     'fantasticfest',
@@ -104,7 +108,42 @@ STATICFILES_DIRS = (
     os.path.join(PROJ_DIR, 'static'),
 )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_FINDERS = DEFAULT_STATICFILES_FINDERS + ('pipeline.finders.PipelineFinder',)
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+# Django Pipeline
+
+PIPELINE_CSS = {
+    'main': {
+        'source_filenames': (
+            'sass/application.scss',
+        ),
+        'output_filename': 'css/main.css'
+    },
+}
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CSSMinCompressor'
+
+PIPELINE_JS = {
+    'headjs': {
+        'source_filenames': (
+          'js/vendor/modernizr.js',
+        ),
+        'output_filename': 'js/head.js',
+    },
+    'postbodyjs': {
+        'source_filenames': (
+          'js/vendor/jquery.js',
+          'js/foundation.min.js'
+        ),
+        'output_filename': 'js/site.js',
+    }
+}
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.uglifyjs.UglifyJSCompressor'
+
+PIPELINE_COMPILERS = (
+  'pipeline.compilers.sass.SASSCompiler',
+)
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']

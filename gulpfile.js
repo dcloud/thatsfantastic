@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     rename = require('gulp-rename'),
     babel = require("gulp-babel"),
+    uglify = require('gulp-uglify'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
@@ -27,6 +28,7 @@ gulp.task('js', function() {
     return gulp.src(es6Dir + '*.js')
     .pipe(concat('site.js'))
     .pipe(babel())
+    .pipe(uglify())
     .pipe(gulp.dest(jsDir));
 });
 

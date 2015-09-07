@@ -71,7 +71,7 @@ ul, ol {
     }
 }
 
-nav ul {
+nav > ul {
     @include display(flex);
     @include flex-direction(row);
     @include flex-wrap(wrap);
@@ -79,7 +79,23 @@ nav ul {
 
     li {
         @include flex(1 1 auto);
+
+        a {
+            display: block;
+        }
     }
+}
+
+
+input, #{$all-buttons} {
+    min-height: 44px;
+}
+
+
+input[type="text"] {
+    min-width: em(300);
+    margin: 0 em(8);
+    font-size: $base-font-size * 1.1;
 }
 
 // Grid
@@ -93,20 +109,62 @@ nav ul {
     @include row();
 }
 
+.col-3 {
+    @include span-columns(3);
+}
+
+.col-9 {
+    @include span-columns(9);
+}
+
 .col-12 {
     @include span-columns(12);
 }
 
 // Components
 
-.top-bar {
-    @include row();
+#{$all-buttons}, .button {
+    @include appearance(none);
+    padding: 0 em(24);
+    display: inline-block;
+    border: 1px solid tint($action-color, 10%);
+    border-radius: 3px;
+    background-color: $action-color;
+    color: $base-font-color;
+}
+
+nav.top-bar {
+    min-height: 56px;
     background-color: $secondary-background-color;
+
+    ul {
+        @include justify-content(space-between);
+
+        li > a {
+            text-align: right;
+            line-height: 1em;
+            padding: em(20) em(8);
+        }
+    }
+
+    h1 {
+        margin: 0;
+        line-height: 1em;
+
+        a {
+            padding: em(12) em(4);
+        }
+
+    }
+
+    section {
+        padding: em(8);
+    }
+
 }
 
 .tab-bar {
     border: 1px solid $interactive-default-color;
-    @include row();
     margin: 1em 0 2em;
 
     ul {
@@ -114,8 +172,6 @@ nav ul {
             border-right: 1px solid $interactive-default-color;
 
             a {
-                @include fill-parent;
-                display: block;
                 padding: em(10) em(4);
                 text-align: center;
 
@@ -126,5 +182,21 @@ nav ul {
             border: none;
         }
 
+    }
+}
+
+form.flex-form > ul {
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-end);
+    @include align-items(center);
+
+    li {
+        @include flex(0 0 auto);
+
+        a {
+            display: block;
+        }
     }
 }

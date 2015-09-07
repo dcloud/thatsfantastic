@@ -4,16 +4,12 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-ruby-sass'),
     rename = require('gulp-rename'),
-    babel = require("gulp-babel"),
-    uglify = require('gulp-uglify'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
 var staticDir = 'thatsfantastic/static/',
     cssDir = staticDir + 'css/',
-    sassDir = staticDir + 'sass/',
-    es6Dir = staticDir + 'js/src/',
-    jsDir = staticDir + 'js/';
+    sassDir = staticDir + 'sass/';
 
 gulp.task('sass', function() {
     return sass(staticDir + 'sass/application.scss')
@@ -24,20 +20,11 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(cssDir))
 });
 
-gulp.task('js', function() {
-    return gulp.src(es6Dir + '*.js')
-    .pipe(concat('site.js'))
-    .pipe(babel())
-    .pipe(uglify())
-    .pipe(gulp.dest(jsDir));
-});
-
-
-gulp.task('build', ['sass', 'js'])
+gulp.task('build', ['sass'])
 
 // watch files for changes and reload
 gulp.task('watch', function() {
-  gulp.watch([sassDir + '*.scss', es6Dir + '*.js'], ['sass', 'js', reload]);
+  gulp.watch(sassDir + '*.scss', ['sass', reload]);
 });
 
 gulp.task('default', ['build'])

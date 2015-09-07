@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load pipeline %}
+<!DOCTYPE html>{% load static from staticfiles %}
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
@@ -6,8 +6,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <title>{% block pagetitle %}That's Fantastic{% endblock pagetitle %}</title>
-        {% stylesheet 'main' %}
-        {% javascript 'headjs' %}
+        <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
     </head>
     <body>
     <div class="outer-container">
@@ -37,7 +36,7 @@
         </nav>
 {% block content %}{% endblock content %}
     </div>
-        {% javascript 'postbodyjs' %}
+    <script src="{% static 'js/site.js' %}"></script>
 {% block extrajs %}{% endblock extrajs %}
     </body>
 </html>

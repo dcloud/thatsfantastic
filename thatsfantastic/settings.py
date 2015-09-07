@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'django_countries',
-    'pipeline',
+    'django_gulp',
 
     'scraper',
     'cinema',
@@ -108,42 +108,8 @@ STATICFILES_DIRS = (
     os.path.join(PROJ_DIR, 'static'),
 )
 
-STATICFILES_FINDERS = DEFAULT_STATICFILES_FINDERS + ('pipeline.finders.PipelineFinder',)
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-
-# Django Pipeline
-
-PIPELINE_CSS = {
-    'main': {
-        'source_filenames': (
-            'sass/application.scss',
-        ),
-        'output_filename': 'css/main.css'
-    },
-}
-PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CSSMinCompressor'
-
-PIPELINE_JS = {
-    'headjs': {
-        'source_filenames': (
-          'js/vendor/modernizr.js',
-        ),
-        'output_filename': 'js/head.js',
-    },
-    'postbodyjs': {
-        'source_filenames': (
-          'js/vendor/jquery.js',
-          'js/foundation.min.js'
-        ),
-        'output_filename': 'js/site.js',
-    }
-}
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.uglifyjs.UglifyJSCompressor'
-
-PIPELINE_COMPILERS = (
-  'pipeline.compilers.sass.SASSCompiler',
-)
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']

@@ -1,0 +1,29 @@
+{
+  "name": "thatsfantastic",
+  "version": "1.0.0",
+  "description": "A collection of information around my Fantastic Fest experiences.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcloud/thatsfantastic.git"
+  },
+  "author": "Daniel Cloud",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dcloud/thatsfantastic/issues"
+  },
+  "homepage": "https://github.com/dcloud/thatsfantastic#readme",
+  "devDependencies": {
+    "browser-sync": "^2.9.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.4.0",
+    "streamqueue": "^1.1.1"
+  }
+}

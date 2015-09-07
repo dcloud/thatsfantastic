@@ -14,3 +14,5 @@ sandbox/*
 staticfiles
 .sass-cache
 thatsfantastic/static/sass/vendor
+
+node_modules

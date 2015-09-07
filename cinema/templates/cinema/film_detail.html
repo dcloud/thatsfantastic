@@ -3,28 +3,36 @@
 {% block content %}
     <div class="row">
         <div class="columns">
-            <h2>{{ object.title }}</h2>
-            <p>Runtime: {{ object.runtime }} minutes</p>
+            <h2 id="title">{{ object.title }}</h2>
         </div>
     </div>
-    <section class="row">
+    <nav class="tab-bar" role="navigation">
+        <ul>
+            <li><a href="#synopsis" title="Synopsis">Synopsis</a></li>
+            <li><a href="#description" title="Description">Description</a></li>
+            <li><a href="#details" title="Details">Details</a></li>
+        </ul>
+    </nav>
+    <section id="synopsis" class="row">
         <div class="columns">
             <h3>Synopsis</h3>
             {{ object.synopsis|linebreaks }}
         </div>
     </section>
     {% if object.description %}
-    <section class="row">
+    <section id="description" class="row">
         <div class="columns">
             <h3>Description</h3>
             {{ object.description|linebreaks }}
         </div>
     </section>
     {% endif %}
-    <section class="row">
+    <section id="details" class="row">
         <div class="columns">
+            <h3>Details</h3>
+            <p>Runtime: {{ object.runtime }} minutes</p>
             {% if object.related_urls %}
-                <h3>Related URLS</h3>
+                <h3 id="related_urls">Related URLS</h3>
                 <ul>{% for url in object.related_urls %}
                     <li>{{ url|urlize }}</li>{% endfor %}
                 </ul>

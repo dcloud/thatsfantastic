@@ -22,6 +22,7 @@ $base-heading-margin: 1em;
 
 // Colors
 $almost-black: #242526;
+$midnight-blue : #1F2226;
 $light-gray: #A6ACB3;
 $dark-grayblue: #2D3D4D;
 $medium-blue: #1A5A9B;
@@ -29,3 +30,8 @@ $medium-blue: #1A5A9B;
 $base-font-color: $light-gray;
 $base-background-color: $almost-black;
 $action-color: $medium-blue;
+$secondary-font-color: $dark-grayblue;
+$secondary-background-color: $midnight-blue;
+
+$interactive-default-color: $dark-grayblue;
+$interactive-active-color: tint($interactive-default-color, 20%);

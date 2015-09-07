@@ -1,16 +1,18 @@
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 @import "variables";
-@import "reset";
 
+// Reset-ish things
 
 body {
-  @include font-feature-settings("kern", "liga", "pnum");
-  color: $base-font-color;
-  background-color: $base-background-color;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+    margin: 0;
+    padding: 0;
+    @include font-feature-settings("kern", "liga", "pnum");
+    color: $base-font-color;
+    background-color: $base-background-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
 }
 
 h1,
@@ -19,13 +21,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-size: $base-font-size;
-  font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
-  margin: 0 0 $base-heading-margin;
-  letter-spacing: $heading-letter-spacing;
-  color: $dark-grayblue;
+    font-family: $heading-font-family;
+    font-size: $base-font-size;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    margin: 0 0 $base-heading-margin;
+    letter-spacing: $heading-letter-spacing;
+    color: $secondary-font-color;
 }
 
 p {
@@ -38,11 +40,91 @@ h1, h1 > a {
 }
 
 h2 {
-    font-size: $base-font-size * 1.5;
+    font-size: $base-font-size * 1.7;
     color: $base-font-color;
 }
 
 
 h3 {
     font-size: $base-font-size * 1.5;
+}
+
+a {
+    color: $action-color;
+    text-decoration: none;
+    @include transition(color 1.0s ease-in-out);
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: shade($action-color, 25%);
+    }
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &%default-ol {
+        list-style-type: decimal;
+    }
+}
+
+nav ul {
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+
+    li {
+        @include flex(1 1 auto);
+    }
+}
+
+// Grid
+
+.outer-container {
+    @include outer-container(100%);
+    margin: em(4) em(6);
+}
+
+.row {
+    @include row();
+}
+
+.col-12 {
+    @include span-columns(12);
+}
+
+// Components
+
+.top-bar {
+    @include row();
+    background-color: $secondary-background-color;
+}
+
+.tab-bar {
+    border: 1px solid $interactive-default-color;
+    @include row();
+    margin: 1em 0 2em;
+
+    ul {
+        li {
+            border-right: 1px solid $interactive-default-color;
+
+            a {
+                @include fill-parent;
+                display: block;
+                padding: em(10) em(4);
+                text-align: center;
+
+            }
+        }
+
+        li:last-child {
+            border: none;
+        }
+
+    }
 }

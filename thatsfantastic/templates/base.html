@@ -10,6 +10,7 @@
         {% javascript 'headjs' %}
     </head>
     <body>
+    <div class="outer-container">
         <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="name">
@@ -35,6 +36,7 @@
         </section>
         </nav>
 {% block content %}{% endblock content %}
+    </div>
         {% javascript 'postbodyjs' %}
 {% block extrajs %}{% endblock extrajs %}
     </body>

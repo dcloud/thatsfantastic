@@ -1,3 +1,6 @@
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
+
 // Typography
 $base-font-family: $helvetica;
 $heading-font-family: $base-font-family;
@@ -32,6 +35,9 @@ $base-background-color: $almost-black;
 $action-color: $medium-blue;
 $secondary-font-color: $dark-grayblue;
 $secondary-background-color: $midnight-blue;
+$title-font-color: lighten($secondary-font-color, 5%);
 
 $interactive-default-color: $dark-grayblue;
-$interactive-active-color: tint($interactive-default-color, 20%);
+$interactive-active-color: lighten($interactive-default-color, 20%);
+$interactive-background-color: lighten($base-background-color, 1%);
+$interactive-background-active-color: lighten($interactive-background-color, 2%);

@@ -37,11 +37,13 @@ p {
 
 h1, h1 > a {
     font-size: $base-font-size * 1.2;
+    color: $title-font-color;
 }
 
 h2 {
     font-size: $base-font-size * 1.7;
     color: $base-font-color;
+    margin: $base-heading-margin 0 $base-heading-margin * 0.75;
 }
 
 
@@ -52,12 +54,13 @@ h3 {
 a {
     color: $action-color;
     text-decoration: none;
-    @include transition(color 1.0s ease-in-out);
+    @include transition(color 0.4s ease-out);
 
     &:active,
     &:focus,
-    &:hover {
-        color: shade($action-color, 25%);
+    &:hover,
+    &.active {
+        color: lighten($action-color, 25%);
     }
 }
 
@@ -84,6 +87,28 @@ nav > ul {
             display: block;
         }
     }
+
+    &.vertical {
+        @include flex-direction(column);
+        @include flex-wrap(nowrap);
+        @include align-items(stretch);
+        @include justify-content(space-around);
+
+        li {
+            border-bottom: 1px solid $interactive-default-color;
+            margin: 0 em(10);
+
+            a {
+                font-size: $base-font-size * 1.2;
+                padding: em(14) em(12);
+                background-color: $interactive-background-color;
+                &:focus,
+                &:hover {
+                    background-color: $interactive-background-active-color;
+                }
+            }
+        }
+    }
 }
 
 
@@ -93,7 +118,6 @@ input, #{$all-buttons} {
 
 
 input[type="text"] {
-    min-width: em(300);
     margin: 0 em(8);
     font-size: $base-font-size * 1.1;
 }
@@ -101,12 +125,16 @@ input[type="text"] {
 // Grid
 
 .outer-container {
-    @include outer-container(100%);
-    margin: em(4) em(6);
+    @include outer-container(800px);
 }
 
 .row {
+    @include fill-parent();
     @include row();
+}
+
+.columns {
+    @include pad();
 }
 
 .col-3 {
@@ -152,7 +180,7 @@ nav.top-bar {
         line-height: 1em;
 
         a {
-            padding: em(12) em(4);
+            padding: em(12) em(8);
         }
 
     }
@@ -165,7 +193,7 @@ nav.top-bar {
 
 .tab-bar {
     border: 1px solid $interactive-default-color;
-    margin: 1em 0 2em;
+    margin: 0 0 1em;
 
     ul {
         li {
@@ -174,13 +202,21 @@ nav.top-bar {
             a {
                 padding: em(10) em(4);
                 text-align: center;
+                &:focus,
+                &:hover {
+                    background-color: lighten($interactive-background-active-color, 2%);
+                }
+                &:active,
+                &.active {
+                    background-color: $interactive-background-active-color;
+                }
+            }
 
+            &:last-child {
+                border: none;
             }
         }
 
-        li:last-child {
-            border: none;
-        }
 
     }
 }
@@ -188,15 +224,21 @@ nav.top-bar {
 form.flex-form > ul {
     @include display(flex);
     @include flex-direction(row);
-    @include flex-wrap(wrap);
-    @include justify-content(flex-end);
-    @include align-items(center);
+    @include flex-wrap(nowrap);
+    @include justify-content(space-between);
+    @include align-items(flex-end);
 
     li {
-        @include flex(0 0 auto);
+        @include flex(2 1 auto);
+        margin: 0;
 
-        a {
-            display: block;
+        &:last-child {
+            @include flex(1 1 auto);
+        }
+
+        input {
+            margin: 0;
+            width: 95%;
         }
     }
 }

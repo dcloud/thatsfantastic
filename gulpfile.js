@@ -12,7 +12,8 @@ var staticDir = 'thatsfantastic/static/',
     sassDir = staticDir + 'sass/';
 
 gulp.task('sass', function() {
-    return sass(staticDir + 'sass/application.scss')
+    return sass(sassDir)
+    .on('error', sass.logError)
     .pipe(concat('main.css'))
     .pipe(gulp.dest(cssDir))
     .pipe(minifyCSS())

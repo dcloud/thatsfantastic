@@ -5,31 +5,26 @@
         <div class="columns">
             <h2 id="title">{{ object.title }}</h2>
         </div>
+        <div class="columns">
+            <nav class="tab-bar" role="navigation">
+                <ul>
+                    <li><a href="#synopsis" title="Synopsis">Synopsis</a></li>
+                    <li><a href="#description" title="Description">Description</a></li>
+                    <li><a href="#details" title="Details">Details</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <nav class="tab-bar" role="navigation">
-        <ul>
-            <li><a href="#synopsis" title="Synopsis">Synopsis</a></li>
-            <li><a href="#description" title="Description">Description</a></li>
-            <li><a href="#details" title="Details">Details</a></li>
-        </ul>
-    </nav>
-    <section id="synopsis" class="row">
-        <div class="columns">
-            <h3>Synopsis</h3>
+    <div class="tab-sections row">
+        <section id="synopsis" class="columns">
             {{ object.synopsis|linebreaks }}
-        </div>
-    </section>
-    {% if object.description %}
-    <section id="description" class="row">
-        <div class="columns">
-            <h3>Description</h3>
+        </section>
+        {% if object.description %}
+        <section id="description" class="columns">
             {{ object.description|linebreaks }}
-        </div>
-    </section>
-    {% endif %}
-    <section id="details" class="row">
-        <div class="columns">
-            <h3>Details</h3>
+        </section>
+        {% endif %}
+        <section id="details" class="columns">
             <p>Runtime: {{ object.runtime }} minutes</p>
             {% if object.related_urls %}
                 <h3 id="related_urls">Related URLS</h3>
@@ -37,6 +32,6 @@
                     <li>{{ url|urlize }}</li>{% endfor %}
                 </ul>
             {% endif %}
-        </div>
-    </section>
+        </section>
+    </div>
 {% endblock content %}

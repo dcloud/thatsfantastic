@@ -4,14 +4,14 @@
 {% endblock pagetitle %}
 {% block content %}
 <div class="row">
-    <div class="columns small-12 medium-8 medium-offset-2">
-        <ul class="stack button-group">
+    <nav class="col-12">
+        <ul class="vertical">
         {% for object in object_list %}
-                <li><a href="{{ object.get_absolute_url }}" class="button">{{ object.title }}</a></li>
+                <li><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></li>
         {% empty %}
         <h4>No films!</h4>
         {% endfor %}
         </ul>
-    </div>
+    </nav>
 </div>
 {% endblock content %}

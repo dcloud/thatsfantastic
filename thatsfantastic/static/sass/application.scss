@@ -193,7 +193,7 @@ nav.top-bar {
 
 .tab-bar {
     border: 1px solid $interactive-default-color;
-    margin: 0 0 1em;
+    margin: 0 0 0.75em;
 
     ul {
         li {
@@ -241,4 +241,8 @@ form.flex-form > ul {
             width: 95%;
         }
     }
+}
+
+.start-hidden {
+    display: none;
 }

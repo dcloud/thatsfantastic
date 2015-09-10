@@ -33,7 +33,7 @@ h6 {
   font-size: 1em;
   font-weight: 100;
   line-height: 1.2;
-  margin: 0 0 1em;
+  margin: 0 0 0.8em;
   letter-spacing: 0.0625em;
   color: #2D3D4D; }
 
@@ -48,7 +48,7 @@ h1, h1 > a {
 h2 {
   font-size: 1.7em;
   color: #A6ACB3;
-  margin: 1em 0 0.75em; }
+  margin: 0.8em 0 0.6em; }
 
 h3 {
   font-size: 1.5em; }
@@ -247,7 +247,7 @@ nav.top-bar {
 
 .tab-bar {
   border: 1px solid #2D3D4D;
-  margin: 0 0 1em; }
+  margin: 0 0 0.75em; }
   .tab-bar ul li {
     border-right: 1px solid #2D3D4D; }
     .tab-bar ul li a {
@@ -323,6 +323,9 @@ form.flex-form > ul {
     form.flex-form > ul li input {
       margin: 0;
       width: 95%; }
+
+.start-hidden {
+  display: none; }
 
 html {
   box-sizing: border-box; }

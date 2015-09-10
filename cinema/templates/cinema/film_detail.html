@@ -8,30 +8,31 @@
         <div class="columns">
             <nav class="tab-bar" role="navigation">
                 <ul>
-                    <li><a href="#synopsis" title="Synopsis">Synopsis</a></li>
-                    <li><a href="#description" title="Description">Description</a></li>
                     <li><a href="#details" title="Details">Details</a></li>
+                    <li><a href="#description" title="Description">Description</a></li>
                 </ul>
             </nav>
         </div>
     </div>
     <div class="tab-sections row">
-        <section id="synopsis" class="columns">
-            {{ object.synopsis|linebreaks }}
-        </section>
-        {% if object.description %}
-        <section id="description" class="columns">
-            {{ object.description|linebreaks }}
-        </section>
-        {% endif %}
         <section id="details" class="columns">
-            <p>Runtime: {{ object.runtime }} minutes</p>
+            <h3>Synopsis</h3>
+            {{ object.synopsis|linebreaks }}
+            <h3>Runtime</h3>
+            <p>{{ object.runtime }} minutes</p>
             {% if object.related_urls %}
                 <h3 id="related_urls">Related URLS</h3>
                 <ul>{% for url in object.related_urls %}
                     <li>{{ url|urlize }}</li>{% endfor %}
                 </ul>
             {% endif %}
+        </section>
+        <section id="description" class="columns">
+        {% if object.description %}
+            {{ object.description|linebreaks }}
+        {% else %}
+            <p><em>No description provided.</em></p>
+        {% endif %}
         </section>
     </div>
 {% endblock content %}

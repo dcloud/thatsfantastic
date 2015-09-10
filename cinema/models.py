@@ -68,6 +68,10 @@ class Film(models.Model):
     def get_absolute_url(self):
         return reverse('film-detail', kwargs={'slug': str(self.slug)})
 
+    def countries_display(self):
+        country_names = (_(countries.name(c)) for c in self.countries)
+        return ", ".join(country_names)
+
 
 class Screening(models.Model):
     start_time = models.DateTimeField()

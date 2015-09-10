@@ -53,13 +53,13 @@ class Command(BaseCommand):
             if not title:
                 raise CommandError("Film data has no title!")
             (object, created) = Film.objects\
-                .get_or_create(title=titlecase(title),
-                               slug=name,
-                               synopsis=data.get('synopsis', ''),
-                               description=data.get('description', ''),
-                               runtime=data.get('runtime', None),
+                .get_or_create(slug=name,
                                year=data.get('year', None),
                                )
+            object.title = titlecase(title)
+            object.synopsis = data.get('synopsis', object.synopsis)
+            object.description = data.get('description', object.description)
+            object.runtime = data.get('runtime', object.runtime)
             object.countries.extend([c for c in countries_abbrs if c])
             object.directors = directors
             if 'meta' in data and 'source_url' in data['meta']:

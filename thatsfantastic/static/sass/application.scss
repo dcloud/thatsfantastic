@@ -89,22 +89,36 @@ nav > ul {
     }
 
     &.vertical {
-        @include flex-direction(column);
-        @include flex-wrap(nowrap);
-        @include align-items(stretch);
-        @include justify-content(space-around);
+        display: table;
+        border-spacing: 0 1px;
+        margin: em(20) 0;
 
         li {
-            border-bottom: 1px solid $interactive-default-color;
-            margin: 0 em(10);
+            display: table-row;
+            background-color: $interactive-background-color;
+            font-size: $base-font-size * 1.1;
 
-            a {
-                font-size: $base-font-size * 1.2;
+            &:focus,
+            &:hover {
+                background-color: $interactive-background-active-color;
+            }
+
+            a, span {
+                border-bottom: 1px solid $interactive-default-color;
+                display: table-cell;
                 padding: em(14) em(12);
-                background-color: $interactive-background-color;
-                &:focus,
-                &:hover {
-                    background-color: $interactive-background-active-color;
+
+                &:last-child {
+                    text-align: right;
+                }
+            }
+
+            span {
+                font-weight: $heading-font-weight;
+                letter-spacing: $heading-letter-spacing;
+
+                &.detail {
+                    font-size: $base-font-size * 0.9;
                 }
             }
         }

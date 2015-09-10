@@ -111,50 +111,26 @@ nav > ul {
     nav > ul li a {
       display: block; }
   nav > ul.vertical {
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-box-lines: single;
-    -moz-box-lines: single;
-    box-lines: single;
-    -webkit-flex-wrap: nowrap;
-    -moz-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    box-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    -ms-align-items: stretch;
-    -o-align-items: stretch;
-    align-items: stretch;
-    -ms-flex-align: stretch;
-    -webkit-box-pack: distribute;
-    -moz-box-pack: distribute;
-    box-pack: distribute;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -o-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: distribute; }
+    display: table;
+    border-spacing: 0 1px;
+    margin: 1.25em 0; }
     nav > ul.vertical li {
-      border-bottom: 1px solid #2D3D4D;
-      margin: 0 0.625em; }
-      nav > ul.vertical li a {
-        font-size: 1.2em;
-        padding: 0.875em 0.75em;
-        background-color: #262829; }
-        nav > ul.vertical li a:focus, nav > ul.vertical li a:hover {
-          background-color: #2b2d2e; }
+      display: table-row;
+      background-color: #262829;
+      font-size: 1.1em; }
+      nav > ul.vertical li:focus, nav > ul.vertical li:hover {
+        background-color: #2b2d2e; }
+      nav > ul.vertical li a, nav > ul.vertical li span {
+        border-bottom: 1px solid #2D3D4D;
+        display: table-cell;
+        padding: 0.875em 0.75em; }
+        nav > ul.vertical li a:last-child, nav > ul.vertical li span:last-child {
+          text-align: right; }
+      nav > ul.vertical li span {
+        font-weight: 100;
+        letter-spacing: 0.0625em; }
+        nav > ul.vertical li span.detail {
+          font-size: 0.9em; }
 
 input, button, input[type="button"], input[type="reset"], input[type="submit"] {
   min-height: 44px; }

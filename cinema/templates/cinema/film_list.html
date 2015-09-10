@@ -6,8 +6,11 @@
 <div class="row">
     <nav class="col-12">
         <ul class="vertical">
-        {% for object in object_list %}
-                <li><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></li>
+        {% for object in object_list %}{% spaceless %}
+            <li>
+                <a href="{{ object.get_absolute_url }}" class="informational">{{ object.title }}</a>
+                <span class="detail runtime">{{ object.runtime }}m</span>
+            </li>{% endspaceless %}
         {% empty %}
         <h4>No films!</h4>
         {% endfor %}

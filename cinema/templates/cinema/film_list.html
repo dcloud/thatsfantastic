@@ -8,7 +8,7 @@
         <ul class="vertical">
         {% for object in object_list %}{% spaceless %}
             <li>
-                <a href="{{ object.get_absolute_url }}" class="informational">{{ object.title }}</a>
+                <a href="{{ object.get_absolute_url }}" title="{{ object.title }}">{{ object.title }}</a>
                 <span class="detail runtime">{{ object.runtime }}m</span>
             </li>{% endspaceless %}
         {% empty %}

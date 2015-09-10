@@ -1,6 +1,7 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.detail import SingleObjectMixin
 from cinema.models import Film, Event
+from django.db.models import Q
 
 
 class FilmDetail(DetailView):
@@ -12,7 +13,17 @@ class FilmSearch(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get("q")
-        return self.model.objects.filter(title__icontains=query)
+        title_q = Q(title__icontains=query)
+        description_q = Q(description__icontains=query)
+        year = self.request.GET.get("year", None)
+        qs = self.model.objects.filter(title_q | description_q)
+        if year:
+            try:
+                year_val = int(year)
+                qs = qs.filter(year=year_val)
+            except ValueError:
+                pass
+        return qs
 
 
 class FilmList(ListView):

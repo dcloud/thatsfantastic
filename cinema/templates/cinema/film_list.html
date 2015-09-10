@@ -5,7 +5,7 @@
 {% block content %}
 <div class="row">
     <nav class="col-12">
-        <ul class="vertical">
+        <ul class="vertical-menu">
         {% for object in object_list %}{% spaceless %}
             <li>
                 <a href="{{ object.get_absolute_url }}" title="{{ object.title }}">{{ object.title }}</a>

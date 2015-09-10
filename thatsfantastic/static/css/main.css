@@ -110,26 +110,27 @@ nav > ul {
     flex: 1 1 auto; }
     nav > ul li a {
       display: block; }
-  nav > ul.vertical {
+  nav > ul.vertical-menu {
     display: table;
     border-spacing: 0 1px;
-    margin: 1.25em 0; }
-    nav > ul.vertical li {
+    margin: 1.25em 0;
+    width: 100%; }
+    nav > ul.vertical-menu li {
       display: table-row;
       background-color: #262829;
       font-size: 1.1em; }
-      nav > ul.vertical li:focus, nav > ul.vertical li:hover {
+      nav > ul.vertical-menu li:focus, nav > ul.vertical-menu li:hover {
         background-color: #2b2d2e; }
-      nav > ul.vertical li a, nav > ul.vertical li span {
+      nav > ul.vertical-menu li a, nav > ul.vertical-menu li span {
         border-bottom: 1px solid #2D3D4D;
         display: table-cell;
         padding: 0.875em 0.75em; }
-        nav > ul.vertical li a:last-child, nav > ul.vertical li span:last-child {
+        nav > ul.vertical-menu li a:last-child, nav > ul.vertical-menu li span:last-child {
           text-align: right; }
-      nav > ul.vertical li span {
+      nav > ul.vertical-menu li span {
         font-weight: 100;
         letter-spacing: 0.0625em; }
-        nav > ul.vertical li span.detail {
+        nav > ul.vertical-menu li span.detail {
           font-size: 0.9em; }
 
 input, button, input[type="button"], input[type="reset"], input[type="submit"] {

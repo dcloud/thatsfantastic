@@ -88,10 +88,11 @@ nav > ul {
         }
     }
 
-    &.vertical {
+    &.vertical-menu {
         display: table;
         border-spacing: 0 1px;
         margin: em(20) 0;
+        width: 100%;
 
         li {
             display: table-row;

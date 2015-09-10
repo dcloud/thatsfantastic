@@ -7,9 +7,9 @@ from scraper.utils import decode_html, unicode_normalize, \
 from cinema.utils import titlecase
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
-BODY_TEXT_SELECTOR = CSSSelector('article h4 + p', translator='html')
 SYNOPSIS_SELECTOR = CSSSelector('.lead p', translator='html')
 ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')
+DESCRIPTION_GRAPHS_XPATH = '//article/h4[last()]/following-sibling::p'
 
 
 class HTMLScraper:
@@ -112,8 +112,8 @@ class FantasticMovieScraper(HTMLScraper):
     @property
     def raw_description(self):
         if self._raw_description is None:
-            body_elements = BODY_TEXT_SELECTOR(self.tree)
-            self._raw_description = body_elements[0].text_content() if len(body_elements) else ''
+            graphs = self.tree.xpath(DESCRIPTION_GRAPHS_XPATH)
+            self._raw_description = '\n'.join(g.text_content() for g in graphs) if len(graphs) else ''
         return self._raw_description
 
     def clean_description(self):

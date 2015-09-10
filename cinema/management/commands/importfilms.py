@@ -60,10 +60,17 @@ class Command(BaseCommand):
             object.synopsis = data.get('synopsis', object.synopsis)
             object.description = data.get('description', object.description)
             object.runtime = data.get('runtime', object.runtime)
-            object.countries.extend([c for c in countries_abbrs if c])
+            if countries_abbrs:
+                country_set = set(object.countries)
+                country_set.update(set([c for c in countries_abbrs if c]))
+                object.countries = list(country_set)
             object.directors = directors
-            if 'meta' in data and 'source_url' in data['meta']:
-                object.related_urls.append(data['meta']['source_url'])
+            has_source_url = ('meta' in data and 'source_url' in data['meta'])
+            if has_source_url:
+                source_url = data['meta']['source_url']
+                url_set = set(object.related_urls)
+                url_set.add(source_url)
+                object.related_urls = list(url_set)
             object.save()
             if self.event:
                 try:

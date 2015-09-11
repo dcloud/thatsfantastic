@@ -64,6 +64,7 @@ class FantasticMovieScraper(HTMLScraper):
             attr_iname = '_raw_{}'.format(attrname)
             setattr(self, attr_iname, None)
         self._raw_metadata = None
+        self._end_directors = self._end_runtime = None
 
     def _clean_string(self, string):
         return clean_string(string)
@@ -143,6 +144,7 @@ class FantasticMovieScraper(HTMLScraper):
     def raw_directors(self):
         if self._raw_directors is None:
             match = re.search(r'dir\.\s+([^\d]+)', self.raw_metadata, flags=re.IGNORECASE)
+            self._end_directors = match.end()
             self._raw_directors = match.groups()[0] if match else ''
         return self._raw_directors
 
@@ -152,12 +154,17 @@ class FantasticMovieScraper(HTMLScraper):
     @property
     def raw_countries(self):
         if self._raw_countries is None:
-            match = re.search(r'\,\s+(\w[\w\s]+)\s*$', self.raw_metadata, flags=re.IGNORECASE)
-            self._raw_countries = match.group() if match else ''
+            search_text = self.raw_metadata
+            if self._end_runtime:
+                search_text = search_text[self._end_runtime:]
+            elif self._end_directors:
+                search_text = search_text[self._end_directors:]
+            match_list = re.findall(r'(?:\,\s+(\w[\w\s]+)+)', search_text, flags=re.IGNORECASE)
+            self._raw_countries = match_list
         return self._raw_countries
 
     def clean_countries(self):
-        return self._clean_list(self.raw_countries.title())
+        return [self._clean_string(c.title()) for c in self._raw_countries]
 
     @property
     def raw_year(self):
@@ -173,6 +180,7 @@ class FantasticMovieScraper(HTMLScraper):
     def raw_runtime(self):
         if not self._raw_runtime:
             match = re.search(r'(\d{1,})\s+MIN\.', self.raw_metadata, flags=re.IGNORECASE)
+            self._end_runtime = match.end()
             self._raw_runtime = match.groups()[0] if match else ''
         return self._raw_runtime
 

@@ -41,3 +41,9 @@ $interactive-default-color: $dark-grayblue;
 $interactive-active-color: lighten($interactive-default-color, 20%);
 $interactive-background-color: lighten($base-background-color, 1%);
 $interactive-background-active-color: lighten($interactive-background-color, 2%);
+
+// Mobile
+
+$mobile: new-breakpoint(max-width 480px 4);
+
+$tablet: new-breakpoint(max-width 800px 8);

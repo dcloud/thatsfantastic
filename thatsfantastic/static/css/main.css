@@ -55,11 +55,11 @@ h3 {
 
 a {
   color: #1A5A9B;
-  text-decoration: none;
-  -webkit-transition: color 0.4s ease-out;
-  -moz-transition: color 0.4s ease-out;
-  transition: color 0.4s ease-out; }
+  text-decoration: none; }
   a:active, a:focus, a:hover, a.active {
+    -webkit-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    transition: color 0.4s ease-out;
     color: #529ae2; }
 
 ul, ol {
@@ -149,6 +149,10 @@ input[type="text"] {
     clear: both;
     content: "";
     display: table; }
+
+@media screen and (max-width: 800px) {
+  .columns {
+    padding: 2.35765%; } }
 
 .row {
   width: 100%;

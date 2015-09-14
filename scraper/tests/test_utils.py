@@ -1,6 +1,7 @@
 import unittest
 
-from scraper.utils import (correct_web_url, is_web_url, unicode_normalize)
+from scraper.utils import (correct_web_url, is_web_url, unicode_normalize,
+                           deeducate_quotes, clean_string, string_to_list)
 
 
 class URLUtilsTestCase(unittest.TestCase):
@@ -41,3 +42,27 @@ class StringUtilsTestCase(unittest.TestCase):
         '''unicode_normalize composes a single unicode character from a decomposed pair'''
         result = unicode_normalize(self.has_decomposed_unicode_str)
         self.assertEqual(result, "Nöe")
+
+    def test_deeducation_of_quotes(self):
+        '''deeducate_quotes takes "fancy" quotes and turns them into dull ones.'''
+        self.fail("Test stub needs implementation")
+
+    def test_clean_string(self):
+        '''clean_string runs deeducate_quotes, and gets rid of whitespace.'''
+        self.fail("Test stub needs implementation")
+
+    def test_string_to_list(self):
+        '''string_to_list splits a comma-separarated string into a list,
+        then deeducates quotes and gets rid of whitespace.'''
+        self.fail("Test stub needs implementation")
+
+
+class HTMLUtilsTestCase(unittest.TestCase):
+    """Test HTML Urils"""
+
+    # def setUp(self):
+    #     self.unicode_html = "N\u006F\u0308e"
+
+    def test_decode_html(self):
+        '''decode_html converts an html string into unicode html.'''
+        self.fail("Test stub needs implementation")

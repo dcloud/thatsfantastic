@@ -16,3 +16,5 @@ staticfiles
 thatsfantastic/static/sass/vendor
 
 node_modules
+
+.coverage

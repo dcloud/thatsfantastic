@@ -4,7 +4,7 @@ from scraper.utils import (correct_web_url, is_web_url, unicode_normalize,
                            deeducate_quotes, clean_string, string_to_list)
 
 
-class URLUtilsTestCase(unittest.TestCase):
+class TestURLUtils(unittest.TestCase):
     """Tests correct_web_url, is_web_url utils"""
 
     def setUp(self):
@@ -33,7 +33,7 @@ class URLUtilsTestCase(unittest.TestCase):
         self.assertTrue(is_web_url(self.valid_url))
 
 
-class StringUtilsTestCase(unittest.TestCase):
+class TestStringUtils(unittest.TestCase):
     """Tests string utils"""
     def setUp(self):
         self.has_decomposed_unicode_str = "N\u006F\u0308e"
@@ -57,7 +57,7 @@ class StringUtilsTestCase(unittest.TestCase):
         self.fail("Test stub needs implementation")
 
 
-class HTMLUtilsTestCase(unittest.TestCase):
+class TestHTMLUtils(unittest.TestCase):
     """Test HTML Urils"""
 
     # def setUp(self):

@@ -183,7 +183,7 @@ class FantasticMovieScraper(HTMLScraper):
     def raw_runtime(self):
         if not self._raw_runtime:
             match = re.search(r'(\d{1,})\s+MIN\.', self.raw_metadata, flags=re.IGNORECASE)
-            self._end_runtime = match.end()
+            self._end_runtime = match.end() if match else None
             self._raw_runtime = match.groups()[0] if match else ''
         return self._raw_runtime
 

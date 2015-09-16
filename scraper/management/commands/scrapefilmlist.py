@@ -3,6 +3,8 @@ from django.utils.termcolors import make_style
 from urllib.parse import urljoin
 import requests
 from scraper.scrape import FantasticMovieListScraper
+from scraper.tasks import (get_url, scrape_response)
+from scraper.utils import correct_web_url
 
 
 class Command(BaseCommand):
@@ -37,9 +39,14 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self._setup_styles(no_color=options.get('no_color', False))
         self.verbosity = options['verbosity']
-        self.url = options['url']
         self.offset = options['offset']
         self.max_pages = options['max_pages']
+
+        try:
+            self.url = correct_web_url(options['url'], http_scheme='http')
+        except TypeError as e:
+            raise CommandError(e)
+
         if self.url[-1] != '/':
             self.url += '/'
         self.session = requests.Session()
@@ -55,11 +62,10 @@ class Command(BaseCommand):
             self._stdout_data(url)
 
     def _collect_links_for_page(self, url):
-        response = self.session.get(url)
+        response = get_url(url, session=self.session)
         if response.ok:
             if self.verbosity > 1:
                 self._stdout_info("Parsing {}".format(response.url))
-            list_scraper = FantasticMovieListScraper(response.text)
-            return list_scraper.scrape()
+            return scrape_response(response, FantasticMovieListScraper)
         else:
             self.stderr.write("Request for {} failed. Reason: {}".format(url, response.reason))

@@ -1,11 +1,10 @@
 from django.core.management.base import BaseCommand, CommandError
 from django.utils.termcolors import make_style
 import argparse
-from urllib.parse import urlparse
 import os
-import requests
-import json
 from scraper.scrape import FantasticMovieScraper
+from scraper.tasks import (get_url, scrape_response, save_scraped_film,
+                           filename_from_url_path, film_to_json_string)
 
 
 class Command(BaseCommand):
@@ -45,28 +44,21 @@ class Command(BaseCommand):
             raise CommandError("--savepath option must specify a directory.")
         if self.outfile and self.savepath:
             raise CommandError('You may provide only an -o/--outfile or a --savepath, not both.')
-        response = requests.request('GET', self.url, timeout=options['timeout'])
+        response = get_url(self.url, timeout=options['timeout'])
         if response.ok:
             if self.verbosity > 1:
                 self._stdout_info("Fetched {}".format(self.url))
-            movie_scraper = FantasticMovieScraper(response.content, response.url)
-            obj = movie_scraper.scrape()
-            url_slug = urlparse(response.url).path.split('/')[-1]
+            obj = scrape_response(response, FantasticMovieScraper)
             if self.outfile:
-                self._save_json(self.outfile, obj)
+                save_scraped_film(obj, self.outfile)
             elif self.savepath:
-                filename = "{}.json".format(url_slug)
-                fpath = os.path.join(os.path.abspath(self.savepath), filename)
-                with open(fpath, 'w') as fp:
-                    self._save_json(fp, obj)
+                fpath = filename_from_url_path(response.url, basepath=self.savepath)
+                save_scraped_film(obj, fpath)
             else:
-                self._stdout_json(self._film_to_json_string(obj))
+                try:
+                    self._stdout_json(film_to_json_string(obj))
+                except TypeError:
+                    self.stderr.write('Error converting film object to JSON')
 
         else:
             self.stderr.write("Unable to GET {} [{}]'".format(self.url, response.status_code))
-
-    def _save_json(self, fp, obj, indent=4):
-        json.dump(obj.data, fp, ensure_ascii=False, sort_keys=True, indent=indent)
-
-    def _film_to_json_string(self, obj, indent=4):
-        return json.dumps(obj.data, ensure_ascii=False, sort_keys=True, indent=indent)

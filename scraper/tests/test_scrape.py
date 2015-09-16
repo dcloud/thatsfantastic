@@ -77,6 +77,7 @@ class TestFantasticMovieScraper(unittest.TestCase):
             scraper = FantasticMovieScraper(resp.content)
             scraper.scrape()
             self.assertNotEqual(scraper.raw_description, "")
+            self.assertNotIn("\n\n\n", scraper.raw_description)
 
     def test_raw_synopsis(self):
         '''raw_synopsis gets a raw synopsis'''
@@ -86,6 +87,7 @@ class TestFantasticMovieScraper(unittest.TestCase):
             scraper.scrape()
             self.assertNotEqual(scraper.raw_synopsis, "")
             self.assertGreater(len(scraper.raw_synopsis), 1)
+            self.assertNotIn("\n\n\n", scraper.raw_synopsis)
 
     def test_raw_directors(self):
         '''raw_directors gets a raw directors string'''

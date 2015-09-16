@@ -79,6 +79,9 @@ class FantasticMovieScraper(HTMLScraper):
         cleaned = self._clean_string(text)
         return self._normalize_unicode(cleaned)
 
+    def _raw_graphs_to_string(self, graphs_list):
+        return '\n\n'.join(g.text_content().strip('\n') for g in graphs_list) if len(graphs_list) else ''
+
     def scrape(self):
         self._scrape_raw()
         return self.clean()
@@ -114,7 +117,7 @@ class FantasticMovieScraper(HTMLScraper):
     def raw_description(self):
         if self._raw_description is None:
             graphs = self.tree.xpath(DESCRIPTION_GRAPHS_XPATH)
-            self._raw_description = '\n\n'.join(g.text_content() for g in graphs) if len(graphs) else ''
+            self._raw_description = self._raw_graphs_to_string(graphs)
         return self._raw_description
 
     def clean_description(self):
@@ -124,7 +127,7 @@ class FantasticMovieScraper(HTMLScraper):
     def raw_synopsis(self):
         if self._raw_synopsis is None:
             graphs = self.tree.xpath(SYNOPSIS_GRAPHS_XPATH)
-            self._raw_synopsis = '\n\n'.join(g.text_content() for g in graphs) if len(graphs) else ''
+            self._raw_synopsis = self._raw_graphs_to_string(graphs)
         return self._raw_synopsis
 
     def clean_synopsis(self):

@@ -2,9 +2,9 @@ import lxml.html
 from lxml.cssselect import CSSSelector
 import re
 from scraper.models import FilmDict
-from scraper.utils import decode_html, unicode_normalize, \
-                          clean_string, string_to_list
-from cinema.utils import titlecase
+from scraper.utils import (decode_html, unicode_normalize,
+                           clean_string, string_to_list, replace_countries)
+from cinema.utils import (titlecase,)
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
 ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')
@@ -167,7 +167,7 @@ class FantasticMovieScraper(HTMLScraper):
         return self._raw_countries
 
     def clean_countries(self):
-        return [self._clean_string(c.title()) for c in self._raw_countries]
+        return [self._clean_string(c.title()) for c in replace_countries(self._raw_countries)]
 
     @property
     def raw_year(self):

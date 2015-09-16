@@ -9,6 +9,10 @@ CHAR_REPLACEMENT_MAP = {
     '\u201D': '\u0022',
 }
 
+COUNTRY_REPLACEMENTS = {
+    'korea': ('Republic of', 'South Korea')
+}
+
 
 def is_web_url(url_cand):
     if isinstance(url_cand, parse.ParseResult):
@@ -60,3 +64,16 @@ def clean_string(string):
 
 def string_to_list(string):
     return [clean_string(x) for x in string.split(',') if x.strip()]
+
+
+def replace_countries(country_list):
+    for n, item in enumerate(country_list):
+        if item:
+            replacement = COUNTRY_REPLACEMENTS.get(item.lower(), None)
+            if replacement:
+                if n+1 < len(country_list) and country_list[n+1].lower() == replacement[0].lower():
+                    country_list[n+1] = None
+                yield replacement[1]
+            else:
+                yield item
+    return country_list

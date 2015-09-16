@@ -3,9 +3,10 @@ import factory.django
 import factory.fuzzy
 import unicodedata
 
-from cinema.models import Film, Person, COUNTRY_CODES
+from cinema.models import Film, Person
+from django_countries import countries
 
-COUNTRY_VALUES = (x[0] for x in COUNTRY_CODES)
+COUNTRY_VALUES = (x[0] for x in countries)
 
 
 def make_unicode_letters():

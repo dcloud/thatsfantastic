@@ -2,10 +2,10 @@ from django.db import models
 from django.utils.translation import ugettext as _
 from django.utils.text import slugify
 from django.contrib.postgres.fields import ArrayField
-from django_countries import countries
+from django_countries.fields import CountryField
 from django.core.urlresolvers import reverse
 
-COUNTRY_CODES = tuple(countries)
+from django_countries import countries
 
 
 class Person(models.Model):
@@ -36,7 +36,7 @@ class Film(models.Model):
     slug = models.SlugField(max_length=140, unique=True, null=True, blank=True)
     synopsis = models.TextField(blank=True)
     description = models.TextField(blank=True)
-    countries = ArrayField(models.CharField(choices=COUNTRY_CODES, max_length=2),
+    countries = ArrayField(CountryField(),
                            default=list, blank=True)
     languages = ArrayField(models.CharField(max_length=30), default=list, blank=True)
     year = models.PositiveIntegerField(blank=True, null=True, help_text=_("Release year"))
@@ -68,9 +68,15 @@ class Film(models.Model):
     def get_absolute_url(self):
         return reverse('film-detail', kwargs={'slug': str(self.slug)})
 
+    def country_display_names(self):
+        for cid in self.countries:
+            if cid == 'US':
+                yield _('USA')
+            elif cid:
+                yield _(countries.name(cid))
+
     def countries_display(self):
-        country_names = (_(countries.name(c)) for c in self.countries)
-        return ", ".join(country_names)
+        return ", ".join(self.country_display_names())
 
 
 class Screening(models.Model):

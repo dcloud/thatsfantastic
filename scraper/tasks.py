@@ -1,15 +1,30 @@
-import requests
 import json
 import os
 from urllib.parse import urlparse
+import requests
+from cachecontrol import CacheControl
+from cachecontrol.caches import FileCache
+from django.conf import settings
 
 from scraper.scrape import HTMLScraper
 from scraper.models import FilmDict
 
+default_cache = FileCache(".webcache")
 
-def get_url(url, session=None, timeout=3.0):
+SCRAPER_USER_AGENT = getattr(settings, 'SCRAPER_USER_AGENT', 'Fantastic Movie Scraper')
+
+
+def make_session(cache=default_cache):
+    session = requests.Session()
+    session.headers.update({'User-Agent': SCRAPER_USER_AGENT})
+    if cache:
+        session = CacheControl(session, cache=cache)
+    return session
+
+
+def get_url(url, session=None, timeout=3.0, cache=default_cache):
     if not session:
-        session = requests.Session()
+        session = make_session(cache=cache)
     return session.get(url, timeout=timeout)
 
 
@@ -22,9 +37,9 @@ def scrape_response(response, scraper_class):
         raise TypeError('scraper_class class must be a HTMLScraper subclass')
 
 
-def filename_from_url_slug(url, basepath=None):
-    url_slug = urlparse(url).path.split('/')[-1]
-    filename = "{}.json".format(url_slug)
+def filename_from_url_path(url, basepath=None, fileext='json'):
+    url_slug = urlparse(url).path.rstrip('/').split('/')[-1]
+    filename = "{0}.{1}".format(url_slug, fileext)
     if basepath:
         return os.path.join(os.path.abspath(basepath), filename)
     else:

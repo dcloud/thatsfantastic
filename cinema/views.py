@@ -12,9 +12,9 @@ class FilmSearch(ListView):
     model = Film
 
     def get_queryset(self):
-        query = self.request.GET.get("q")
-        title_q = Q(title__icontains=query)
-        description_q = Q(description__icontains=query)
+        self.query = self.request.GET.get("q")
+        title_q = Q(title__icontains=self.query)
+        description_q = Q(description__icontains=self.query)
         year = self.request.GET.get("year", None)
         qs = self.model.objects.filter(title_q | description_q)
         if year:
@@ -24,6 +24,11 @@ class FilmSearch(ListView):
             except ValueError:
                 pass
         return qs
+
+    def get_context_data(self, **kwargs):
+        context = super(FilmSearch, self).get_context_data(**kwargs)
+        context['q'] = self.query
+        return context
 
 
 class FilmList(ListView):

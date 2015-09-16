@@ -23,7 +23,7 @@
         <form class="flex-form" action="{% url 'films-search' %}" method="get">
         <ul>
             <li>
-                <input name="q" type="text" placeholder="Look up a film" autofocus>
+                <input name="q" type="text" placeholder="Look up a film" autofocus{% if q %} value="{{ q }}"{% endif %}>
             </li>
             <li>
                 <input class="button" type="submit" value="Search">

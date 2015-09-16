@@ -3,13 +3,24 @@
 {% if event.title %} | {{ event.title }}{% endif %}
 {% endblock pagetitle %}
 {% block content %}
+{% if q %}
 <div class="row">
-    <nav class="col-12">
+    <div class="columns col-12">
+        <h3>Results for: "{{ q }}"</h3>
+    </div>
+</div>
+{% endif %}
+<div class="row">
+    <nav class="columnscol-12">
         <ul class="vertical-menu">
         {% for object in object_list %}{% spaceless %}
             <li>
                 <a href="{{ object.get_absolute_url }}" title="{{ object.title }}">{{ object.title }}</a>
+                {% if q %}
+                <span class="detail event">{{ object.shown_at.latest.title }}</span>
+                {% else %}
                 <span class="detail runtime">{{ object.runtime }}m</span>
+                {% endif %}
             </li>{% endspaceless %}
         {% empty %}
         <h4>No films!</h4>

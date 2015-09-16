@@ -46,9 +46,12 @@ h2 {
     margin: $base-heading-margin 0 $base-heading-margin * 0.75;
 }
 
-
 h3 {
     font-size: $base-font-size * 1.5;
+}
+
+h3, h4, h5 {
+    margin: 0;
 }
 
 a {
@@ -93,7 +96,6 @@ nav > ul {
     &.vertical-menu {
         display: table;
         border-spacing: 0 1px;
-        margin: em(20) 0;
         width: 100%;
 
         li {
@@ -143,6 +145,7 @@ input[type="text"] {
 
 .outer-container {
     @include outer-container(800px);
+    margin-top: em(20);
 }
 
 .columns {
@@ -154,6 +157,7 @@ input[type="text"] {
 .row {
     @include fill-parent();
     @include row();
+    margin-bottom: em(18);
 }
 
 @for $i from 1 through 12 {

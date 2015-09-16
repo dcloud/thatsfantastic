@@ -53,6 +53,9 @@ h2 {
 h3 {
   font-size: 1.5em; }
 
+h3, h4, h5 {
+  margin: 0; }
+
 a {
   color: #1A5A9B;
   text-decoration: none; }
@@ -114,7 +117,6 @@ nav > ul {
   nav > ul.vertical-menu {
     display: table;
     border-spacing: 0 1px;
-    margin: 1.25em 0;
     width: 100%; }
     nav > ul.vertical-menu li {
       display: table-row;
@@ -144,7 +146,8 @@ input[type="text"] {
 .outer-container {
   max-width: 800px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 1.25em; }
   .outer-container::after {
     clear: both;
     content: "";
@@ -156,7 +159,8 @@ input[type="text"] {
 
 .row {
   width: 100%;
-  display: block; }
+  display: block;
+  margin-bottom: 1.125em; }
   .row::after {
     clear: both;
     content: "";

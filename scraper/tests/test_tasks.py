@@ -4,6 +4,7 @@ import cachecontrol
 import betamax
 import os
 import json
+from unittest.mock import mock_open, patch
 
 from scraper.tasks import *
 from scraper.scrape import (HTMLScraper,)
@@ -61,18 +62,18 @@ class TestScraperTasks(unittest.TestCase):
     def test_save_scraped_film_sorted(self):
         '''save_scraped_film sorts keys on serialization'''
         fpath = '/tmp/test_save_scrape'
-        if os.path.exists(fpath):
-            self.fail("File exists at test path '{}'".format(fpath))
-        object = FilmDict(initialdata={'title': 'The Fake', 'description': 'foo'})
-        save_scraped_film(object, fpath)
-        self.assertTrue(os.path.exists(fpath))
-        with open(fpath, 'r') as fp:
-            contents = fp.read()
+        data = {'title': 'The Fake', 'description': 'foo'}
+        object = FilmDict(initialdata=data)
+        m = mock_open(read_data=json.dumps(data, ensure_ascii=False, sort_keys=True, indent=4))
+        with patch('builtins.open', m):
+            save_scraped_film(object, fpath)
+            m.assert_called_once_with(fpath, 'w')
+            handle = m()
+            contents = handle.read()
             d_pos = contents.find('description')
             t_pos = contents.find('title')
             self.assertLess(d_pos, t_pos)
             self.assertIn("    ", contents)
-        os.remove(fpath)
 
     def test_film_to_json_string(self):
         '''film_to_json_string can serialized a FilmDict object to a json string, with sorted keys'''

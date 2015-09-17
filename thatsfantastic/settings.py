@@ -81,6 +81,9 @@ TEMPLATES = [
     },
 ]
 
+if TEMPLATES[0]['OPTIONS']['debug']:
+    INSTALLED_APPS += ('debug_toolbar',)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 

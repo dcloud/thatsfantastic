@@ -10,12 +10,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 body {
   margin: 0;
   padding: 0;
@@ -70,6 +64,8 @@ a {
     -moz-transition: color 0.4s ease-out;
     transition: color 0.4s ease-out;
     color: #529ae2; }
+  a.secondary {
+    color: #564963; }
 
 ul, ol {
   list-style: none;
@@ -129,11 +125,11 @@ nav > ul {
       font-size: 1.1em; }
       nav > ul.vertical-menu li:focus, nav > ul.vertical-menu li:hover {
         background-color: #2b2d2e; }
-      nav > ul.vertical-menu li a, nav > ul.vertical-menu li span {
+      nav > ul.vertical-menu li > a, nav > ul.vertical-menu li > span {
         border-bottom: 1px solid #2D3D4D;
         display: table-cell;
         padding: 0.875em 0.75em; }
-        nav > ul.vertical-menu li a:last-child, nav > ul.vertical-menu li span:last-child {
+        nav > ul.vertical-menu li > a:last-child, nav > ul.vertical-menu li > span:last-child {
           text-align: right; }
       nav > ul.vertical-menu li span {
         font-weight: 100;
@@ -285,6 +281,9 @@ nav.top-bar {
   min-height: 56px;
   background-color: #1F2226; }
   nav.top-bar ul {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-box-pack: justify;
     -moz-box-pack: justify;
     box-pack: justify;
@@ -294,15 +293,18 @@ nav.top-bar {
     -o-justify-content: space-between;
     justify-content: space-between;
     -ms-flex-pack: justify; }
-    nav.top-bar ul li > a {
-      text-align: right;
+    nav.top-bar ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    nav.top-bar ul li a {
       line-height: 1em;
       padding: 1.25em 0.5em; }
-  nav.top-bar h1 {
-    margin: 0;
-    line-height: 1em; }
-    nav.top-bar h1 a {
-      padding: 0.75em 0.5em; }
+    nav.top-bar ul li:last-child {
+      text-align: right; }
+    nav.top-bar ul li h1 {
+      margin: 0.75em 0 0;
+      text-align: center; }
   nav.top-bar section {
     padding: 0.5em; }
 
@@ -389,3 +391,9 @@ form.flex-form > ul {
 
 .start-hidden {
   display: none; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }

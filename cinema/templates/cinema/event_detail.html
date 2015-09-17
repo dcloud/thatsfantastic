@@ -4,6 +4,10 @@
 {% endif %}
 {% endblock pagetitle %}
 
+{% block pagehead %}
+<h1>{{ event.title }}</h1>
+{% endblock pagehead %}
+
 {% block content %}
 <div class="row">
     {% include "cinema/_film_menu.html" with object_list=event.films.all %}

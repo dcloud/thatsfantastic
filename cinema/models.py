@@ -57,14 +57,14 @@ class Film(models.Model):
             self.slug = slugify(title_str)
         super(Film, self).save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('film-detail', kwargs={'slug': str(self.slug)})
+
     def __unicode__(self):
         return '{title} [{year}]'.format(title=self.title, year=self.year)
 
     def __str__(self):
         return self.__unicode__()
-
-    def get_absolute_url(self):
-        return reverse('film-detail', kwargs={'slug': str(self.slug)})
 
 
 class Screening(models.Model):
@@ -110,6 +110,9 @@ class Event(models.Model):
             self.slug = slugify(title_str)
         super(Event, self).save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('film-event-detail', kwargs={'slug': str(self.slug)})
+
     def __unicode__(self):
         subinfo = ''
         if self.start_date and self.end_date:
@@ -134,8 +137,12 @@ class Country(models.Model):
         verbose_name = "Country"
         verbose_name_plural = "Countries"
 
+    @property
     def slug(self):
         return slugify(self.name)
+
+    def get_absolute_url(self):
+        return reverse('film-event-detail', kwargs={'slug': str(self.slug)})
 
     def __unicode__(self):
         return self.name

@@ -14,10 +14,13 @@
     <body>
     <nav class="top-bar" role="navigation">
     <ul class="title-area">
+        <li class="menu-icon"><a href="/"><span>Home</span></a></li>
         <li class="name">
-            <h1><a href="/">That's Fantastic</a></h1>
+            {% block pagehead %}
+            <h1>That's Fantastic</h1>
+            {% endblock pagehead %}
         </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Search</span></a></li>
     </ul>
     <section class="top-bar-section start-hidden">
         <form class="flex-form" action="{% url 'films-search' %}" method="get">

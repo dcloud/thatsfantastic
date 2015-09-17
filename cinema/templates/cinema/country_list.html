@@ -5,7 +5,7 @@
     <nav class="columns col-12">
         <ul class="vertical-menu">
         {% for object in object_list %}{% spaceless %}
-            <li><a href={% url 'films-by-country' slug=object.slug %}>{{ object }}</a>
+            <li><a href="{{ object.get_absolute_url }}">{{ object }}</a>
             <span></span>
             </li>{% endspaceless %}
         {% empty %}

@@ -6,7 +6,10 @@
             {{ object.title }}</a>
             {% if q or country %}
             <span class="detail event">
-            {{ object.shown_at.latest.title }}</span>
+            <a class="secondary"
+               href="{{ object.shown_at.latest.get_absolute_url }}"
+               title="{{ object.shown_at.title }}">{{ object.shown_at.latest.title }}</a>
+            </span>
             {% else %}
             <span class="detail runtime">{{ object.runtime }}m</span>
             {% endif %}

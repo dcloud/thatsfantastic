@@ -29,10 +29,12 @@ $midnight-blue : #1F2226;
 $light-gray: #A6ACB3;
 $dark-grayblue: #2D3D4D;
 $medium-blue: #1A5A9B;
+$vague-purple: #564963;
 
 $base-font-color: $light-gray;
 $base-background-color: $almost-black;
 $action-color: $medium-blue;
+$secondary-action-color: $vague-purple;
 $secondary-font-color: $dark-grayblue;
 $secondary-background-color: $midnight-blue;
 $title-font-color: lighten($secondary-font-color, 5%);
@@ -42,6 +44,10 @@ $interactive-active-color: lighten($interactive-default-color, 20%);
 $interactive-disabled-color: darken($base-font-color, 45%);
 $interactive-background-color: lighten($base-background-color, 1%);
 $interactive-background-active-color: lighten($interactive-background-color, 2%);
+
+// Containers and whatnot
+
+$max-page-width: 800px;
 
 // Mobile
 

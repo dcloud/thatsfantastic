@@ -3,7 +3,7 @@
         {% spaceless %}
         <li>
             {% if page_obj.has_previous %}
-            <a rel="next" href="?page={{ page_obj.previous_page_number }}">
+            <a rel="next" acceskey="n" href="?page={{ page_obj.previous_page_number }}">
             {% else %}
             <span class="disabled">
             {% endif %}
@@ -18,7 +18,7 @@
         <li><span>{{ page_obj.number }} of {{ paginator.num_pages }}</span></li>
         <li>
         {% if page_obj.has_next %}
-            <a rel="prev" href="?page={{ page_obj.next_page_number }}">
+            <a rel="prev" acceskey="p" href="?page={{ page_obj.next_page_number }}">
         {% else %}
             <span class="disabled">
         {% endif %}

@@ -1,10 +1,22 @@
 {% extends "base.html" %}
+
 {% block pagetitle %}{{ block.super }}
 {% if event.title %} | {{ event.title }}
 {% elif country %}
  | {{ country }}
 {% endif %}
 {% endblock pagetitle %}
+
+
+{% block pagehead %}
+{% if country %}
+<h1>{{ country }}</h1>
+{% else %}
+{{ block.super }}
+{% endif %}
+{% endblock pagehead %}
+
+
 {% block content %}
 {% if q %}
 <div class="row">

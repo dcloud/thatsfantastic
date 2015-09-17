@@ -142,7 +142,7 @@ class Country(models.Model):
         return slugify(self.name)
 
     def get_absolute_url(self):
-        return reverse('film-event-detail', kwargs={'slug': str(self.slug)})
+        return reverse('films-from-country', kwargs={'slug': str(self.slug)})
 
     def __unicode__(self):
         return self.name

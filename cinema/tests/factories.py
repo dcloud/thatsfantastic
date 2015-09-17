@@ -4,9 +4,6 @@ import factory.fuzzy
 import unicodedata
 
 from cinema.models import Film, Person
-from django_countries import countries
-
-COUNTRY_VALUES = (x[0] for x in countries)
 
 
 def make_unicode_letters():
@@ -52,7 +49,7 @@ class FilmFactory(factory.django.DjangoModelFactory):
     title = factory.fuzzy.FuzzyText(length=40, chars=unicode_letters)
     synopsis = factory.fuzzy.FuzzyText()
     description = factory.fuzzy.FuzzyText()
-    countries = FuzzyList(factory.fuzzy.FuzzyChoice(COUNTRY_VALUES), 5)
+    countries = FuzzyList(factory.fuzzy.FuzzyText(length=60, chars=unicode_letters), 5)
 
     @factory.post_generation
     def directors(self, create, extracted, **kwargs):

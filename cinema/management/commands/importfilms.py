@@ -3,7 +3,6 @@ import os.path
 from os import listdir
 import json
 from nameparser import HumanName
-from django_countries import countries
 from cinema.models import Film, Person, Event
 from cinema.utils import titlecase
 
@@ -47,7 +46,6 @@ class Command(BaseCommand):
         if isinstance(data, dict):
             (head, tail) = os.path.split(path)
             (name, ext) = os.path.splitext(tail)
-            countries_abbrs = (self._lookup_country(c) for c in data.get('countries', []))
             title = data.get('title', None)
             directors = self._process_directors(data.get('directors', []))
             if not title:
@@ -60,10 +58,9 @@ class Command(BaseCommand):
             object.synopsis = data.get('synopsis', object.synopsis)
             object.description = data.get('description', object.description)
             object.runtime = data.get('runtime', object.runtime)
-            if countries_abbrs:
-                country_set = set(object.countries)
-                country_set.update(set([c for c in countries_abbrs if c]))
-                object.countries = list(country_set)
+            country_set = set(object.countries)
+            country_set.update(set(data.get('countries', [])))
+            object.countries = list(country_set)
             object.directors = directors
             has_source_url = ('meta' in data and 'source_url' in data['meta'])
             if has_source_url:
@@ -94,11 +91,6 @@ class Command(BaseCommand):
             except ValueError:
                 self.stderr.write("'' appears to be invalid JSON. Skipping.")
         return data
-
-    def _lookup_country(self, name):
-        if name == 'United States':
-            return 'US'
-        return countries.by_name(name)
 
     def _process_directors(self, directors_list):
         people = []

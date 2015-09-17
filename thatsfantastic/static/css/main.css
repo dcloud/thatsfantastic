@@ -10,6 +10,12 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
   margin: 0;
   padding: 0;
@@ -112,11 +118,10 @@ nav > ul {
     -moz-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
-    nav > ul li a {
+    nav > ul li a, nav > ul li span {
       display: block; }
   nav > ul.vertical-menu {
     display: table;
-    border-spacing: 0 1px;
     width: 100%; }
     nav > ul.vertical-menu li {
       display: table-row;
@@ -147,7 +152,8 @@ input[type="text"] {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1.25em; }
+  margin-top: 1.25em;
+  padding-bottom: 3.75em; }
   .outer-container::after {
     clear: both;
     content: "";
@@ -300,19 +306,21 @@ nav.top-bar {
   nav.top-bar section {
     padding: 0.5em; }
 
-.tab-bar {
+.bar, .tab-bar {
   border: 1px solid #2D3D4D;
   margin: 0 0 0.75em; }
-  .tab-bar ul li {
+  .bar ul li, .tab-bar ul li {
     border-right: 1px solid #2D3D4D; }
-    .tab-bar ul li a {
+    .bar ul li span, .bar ul li a, .tab-bar ul li span, .tab-bar ul li a {
       padding: 0.625em 0.25em;
       text-align: center; }
-      .tab-bar ul li a:focus, .tab-bar ul li a:hover {
-        background-color: #303233; }
-      .tab-bar ul li a:active, .tab-bar ul li a.active {
-        background-color: #2b2d2e; }
-    .tab-bar ul li:last-child {
+    .bar ul li span.disabled, .tab-bar ul li span.disabled {
+      color: #35393e; }
+    .bar ul li a:focus, .bar ul li a:hover, .tab-bar ul li a:focus, .tab-bar ul li a:hover {
+      background-color: #303233; }
+    .bar ul li a:active, .bar ul li a.active, .tab-bar ul li a:active, .tab-bar ul li a.active {
+      background-color: #2b2d2e; }
+    .bar ul li:last-child, .tab-bar ul li:last-child {
       border: none; }
 
 form.flex-form > ul {
@@ -381,9 +389,3 @@ form.flex-form > ul {
 
 .start-hidden {
   display: none; }
-
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }

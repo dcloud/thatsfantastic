@@ -39,6 +39,7 @@ $title-font-color: lighten($secondary-font-color, 5%);
 
 $interactive-default-color: $dark-grayblue;
 $interactive-active-color: lighten($interactive-default-color, 20%);
+$interactive-disabled-color: darken($base-font-color, 45%);
 $interactive-background-color: lighten($base-background-color, 1%);
 $interactive-background-active-color: lighten($interactive-background-color, 2%);
 

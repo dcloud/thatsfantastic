@@ -1,0 +1,34 @@
+<nav class="bar">
+    <ul>
+        {% spaceless %}
+        <li>
+            {% if page_obj.has_previous %}
+            <a rel="next" href="?page={{ page_obj.previous_page_number }}">
+            {% else %}
+            <span class="disabled">
+            {% endif %}
+            &laquo; Previous
+            {% if page_obj.has_previous %}
+            </a>
+            {% else %}
+            </span>
+            {% endif %}
+        </li>
+
+        <li><span>{{ page_obj.number }} of {{ paginator.num_pages }}</span></li>
+        <li>
+        {% if page_obj.has_next %}
+            <a rel="prev" href="?page={{ page_obj.next_page_number }}">
+        {% else %}
+            <span class="disabled">
+        {% endif %}
+            Next &raquo;
+        {% if page_obj.has_next %}
+            </a>
+            {% else %}
+            </span>
+        {% endif %}
+        </li>
+        {% endspaceless %}
+    </ul>
+</nav>

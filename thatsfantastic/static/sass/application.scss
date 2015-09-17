@@ -88,14 +88,13 @@ nav > ul {
     li {
         @include flex(1 1 auto);
 
-        a {
+        a, span {
             display: block;
         }
     }
 
     &.vertical-menu {
         display: table;
-        border-spacing: 0 1px;
         width: 100%;
 
         li {
@@ -146,6 +145,7 @@ input[type="text"] {
 .outer-container {
     @include outer-container(800px);
     margin-top: em(20);
+    padding-bottom: em(60);
 }
 
 .columns {
@@ -206,7 +206,7 @@ nav.top-bar {
 
 }
 
-.tab-bar {
+.bar, .tab-bar {
     border: 1px solid $interactive-default-color;
     margin: 0 0 0.75em;
 
@@ -214,9 +214,14 @@ nav.top-bar {
         li {
             border-right: 1px solid $interactive-default-color;
 
-            a {
+            span, a {
                 padding: em(10) em(4);
                 text-align: center;
+            }
+            span.disabled {
+                color: $interactive-disabled-color;
+            }
+            a {
                 &:focus,
                 &:hover {
                     background-color: lighten($interactive-background-active-color, 2%);

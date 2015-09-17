@@ -92,4 +92,10 @@ class Migration(migrations.Migration):
             name='films',
             field=models.ManyToManyField(to='cinema.Film', related_name='shown_at'),
         ),
+        migrations.RunSQL("CREATE INDEX cinema_film_countries ON cinema_film USING gin (countries);",
+                          reverse_sql="DROP INDEX IF EXISTS cinema_film_countries;"),
+        migrations.RunSQL("""CREATE VIEW cinema_country AS
+                             SELECT DISTINCT unnest(countries) AS name FROM cinema_film
+                             ORDER BY name ASC;""",
+                          reverse_sql="DROP VIEW IF EXISTS cinema_country;")
     ]

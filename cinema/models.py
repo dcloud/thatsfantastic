@@ -122,3 +122,23 @@ class Event(models.Model):
 
     def __str__(self):
         return self.__unicode__()
+
+
+class Country(models.Model):
+    """Model that is actually backed by a PostgreSQL view based on the Film model's countries"""
+    name = models.CharField(max_length=60, primary_key=True)
+
+    class Meta:
+        db_table = "cinema_country"
+        managed = False
+        verbose_name = "Country"
+        verbose_name_plural = "Countries"
+
+    def slug(self):
+        return slugify(self.name)
+
+    def __unicode__(self):
+        return self.name
+
+    def __str__(self):
+        return self.__unicode__()

@@ -1,0 +1,19 @@
+<nav class="columns col-12">
+    <ul class="vertical-menu">
+    {% for object in object_list %}{% spaceless %}
+        <li {% if default_event and object.shown_at.latest.slug == default_event %}class="current"{% endif %}>
+            <a href="{{ object.get_absolute_url }}" title="{{ object.title }}">
+            {{ object.title }}</a>
+            {% if q or country %}
+            <span class="detail event">
+            {{ object.shown_at.latest.title }}</span>
+            {% else %}
+            <span class="detail runtime">{{ object.runtime }}m</span>
+            {% endif %}
+        </li>{% endspaceless %}
+    {% empty %}
+    <h3>No films!</h3>
+    <p>No films were found</p>
+    {% endfor %}
+    </ul>
+</nav>

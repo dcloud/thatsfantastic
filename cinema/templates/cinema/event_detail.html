@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block pagetitle %}{{ block.super }}
+{% if event.title %} | {{ event.title }}
+{% endif %}
+{% endblock pagetitle %}
+
+{% block content %}
+<div class="row">
+    {% include "cinema/_film_menu.html" with object_list=event.films.all %}
+</div>
+{% endblock content %}

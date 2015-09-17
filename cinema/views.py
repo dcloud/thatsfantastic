@@ -1,5 +1,4 @@
 from django.views.generic import (ListView, DetailView)
-from django.views.generic.detail import SingleObjectMixin
 from django.db.models import Q
 
 from cinema.models import (Film, Event, Country)
@@ -44,6 +43,7 @@ class FilmSearch(FilmList):
 
 class CountryFilmList(FilmList):
     """Filter Films by a country name slug"""
+    paginate_by = 20
 
     def get_queryset(self):
         country_slug = self.kwargs.get('slug')
@@ -61,17 +61,5 @@ class CountryList(ListView):
     model = Country
 
 
-class EventDetail(SingleObjectMixin, FilmList):
+class EventDetail(DetailView):
     model = Event
-
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object(queryset=Event.objects.all())
-        return super(EventDetail, self).get(request, *args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context = super(EventDetail, self).get_context_data(**kwargs)
-        context['event'] = self.object
-        return context
-
-    def get_queryset(self):
-        return self.object.films.all()

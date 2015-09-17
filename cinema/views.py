@@ -1,14 +1,25 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import (ListView, DetailView)
 from django.views.generic.detail import SingleObjectMixin
-from cinema.models import Film, Event
 from django.db.models import Q
+
+from cinema.models import (Film, Event, Country)
+from cinema.settings import CINEMA_DEFAULT_EVENT
 
 
 class FilmDetail(DetailView):
     model = Film
 
 
-class FilmSearch(ListView):
+class FilmList(ListView):
+    model = Film
+
+    def get_context_data(self, **kwargs):
+        context = super(FilmList, self).get_context_data(**kwargs)
+        context['default_event'] = CINEMA_DEFAULT_EVENT
+        return context
+
+
+class FilmSearch(FilmList):
     model = Film
 
     def get_queryset(self):
@@ -31,8 +42,23 @@ class FilmSearch(ListView):
         return context
 
 
-class FilmList(ListView):
-    model = Film
+class CountryFilmList(FilmList):
+    """Filter Films by a country name slug"""
+
+    def get_queryset(self):
+        country_slug = self.kwargs.get('slug')
+        self.name_approx = country_slug.replace('-', ' ').title()
+        return Film.objects.filter(countries__contains=[self.name_approx]).order_by('shown_at')
+
+    def get_context_data(self, **kwargs):
+        context = super(CountryFilmList, self).get_context_data(**kwargs)
+        context['country'] = self.name_approx
+        return context
+
+
+class CountryList(ListView):
+    """List of countries with associated films"""
+    model = Country
 
 
 class EventDetail(SingleObjectMixin, FilmList):

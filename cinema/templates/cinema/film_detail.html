@@ -27,7 +27,9 @@
                 {% endif %}
                 {% if object.countries %}
                 <h3>Countries</h3>
-                <p>{{ object.countries_display }}</p>
+                <p>{% for country in object.countries %}
+                    <a href="{% url 'films-by-country' slug=country|slugify %}">{{ country }}</a>{% if not forloop.last %},{% endif %}
+                {% endfor %}</p>
                 {% endif %}
                 {% if object.related_urls %}
                     <h3 id="related_urls">Related URLS</h3>
@@ -37,6 +39,8 @@
                 {% endif %}
             </div>
             <div class="col-6">
+                <h3>Year</h3>
+                <p>{{ object.year }}</p>
                 <h3>Directors</h3>
                 {% if object.directors.count > 1 %}
                 <ul>

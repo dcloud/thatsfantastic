@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block pagetitle %}{{ block.super }}
-{% if event.title %} | {{ event.title }}{% endif %}
+{% if event.title %} | {{ event.title }}
+{% elif country %}
+ | {{ country }}
+{% endif %}
 {% endblock pagetitle %}
 {% block content %}
 {% if q %}
@@ -11,19 +14,22 @@
 </div>
 {% endif %}
 <div class="row">
-    <nav class="columnscol-12">
+    <nav class="columns col-12">
         <ul class="vertical-menu">
         {% for object in object_list %}{% spaceless %}
-            <li>
-                <a href="{{ object.get_absolute_url }}" title="{{ object.title }}">{{ object.title }}</a>
-                {% if q %}
-                <span class="detail event">{{ object.shown_at.latest.title }}</span>
+            <li {% if default_event and object.shown_at.latest.slug == default_event %}class="current"{% endif %}>
+                <a href="{{ object.get_absolute_url }}" title="{{ object.title }}">
+                {{ object.title }}</a>
+                {% if q or country %}
+                <span class="detail event">
+                {{ object.shown_at.latest.title }}</span>
                 {% else %}
                 <span class="detail runtime">{{ object.runtime }}m</span>
                 {% endif %}
             </li>{% endspaceless %}
         {% empty %}
-        <h4>No films!</h4>
+        <h3>No films!</h3>
+        <p>No films were found</p>
         {% endfor %}
         </ul>
     </nav>

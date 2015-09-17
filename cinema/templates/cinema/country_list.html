@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block pagetitle %}{{ block.super }} | Countries with films{% endblock pagetitle %}
+{% block content %}
+<div class="row">
+    <nav class="columns col-12">
+        <ul class="vertical-menu">
+        {% for object in object_list %}{% spaceless %}
+            <li><a href={% url 'films-by-country' slug=object.slug %}>{{ object }}</a>
+            <span></span>
+            </li>{% endspaceless %}
+        {% empty %}
+        <h3>No films!</h3>
+        <p>No films were found</p>
+        {% endfor %}
+        </ul>
+    </nav>
+</div>
+{% endblock content %}

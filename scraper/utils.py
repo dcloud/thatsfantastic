@@ -9,13 +9,19 @@ CHAR_REPLACEMENT_MAP = {
     '\u201D': '\u0022',
 }
 
+COUNTRY_NAME_OFFICIALDOM = (
+    "democratic people's republic of",
+    "republic of",
+    "people's republic of",
+)
+
 
 def correct_countries_list(countries_list):
-    for n, item in enumerate(countries_list.copy()):
+    for n, item in enumerate(countries_list):
         if countries_list[n]:
             if n + 1 < len(countries_list):
                 l_item = countries_list[n+1].lower()
-                if 'republic' in l_item or 'democratic' in l_item:
+                if l_item in COUNTRY_NAME_OFFICIALDOM:
                     yield ' '.join((countries_list[n+1], countries_list[n]))
                     countries_list[n+1] = None
                 else:
@@ -74,3 +80,7 @@ def clean_string(string):
 
 def string_to_list(string):
     return [clean_string(x) for x in string.split(',') if x.strip()]
+
+
+def country_title(string):
+    return ' '.join(s.lower() not in ('of', 'the') and s.capitalize() or s.lower() for s in string.split(' '))

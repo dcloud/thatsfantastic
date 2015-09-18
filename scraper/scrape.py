@@ -3,13 +3,16 @@ from lxml.cssselect import CSSSelector
 import re
 from scraper.models import FilmDict
 from scraper.utils import (decode_html, unicode_normalize,
-                           clean_string, string_to_list, replace_countries)
+                           clean_string, string_to_list,
+                           correct_countries_list, country_title)
 from cinema.utils import (titlecase,)
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
 ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')
 SYNOPSIS_GRAPHS_XPATH = "//div[@class='lead']/p"
 DESCRIPTION_GRAPHS_XPATH = '//article/h4[2]/following-sibling::p'
+DIRECTOR_REG = r'dir\.\s+([^\d]+)'
+COUNTRIES_REG = r'(?:\,\s+(\w[\'\w\s]+)+)'
 
 
 class HTMLScraper:
@@ -82,6 +85,10 @@ class FantasticMovieScraper(HTMLScraper):
     def _raw_graphs_to_string(self, graphs_list):
         return '\n\n'.join(g.text_content().strip('\n') for g in graphs_list) if len(graphs_list) else ''
 
+    def _clean_and_titlecase_country_names(self, country_list):
+        for c in correct_countries_list(country_list.copy()):
+            yield country_title(self._clean_string(c))
+
     def scrape(self):
         self._scrape_raw()
         return self.clean()
@@ -146,7 +153,7 @@ class FantasticMovieScraper(HTMLScraper):
     @property
     def raw_directors(self):
         if self._raw_directors is None:
-            match = re.search(r'dir\.\s+([^\d]+)', self.raw_metadata, flags=re.IGNORECASE)
+            match = re.search(DIRECTOR_REG, self.raw_metadata, flags=re.IGNORECASE)
             self._end_directors = match.end()
             self._raw_directors = match.groups()[0] if match else ''
         return self._raw_directors
@@ -162,12 +169,12 @@ class FantasticMovieScraper(HTMLScraper):
                 search_text = search_text[self._end_runtime:]
             elif self._end_directors:
                 search_text = search_text[self._end_directors:]
-            match_list = re.findall(r'(?:\,\s+(\w[\w\s]+)+)', search_text, flags=re.IGNORECASE)
+            match_list = re.findall(COUNTRIES_REG, search_text, flags=re.IGNORECASE)
             self._raw_countries = match_list
         return self._raw_countries
 
     def clean_countries(self):
-        return [self._clean_string(c.title()) for c in replace_countries(self._raw_countries)]
+        return list(self._clean_and_titlecase_country_names(self.raw_countries))
 
     @property
     def raw_year(self):

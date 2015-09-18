@@ -1,12 +1,35 @@
 import unittest
 import betamax
 
-from scraper.scrape import (HTMLScraper, FantasticMovieScraper, FantasticMovieListScraper)
+from scraper.scrape import (HTMLScraper, FantasticMovieScraper, FantasticMovieListScraper,
+                            META_SELECTOR, ANCHOR_SELECTOR, SYNOPSIS_GRAPHS_XPATH,
+                            DESCRIPTION_GRAPHS_XPATH, DIRECTOR_REG, COUNTRIES_REG,
+                            )
 from scraper.models import FilmDict
 from scraper.tasks import (get_url, make_session)
 from scraper.tests import (CASSETTES_DIR,)
 
 import lxml.html
+import re
+
+
+class TestScrapeRegexes(unittest.TestCase):
+    """Test regexes used in the scrapers"""
+
+    def setUp(self):
+        self.big_meta = "2012, dir. Jeong Byeong Gil, 119 min., United States, KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF"
+
+    def test_countries_regex(self):
+        """countries_regex should pick up only country names from a meta string."""
+        match_list = re.findall(COUNTRIES_REG, self.big_meta, flags=re.IGNORECASE)
+        self.assertIsNotNone(match_list)
+        self.assertNotIn('2012', match_list)
+        self.assertNotIn('dir.', match_list)
+        self.assertNotIn('Jeong Byeong Gil', match_list)
+        self.assertNotIn('119 min.', match_list)
+        self.assertIn('KOREA', match_list)
+        self.assertIn("DEMOCRATIC PEOPLE'S REPUBLIC OF", match_list)
+        self.assertIn("United States", match_list)
 
 
 class TestHTMLScraper(unittest.TestCase):
@@ -32,6 +55,7 @@ class TestFantasticMovieScraper(unittest.TestCase):
         self.many_countries_countries = ["France", "Belgium", "Luxembourg"]
         self.many_countries_year = 2013
         self.many_countries_runtime = 102
+        self.difficult_countries_url = "http://fantasticfest.com/films/river"
         self.session = make_session()
         self.recorder = betamax.Betamax(self.session, cassette_library_dir=CASSETTES_DIR)
 

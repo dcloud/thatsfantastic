@@ -43,7 +43,14 @@ class TestTitlecaseUtil(unittest.TestCase):
 
     def test_titlecase_with_alphanumbers(self):
         '''titlecase should captialize a letter that immediately follows a + sign'''
-        raw_title = "2001AD THE 1ST, 2ND, 3RD, 4TH WITH R2-D2 AND SK1 IN 3D AND 2D"
+        raw_title = "2001AD THE 1ST, 22ND, 53RD, 4TH WITH R2-D2 AND SK1 IN 3D AND 2D"
         corrected_title = titlecase(raw_title)
         self.assertEqual(corrected_title,
-                         "2001AD the 1st, 2nd, 3rd, 4th with R2-D2 and SK1 in 3D and 2D")
+                         "2001AD the 1st, 22nd, 53rd, 4th with R2-D2 and SK1 in 3D and 2D")
+
+    def test_titlecase_preserves_ordinals(self):
+        '''titlecase should not uppercase the letters in an ordinal'''
+        raw_title = "THE EXORCIST IN THE 21ST CENTURY"
+        corrected_title = titlecase(raw_title)
+        self.assertEqual(corrected_title,
+                         "The Exorcist in the 21st Century")

@@ -9,9 +9,19 @@ CHAR_REPLACEMENT_MAP = {
     '\u201D': '\u0022',
 }
 
-COUNTRY_REPLACEMENTS = {
-    'korea': ('Republic of', 'South Korea')
-}
+
+def correct_countries_list(countries_list):
+    for n, item in enumerate(countries_list.copy()):
+        if countries_list[n]:
+            if n + 1 < len(countries_list):
+                l_item = countries_list[n+1].lower()
+                if 'republic' in l_item or 'democratic' in l_item:
+                    yield ' '.join((countries_list[n+1], countries_list[n]))
+                    countries_list[n+1] = None
+                else:
+                    yield countries_list[n]
+            else:
+                yield countries_list[n]
 
 
 def is_web_url(url_cand):
@@ -64,16 +74,3 @@ def clean_string(string):
 
 def string_to_list(string):
     return [clean_string(x) for x in string.split(',') if x.strip()]
-
-
-def replace_countries(country_list):
-    for n, item in enumerate(country_list):
-        if item:
-            replacement = COUNTRY_REPLACEMENTS.get(item.lower(), None)
-            if replacement:
-                if n+1 < len(country_list) and country_list[n+1].lower() == replacement[0].lower():
-                    country_list[n+1] = None
-                yield replacement[1]
-            else:
-                yield item
-    return country_list

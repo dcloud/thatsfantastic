@@ -1,7 +1,8 @@
 import unittest
 
 from scraper.utils import (correct_web_url, is_web_url, unicode_normalize,
-                           deeducate_quotes, clean_string, string_to_list)
+                           deeducate_quotes, clean_string, string_to_list,
+                           correct_countries_list)
 
 
 class TestURLUtils(unittest.TestCase):
@@ -66,3 +67,32 @@ class TestHTMLUtils(unittest.TestCase):
     def test_decode_html(self):
         '''decode_html converts an html string into unicode html.'''
         self.fail("Test stub needs implementation")
+
+
+class TestCountryUtils(unittest.TestCase):
+    """Test HTML Urils"""
+
+    def setUp(self):
+        self.malformed_countries_list = [
+            "United States",
+            "Korea",
+            "People's Republic of",
+            "Lao People's Democratic Republic",
+            "Korea",
+            "Democratic People's Republic of",
+            "Norway",
+            "China",
+            "People's Republic of"
+        ]
+
+    def test_correct_countries_list(self):
+        '''correct_countries_list fixes countries whose full names contained commas'''
+        corrected_countries = list(correct_countries_list(self.malformed_countries_list))
+        self.assertNotIn("Korea", corrected_countries)
+        self.assertNotIn("China", corrected_countries)
+        self.assertIn("People's Republic of Korea", corrected_countries)
+        self.assertIn("Democratic People's Republic of Korea", corrected_countries)
+        self.assertIn("People's Republic of China", corrected_countries)
+        self.assertIn("Norway", corrected_countries)
+        self.assertIn("United States", corrected_countries)
+        self.assertEqual(len(corrected_countries), 6)

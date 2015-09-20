@@ -47,12 +47,12 @@ class CountryFilmList(FilmList):
 
     def get_queryset(self):
         country_slug = self.kwargs.get('slug')
-        self.name_approx = country_slug.replace('-', ' ').title()
-        return Film.objects.filter(countries__contains=[self.name_approx]).order_by('shown_at')
+        self.country = Country.objects.get(slug=country_slug)
+        return self.country.film_set.all().order_by('shown_at')
 
     def get_context_data(self, **kwargs):
         context = super(CountryFilmList, self).get_context_data(**kwargs)
-        context['country'] = self.name_approx
+        context['country'] = self.country
         return context
 
 

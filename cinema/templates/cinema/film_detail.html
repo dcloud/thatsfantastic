@@ -27,13 +27,13 @@
                 {% endif %}
                 {% if object.countries %}
                 <h3>Countries</h3>
-                <p>{% for country in object.countries.all %}
-                    <a href="{% url 'films-from-country' slug=country.slug %}">{{ country.name }}</a>{% if not forloop.last %},{% endif %}
-                {% endfor %}</p>
+                <ul class="secondary-links">{% for country in object.countries.all %}
+                    <li><a href="{% url 'films-from-country' slug=country.slug %}">{{ country.name }}</a></li>{% endfor %}
+                </ul>
                 {% endif %}
                 {% if object.related_urls %}
                     <h3 id="related_urls">Related URLS</h3>
-                    <ul>{% for url in object.related_urls %}
+                    <ul class="secondary-links">{% for url in object.related_urls %}
                         <li>{{ url|urlize }}</li>{% endfor %}
                     </ul>
                 {% endif %}

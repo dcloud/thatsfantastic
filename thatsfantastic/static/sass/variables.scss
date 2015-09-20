@@ -22,6 +22,7 @@ $heading-letter-spacing: $base-letter-spacing * 2;
 
 // Margins
 $base-heading-margin: 0.8em;
+$link-list-margin: 0.5em;
 
 // Colors
 $almost-black: #242526;
@@ -37,7 +38,7 @@ $action-color: $medium-blue;
 $secondary-action-color: $vague-purple;
 $secondary-font-color: $dark-grayblue;
 $secondary-background-color: $midnight-blue;
-$title-font-color: lighten($secondary-font-color, 5%);
+$title-font-color: lighten($secondary-font-color, 15%);
 
 $interactive-default-color: $dark-grayblue;
 $interactive-active-color: lighten($interactive-default-color, 20%);

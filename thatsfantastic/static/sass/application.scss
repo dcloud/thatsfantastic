@@ -33,6 +33,7 @@ h6 {
 p {
     font-weight: $base-font-weight;
     letter-spacing: $base-letter-spacing;
+    margin-top: em(4);
 }
 
 h1, h1 > a {
@@ -51,7 +52,7 @@ h3 {
 }
 
 h3, h4, h5 {
-    margin: 0;
+    margin: 0 0 em(8) 0;
 }
 
 a {
@@ -78,6 +79,15 @@ ul, ol {
 
     &%default-ol {
         list-style-type: decimal;
+    }
+}
+
+ul.secondary-links {
+    li {
+        a {
+            display: inline-block;
+            padding: em(10) 0;
+        }
     }
 }
 
@@ -223,8 +233,11 @@ nav.top-bar {
                 padding: em(10) em(4);
                 text-align: center;
             }
-            span.disabled {
-                color: $interactive-disabled-color;
+            span {
+                color: $interactive-default-color;
+                &.disabled {
+                    color: $interactive-disabled-color;
+                }
             }
             a {
                 &:focus,

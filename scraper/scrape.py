@@ -4,8 +4,8 @@ import re
 from scraper.models import FilmDict
 from scraper.utils import (decode_html, unicode_normalize,
                            clean_string, string_to_list,
-                           correct_countries_list, country_title)
-from cinema.utils import (titlecase,)
+                           correct_countries_list)
+from cinema.utils import (titlecase, country_title)
 
 META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
 ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')

@@ -80,7 +80,3 @@ def clean_string(string):
 
 def string_to_list(string):
     return [clean_string(x) for x in string.split(',') if x.strip()]
-
-
-def country_title(string):
-    return ' '.join(s.lower() not in ('of', 'the') and s.capitalize() or s.lower() for s in string.split(' '))

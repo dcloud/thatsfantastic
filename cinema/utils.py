@@ -40,3 +40,7 @@ def titlecase(string, exceptions=SMALL_WORDS, replacements=REPLACEMENTS):
                    lambda mo: mo.group().upper(),
                    s, flags=re.I)
         return s
+
+
+def country_title(string):
+    return ' '.join(s.lower() not in ('of', 'the') and s.capitalize() or s.lower() for s in string.split(' '))

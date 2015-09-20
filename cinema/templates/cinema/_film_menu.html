@@ -4,7 +4,7 @@
         <li {% if default_event and object.shown_at.latest.slug == default_event %}class="current"{% endif %}>
             <a href="{{ object.get_absolute_url }}" title="{{ object.title }}">
             {{ object.title }}</a>
-            {% if q or country %}
+            {% if q or country and not event %}
             <span class="detail event">
             <a class="secondary"
                href="{{ object.shown_at.latest.get_absolute_url }}"

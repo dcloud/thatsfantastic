@@ -63,3 +63,19 @@ class CountryList(ListView):
 
 class EventDetail(DetailView):
     model = Event
+
+
+class EventCountryFilmList(CountryFilmList):
+
+    def get_queryset(self):
+        event_slug = self.kwargs.get('event_slug')
+        country_slug = self.kwargs.get('country_slug')
+        self.country = Country.objects.get(slug=country_slug)
+        self.event = Event.objects.get(slug=event_slug)
+        return self.country.film_set.filter(shown_at=self.event).order_by('shown_at')
+
+    def get_context_data(self, **kwargs):
+        context = super(CountryFilmList, self).get_context_data(**kwargs)
+        context['country'] = self.country
+        context['event'] = self.event
+        return context

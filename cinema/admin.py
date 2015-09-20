@@ -1,5 +1,5 @@
 from django.contrib import admin
-from cinema.models import (Film, Person, Screening, Event)
+from cinema.models import (Film, Person, Screening, Event, Country)
 
 
 @admin.register(Film)
@@ -12,8 +12,15 @@ class FilmAdmin(admin.ModelAdmin):
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
-    list_display = ('title', 'start_date', 'end_date', 'location')
+    list_display = ('title', 'start_day', 'end_day', 'location')
     search_fields = ('title', 'location')
+
+
+@admin.register(Country)
+class CountryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('name',)}
+    list_display = ('name', 'slug')
+    search_fields = ('name',)
 
 
 admin.site.register(Person)

@@ -27,8 +27,8 @@
                 {% endif %}
                 {% if object.countries %}
                 <h3>Countries</h3>
-                <p>{% for country in object.countries %}
-                    <a href="{% url 'films-from-country' slug=country|slugify %}">{{ country }}</a>{% if not forloop.last %},{% endif %}
+                <p>{% for country in object.countries.all %}
+                    <a href="{% url 'films-from-country' slug=country.slug %}">{{ country.name }}</a>{% if not forloop.last %},{% endif %}
                 {% endfor %}</p>
                 {% endif %}
                 {% if object.related_urls %}

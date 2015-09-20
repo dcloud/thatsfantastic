@@ -3,7 +3,7 @@ import os.path
 from os import listdir
 import json
 from nameparser import HumanName
-from cinema.models import Film, Person, Event
+from cinema.models import (Film, Person, Event, Country)
 from cinema.utils import titlecase
 
 
@@ -58,9 +58,10 @@ class Command(BaseCommand):
             object.synopsis = data.get('synopsis', object.synopsis)
             object.description = data.get('description', object.description)
             object.runtime = data.get('runtime', object.runtime)
-            country_set = set(object.countries)
-            country_set.update(set(data.get('countries', [])))
-            object.countries = list(country_set)
+            for country_name in set(data.get('countries', [])):
+                (country, _) = Country.objects.get_or_create(name=country_name)
+                object.countries.add(country)
+
             object.directors = directors
             has_source_url = ('meta' in data and 'source_url' in data['meta'])
             if has_source_url:

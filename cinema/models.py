@@ -33,9 +33,7 @@ class Film(models.Model):
     slug = models.SlugField(max_length=140, unique=True, null=True, blank=True)
     synopsis = models.TextField(blank=True)
     description = models.TextField(blank=True)
-    countries = ArrayField(models.CharField(max_length=60),
-                           default=list, blank=True,
-                           help_text=_('Country names, not standardized'))
+    countries = models.ManyToManyField('Country')
     languages = ArrayField(models.CharField(max_length=30), default=list, blank=True)
     year = models.PositiveIntegerField(blank=True, null=True, help_text=_("Release year"))
     runtime = models.IntegerField(blank=True, null=True, help_text=_("Film runtime, in whole minutes"))
@@ -90,8 +88,10 @@ class Screening(models.Model):
 class Event(models.Model):
     title = models.CharField(max_length=80)
     slug = models.SlugField(max_length=140, unique=True, null=True, blank=True)
-    start_date = models.DateField(null=True)
-    end_date = models.DateField(null=True)
+    start_day = models.DateField(null=True, blank=True)
+    start_time = models.TimeField(null=True, blank=True)
+    end_day = models.DateField(null=True, blank=True)
+    end_time = models.TimeField(null=True, blank=True)
     location = models.CharField(blank=True, default='', max_length=50,
                                 help_text=_("Geographic location of event, i.e. Austin, Texas"))
     films = models.ManyToManyField('Film', related_name='shown_at')
@@ -99,8 +99,8 @@ class Event(models.Model):
     class Meta:
         verbose_name = _("Event")
         verbose_name_plural = _("Events")
-        ordering = ('-start_date', '-end_date', 'title')
-        get_latest_by = 'start_date'
+        ordering = ('-start_day', '-end_day', 'title')
+        get_latest_by = 'start_day'
 
     def save(self, *args, **kwargs):
         if self.slug is None or self.slug == '':
@@ -128,18 +128,18 @@ class Event(models.Model):
 
 
 class Country(models.Model):
-    """Model that is actually backed by a PostgreSQL view based on the Film model's countries"""
+    '''Non-standardized country names, for films'''
     name = models.CharField(max_length=60, primary_key=True)
+    slug = models.SlugField(max_length=65, unique=True, null=True, blank=True)
 
     class Meta:
-        db_table = "cinema_country"
-        managed = False
         verbose_name = "Country"
         verbose_name_plural = "Countries"
 
-    @property
-    def slug(self):
-        return slugify(self.name)
+    def save(self, *args, **kwargs):
+        if self.slug is None or self.slug == '':
+            self.slug = slugify(self.name)
+        super(Country, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('films-from-country', kwargs={'slug': str(self.slug)})

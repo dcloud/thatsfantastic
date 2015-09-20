@@ -12,48 +12,60 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Event',
+            name='Country',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
-                ('title', models.CharField(max_length=80)),
-                ('slug', models.SlugField(null=True, blank=True, unique=True, max_length=140)),
-                ('start_date', models.DateField(null=True)),
-                ('end_date', models.DateField(null=True)),
-                ('location', models.CharField(default='', blank=True, help_text='Geographic location of event, i.e. Austin, Texas', max_length=50)),
+                ('name', models.CharField(max_length=60, serialize=False, primary_key=True)),
+                ('slug', models.SlugField(max_length=65, unique=True, blank=True, null=True)),
             ],
             options={
+                'verbose_name': 'Country',
+                'verbose_name_plural': 'Countries',
+            },
+        ),
+        migrations.CreateModel(
+            name='Event',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
+                ('title', models.CharField(max_length=80)),
+                ('slug', models.SlugField(max_length=140, unique=True, blank=True, null=True)),
+                ('start_day', models.DateField(blank=True, null=True)),
+                ('start_time', models.TimeField(blank=True, null=True)),
+                ('end_day', models.DateField(blank=True, null=True)),
+                ('end_time', models.TimeField(blank=True, null=True)),
+                ('location', models.CharField(help_text='Geographic location of event, i.e. Austin, Texas', max_length=50, default='', blank=True)),
+            ],
+            options={
+                'get_latest_by': 'start_day',
                 'verbose_name': 'Event',
-                'ordering': ('-start_date', '-end_date', 'title'),
                 'verbose_name_plural': 'Events',
-                'get_latest_by': 'start_date',
+                'ordering': ('-start_day', '-end_day', 'title'),
             },
         ),
         migrations.CreateModel(
             name='Film',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
                 ('title', models.CharField(max_length=120)),
-                ('slug', models.SlugField(null=True, blank=True, unique=True, max_length=140)),
+                ('slug', models.SlugField(max_length=140, unique=True, blank=True, null=True)),
                 ('synopsis', models.TextField(blank=True)),
                 ('description', models.TextField(blank=True)),
-                ('countries', django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=60), default=list, blank=True, help_text='Country names, not standardized', size=None)),
-                ('languages', django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=30), default=list, blank=True, size=None)),
-                ('year', models.PositiveIntegerField(null=True, blank=True, help_text='Release year')),
-                ('runtime', models.IntegerField(null=True, blank=True, help_text='Film runtime, in whole minutes')),
-                ('related_urls', django.contrib.postgres.fields.ArrayField(base_field=models.URLField(), default=list, blank=True, size=None)),
+                ('languages', django.contrib.postgres.fields.ArrayField(default=list, base_field=models.CharField(max_length=30), blank=True, size=None)),
+                ('year', models.PositiveIntegerField(help_text='Release year', blank=True, null=True)),
+                ('runtime', models.IntegerField(help_text='Film runtime, in whole minutes', blank=True, null=True)),
+                ('related_urls', django.contrib.postgres.fields.ArrayField(default=list, base_field=models.URLField(), blank=True, size=None)),
             ],
             options={
                 'verbose_name': 'Film',
-                'ordering': ('title', '-year'),
                 'verbose_name_plural': 'Films',
+                'ordering': ('title', '-year'),
             },
         ),
         migrations.CreateModel(
             name='Person',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
                 ('first_name', models.CharField(max_length=50)),
-                ('middle_name', models.CharField(default='', blank=True, max_length=50)),
+                ('middle_name', models.CharField(max_length=50, default='', blank=True)),
                 ('last_name', models.CharField(max_length=50)),
             ],
             options={
@@ -64,38 +76,37 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Screening',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
                 ('start_time', models.DateTimeField()),
-                ('end_time', models.DateTimeField(null=True, blank=True)),
-                ('location', models.CharField(default='', blank=True, help_text='Location of film screening', max_length=120)),
+                ('end_time', models.DateTimeField(blank=True, null=True)),
+                ('location', models.CharField(help_text='Location of film screening', max_length=120, default='', blank=True)),
                 ('event', models.ForeignKey(to='cinema.Event')),
                 ('film', models.ForeignKey(to='cinema.Film')),
             ],
             options={
+                'get_latest_by': 'start_time',
                 'verbose_name': 'Screening',
                 'verbose_name_plural': 'Screenings',
-                'get_latest_by': 'start_time',
             },
         ),
         migrations.AddField(
             model_name='film',
             name='actors',
-            field=models.ManyToManyField(to='cinema.Person', blank=True, related_name='acted_in'),
+            field=models.ManyToManyField(to='cinema.Person', related_name='acted_in', blank=True),
+        ),
+        migrations.AddField(
+            model_name='film',
+            name='countries',
+            field=models.ManyToManyField(to='cinema.Country'),
         ),
         migrations.AddField(
             model_name='film',
             name='directors',
-            field=models.ManyToManyField(to='cinema.Person', blank=True, help_text='Usually one person, but can accomodate multiple directors', related_name='directed'),
+            field=models.ManyToManyField(help_text='Usually one person, but can accomodate multiple directors', to='cinema.Person', related_name='directed', blank=True),
         ),
         migrations.AddField(
             model_name='event',
             name='films',
             field=models.ManyToManyField(to='cinema.Film', related_name='shown_at'),
         ),
-        migrations.RunSQL("CREATE INDEX cinema_film_countries ON cinema_film USING gin (countries);",
-                          reverse_sql="DROP INDEX IF EXISTS cinema_film_countries;"),
-        migrations.RunSQL("""CREATE VIEW cinema_country AS
-                             SELECT DISTINCT unnest(countries) AS name FROM cinema_film
-                             ORDER BY name ASC;""",
-                          reverse_sql="DROP VIEW IF EXISTS cinema_country;")
     ]

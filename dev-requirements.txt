@@ -5,3 +5,4 @@ django-dotenv
 factory-boy>=2.5,<3.0
 coverage
 betamax
+django-debug-toolbar

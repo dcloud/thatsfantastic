@@ -81,8 +81,12 @@ TEMPLATES = [
     },
 ]
 
-if TEMPLATES[0]['OPTIONS']['debug']:
-    INSTALLED_APPS += ('debug_toolbar',)
+try:
+    import debug_toolbar
+    if TEMPLATES[0]['OPTIONS']['debug'] == True:
+        INSTALLED_APPS += ('debug_toolbar',)
+except ImportError:
+    pass
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

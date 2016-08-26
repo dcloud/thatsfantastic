@@ -82,8 +82,8 @@ TEMPLATES = [
 ]
 
 try:
-    import debug_toolbar
-    if TEMPLATES[0]['OPTIONS']['debug'] == True:
+    import debug_toolbar  # noqa F401
+    if TEMPLATES[0]['OPTIONS']['debug'] is True:
         INSTALLED_APPS += ('debug_toolbar',)
 except ImportError:
     pass

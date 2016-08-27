@@ -14,11 +14,8 @@ class Person(models.Model):
         verbose_name = _('Person')
         verbose_name_plural = _('People')
 
-    def __unicode__(self):
-        return self.full_name
-
     def __str__(self):
-        return self.__unicode__()
+        return self.full_name
 
     @property
     def full_name(self):
@@ -58,11 +55,8 @@ class Film(models.Model):
     def get_absolute_url(self):
         return reverse('film-detail', kwargs={'slug': str(self.slug)})
 
-    def __unicode__(self):
-        return '{title} [{year}]'.format(title=self.title, year=self.year)
-
     def __str__(self):
-        return self.__unicode__()
+        return '{title} [{year}]'.format(title=self.title, year=self.year)
 
 
 class Screening(models.Model):
@@ -78,11 +72,8 @@ class Screening(models.Model):
         verbose_name_plural = _('Screenings')
         get_latest_by = 'start_time'
 
-    def __unicode__(self):
-        return '{title}: {start}-{end}'.format(title=self.film.title, start=self.start_time, end=self.end_time)
-
     def __str__(self):
-        return self.__unicode__()
+        return '{title}: {start}-{end}'.format(title=self.film.title, start=self.start_time, end=self.end_time)
 
 
 class Event(models.Model):
@@ -113,18 +104,15 @@ class Event(models.Model):
     def get_absolute_url(self):
         return reverse('film-event-detail', kwargs={'slug': str(self.slug)})
 
-    def __unicode__(self):
+    def __str__(self):
         subinfo = ''
-        if self.start_date and self.end_date:
+        if self.start_day and self.end_day:
             time_format = '%x'
-            subinfo = '{} - {}'.format(self.start_date.strftime(time_format),
-                                       self.end_date.strftime(time_format))
+            subinfo = '{} - {}'.format(self.start_day.strftime(time_format),
+                                       self.end_day.strftime(time_format))
         elif self.location:
             subinfo = '({})'.format(self.location)
         return '{title}: {subinfo}'.format(title=self.title, subinfo=subinfo)
-
-    def __str__(self):
-        return self.__unicode__()
 
 
 class Country(models.Model):
@@ -144,8 +132,5 @@ class Country(models.Model):
     def get_absolute_url(self):
         return reverse('films-from-country', kwargs={'slug': str(self.slug)})
 
-    def __unicode__(self):
-        return self.name
-
     def __str__(self):
-        return self.__unicode__()
+        return self.name

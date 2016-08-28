@@ -1,5 +1,5 @@
 import lxml.html
-from lxml.cssselect import CSSSelector
+from cssselect import HTMLTranslator
 import re
 from scraper.models import FilmDict
 from scraper.utils import (decode_html, unicode_normalize,
@@ -7,8 +7,9 @@ from scraper.utils import (decode_html, unicode_normalize,
                            correct_countries_list)
 from cinema.utils import (titlecase, country_title)
 
-META_SELECTOR = CSSSelector('header.carousel-caption > h6', translator='html')
-ANCHOR_SELECTOR = CSSSelector('ul.thumbnails > li .thumbnail > a:nth-of-type(1)', translator='html')
+html_translator = HTMLTranslator()
+META_XPATH = html_translator.css_to_xpath('header.carousel-caption > h6')
+ANCHOR_XPATH = html_translator.css_to_xpath('ul.thumbnails > li .thumbnail > a:nth-of-type(1)')
 SYNOPSIS_GRAPHS_XPATH = "//div[@class='lead']/p"
 DESCRIPTION_GRAPHS_XPATH = '//article/h4[2]/following-sibling::p'
 DIRECTOR_REG = r'dir\.\s+([^\d]+)'
@@ -44,7 +45,7 @@ class FantasticMovieListScraper(HTMLScraper):
         self.anchor_list = []
 
     def get_film_page_urls(self):
-        anchor_els = ANCHOR_SELECTOR(self.tree)
+        anchor_els = self.tree.xpath(ANCHOR_XPATH)
         self.anchor_list = list(a.attrib.get('href', None) for a in anchor_els)
         self.anchor_list = filter(lambda x: 'secret-screening' not in x, self.anchor_list)
         return self.anchor_list
@@ -144,7 +145,7 @@ class FantasticMovieScraper(HTMLScraper):
     def raw_metadata(self):
         '''Unlike other 'raw' properties, `raw_metadata` has had unicode normalization applied.'''
         if self._raw_metadata is None:
-            meta_el = META_SELECTOR(self.tree)
+            meta_el = self.tree.xpath(META_XPATH)
             if len(meta_el) > 0:
                 el_text = meta_el[0].text_content()
                 self._raw_metadata = self._normalize_unicode(el_text)

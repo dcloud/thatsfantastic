@@ -2,7 +2,7 @@ import unittest
 import betamax
 
 from scraper.scrape import (HTMLScraper, FantasticMovieScraper, FantasticMovieListScraper,
-                            META_SELECTOR, ANCHOR_SELECTOR, SYNOPSIS_GRAPHS_XPATH,
+                            META_XPATH, ANCHOR_XPATH, SYNOPSIS_GRAPHS_XPATH,
                             DESCRIPTION_GRAPHS_XPATH, DIRECTOR_REG, COUNTRIES_REG,
                             )
 from scraper.models import FilmDict

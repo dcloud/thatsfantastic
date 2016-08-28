@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'scraper',
     'cinema',
     'fantasticfest',
+
+    'debug_toolbar',
 )
 
 MIDDLEWARE_CLASSES = (

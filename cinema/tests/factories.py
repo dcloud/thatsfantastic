@@ -49,7 +49,15 @@ class FilmFactory(factory.django.DjangoModelFactory):
     title = factory.fuzzy.FuzzyText(length=40, chars=unicode_letters)
     synopsis = factory.fuzzy.FuzzyText()
     description = factory.fuzzy.FuzzyText()
-    countries = FuzzyList(factory.fuzzy.FuzzyText(length=60, chars=unicode_letters), 5)
+
+    @factory.post_generation
+    def countries(self, create, extracted, **kwargs):
+        if not create:
+            return
+
+        if extracted:
+            for country in extracted:
+                self.countries.add(country)
 
     @factory.post_generation
     def directors(self, create, extracted, **kwargs):

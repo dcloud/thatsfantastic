@@ -8,9 +8,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-from django.conf.global_settings import \
-            TEMPLATE_CONTEXT_PROCESSORS as DEFAULT_CONTEXT_PROCESSORS,\
-            STATICFILES_FINDERS as DEFAULT_STATICFILES_FINDERS
 import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -45,6 +42,7 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,19 +73,26 @@ TEMPLATES = [
         'APP_DIRS': True,
         'DIRS': [os.path.join(PROJ_DIR, 'templates')],
         'OPTIONS': {
-            'context_processors': DEFAULT_CONTEXT_PROCESSORS,
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+            ],
             'debug': True if os.getenv('TEMPLATE_DEBUG', 'True') == 'True' else DEBUG
         }
     },
 ]
 
-try:
-    import debug_toolbar  # noqa F401
-    if TEMPLATES[0]['OPTIONS']['debug'] is True:
-        INSTALLED_APPS += ('debug_toolbar',)
-except ImportError:
-    pass
-
+# DEBUG TOOLBAR
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+INTERNAL_IPS = [
+    '127.0.0.1',
+    '::1',
+]
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -119,4 +124,4 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 # Cinema settings
-CINEMA_DEFAULT_EVENT = 'fantastic-fest-2015'
+CINEMA_DEFAULT_EVENT = os.getenv('CINEMA_DEFAULT_EVENT', 'fantastic-fest-2015')

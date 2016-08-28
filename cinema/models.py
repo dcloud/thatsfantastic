@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext as _
 from django.utils.text import slugify
 from django.contrib.postgres.fields import ArrayField
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 
 class Person(models.Model):
@@ -53,7 +53,7 @@ class Film(models.Model):
         super(Film, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('film-detail', kwargs={'slug': str(self.slug)})
+        return reverse('cinema:film-detail', kwargs={'slug': str(self.slug)})
 
     def __str__(self):
         return '{title} [{year}]'.format(title=self.title, year=self.year)
@@ -62,10 +62,10 @@ class Film(models.Model):
 class Screening(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField(blank=True, null=True)
-    film = models.ForeignKey('Film')
+    film = models.ForeignKey('Film', on_delete=models.CASCADE)
     location = models.CharField(blank=True, default='', max_length=120,
                                 help_text=_("Location of film screening"))
-    event = models.ForeignKey('Event')
+    event = models.ForeignKey('Event', on_delete=models.SET_NULL, blank=True, null=True)
 
     class Meta:
         verbose_name = _('Screening')
@@ -102,7 +102,7 @@ class Event(models.Model):
         super(Event, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('film-event-detail', kwargs={'slug': str(self.slug)})
+        return reverse('cinema:film-event-detail', kwargs={'slug': str(self.slug)})
 
     def __str__(self):
         subinfo = ''
@@ -130,7 +130,7 @@ class Country(models.Model):
         super(Country, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('films-from-country', kwargs={'slug': str(self.slug)})
+        return reverse('cinema:films-from-country', kwargs={'slug': str(self.slug)})
 
     def __str__(self):
         return self.name

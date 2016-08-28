@@ -1,1 +1,1 @@
-web: gunicorn thatsfantastic.wsgi --log-file -
+web: waitress-serve --port=$PORT thatsfantastic.wsgi:application

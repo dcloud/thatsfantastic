@@ -80,8 +80,8 @@ class Migration(migrations.Migration):
                 ('start_time', models.DateTimeField()),
                 ('end_time', models.DateTimeField(blank=True, null=True)),
                 ('location', models.CharField(help_text='Location of film screening', max_length=120, default='', blank=True)),
-                ('event', models.ForeignKey(to='cinema.Event')),
-                ('film', models.ForeignKey(to='cinema.Film')),
+                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cinema.Event')),
+                ('film', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cinema.Film')),
             ],
             options={
                 'get_latest_by': 'start_time',

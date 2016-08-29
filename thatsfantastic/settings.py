@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'debug_toolbar',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+]
 
 ROOT_URLCONF = 'thatsfantastic.urls'
 
@@ -64,7 +64,6 @@ WSGI_APPLICATION = 'thatsfantastic.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config()
-
 }
 
 # Templates

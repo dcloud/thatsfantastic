@@ -1,11 +1,5 @@
 """
 Django settings for thatsfantastic project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 import dj_database_url
@@ -40,11 +34,14 @@ INSTALLED_APPS = (
     'cinema',
     'fantasticfest',
 
+    'whitenoise.runserver_nostatic',
     'debug_toolbar',
 )
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'thatsfantastic.middleware.CompatitibleWith110DebugMiddleware',  # FIXME: Need 1.5.x release of debug-toolbar
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -118,7 +115,7 @@ STATICFILES_DIRS = (
     os.path.join(PROJ_DIR, 'static'),
 )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

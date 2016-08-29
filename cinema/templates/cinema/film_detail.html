@@ -28,7 +28,7 @@
                 {% if object.countries %}
                 <h3>Countries</h3>
                 <ul class="secondary-links">{% for country in object.countries.all %}
-                    <li><a href="{% url 'films-from-country' slug=country.slug %}">{{ country.name }}</a></li>{% endfor %}
+                    <li><a href="{% url 'cinema:films-from-country' slug=country.slug %}">{{ country.name }}</a></li>{% endfor %}
                 </ul>
                 {% endif %}
                 {% if object.related_urls %}

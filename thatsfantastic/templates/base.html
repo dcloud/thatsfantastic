@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load static from staticfiles %}
+<!DOCTYPE html>{% load static %}
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
@@ -23,7 +23,7 @@
         <li class="toggle-topbar menu-icon"><a href="#"><span>Search</span></a></li>
     </ul>
     <section class="top-bar-section start-hidden">
-        <form class="flex-form" action="{% url 'films-search' %}" method="get">
+        <form class="flex-form" action="{% url 'cinema:films-search' %}" method="get">
         <ul>
             <li>
                 <input name="q" type="text" placeholder="Look up a film" autofocus{% if q %} value="{{ q }}"{% endif %}>

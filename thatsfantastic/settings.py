@@ -2,6 +2,7 @@
 Django settings for thatsfantastic project.
 """
 
+from datetime import date
 import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -121,5 +122,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
+
+def calculate_event_slug(name):
+    now = date.today()
+    year = now.year if now.month > 7 else now.year - 1
+    name_parts = name.lower().split() + [str(year)]
+    return '-'.join(name_parts)
+
 # Cinema settings
-CINEMA_DEFAULT_EVENT = os.getenv('CINEMA_DEFAULT_EVENT', 'fantastic-fest-2015')
+
+CINEMA_DEFAULT_EVENT = os.getenv('CINEMA_DEFAULT_EVENT', calculate_event_slug('Fantastic Fest'))

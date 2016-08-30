@@ -18,7 +18,7 @@ for i in {2012..2015}; do python manage.py importfilms --event fantastic-fest-$i
 
 ## Scraping new films
 
-You could run something like the following to scrape films from a website, but thay may be cruel.
+You could run something like the following to scrape films from a website, but that may be cruel.
 
 ```
 for i in {2012..2015}; do python manage.py scrapefilmsfromlist --savepath data/films/$i --url http://fantasticfest.com/films/category/festival-year-$i --max-pages 7; echo "Pant, pant, pant."; done;

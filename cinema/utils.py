@@ -8,20 +8,20 @@ REPLACEMENTS = {
     'V/H/S': 'V/H/S',
     'VIC+FLO': 'Vic+Flo'
 }
-ROMANS_REG = r'\bM{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(\b|\:|\.)'
 ORDINAL_SUFFIXES = ('st', 'nd', 'rd', 'th')
+ROMANS_REG = r'\bM{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(\b|\:|\.)'
+romans_regex = re.compile(ROMANS_REG, flags=re.I)
 
 
 def titlecase(in_string, exceptions=SMALL_WORDS, replacements=REPLACEMENTS):
-    parts = re.split(': ', in_string.upper())
+    parts = in_string.upper().split(': ')
     if len(parts) > 1:
         return ': '.join([titlecase(p, exceptions=exceptions) for p in parts])
     else:
-        # XXX: use string.split() instead of re.split?
-        words = re.split(' ', parts[0])
+        words = parts[0].split()
         title_words = []
         for n, w in enumerate(words):
-            if n < len(words) - 1 and '.' in w.rstrip('.'):
+            if '.' in w.rstrip('.'):
                 # Uppercase acronyms
                 title_words.append(w.upper())
             elif '-' in w:
@@ -43,14 +43,12 @@ def titlecase(in_string, exceptions=SMALL_WORDS, replacements=REPLACEMENTS):
                     # Uppercase words with non-ordinals
                     title_words.append(w.upper())
             elif n == 0:
-                # Always captialize first word
+                # Always captialize first word if not otherwise whacky
                 title_words.append(w.capitalize())
             else:
                 title_words.append(w in exceptions and w.lower() or w.capitalize())
         s = ' '.join(title_words)
-        s = re.sub(ROMANS_REG,
-                   lambda mo: mo.group().upper(),
-                   s, flags=re.I)
+        s = romans_regex.sub(lambda mo: mo.group().upper(), s)
         return s
 
 

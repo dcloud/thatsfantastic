@@ -54,3 +54,10 @@ class TestTitlecaseUtil(unittest.TestCase):
         corrected_title = titlecase(raw_title)
         self.assertEqual(corrected_title,
                          "The Exorcist in the 21st Century")
+
+    def test_titlecase_trailing_acronym(self):
+        '''titlecase preserve a trailing acronym'''
+        raw_title = "MARCUS WELBY, M.D."
+        corrected_title = titlecase(raw_title)
+        self.assertEqual(corrected_title,
+                         "Marcus Welby, M.D.")

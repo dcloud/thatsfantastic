@@ -11,6 +11,7 @@
                title="{{ object.shown_at.title }}">{{ object.shown_at.latest.title }}</a>
             </span>
             {% else %}
+            <span class="detail">{{object.countries.first.name}}</span>
             <span class="detail runtime">{{ object.runtime }}m</span>
             {% endif %}
         </li>{% endspaceless %}

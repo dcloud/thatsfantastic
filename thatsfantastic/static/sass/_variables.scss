@@ -10,7 +10,7 @@ $base-font-size: 16px;
 
 // Font Weights
 $base-font-weight: 300;
-$heading-font-weight: 100;
+$heading-font-weight: 200;
 
 // Line height
 $base-line-height: 1.5;
@@ -32,17 +32,18 @@ $dark-grayblue: #2D3D4D;
 $medium-blue: #1A5A9B;
 $vague-purple: #564963;
 $nighttime-red: rgb(161, 16, 16);
+$blood-red: darken($nighttime-red, 15);
 
 $base-font-color: $light-gray;
 $base-background-color: $almost-black;
 $action-color: $nighttime-red;
 $secondary-action-color: $vague-purple;
-$secondary-font-color: darken($nighttime-red, 15);
+$secondary-font-color: $blood-red;
 $secondary-background-color: $midnight-blue;
 $title-font-color: lighten($secondary-font-color, 15%);
 
-$interactive-default-color: $dark-grayblue;
-$interactive-active-color: lighten($interactive-default-color, 20%);
+$interactive-default-color: desaturate($blood-red, 60);
+$interactive-active-color: lighten($blood-red, 10%);
 $interactive-disabled-color: darken($base-font-color, 45%);
 $interactive-background-color: lighten($base-background-color, 1%);
 $interactive-background-active-color: lighten($interactive-background-color, 2%);

@@ -85,7 +85,7 @@ class Event(models.Model):
     end_time = models.TimeField(null=True, blank=True)
     location = models.CharField(blank=True, default='', max_length=50,
                                 help_text=_("Geographic location of event, i.e. Austin, Texas"))
-    films = models.ManyToManyField('Film', related_name='shown_at')
+    films = models.ManyToManyField('Film', related_name='shown_at', blank=True)
 
     class Meta:
         verbose_name = _("Event")

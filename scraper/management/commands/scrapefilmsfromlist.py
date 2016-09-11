@@ -28,8 +28,10 @@ class Command(BaseCommand):
                             default=scrapefilmlist.Command.BASE_URL)
         parser.add_argument('--timeout', nargs='?', type=float, default=3.0,
                             help='Number of seconds to wait for a request to complete before giving up. Default: %(default)s')
-        parser.add_argument('--offset', type=int, default=18,
-                            help='Number of films to offset to make the next page. Default: %(default)s')
+        parser.add_argument('--page-size', type=int, default=18,
+                            help='Number of films to per page. Used to calculate offset for next page. Default: %(default)s')
+        parser.add_argument('--start-page', type=int, default=0,
+                            help='0-indexed page to start scraping from. Default: %(default)s')
         parser.add_argument('--max-pages', type=int, default=1,
                             help='Maximum number of pages to fetch. Default: %(default)s')
         parser.add_argument('--savepath', nargs='?',
@@ -39,7 +41,8 @@ class Command(BaseCommand):
         self._setup_styles()
         self.verbosity = options['verbosity']
         self.url = options['url']
-        self.offset = options['offset']
+        self.page_size = options['page_size']
+        self.start_page = options['start_page']
         self.max_pages = options['max_pages']
         if self.url[-1] != '/':
             self.url += '/'
@@ -51,7 +54,8 @@ class Command(BaseCommand):
         with io.StringIO() as fp:
             management.call_command("scrapefilmlist", verbosity=0, stdout=fp,
                                     url=self.url,
-                                    offset=self.offset,
+                                    page_size=self.page_size,
+                                    start_page=self.start_page,
                                     max_pages=self.max_pages,
                                     )
             film_urls = fp.getvalue().splitlines()

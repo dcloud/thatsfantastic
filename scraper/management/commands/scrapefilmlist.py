@@ -31,15 +31,18 @@ class Command(BaseCommand):
                             default=Command.BASE_URL)
         parser.add_argument('--timeout', nargs='?', type=float, default=3.0,
                             help='Number of seconds to wait for a request to complete before giving up. Default: %(default)s')
-        parser.add_argument('--offset', type=int, default=18,
-                            help='Number of films to offset to make the next page. Default: %(default)s')
+        parser.add_argument('--page-size', type=int, default=18,
+                            help='Number of films to per page. Used to calculate offset for next page. Default: %(default)s')
+        parser.add_argument('--start-page', type=int, default=0,
+                            help='0-indexed page to start scraping from. Default: %(default)s')
         parser.add_argument('--max-pages', type=int, default=1,
                             help='Maximum number of pages to fetch. Default: %(default)s')
 
     def handle(self, *args, **options):
         self._setup_styles(no_color=options.get('no_color', False))
         self.verbosity = options['verbosity']
-        self.offset = options['offset']
+        self.page_size = options['page_size']
+        self.start_page = options['start_page']
         self.max_pages = options['max_pages']
 
         try:
@@ -51,8 +54,8 @@ class Command(BaseCommand):
             self.url += '/'
         self.session = requests.Session()
 
-        page_offsets = range(0, self.offset * self.max_pages, self.offset)
-        page_urls = [urljoin(self.url, "P{0:d}".format(p_off)) for p_off in page_offsets]
+        page_page_sizes = range(self.start_page * self.page_size, self.page_size * self.max_pages, self.page_size)
+        page_urls = [urljoin(self.url, "P{0:d}".format(p_off)) for p_off in page_page_sizes]
 
         movie_urls = []
         for p_url in page_urls:

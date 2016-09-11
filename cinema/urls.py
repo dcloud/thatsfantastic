@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from cinema.views import (FilmDetail, FilmSearch, FilmList,
                           CountryFilmList, CountryList,
                           EventDetail, EventCountryFilmList)

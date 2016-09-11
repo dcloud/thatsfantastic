@@ -31,12 +31,13 @@ $light-gray: #A6ACB3;
 $dark-grayblue: #2D3D4D;
 $medium-blue: #1A5A9B;
 $vague-purple: #564963;
+$nighttime-red: rgb(161, 16, 16);
 
 $base-font-color: $light-gray;
 $base-background-color: $almost-black;
-$action-color: $medium-blue;
+$action-color: $nighttime-red;
 $secondary-action-color: $vague-purple;
-$secondary-font-color: $dark-grayblue;
+$secondary-font-color: darken($nighttime-red, 15);
 $secondary-background-color: $midnight-blue;
 $title-font-color: lighten($secondary-font-color, 15%);
 

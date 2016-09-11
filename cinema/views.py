@@ -1,6 +1,6 @@
 from django.views.generic import (ListView, DetailView)
-from django.db.models import Q
-
+from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+from django.contrib.postgres.aggregates import BitOr
 from cinema.models import (Film, Event, Country)
 from cinema.settings import CINEMA_DEFAULT_EVENT
 
@@ -23,16 +23,31 @@ class FilmSearch(FilmList):
 
     def get_queryset(self):
         self.query = self.request.GET.get("q")
-        title_q = Q(title__icontains=self.query)
-        description_q = Q(description__icontains=self.query)
+        query = None
+        if (self.query[0] == "'" or self.query[0] == '"') and self.query[0] == self.query[-1]:
+            query = SearchQuery(self.query)
+        else:
+            query_words = self.query.split()
+            query = SearchQuery(query_words[0])
+            for word in query_words[1:]:
+                query.bitor(SearchQuery(word))
+        vector = (
+            SearchVector('title', weight='A') +
+            SearchVector('description', weight='C') +
+            SearchVector('directors__last_name', weight='B') +
+            SearchVector('countries__name', weight='B')
+        )
+        qs = self.model.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gte=0.12)
+
         year = self.request.GET.get("year", None)
-        qs = self.model.objects.filter(title_q | description_q)
         if year:
             try:
                 year_val = int(year)
                 qs = qs.filter(year=year_val)
             except ValueError:
                 pass
+
+        qs = qs.order_by('-rank', 'title', 'id').distinct('rank', 'title', 'id')
         return qs
 
     def get_context_data(self, **kwargs):

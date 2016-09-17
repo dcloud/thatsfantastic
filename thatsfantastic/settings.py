@@ -16,14 +16,13 @@ BASE_DIR = os.path.dirname(PROJ_DIR)
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', None)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.getenv('DEBUG', 'False') == 'True' else False
-
-ALLOWED_HOSTS = []
-
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+TEMPLATE_DEBUG = os.getenv('TEMPLATE_DEBUG', 'False') == 'True'
+DEBUG_TOOLBAR = os.getenv('DEBUG_TOOLBAR', 'False') == 'True'
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -36,13 +35,11 @@ INSTALLED_APPS = (
     'fantasticfest',
 
     'whitenoise.runserver_nostatic',
-    'debug_toolbar',
-)
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'thatsfantastic.middleware.CompatitibleWith110DebugMiddleware',  # FIXME: Need 1.5.x release of debug-toolbar
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -51,6 +48,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+if DEBUG and DEBUG_TOOLBAR:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.append('thatsfantastic.middleware.CompatitibleWith110DebugMiddleware')  # FIXME: Need 1.5.x release of debug-toolbar
 
 ROOT_URLCONF = 'thatsfantastic.urls'
 
@@ -81,7 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
             ],
-            'debug': True if os.getenv('TEMPLATE_DEBUG', 'True') == 'True' else DEBUG
+            'debug': DEBUG_TOOLBAR or DEBUG
         }
     },
 ]

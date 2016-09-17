@@ -11,7 +11,9 @@
                title="{{ object.shown_at.title }}">{{ object.shown_at.latest.title }}</a>
             </span>
             {% else %}
-            <span>{{object.countries.first.name}}</span>
+            {% with object.countries.first as country %}
+            <span><a href="{{country.get_absolute_url}}">{{object.countries.first.name}}</a></span>
+            {% endwith %}
             <span class="minor runtime">{{ object.runtime }}m</span>
             <span>Dir: {% for director in object.directors.all|slice:':4' %}{{director.full_name}}{% if not forloop.last %}, {% endif %}{% endfor %}</span>
             {% endif %}

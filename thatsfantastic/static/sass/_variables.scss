@@ -21,7 +21,7 @@ $base-letter-spacing: em(0.5);
 $heading-letter-spacing: $base-letter-spacing * 2;
 
 // Margins
-$base-heading-margin: 0.8em;
+$base-heading-margin: rem(12);
 $link-list-margin: 0.5em;
 
 // Colors
@@ -32,7 +32,7 @@ $dark-grayblue: #2D3D4D;
 $medium-blue: #1A5A9B;
 $vague-purple: #564963;
 $nighttime-red: rgb(161, 16, 16);
-$blood-red: darken($nighttime-red, 15);
+$blood-red: shade($nighttime-red, 40%);
 
 $base-font-color: $light-gray;
 $base-background-color: $almost-black;
@@ -55,3 +55,4 @@ $max-page-width: 900px;
 // Mobile
 
 $tablet: new-breakpoint(min-width 600px);
+$monitor: new-breakpoint(min-width 980px);

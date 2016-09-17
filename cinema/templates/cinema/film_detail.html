@@ -14,43 +14,47 @@
             </nav>
         </div>
     </div>
-    <div class="tab-sections row">
-        <section id="details" class="columns col-12">
-            <h3>Synopsis</h3>
-            {{ object.synopsis|linebreaks }}
-            <div class="col-6">
-                <h3>Runtime</h3>
-                <p>{{ object.runtime }} minutes</p>
-                {% if object.languages %}
-                <h3>Languages</h3>
-                <p>{{ object.languages|join:", " }}</p>
-                {% endif %}
-                {% if object.countries %}
-                <h3>Countries</h3>
-                <ul class="secondary-links">{% for country in object.countries.all %}
-                    <li><a href="{% url 'cinema:films-from-country' slug=country.slug %}">{{ country.name }}</a></li>{% endfor %}
-                </ul>
-                {% endif %}
-                {% if object.related_urls %}
+    <div class="tab-sections">
+        <section id="details">
+            <header>
+                <h3>Synopsis</h3>
+                {{ object.synopsis|linebreaks }}
+            </header>
+            <div class="layout">
+                <div class="balanced">
+                    <h3>Runtime</h3>
+                    <p>{{ object.runtime }} minutes</p>
+                    {% if object.languages %}
+                    <h3>Languages</h3>
+                    <p>{{ object.languages|join:", " }}</p>
+                    {% endif %}
+                    {% if object.countries %}
+                    <h3>Countries</h3>
+                    <ul class="secondary-links">{% for country in object.countries.all %}
+                        <li><a href="{% url 'cinema:films-from-country' slug=country.slug %}">{{ country.name }}</a></li>{% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% if object.related_urls %}
                     <h3 id="related_urls">Related URLS</h3>
                     <ul class="secondary-links">{% for url in object.related_urls %}
                         <li>{{ url|urlize }}</li>{% endfor %}
                     </ul>
-                {% endif %}
-            </div>
-            <div class="col-6">
-                <h3>Year</h3>
-                <p>{{ object.year }}</p>
-                <h3>Directors</h3>
-                {% if object.directors.count > 1 %}
-                <ul>
-                    {% for director in object.directors.all %}
-                    <li>{{ director.full_name }}</li>
-                    {% endfor %}
-                </ul>
-                {% else %}
+                    {% endif %}
+                </div>
+                <div class="balanced">
+                    <h3>Year</h3>
+                    <p>{{ object.year }}</p>
+                    <h3>Directors</h3>
+                    {% if object.directors.count > 1 %}
+                    <ul>
+                        {% for director in object.directors.all %}
+                        <li>{{ director.full_name }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
                     <p>{{ object.directors.first.full_name }}</p>
-                {% endif %}
+                    {% endif %}
+                </div>
             </div>
         </section>
         <section id="description" class="columns">

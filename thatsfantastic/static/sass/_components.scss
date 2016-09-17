@@ -123,11 +123,21 @@ nav.top-bar {
     margin: 0 0 0.75em;
 
     ul {
+        @include display(flex);
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        margin: 0;
+
         li {
+            display: block;
+            @include flex(1 1 auto);
+
             border-right: 1px solid $interactive-default-color;
 
-            span, a {
-                padding: em(10) em(4);
+            > * {
+                display: block;
+                padding: rem(10) rem(4);
+                width: 100%;
                 text-align: center;
             }
             span {

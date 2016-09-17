@@ -1,24 +1,32 @@
-// Grid
-
 .outer-container {
     display: block;
-    max-width: $max-page-width;
+    max-width: 96%;
     margin: em(20) auto 0;
     padding-bottom: em(60);
-}
 
-.columns {
-    @include media($tablet) {
-        @include pad();
+    @include media($monitor) {
+        max-width: $max-page-width;
     }
 }
 
-.row {
-    @include fill-parent();
-    @include row();
-    margin-bottom: em(18);
-}
+.layout {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-between);
 
-@for $i from 1 through 12 {
-  .col-#{$i} { @include span-columns($i); }
+    @include media($tablet) {
+        @include flex-direction(row);
+    }
+
+    > * {
+        display: block;
+        @include flex(0 1 auto);
+    }
+
+    > .balanced {
+        margin: 0;
+        @include flex(0 1 50%);
+    }
+
+
 }

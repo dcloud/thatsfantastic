@@ -1,6 +1,5 @@
 from django.views.generic import (ListView, DetailView)
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
-from django.contrib.postgres.aggregates import BitOr
 from cinema.models import (Film, Event, Country)
 from cinema.settings import CINEMA_DEFAULT_EVENT
 

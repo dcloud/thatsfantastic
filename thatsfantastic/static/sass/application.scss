@@ -1,12 +1,25 @@
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 @import "variables";
+@import "layout";
+@import "components";
 
 // Reset-ish things
 
-body {
+html {
+    box-sizing: border-box;
+}
+
+* {
     margin: 0;
     padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
     @include font-feature-settings("kern", "liga", "pnum");
     color: $base-font-color;
     background-color: $base-background-color;
@@ -91,196 +104,11 @@ ul.secondary-links {
     }
 }
 
-nav > ul {
-    @include display(flex);
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    @include justify-content(space-around);
-
-    margin: 0;
-
-    li {
-        @include flex(1 1 auto);
-
-        a, span {
-            display: block;
-        }
-    }
-
-    &.vertical-menu {
-        display: table;
-        width: 100%;
-
-        li {
-            display: table-row;
-            background-color: $interactive-background-color;
-            font-size: $base-font-size * 1.1;
-
-            &:focus,
-            &:hover {
-                background-color: $interactive-background-active-color;
-            }
-
-            > a, > span {
-                border-bottom: 1px solid $interactive-default-color;
-                display: table-cell;
-                padding: em(14) em(12);
-
-                &:last-child {
-                    text-align: right;
-                }
-            }
-
-            span {
-                font-weight: $heading-font-weight;
-                letter-spacing: $heading-letter-spacing;
-
-                &.detail {
-                    font-size: $base-font-size * 0.9;
-                }
-            }
-        }
-    }
-}
-
-
 input, #{$all-buttons} {
     min-height: 44px;
 }
 
-
 input[type="text"] {
     margin: 0 em(8);
     font-size: $base-font-size * 1.1;
-}
-
-// Grid
-
-.outer-container {
-    @include outer-container($max-page-width);
-    margin-top: em(20);
-    padding-bottom: em(60);
-}
-
-.columns {
-    @include media($tablet) {
-        @include pad();
-    }
-}
-
-.row {
-    @include fill-parent();
-    @include row();
-    margin-bottom: em(18);
-}
-
-@for $i from 1 through 12 {
-  .col-#{$i} { @include span-columns($i); }
-}
-
-// Components
-
-#{$all-buttons}, .button {
-    @include appearance(none);
-    padding: 0 em(24);
-    display: inline-block;
-    border: 1px solid tint($action-color, 10%);
-    border-radius: 3px;
-    background-color: $action-color;
-    color: $base-font-color;
-}
-
-nav.top-bar {
-    min-height: 56px;
-    background-color: $secondary-background-color;
-
-    ul {
-        @include outer-container($max-page-width);
-        @include justify-content(space-between);
-
-        li {
-            a {
-                line-height: 1em;
-                padding: em(20) em(8);
-            }
-
-            &:last-child {
-                text-align: right;
-            }
-
-            h1 {
-                margin: em(12) 0 0;
-                text-align: center;
-            }
-        }
-    }
-
-    section {
-        padding: em(8);
-    }
-
-}
-
-.bar, .tab-bar {
-    border: 1px solid $interactive-default-color;
-    margin: 0 0 0.75em;
-
-    ul {
-        li {
-            border-right: 1px solid $interactive-default-color;
-
-            span, a {
-                padding: em(10) em(4);
-                text-align: center;
-            }
-            span {
-                color: $interactive-default-color;
-                &.disabled {
-                    color: $interactive-disabled-color;
-                }
-            }
-            a {
-                &:focus,
-                &:hover {
-                    background-color: lighten($interactive-background-active-color, 2%);
-                }
-                &:active,
-                &.active {
-                    background-color: $interactive-background-active-color;
-                }
-            }
-
-            &:last-child {
-                border: none;
-            }
-        }
-
-
-    }
-}
-
-form.flex-form > ul {
-    @include display(flex);
-    @include flex-direction(row);
-    @include flex-wrap(nowrap);
-    @include justify-content(space-between);
-    @include align-items(flex-end);
-
-    li {
-        @include flex(2 1 auto);
-        margin: 0;
-
-        &:last-child {
-            @include flex(1 1 auto);
-        }
-
-        input {
-            margin: 0;
-            width: 95%;
-        }
-    }
-}
-
-.start-hidden {
-    display: none;
 }

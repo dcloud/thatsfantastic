@@ -1,0 +1,183 @@
+ul {
+    &.menu {
+        margin: 0;
+        width: 100%;
+        @include display(flex);
+        @include flex-direction(column);
+
+        li {
+            @include flex(1 1 auto);
+            @include display(flex);
+            @include flex-direction(row);
+            @include flex-wrap(wrap);
+            @include justify-content(space-between);
+            font-size: $base-font-size * 1.1;
+            background-color: $interactive-background-color;
+            border-bottom: 1px solid $interactive-default-color;
+
+            &:focus,
+            &:hover {
+                background-color: $interactive-background-active-color;
+            }
+
+            padding: 0.75rem 0;
+
+            @include media($tablet) {
+                @include flex-wrap(no-wrap);
+            }
+
+            > * {
+                @include flex(0 1 50%);
+                padding: 0.125rem 0.5rem;
+
+                &:first-child {
+                    font-weight: $heading-font-weight;
+                    letter-spacing: $heading-letter-spacing;
+                    @include flex-basis(100%);
+                }
+
+                &:not(:first-child) {
+                    font-size: rem(13);
+                }
+
+                &.minor {
+                    @include flex-basis(1%);
+                }
+
+                @include media($tablet) {
+                    padding: 1rem 0.75rem;
+
+                    &:first-child {
+                        @include flex-basis(40%);
+                    }
+
+                    &:not(:first-child) {
+                        @include flex-basis(20%);
+                        font-size: initial;
+                        text-align: right;
+                    }
+
+                    &.minor {
+                        @include flex-basis(1%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#{$all-buttons}, .button {
+    @include appearance(none);
+    padding: 0 em(24);
+    display: inline-block;
+    border: 1px solid tint($action-color, 10%);
+    border-radius: 3px;
+    background-color: $action-color;
+    color: $base-font-color;
+}
+
+nav.top-bar {
+    display: block;
+    margin: 0 auto;
+    max-width: $max-page-width;
+    min-height: 56px;
+    background-color: $secondary-background-color;
+
+    ul {
+        width: 100%;
+        @include display(flex);
+        @include flex-direction(row);
+        @include flex-wrap(no-wrap);
+        @include justify-content(space-around);
+        @include align-items(center);
+
+        li {
+            display: inline-block;
+            @include flex(1 1 auto);
+
+            a {
+                display: inline-block;
+                line-height: 1em;
+                padding: em(20) em(8);
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+
+            h1 {
+                margin: auto;
+                text-align: center;
+            }
+        }
+    }
+
+    section {
+        padding: em(8);
+    }
+
+}
+
+.bar, .tab-bar {
+    border: 1px solid $interactive-default-color;
+    margin: 0 0 0.75em;
+
+    ul {
+        li {
+            border-right: 1px solid $interactive-default-color;
+
+            span, a {
+                padding: em(10) em(4);
+                text-align: center;
+            }
+            span {
+                color: $interactive-default-color;
+                &.disabled {
+                    color: $interactive-disabled-color;
+                }
+            }
+            a {
+                &:focus,
+                &:hover {
+                    background-color: lighten($interactive-background-active-color, 2%);
+                }
+                &:active,
+                &.active {
+                    background-color: $interactive-background-active-color;
+                }
+            }
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+
+    }
+}
+
+form.flex-form > ul {
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include justify-content(space-between);
+    @include align-items(flex-end);
+
+    li {
+        @include flex(2 1 auto);
+        margin: 0;
+
+        &:last-child {
+            @include flex(1 1 auto);
+        }
+
+        input {
+            margin: 0;
+            width: 95%;
+        }
+    }
+}
+
+.start-hidden {
+    display: none;
+}

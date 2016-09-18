@@ -1,8 +1,10 @@
 from django.conf.urls import url
+from django.conf import settings
 from cinema.views import (FilmDetail, FilmSearch, FilmList,
                           CountryFilmList, CountryList,
                           EventDetail, EventCountryFilmList)
-from cinema.settings import CINEMA_DEFAULT_EVENT
+
+CINEMA_DEFAULT_EVENT = getattr(settings, 'CINEMA_DEFAULT_EVENT', None)
 
 app_name = 'cinema'
 urlpatterns = [

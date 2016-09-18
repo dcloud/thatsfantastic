@@ -17,7 +17,6 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', None)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-TEMPLATE_DEBUG = os.getenv('TEMPLATE_DEBUG', 'False') == 'True'
 DEBUG_TOOLBAR = os.getenv('DEBUG_TOOLBAR', 'False') == 'True'
 
 # Application definition
@@ -82,7 +81,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
             ],
-            'debug': DEBUG_TOOLBAR or DEBUG
+            'debug': os.getenv('TEMPLATE_DEBUG', 'False') == 'True'
         }
     },
 ]

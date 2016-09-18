@@ -1,7 +1,9 @@
 from django.views.generic import (ListView, DetailView)
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+from django.conf import settings
 from cinema.models import (Film, Event, Country)
-from cinema.settings import CINEMA_DEFAULT_EVENT
+
+CINEMA_DEFAULT_EVENT = getattr(settings, 'CINEMA_DEFAULT_EVENT', None)
 
 
 class FilmDetail(DetailView):

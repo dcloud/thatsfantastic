@@ -50,37 +50,37 @@ class Command(BaseCommand):
             directors = self._process_directors(data.get('directors', []))
             if not title:
                 raise CommandError("Film data has no title!")
-            (object, created) = Film.objects\
+            (instance, created) = Film.objects\
                 .get_or_create(slug=name,
                                year=data.get('year', None),
                                )
-            object.title = titlecase(title)
-            object.synopsis = data.get('synopsis', object.synopsis)
-            object.description = data.get('description', object.description)
-            object.runtime = data.get('runtime', object.runtime)
+            instance.title = titlecase(title)
+            instance.synopsis = data.get('synopsis', instance.synopsis)
+            instance.description = data.get('description', instance.description)
+            instance.runtime = data.get('runtime', instance.runtime)
             for country_name in set(data.get('countries', [])):
                 (country, _) = Country.objects.get_or_create(name=country_name)
-                object.countries.add(country)
+                instance.countries.add(country)
 
-            object.directors = directors
+            instance.directors = directors
             has_source_url = ('meta' in data and 'source_url' in data['meta'])
             if has_source_url:
                 source_url = data['meta']['source_url']
-                url_set = set(object.related_urls)
+                url_set = set(instance.related_urls)
                 url_set.add(source_url)
-                object.related_urls = list(url_set)
-            object.save()
+                instance.related_urls = list(url_set)
+            instance.save()
             if self.event:
                 try:
                     event = Event.objects.get(slug=self.event)
-                    event.films.add(object)
+                    event.films.add(instance)
                     if self.verbosity > 2:
-                        self.stdout.write("Associated '{}' with '{}'".format(object.title, event.title))
+                        self.stdout.write("Associated '{}' with '{}'".format(instance.title, event.title))
                 except Event.DoesNotExist:
                     self.stderr.write("Record does not exist for slug '{}'".format(self.event))
-            self.stdout.write("{} film '{}'".format('Created' if created else 'Updated', str(object)))
+            self.stdout.write("{} film '{}'".format('Created' if created else 'Updated', str(instance)))
         else:
-            self.stderr.write("Error reading film data from a non-dictionary object")
+            self.stderr.write("Error reading film data from a non-dictionary instance")
 
     def _load_json(self, fpath):
         data = None
@@ -97,10 +97,10 @@ class Command(BaseCommand):
         people = []
         for name_str in directors_list:
             name = HumanName(name_str)
-            (object, created) = Person.objects.get_or_create(first_name=name.first,
+            (instance, created) = Person.objects.get_or_create(first_name=name.first,
                                                              middle_name=name.middle,
                                                              last_name=name.last)
             if self.verbosity > 1:
-                self.stdout.write("{} person '{}'".format('Created' if created else 'Updated', str(object)))
-            people.append(object)
+                self.stdout.write("{} person '{}'".format('Created' if created else 'Updated', str(instance)))
+            people.append(instance)
         return people

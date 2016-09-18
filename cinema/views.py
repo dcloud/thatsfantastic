@@ -1,5 +1,5 @@
 from django.views.generic import (ListView, DetailView)
-from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector, TrigramSimilarity
 from django.conf import settings
 from cinema.models import (Film, Event, Country)
 
@@ -24,7 +24,10 @@ class FilmSearch(FilmList):
 
     def get_queryset(self):
         self.query = self.request.GET.get("q")
+        year = self.request.GET.get("year", None)
         query = None
+        ordering = ('title', 'id')
+        distinct_on = ('title', 'id')
         if (self.query[0] == "'" or self.query[0] == '"') and self.query[0] == self.query[-1]:
             query = SearchQuery(self.query)
         else:
@@ -39,8 +42,14 @@ class FilmSearch(FilmList):
             SearchVector('countries__name', weight='B')
         )
         qs = self.model.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gte=0.12)
+        if qs.count() != 0:
+            ordering = ('-rank',) + ordering
+            distinct_on = ('rank',) + distinct_on
+        else:
+            qs = Film.objects.annotate(similarity=TrigramSimilarity('title', self.query)).filter(similarity__gt=0.25)
+            ordering = ('-similarity',) + ordering
+            distinct_on = ('similarity',) + distinct_on
 
-        year = self.request.GET.get("year", None)
         if year:
             try:
                 year_val = int(year)
@@ -48,8 +57,7 @@ class FilmSearch(FilmList):
             except ValueError:
                 pass
 
-        qs = qs.order_by('-rank', 'title', 'id').distinct('rank', 'title', 'id')
-        return qs
+        return qs.order_by(*ordering).distinct(*distinct_on)
 
     def get_context_data(self, **kwargs):
         context = super(FilmSearch, self).get_context_data(**kwargs)

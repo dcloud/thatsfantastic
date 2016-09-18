@@ -20,7 +20,7 @@
             <h1>That's Fantastic</h1>
             {% endblock pagehead %}
         </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Search</span></a></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
     <section class="top-bar-section start-hidden">
         <form class="flex-form" action="{% url 'cinema:films-search' %}" method="get">
@@ -33,12 +33,19 @@
             </li>
         </ul>
         </form>
+        <div>
+            <label for="event"> Go to event:</label>
+            <select name="event" id="event-select">
+                <option>---</option>{% for event in cinema.events %}
+                <option value="{{event.get_absolute_url}}">{{event.title}}</option>{% endfor %}
+            </select>
+        </div>
     </section>
     </nav>
     <div class="outer-container">
 {% block content %}{% endblock content %}
     </div>
-    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js/vendor/zepto.min.js' %}"></script>
     <script src="{% static 'js/application.js' %}"></script>
 {% block extrajs %}{% endblock extrajs %}
     </body>

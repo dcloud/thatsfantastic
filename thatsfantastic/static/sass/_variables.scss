@@ -47,6 +47,7 @@ $interactive-active-color: lighten($blood-red, 10%);
 $interactive-disabled-color: darken($base-font-color, 45%);
 $interactive-background-color: lighten($base-background-color, 1%);
 $interactive-background-active-color: lighten($interactive-background-color, 2%);
+$interactive-border-color: lighten($interactive-background-color, 8%);
 
 // Containers and whatnot
 

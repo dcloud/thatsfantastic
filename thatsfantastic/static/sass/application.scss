@@ -15,7 +15,7 @@ html {
     padding: 0;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
@@ -104,13 +104,42 @@ ul.secondary-links {
     }
 }
 
+#{$all-buttons}, .button {
+    @include appearance(none);
+    cursor: pointer;
+    padding: 0 em(24);
+    display: inline-block;
+    border: 1px solid tint($action-color, 10%);
+    border-radius: 0;
+    background-color: $action-color;
+    color: $base-font-color;
+}
+
 input, #{$all-buttons} {
     min-height: 44px;
 }
 
-input[type="text"] {
-    margin: 0 em(8);
+input, select {
     font-size: $base-font-size * 1.1;
+    border-radius: 0;
+}
+
+input[type="text"] {
+    padding: 0 rem(4);
+    margin: 0 em(8);
+}
+
+select {
+    @include appearance(none);
+    cursor: pointer;
+    padding: rem(12) rem(20) rem(12) rem(12);
+    border: 1px solid $interactive-border-color;
+    color: $action-color;
+    background: no-repeat 98%/10% url('/static/img/select_arrow.svg') $interactive-background-active-color;
+}
+
+option {
+    background-color: $action-color;
 }
 
 section > header {

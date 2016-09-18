@@ -1,12 +1,17 @@
 "use strict";
 
-jQuery(document).ready(function($) {
+Zepto(function($) {
+  $('select[name="event"]').on('change', function (event) {
+    var event_value = $(event.target).val();
+    if (event_value != null) document.location = event.target.value;
+  });
+
     $('.top-bar').each(function(index, el) {
         var bar = $(el);
         var togglers = bar.find('.toggle-topbar > a');
         var barSections = bar.find('.top-bar-section');
         togglers.on('click', function(event) {
-            barSections.slideToggle('fast');
+            barSections.toggle();
         });
         barSections.hide();
     });

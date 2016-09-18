@@ -80,6 +80,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                'cinema.context_processors.cinema',
             ],
             'debug': os.getenv('TEMPLATE_DEBUG', 'False') == 'True'
         }

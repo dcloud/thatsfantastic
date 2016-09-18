@@ -66,16 +66,6 @@ ul {
     }
 }
 
-#{$all-buttons}, .button {
-    @include appearance(none);
-    padding: 0 em(24);
-    display: inline-block;
-    border: 1px solid tint($action-color, 10%);
-    border-radius: 3px;
-    background-color: $action-color;
-    color: $base-font-color;
-}
-
 nav.top-bar {
     display: block;
     margin: 0 auto;

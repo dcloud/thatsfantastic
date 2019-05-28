@@ -1,0 +1,30 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+django-debug-toolbar = "*"
+ipython = "*"
+ipdb = "*"
+coverage = "*"
+factory-boy = "*"
+betamax = "*"
+
+[packages]
+brotlipy = "==0.5.1"
+psycopg2 = ">2.8"
+dj-database-url = ">=0.4.1"
+whitenoise = ">=3.0,<4.0"
+requests = "*"
+cchardet = "*"
+beautifulsoup4 = "==4.5.1"
+cssselect = "==0.9.2"
+lxml = ">3.4"
+waitress = "==0.9.0"
+nameparser = "==0.5.1"
+Django = "<2.0"
+CacheControl = {extras = ["filecache"],version = "==0.11.6"}
+
+[requires]
+python_version = "3.7"

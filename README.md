@@ -2,6 +2,10 @@
 
 A collection of information around my Fantastic Fest experiences.
 
+## Installation Tips
+
+`pyscopg2` may not compile/install correctly on macOS if certain libraries can't be found by the compiler. In particular, compiles were failing when openssl libraries were not found. I set `export LDFLAGS="-L/usr/local/opt/openssl/lib"; export CPPFLAGS="-I/usr/local/opt/openssl/include";` to tell the compiler where to find Homebrew-installed openssl and things worked after that.
+
 # Getting started
 
 First, *PostgreSQL* is the required database. This project uses PostgreSQL fields and features, such as Array fields and VIEWs. The *cinema* app's initial migration creates a GIN index on the country field of the Film model, and a *cinema_countries* PostgreSQL VIEW that presents distinct country names as populated from the film tables countries array column.

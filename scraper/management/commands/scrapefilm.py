@@ -1,4 +1,3 @@
-from ipdb import launch_ipdb_on_exception
 from django.core.management.base import BaseCommand, CommandError
 from django.utils.termcolors import make_style
 import argparse
@@ -70,8 +69,7 @@ class Command(BaseCommand):
         if response.ok:
             if self.verbosity > 1:
                 self._stdout_info("Fetched {}".format(self.url))
-            with launch_ipdb_on_exception():
-                obj = scrape_response(response, FantasticMovieScraper)
+            obj = scrape_response(response, FantasticMovieScraper)
             if self.outfile:
                 save_scraped_film(obj, self.outfile)
             elif self.savepath:

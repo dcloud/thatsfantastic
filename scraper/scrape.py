@@ -1,6 +1,7 @@
 import lxml.html
 from cssselect import HTMLTranslator
 import re
+import logging
 from scraper.models import FilmDict
 from scraper.utils import (
     decode_html,
@@ -23,14 +24,18 @@ DIRECTOR_REG = r"dir\.\s+([^\d]+)"
 COUNTRIES_REG = r"(?:\,\s+(\w[\'\w\s]+)+)"
 
 
+logger = logging.getLogger(__name__)
+
+
 class HTMLScraper:
     """docstring for HTMLScraper"""
 
-    def __init__(self, raw_html, source_url=None):
+    def __init__(self, raw_html, source_url=None, raise_errors=False):
         super(HTMLScraper, self).__init__()
         self.source_url = source_url
         self.raw_html = raw_html
         self._tree = None
+        self.raise_errors = raise_errors
 
     @property
     def tree(self):
@@ -45,12 +50,20 @@ class HTMLScraper:
     def scrape(self):
         raise NotImplementedError("Subclasses must implement scraping of raw_html")
 
+    def handle_error(self, error):
+        if self.raise_errors:
+            raise error
+        else:
+            logger.warning(error)
+
 
 class FantasticMovieListScraper(HTMLScraper):
     """Scrapes a film list page for links to film pages."""
 
-    def __init__(self, raw_html, source_url=None):
-        super(FantasticMovieListScraper, self).__init__(raw_html, source_url=source_url)
+    def __init__(self, raw_html, source_url=None, raise_errors=False):
+        super(FantasticMovieListScraper, self).__init__(
+            raw_html, source_url=source_url, raise_errors=False
+        )
         self.anchor_list = []
 
     def get_film_page_urls(self):
@@ -69,8 +82,10 @@ class FantasticMovieListScraper(HTMLScraper):
 class FantasticMovieScraper(HTMLScraper):
     """Scrapes film web pages from http://fantasticfest.com/"""
 
-    def __init__(self, raw_html, source_url=None):
-        super(FantasticMovieScraper, self).__init__(raw_html, source_url=source_url)
+    def __init__(self, raw_html, source_url=None, raise_errors=False):
+        super(FantasticMovieScraper, self).__init__(
+            raw_html, source_url=source_url, raise_errors=False
+        )
         self.film = FilmDict()
         if self.source_url:
             self.film["meta"] = {"source_url": self.source_url}
@@ -171,8 +186,9 @@ class FantasticMovieScraper(HTMLScraper):
         if self._raw_directors is None:
             match = re.search(DIRECTOR_REG, self.raw_metadata, flags=re.IGNORECASE)
             if match is None:
-                raise ScrapeError("Unable to find directors")
-            self._end_directors = match.end()
+                e = ScrapeError("Unable to find directors")
+                self.handle_error(e)
+            self._end_directors = match.end() if match else None
             self._raw_directors = match.groups()[0] if match else ""
         return self._raw_directors
 
@@ -199,7 +215,8 @@ class FantasticMovieScraper(HTMLScraper):
         if self._raw_year is None:
             match = re.search(r"^\s*\d{4}", self.raw_metadata)
             if match is None:
-                raise ScrapeError("Unable to find year")
+                e = ScrapeError("Unable to find year")
+                self.handle_error(e)
             self._raw_year = match.group() if match else ""
         return self._raw_year
 
@@ -213,7 +230,8 @@ class FantasticMovieScraper(HTMLScraper):
                 r"(\d{1,})\s+MIN\.", self.raw_metadata, flags=re.IGNORECASE
             )
             if match is None:
-                raise ScrapeError("Unable to find runtime")
+                e = ScrapeError("Unable to find runtime")
+                self.handle_error(e)
             self._end_runtime = match.end() if match else None
             self._raw_runtime = match.groups()[0] if match else ""
         return self._raw_runtime

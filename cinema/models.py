@@ -8,7 +8,7 @@ from django.urls import reverse
 class Person(models.Model):
     first_name = models.CharField(max_length=50)
     middle_name = models.CharField(blank=True, max_length=50, default="")
-    last_name = models.CharField(max_length=50)
+    last_name = models.CharField(blank=True, max_length=50, default="")
 
     class Meta:
         verbose_name = _("Person")

@@ -6,8 +6,15 @@ class FilmDict(UserDict):
        Each key/attribute is initialized to None if a value isn't provided.
        Values for key/attribute may be set/retrieved using object attribute notation."""
 
-    attributes = ('title', 'description', 'synopsis', 'directors',
-                  'countries', 'runtime', 'year')
+    attributes = (
+        "title",
+        "description",
+        "synopsis",
+        "directors",
+        "countries",
+        "runtime",
+        "year",
+    )
 
     def __init__(self, initialdata=None, **elements):
         super(FilmDict, self).__init__(initialdata)
@@ -24,7 +31,10 @@ class FilmDict(UserDict):
     def __setattr__(self, name, value):
         if name in FilmDict.attributes:
             self[name] = value
-        elif name is 'data':
+        elif name == "data":
             super(FilmDict, self).__setattr__(name, value)
         else:
-            raise AttributeError("Only keys from FilmDict.attributes may be set using attribute notation.")
+            raise AttributeError(
+                "Only keys from FilmDict.attributes may be set "
+                + "using attribute notation."
+            )

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "44ad3cb8128bc21ae1bb32961192ea2b0def21ea3ccfd9139375dc14f4c745c2"
+            "sha256": "230efea5ff7cbd4bc04f35d22cc93085b8596d4a3e28a63430bc2cdcc8fed5bb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -26,6 +26,9 @@
             "version": "==4.5.1"
         },
         "cachecontrol": {
+            "extras": [
+                "filecache"
+            ],
             "hashes": [
                 "sha256:cef77effdf51b43178f6a2d3b787e3734f98ade253fa3187f3bb7315aaa42ff7"
             ],

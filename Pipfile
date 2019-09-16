@@ -27,3 +27,8 @@ CacheControl = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+manage = "python manage.py"
+server = "python manage.py runserver"
+db = "python manage.py dbshell"

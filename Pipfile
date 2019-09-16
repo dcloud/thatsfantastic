@@ -22,7 +22,7 @@ cssselect = "==0.9.2"
 lxml = ">3.4"
 waitress = "*"
 nameparser = "==0.5.1"
-Django = "*"
+Django = ">=2.2.4"
 CacheControl = {extras = ["filecache"],version = "*"}
 
 [requires]

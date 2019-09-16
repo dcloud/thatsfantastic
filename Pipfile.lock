@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2cd25eb73327fed18907b4140301652a3bb90ce0a2aec46330ceca0ac1ba3017"
+            "sha256": "44ad3cb8128bc21ae1bb32961192ea2b0def21ea3ccfd9139375dc14f4c745c2"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -105,6 +105,13 @@
                 "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"
             ],
             "version": "==2.8"
+        },
+        "lockfile": {
+            "hashes": [
+                "sha256:6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799",
+                "sha256:6c3cb24f344923d30b2785d5ad75182c8ea7ac1b6171b08657258ec7429d50fa"
+            ],
+            "version": "==0.12.2"
         },
         "lxml": {
             "hashes": [

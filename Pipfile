@@ -23,7 +23,7 @@ lxml = ">3.4"
 waitress = "*"
 nameparser = "==0.5.1"
 Django = "*"
-CacheControl = "*"
+CacheControl = {extras = ["filecache"],version = "*"}
 
 [requires]
 python_version = "3.7"
